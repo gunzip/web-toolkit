@@ -1,0 +1,20 @@
+{
+  "name": "it-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cssnano": "^3.6.2",
+    "suitcss": "^2.0.0"
+  },
+  "devDependencies": {
+    "cssnano-cli": "^1.0.4",
+    "suitcss-preprocessor": "^2.0.0"
+  },
+  "scripts": {
+    "build": "suitcss index.css build/build.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
