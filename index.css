@@ -1,9 +1,18 @@
 @import 'suitcss';
+@import 'suitcss-components-table';
 
 @custom-media --sm-viewport (min-width: 320px) and (max-width: 640px);
 @custom-media --md-viewport (min-width: 640px) and (max-width: 960px);
 @custom-media --lg-viewport (min-width: 960px);
 
-:root {
-  --Grid-gutter-size: 25px;
+/**
+ * 1. 62.5% = 10px on browsers with base size = 16px
+ * 		so we got 10px = 1rem
+ *
+ * 2. See http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text
+ */
+html {
+  font-size: 62.5%; /* 1 */
+  font-variant-ligatures: common-ligatures; /* 2 */
+  /* text-rendering: optimizeLegibility; */
 }

@@ -1,0 +1,45 @@
+/** @define Prose; */
+
+:root {
+  --it-Prose-color-text-primary: #1C2024;
+  --it-Prose-color-text-secondary: #5A6772;
+  --it-Prose-color-text-highlighted: #B2EBED;
+
+  --it-Prose-color-link: #0066cc;
+  --it-Prose-color-link-hover: #003366;
+  --it-Prose-color-link-visited: #551A8B;
+}
+
+.Prose h1 {
+}
+
+.Prose h2 {
+}
+
+.Prose h3 {
+}
+
+.Prose h4 {
+}
+
+.Prose h5 {
+}
+
+.Prose h6 {
+}
+
+.Prose p {
+  color: var(--it-Prose-color-text-primary);
+}
+
+.Prose a {
+  color: var(--it-Prose-color-link);
+}
+
+.Prose a:hover {
+  color: var(--it-Prose-color-link-hover);
+}
+
+.Prose a:visited {
+  color: var(--it-Prose-color-link-visited);
+}

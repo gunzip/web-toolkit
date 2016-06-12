@@ -1,0 +1,9 @@
+:root {
+  --it-Footer-color-background: #30373d,
+  --it-Footer-color-text: #c6cace;
+  --it-Footer-color-text-light: #a5abb0,
+
+  --it-Footer-color-link: #65dcdf;
+  --it-Footer-color-link-hover: #00aeb3;
+  --it-Footer-color-link-visited: #AA8DC6;
+}

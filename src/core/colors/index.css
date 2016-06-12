@@ -1,0 +1,33 @@
+:root {
+  --it-Color-brand-primary: #0066CC;
+  --it-Color-brand-05: #D1E7FF;
+  --it-Color-brand-10: #8EBEED;
+  --it-Color-brand-20: #66A5E3;
+  --it-Color-brand-30: #428FDB;
+  --it-Color-brand-40: #2079D4;
+  --it-Color-brand-50: #0066CC;
+  --it-Color-brand-60: #0059B3;
+  --it-Color-brand-70: #004D99;
+  --it-Color-brand-80: #004080;
+  --it-Color-brand-90: #003366;
+  --it-Color-brand-95: #00264D;
+
+  --it-Color-grey-light: #F5F5F0;
+  --it-Color-grey: #5A6772;
+  --it-Color-grey-dark: #1C2024;
+
+  --it-Color-teal-light: #65DDE0;
+  --it-Color-teal: #00C5CA;
+  --it-Color-teal-dark: #004A4D;
+}
+
+/*
+ * .u-Color-text-primary {
+ * color: --it-Color-text-primary;
+ * }
+ *
+ * .u-Color-text-secondary {
+ *  color: --it-Color-text-secondary;
+ * }
+ *
+ */

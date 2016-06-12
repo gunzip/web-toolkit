@@ -1,0 +1,5 @@
+:root {
+  --it-Button-color: var(--it-Color-teal-light);
+  --it-Button-color: var(--it-Color-teal-dark);
+  --it-Button-color: var(--it-Color-teal);
+}
