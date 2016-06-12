@@ -1,0 +1,55 @@
+:root {
+  --it-Type-xxs: 1.5rem;
+  --it-Type-xs: 1.8rem;
+  --it-Type-s: 2.0rem;
+  --it-Type-m: 2.4rem;
+  --it-Type-l: 3.2rem;
+  --it-Type-xl: 4.0rem;
+  --it-Type-xxl: 5.4rem;
+}
+
+.u-Type-xxs {
+  line-height: 1.55;
+  font-size: var(--it-Type-xxs) !important;
+}
+
+.u-Type-xs {
+  line-height: 1.55;
+  font-size: var(--it-Type-xs) !important;
+}
+
+.u-Type-s {
+  line-height: 1.2;
+  font-size: var(--it-Type-s) !important;
+}
+
+.u-Type-m {
+  line-height: 1.2;
+  font-size: var(--it-Type-m) !important;
+}
+
+.u-Type-l {
+  line-height: 1.2;
+  font-size: var(--it-Type-l) !important;
+}
+
+.u-Type-xl {
+  line-height: 1.2;
+  font-size: var(--it-Type-xl) !important;
+}
+
+.u-Type-xxl {
+  line-height: 1.2;
+  font-size: var(--it-Type-xxl) !important;
+}
+
+.u-Type-bold {
+  font-weight: bold !important;
+}
+
+.u-Type-italic {
+  font-style: italic !important;
+}
+
+@media (--lg-viewport) {
+}

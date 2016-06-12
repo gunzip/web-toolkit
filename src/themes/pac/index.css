@@ -1,0 +1,54 @@
+/** @define Theme; */
+
+@import '../fonts/titillium';
+
+/**
+ * 	Fonts
+ */
+:root {
+  --it-Pac-font-family-sans: 'Titillium Web';
+}
+
+/**
+ * 	Brand colors
+ */
+:root {
+  --it-Pac-brand-primary: #0066CC;
+  --it-Pac-brand-05: #D1E7FF;
+  --it-Pac-brand-10: #8EBEED;
+  --it-Pac-brand-20: #66A5E3;
+  --it-Pac-brand-30: #428FDB;
+  --it-Pac-brand-40: #2079D4;
+  --it-Pac-brand-50: #0066CC;
+  --it-Pac-brand-60: #0059B3;
+  --it-Pac-brand-70: #004D99;
+  --it-Pac-brand-80: #004080;
+  --it-Pac-brand-90: #003366;
+  --it-Pac-brand-95: #00264D;
+}
+
+/**
+ * 	Text
+ */
+:root {
+  --it-Pac-grey-light: #F5F5F0;
+  --it-Pac-grey: #5A6772;
+  --it-Pac-grey-dark: #1C2024;
+}
+
+/**
+ * 	Buttons
+ */
+:root {
+  --it-Pac-teal-light: #65DDE0;
+  --it-Pac-teal: #00C5CA;
+  --it-Pac-teal-dark: #004A4D;
+}
+
+/*
+ *	Only apply to body
+ *		class="it-Pac"
+ */
+.Pac {
+  font-family: var(--it-Pac-font-family-sans);
+}
