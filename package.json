@@ -1,20 +1,18 @@
 {
-  "name": "it-css",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ita-web-toolkit",
+  "version": "0.1.0",
+  "description": "Implementazione di riferimento per le linee guida di design della PA",
   "main": "index.js",
   "dependencies": {
-    "cssnano": "^3.6.2",
     "suitcss": "^2.0.0"
   },
   "devDependencies": {
-    "cssnano-cli": "^1.0.4",
+    "stylelint-config-suitcss": "^6.0.0",
     "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {
-    "build": "suitcss index.css build/build.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "suitcss index.css build/build.css"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "AgID",
+  "license": "CC0"
 }
