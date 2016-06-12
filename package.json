@@ -7,11 +7,12 @@
     "suitcss": "^2.0.0"
   },
   "devDependencies": {
+    "postcss-extend": "^1.0.1",
     "stylelint-config-suitcss": "^6.0.0",
     "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {
-    "build": "suitcss index.css build/build.css"
+    "build": "suitcss -c .postcss.js index.css build/build.css"
   },
   "author": "AgID",
   "license": "CC0"

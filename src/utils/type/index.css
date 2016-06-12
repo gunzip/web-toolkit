@@ -1,55 +1,100 @@
-:root {
-  --it-Type-xxs: 1.5rem;
-  --it-Type-xs: 1.8rem;
-  --it-Type-s: 2.0rem;
-  --it-Type-m: 2.4rem;
-  --it-Type-l: 3.2rem;
-  --it-Type-xl: 4.0rem;
-  --it-Type-xxl: 5.4rem;
+/** @define utilities */
+
+/*
+ * 	1. antialiasing firefox per mac
+ * 	2. antialiasing chrome, safari per mac
+ */
+.u-typeSmooth {
+  -moz-osx-font-smoothing: grayscale !important; /* 1 */
+  -webkit-font-smoothing: antialiased !important; /* 2 */
 }
 
-.u-Type-xxs {
-  line-height: 1.55;
-  font-size: var(--it-Type-xxs) !important;
+.u-typeW200 {
+  font-weight: 200 !important;
 }
 
-.u-Type-xs {
-  line-height: 1.55;
-  font-size: var(--it-Type-xs) !important;
+.u-typeW300 {
+  font-weight: 300 !important;
 }
 
-.u-Type-s {
-  line-height: 1.2;
-  font-size: var(--it-Type-s) !important;
+.u-typeW400 {
+  font-weight: 400 !important;
 }
 
-.u-Type-m {
-  line-height: 1.2;
-  font-size: var(--it-Type-m) !important;
+.u-typeW600 {
+  font-weight: 600 !important;
 }
 
-.u-Type-l {
-  line-height: 1.2;
-  font-size: var(--it-Type-l) !important;
+.u-typeW700 {
+  font-weight: 700 !important;
 }
 
-.u-Type-xl {
-  line-height: 1.2;
-  font-size: var(--it-Type-xl) !important;
+.u-typeW900 {
+  font-weight: 900 !important;
 }
 
-.u-Type-xxl {
-  line-height: 1.2;
-  font-size: var(--it-Type-xxl) !important;
-}
-
-.u-Type-bold {
-  font-weight: bold !important;
-}
-
-.u-Type-italic {
+.u-typeItalic {
   font-style: italic !important;
 }
 
-@media (--lg-viewport) {
+.u-typePre {
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/*
+ *	Font sizing
+ * 	====================================
+ */
+.u-typeXxl {
+  font-size: 3.6em !important;
+  line-height: 1.2 !important;
+}
+
+.u-typeXl {
+  font-size: 3.2em !important;
+  line-height: 1.2 !important;
+}
+
+.u-typeL {
+  font-size: 2.8rem !important;
+  line-height: 1.2 !important;
+}
+
+.u-typeM {
+  font-size: 2.3em !important;
+  letter-spacing: 0.007em !important;
+  line-height: 1.2 !important;
+}
+
+.u-typeS {
+  font-size: 2.1em !important;
+  letter-spacing: 0.005em !important;
+  line-height: 1.2 !important;
+}
+
+.u-typeXs {
+  font-size: 2em !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.2 !important;
+}
+
+.u-typeXxs {
+  font-size: 2em !important;
+  letter-spacing: normal !important;
+  line-height: 1.2 !important;
+}
+
+@media (--md-viewport) {
+  .u-typeXxl {
+    font-size: 5.4rem !important;
+  }
+
+  .u-typeXl {
+    font-size: 4em !important;
+  }
+
+  .u-typeL {
+    font-size: 3.2rem !important;
+  }
 }

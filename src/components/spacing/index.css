@@ -1,9 +1,13 @@
+/**
+ * Use the following values for margin and paddings.
+ * ================================================
+ */
 :root {
-  --it-Space-xxs: 0.8rem;
-  --it-Space-xs: 1.8rem;
-  --it-Space-s: 2.0rem;
-  --it-Space-m: 2.4rem;
-  --it-Space-l: 3.2rem;
-  --it-Space-xl: 4.0rem;
-  --it-Space-xxl: 5.4rem;
+  --Space-xxs: 0.8rem;
+  --Space-xs: 1.8rem;
+  --Space-s: 2.0rem;
+  --Space-m: 2.4rem;
+  --Space-l: 3.2rem;
+  --Space-xl: 4.0rem;
+  --Space-xxl: 5.4rem;
 }

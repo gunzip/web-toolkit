@@ -1,85 +1,80 @@
-/** @define Prose; */
+/** @define Prose; weak; */
+
+@import '../../utils/type';
 
 :root {
-  --it-Prose-color-text-primary: #1C2024;
-  --it-Prose-color-text-secondary: #5A6772;
-  --it-Prose-color-text-highlighted: #B2EBED;
+  --Prose-color-text-primary: #1C2024;
+  --Prose-color-text-secondary: #5A6772;
+  --Prose-color-text-highlighted: #B2EBED;
 
-  --it-Prose-color-link: #0066cc;
-  --it-Prose-color-link-hover: #003366;
-  --it-Prose-color-link-visited: #551A8B;
+  --Prose-color-link: #0066cc;
+  --Prose-color-link-hover: #003366;
+  --Prose-color-link-visited: #551A8B;
 }
 
 .Prose h1 {
-  /*
-   *	@include .u-Type-xxl;
-   *	@include .u-Type-bold;
-   */
+  @extend .u-typeXxl;
+  @extend .u-typeW700;
 }
 
 .Prose h2 {
-  /*
-   *	@include .u-Type-xl;
-   *	@include .u-Type-bold;
-   */
+  @extend .u-typeXl;
+  @extend .u-typeW700;
 }
 
 .Prose h3 {
-  /*
-   *	@include .u-Type-l;
-   *	@include .u-Type-bold;
-   */
+  @extend .u-typeL;
+  @extend .u-typeW700;
 }
 
 .Prose h4 {
-  /*
-   *	@include .u-Type-m;
-   *	@include .u-Type-bold;
-   */
+  @extend .utypeM;
+  @extend .utypeW700;
 }
 
 .Prose h5 {
-  /*
-   *	@include .u-Type-s;
-   */
+  @extend .u-typeS;
 }
 
 .Prose h6 {
-  /*
-   *	@include .u-Type-xs;
-   *	@include .u-Type-bold;
-   */
+  @extend .u-typeXs;
+  @extend .u-typeW700;
+  letter-spacing: 0.007em !important;
 }
 
 .Prose small {
-  /*
-   *	@include .u-Type-xxs;
-   */
+  @extend .u-typeXxs;
 }
 
 .Prose p,
 .Prose li {
-  /*
-   *	@include .u-Type-xs;
-   */
+  @extend .u-typeXs;
+}
+
+.Prose small {
+  @extend .u-typeXxs;
+}
+
+.Prose pre {
+  @extend .u-typePre;
 }
 
 .Prose a {
-  color: var(--it-Prose-color-link);
+  color: var(--Prose-color-link);
 }
 
 .Prose {
-  color: var(--it-Prose-color-text-primary);
+  color: var(--Prose-color-text-primary);
 }
 
 .Prose--secondary {
-  color: var(--it-Prose-color-text-secondary);
+  color: var(--Prose-color-text-secondary);
 }
 
 .Prose a:hover {
-  color: var(--it-Prose-color-link-hover);
+  color: var(--Prose-color-link-hover);
 }
 
 .Prose a:visited {
-  color: var(--it-Prose-color-link-visited);
+  color: var(--Prose-color-link-visited);
 }
