@@ -1,5 +1,32 @@
 @import 'suitcss';
-@import 'suitcss-components-table';
+
+@import 'src/components/blockquote';
+@import 'src/components/button';
+@import 'src/components/checkbox';
+@import 'src/components/form';
+@import 'src/components/grid';
+@import 'src/components/icon';
+@import 'src/components/list';
+@import 'src/components/prose';
+@import 'src/components/radio';
+@import 'src/components/select';
+@import 'src/components/space';
+@import 'src/components/table';
+
+@import 'src/modules/breadcrumb';
+@import 'src/modules/calendar';
+@import 'src/modules/card';
+@import 'src/modules/footer';
+@import 'src/modules/gallery';
+@import 'src/modules/header';
+@import 'src/modules/menu';
+
+@import 'src/themes/it';
+
+:root {
+  --it-Base-font-size: 1.8rem;
+  --it-Base-text-color: #1C2024;
+}
 
 @custom-media --sm-viewport (min-width: 320px) and (max-width: 640px);
 @custom-media --md-viewport (min-width: 640px) and (max-width: 960px);
@@ -15,4 +42,9 @@ html {
   font-size: 62.5%; /* 1 */
   font-variant-ligatures: common-ligatures; /* 2 */
   /* text-rendering: optimizeLegibility; */
+}
+
+body {
+  font-size: var(--it-Base-font-size);
+  color: var(--it-Base-text-color);
 }

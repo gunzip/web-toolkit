@@ -11,29 +11,69 @@
 }
 
 .Prose h1 {
+  /*
+   *	@include .u-Type-xxl;
+   *	@include .u-Type-bold;
+   */
 }
 
 .Prose h2 {
+  /*
+   *	@include .u-Type-xl;
+   *	@include .u-Type-bold;
+   */
 }
 
 .Prose h3 {
+  /*
+   *	@include .u-Type-l;
+   *	@include .u-Type-bold;
+   */
 }
 
 .Prose h4 {
+  /*
+   *	@include .u-Type-m;
+   *	@include .u-Type-bold;
+   */
 }
 
 .Prose h5 {
+  /*
+   *	@include .u-Type-s;
+   */
 }
 
 .Prose h6 {
+  /*
+   *	@include .u-Type-xs;
+   *	@include .u-Type-bold;
+   */
 }
 
-.Prose p {
-  color: var(--it-Prose-color-text-primary);
+.Prose small {
+  /*
+   *	@include .u-Type-xxs;
+   */
+}
+
+.Prose p,
+.Prose li {
+  /*
+   *	@include .u-Type-xs;
+   */
 }
 
 .Prose a {
   color: var(--it-Prose-color-link);
+}
+
+.Prose {
+  color: var(--it-Prose-color-text-primary);
+}
+
+.Prose--secondary {
+  color: var(--it-Prose-color-text-secondary);
 }
 
 .Prose a:hover {
