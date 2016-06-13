@@ -12,7 +12,8 @@
     "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {
-    "build": "suitcss -c .postcss.js index.css build/build.css"
+    "build": "suitcss -m -c .postcss.js index.css build/build.css",
+    "watch": "suitcss -w -c .postcss.js index.css build/build.css"
   },
   "author": "AgID",
   "license": "CC0"

@@ -10,44 +10,40 @@
   --Prose-color-link: #0066cc;
   --Prose-color-link-hover: #003366;
   --Prose-color-link-visited: #551A8B;
+
+  --Prose-color-text-primary: #333333;
+  --Prose-color-text-secondary: #5A6772;
+
+  --Prose-space-unit: 0.5rem;
 }
 
-.Prose h1 {
-  @extend .u-typeXxl;
-  @extend .u-typeW700;
+.Prose h1,
+.Prose h2,
+.Prose h3,
+.Prose h4,
+.Prose h5,
+.Prose h6,
+.Prose p,
+.Prose blockquote,
+.Prose li {
+  max-width: 32em;
 }
 
-.Prose h2 {
-  @extend .u-typeXl;
-  @extend .u-typeW700;
-}
-
-.Prose h3 {
-  @extend .u-typeL;
-  @extend .u-typeW700;
-}
-
-.Prose h4 {
-  @extend .utypeM;
-  @extend .utypeW700;
-}
-
-.Prose h5 {
-  @extend .u-typeS;
-}
-
-.Prose h6 {
-  @extend .u-typeXs;
-  @extend .u-typeW700;
-  letter-spacing: 0.007em !important;
+.Prose blockquote {
+  @extend .u-typeBlockquote;
 }
 
 .Prose small {
   @extend .u-typeXxs;
 }
 
+.Prose p {
+  margin-bottom: calc(6 * var(--Prose-space-unit));
+}
+
 .Prose p,
 .Prose li {
+  color: var(--Prose-color-text-primary);
   @extend .u-typeXs;
 }
 

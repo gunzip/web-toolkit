@@ -1,5 +1,12 @@
 /** @define utilities */
 
+:root {
+  --Type-blockquote-border-color: #eee;
+  --Type-color-text-primary: #333333;
+  --Type-color-text-secondary: #5A6772;
+  --Type-space-unit: 0.5rem;
+}
+
 /*
  * 	1. antialiasing firefox per mac
  * 	2. antialiasing chrome, safari per mac
@@ -42,17 +49,24 @@
   overflow-x: auto;
 }
 
+.u-typeBlockquote {
+  padding: 1.2rem 2.8rem !important;
+  margin: 0 0 2.8rem !important;
+  border-left: 0.5rem solid var(--Type-blockquote-border-color) !important;
+  font-style: italic;
+}
+
 /*
  *	Font sizing
  * 	====================================
  */
 .u-typeXxl {
-  font-size: 3.6em !important;
+  font-size: 3.6rem !important;
   line-height: 1.2 !important;
 }
 
 .u-typeXl {
-  font-size: 3.2em !important;
+  font-size: 3.2rem !important;
   line-height: 1.2 !important;
 }
 
@@ -62,39 +76,82 @@
 }
 
 .u-typeM {
-  font-size: 2.3em !important;
+  font-size: 2.3rem !important;
   letter-spacing: 0.007em !important;
   line-height: 1.2 !important;
 }
 
 .u-typeS {
-  font-size: 2.1em !important;
+  font-size: 2.1rem !important;
   letter-spacing: 0.005em !important;
   line-height: 1.2 !important;
 }
 
 .u-typeXs {
-  font-size: 2em !important;
+  font-size: 1.8rem !important;
   letter-spacing: 0.01em !important;
-  line-height: 1.2 !important;
+  line-height: 1.55 !important;
 }
 
 .u-typeXxs {
-  font-size: 2em !important;
+  font-size: 1.5rem !important;
   letter-spacing: normal !important;
-  line-height: 1.2 !important;
+  line-height: 1.55 !important;
 }
 
-@media (--md-viewport) {
+@media (--md-viewport), (--lg-viewport) {
   .u-typeXxl {
     font-size: 5.4rem !important;
   }
 
   .u-typeXl {
-    font-size: 4em !important;
+    font-size: 4rem !important;
   }
 
   .u-typeL {
     font-size: 3.2rem !important;
   }
+}
+
+/*
+ *	Heading
+ * 	====================================
+ */
+
+.u-typeH1 {
+  @extend .u-typeXxl;
+  @extend .u-typeW700;
+  margin-bottom: calc(6 * var(--Type-space-unit));
+}
+
+.u-typeH2 {
+  @extend .u-typeXl;
+  @extend .u-typeW700;
+  margin-bottom: calc(6 * var(--Type-space-unit));
+}
+
+.u-typeH3 {
+  @extend .u-typeL;
+  @extend .u-typeW700;
+  margin-bottom: calc(6 * var(--Type-space-unit));
+}
+
+.u-typeH4 {
+  @extend .u-typeM;
+  @extend .u-typeW700;
+  margin-bottom: calc(6 * var(--Type-space-unit));
+}
+
+.u-typeH5 {
+  @extend .u-typeS;
+  @extend .u-typeW400;
+  color: var(--Type-color-text-secondary);
+  margin-bottom: calc(5 * var(--Type-space-unit));
+}
+
+.u-typeH6 {
+  @extend .u-typeXs;
+  @extend .u-typeW700;
+  letter-spacing: 0.007em !important;
+  margin-bottom: calc(5 * var(--Type-space-unit));
 }

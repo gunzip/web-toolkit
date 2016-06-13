@@ -6,7 +6,7 @@
  * 	Fonts
  */
 :root {
-  --Pac-font-family-sans: 'Titillium Web';
+  --Pac-font-family-sans: Titillium Web, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
 }
 
 /**
