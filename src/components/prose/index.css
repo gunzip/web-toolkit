@@ -17,15 +17,10 @@
   --Prose-space-unit: 0.5rem;
 }
 
-.Prose h1,
-.Prose h2,
-.Prose h3,
-.Prose h4,
-.Prose h5,
-.Prose h6,
-.Prose p,
-.Prose blockquote,
-.Prose li {
+/*
+ *	Do not nest .Prose(s)
+ */
+.Prose {
   max-width: 32em;
 }
 
@@ -91,5 +86,5 @@
 }
 
 .Prose li {
-  padding: var(--Prose-space-unit) 0;
+  padding: calc(var(--Prose-space-unit) / 2) 0;
 }
