@@ -121,37 +121,37 @@
 .u-typeH1 {
   @extend .u-typeXxl;
   @extend .u-typeW700;
-  margin-bottom: calc(6 * var(--Type-space-unit));
+  margin-bottom: calc(3 * var(--Type-space-unit));
 }
 
 .u-typeH2 {
   @extend .u-typeXl;
   @extend .u-typeW700;
-  margin-bottom: calc(6 * var(--Type-space-unit));
+  margin-bottom: calc(3 * var(--Type-space-unit));
 }
 
 .u-typeH3 {
   @extend .u-typeL;
   @extend .u-typeW700;
-  margin-bottom: calc(6 * var(--Type-space-unit));
+  margin-bottom: calc(3 * var(--Type-space-unit));
 }
 
 .u-typeH4 {
   @extend .u-typeM;
   @extend .u-typeW700;
-  margin-bottom: calc(6 * var(--Type-space-unit));
+  margin-bottom: calc(3 * var(--Type-space-unit));
 }
 
 .u-typeH5 {
   @extend .u-typeS;
   @extend .u-typeW400;
   color: var(--Type-color-text-secondary);
-  margin-bottom: calc(5 * var(--Type-space-unit));
+  margin-bottom: calc(2 * var(--Type-space-unit));
 }
 
 .u-typeH6 {
   @extend .u-typeXs;
   @extend .u-typeW700;
   letter-spacing: 0.007em !important;
-  margin-bottom: calc(5 * var(--Type-space-unit));
+  margin-bottom: calc(2 * var(--Type-space-unit));
 }
