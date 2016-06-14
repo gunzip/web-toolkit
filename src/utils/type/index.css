@@ -7,6 +7,10 @@
   --Type-space-unit: 0.5rem;
 }
 
+.u-typeSecondary {
+  color: --Type-color-text-secondary;
+}
+
 /*
  * 	1. antialiasing firefox per mac
  * 	2. antialiasing chrome, safari per mac

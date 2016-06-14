@@ -7,8 +7,10 @@
     "suitcss": "^2.0.0"
   },
   "devDependencies": {
+    "postcss-color-function": "^2.0.1",
     "postcss-extend": "^1.0.1",
     "stylelint-config-suitcss": "^6.0.0",
+    "suitcss-components-form": "^1.0.0",
     "suitcss-preprocessor": "^2.0.0"
   },
   "scripts": {

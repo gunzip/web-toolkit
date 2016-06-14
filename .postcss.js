@@ -1,5 +1,6 @@
 module.exports = {
   use: [
-    'postcss-extend'
+    'postcss-extend',
+    'postcss-color-function'
   ]
 };

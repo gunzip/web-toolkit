@@ -1,17 +1,14 @@
 @import 'suitcss';
+@import 'suitcss-components-form';
 
 @import 'src/utils/type';
 
-/*@import 'src/components/button';*/
-/*@import 'src/components/callout';*/
-/*@import 'src/components/checkbox';*/
-/*@import 'src/components/form';*/
-/*@import 'src/components/grid';*/
-/*@import 'src/components/icon';*/
+@import 'src/components/alert';
+@import 'src/components/button';
+@import 'src/components/callout';
+@import 'src/components/form';
 @import 'src/components/prose';
-/*@import 'src/components/radio';*/
-/*@import 'src/components/select';*/
-/*@import 'src/components/table';*/
+@import 'src/components/table';
 
 /*@import 'src/modules/breadcrumb';
 /*@import 'src/modules/calendar';*/
@@ -48,4 +45,21 @@ html {
 body {
   font-size: var(--it-Base-font-size);
   color: var(--it-Base-text-color);
+}
+
+p,
+li {
+  max-width: 32em;
+}
+
+:focus {
+  outline: #ff8c00 solid 3px;
+  background: none;
+  text-decoration: none;
+}
+
+a:focus {
+  background: #ff8c00;
+  outline: #ff8c00 solid 0px;
+  text-decoration: underline;
 }

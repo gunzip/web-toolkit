@@ -79,9 +79,13 @@
 /**
  * Add border around table
  */
-.Table--withBorder {
-  border: 1px var(--Table-border-color) solid;
+.Table--withBorder tr {
+  border-bottom: 1px var(--Table-border-color) solid;
   margin-top: var(--Table-cell-pad-v);
+}
+
+.Table--withBorder thead tr {
+  border-bottom: 2px var(--Table-border-color) solid;
 }
 
 .Table--withBorder th,
@@ -92,6 +96,10 @@
 .Table--withBorder thead tr:first-child th,
 .Table--withBorder thead tr:first-child td {
   border-top: 0;
+}
+
+.Table--withBorder tbody tr:last-child {
+  border-bottom: 0;
 }
 
 /* Compact layout modifier

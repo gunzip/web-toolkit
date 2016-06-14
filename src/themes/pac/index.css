@@ -1,6 +1,12 @@
-/** @define Pac; weak; */
-
 @import '../../fonts/titillium';
+
+/*
+ *	Only apply to body
+ *		class="it-Pac"
+ */
+.Pac {
+  font-family: var(--Pac-font-family-sans);
+}
 
 /**
  * 	Fonts
@@ -10,45 +16,8 @@
 }
 
 /**
- * 	Brand colors
+ * 	Brand color
  */
 :root {
   --Pac-brand-primary: #0066CC;
-  --Pac-brand-05: #D1E7FF;
-  --Pac-brand-10: #8EBEED;
-  --Pac-brand-20: #66A5E3;
-  --Pac-brand-30: #428FDB;
-  --Pac-brand-40: #2079D4;
-  --Pac-brand-50: #0066CC;
-  --Pac-brand-60: #0059B3;
-  --Pac-brand-70: #004D99;
-  --Pac-brand-80: #004080;
-  --Pac-brand-90: #003366;
-  --Pac-brand-95: #00264D;
-}
-
-/**
- * 	Text
- */
-:root {
-  --Pac-grey-light: #F5F5F0;
-  --Pac-grey: #5A6772;
-  --Pac-grey-dark: #1C2024;
-}
-
-/**
- * 	Buttons
- */
-:root {
-  --Pac-teal-light: #65DDE0;
-  --Pac-teal: #00C5CA;
-  --Pac-teal-dark: #004A4D;
-}
-
-/*
- *	Only apply to body
- *		class="it-Pac"
- */
-.Pac {
-  font-family: var(--Pac-font-family-sans);
 }
