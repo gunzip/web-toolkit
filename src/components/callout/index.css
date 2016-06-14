@@ -1,0 +1,57 @@
+/** @define Callout; weak; */
+
+:root {
+  --Callout-color-must: #F4E6F5;
+  --Callout-color-should: #D1E7FF;
+  --Callout-color-could: #EBF5EF;
+  --Callout-color-example: #E6E5E3;
+  --Callout-border-top-color: #AAAAAA;
+  --Callout-space-unit: 0.5rem;
+}
+
+.Callout {
+  padding: calc(4 * var(--Callout-space-unit));
+  margin: calc(4 * var(--Callout-space-unit)) 0;
+  border-top: 1px solid var(--Callout-border-top-color);
+}
+
+.Callout mark {
+  background: transparent;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: var(--Callout-space-unit);
+  display: block;
+  width: 100%;
+}
+
+.Callout--must {
+  border-top-color: color(var(--Callout-color-must) l(-40%));
+  background: var(--Callout-color-must);
+}
+.Callout--must mark {
+  color: color(var(--Callout-color-must) l(-40%));
+}
+
+.Callout--should {
+  border-top-color: color(var(--Callout-color-should) l(-40%));
+  background: var(--Callout-color-should);
+}
+.Callout--should mark {
+  color: color(var(--Callout-color-should) l(-40%));
+}
+
+.Callout--could {
+  border-top-color: color(var(--Callout-color-could) l(-40%));
+  background: var(--Callout-color-could);
+}
+.Callout--could mark {
+  color: color(var(--Callout-color-could) l(-40%));
+}
+
+.Callout--example {
+  border-top-color: color(var(--Callout-color-example) l(-40%));
+  background: var(--Callout-color-example);
+}
+.Callout--example mark {
+  color: color(var(--Callout-color-example) l(-40%));
+}

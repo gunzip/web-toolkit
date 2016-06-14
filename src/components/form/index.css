@@ -1,0 +1,64 @@
+/*
+ *	Custom theme for
+ *		https://github.com/giuseppeg/suitcss-components-form
+ *		Copyright (c) Giuseppe Gurgone
+ */
+:root {
+  --Form-input-border-color: #ccc;
+  --Form-input-border-radius: 0;
+
+  --Form-state-invalid-border-color: #b50000;
+  --Form-state-invalid-label-color: #b50000;
+  --Form-state-invalid-message-color: #b50000;
+
+  --Form-state-warning-border-color: #e5ce23;
+  --Form-state-warning-label-color: #e5ce23;
+  --Form-state-warning-message-color: #e5ce23;
+
+  --Form-border-width: 0.4rem;
+  --Form-choose-height: 1em;
+}
+
+.Form-field.is-invalid .Form-input,
+.Form-field.is-warning .Form-input {
+  border-width: var(--Form-border-width);
+}
+
+select.Form-input {
+  background-color: transparent;
+}
+
+.Form-legend {
+  font-weight: bold;
+}
+
+/*
+ *	Custom components: checkbox / radio
+ *	===================================
+ */
+.Form-field--choose .Form-label {
+  display: inline-block;
+  font-weight: normal;
+  width: 100%;
+}
+
+.Form-field--choose .Form-input {
+  display: inline-block;
+  margin-right: calc(var(--Form-choose-height) / 2);
+  width: auto;
+}
+
+/*
+ *	Custom components: label block
+ *	==============================
+ */
+.Form-label--block {
+  border: 1px solid var(--Form-input-border-color);
+  border-bottom: 0;
+  min-height: calc(var(--Form-choose-height) + 2 * var(--Form-choose-height));
+  line-height: calc(2 * var(--Form-choose-height));
+  padding: calc(var(--Form-choose-height) / 2);
+}
+.Form-label--block:last-child {
+  border-bottom: 1px solid var(--Form-input-border-color);
+}

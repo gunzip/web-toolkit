@@ -1,0 +1,84 @@
+/** @define utilities */
+/*
+ *	To be overridden by themes
+ */
+:root {
+  --Color-primary: #111;
+}
+
+.u-color-100 {
+  background: --Color-primary;
+}
+.u-color-bg100 {
+  background: --Color-primary;
+}
+
+.u-color-10 {
+  color: color(var(--Color-primary) l(10%));
+}
+.u-color-bg10 {
+  background: color(var(--Color-primary) l(10%));
+}
+
+.u-color-20 {
+  color: color(var(--Color-primary) l(20%));
+}
+.u-color-bg20 {
+  background: color(var(--Color-primary) l(20%));
+}
+
+.u-color-30 {
+  color: color(var(--Color-primary) l(30%));
+}
+.u-color-bg30 {
+  background: color(var(--Color-primary) l(30%));
+}
+
+.u-color-40 {
+  color: color(var(--Color-primary) l(40%));
+}
+.u-color-bg40 {
+  background: color(var(--Color-primary) l(40%));
+}
+
+.u-color-50 {
+  color: color(var(--Color-primary) l(50%));
+}
+.u-color-bg50 {
+  background: color(var(--Color-primary) l(50%));
+}
+
+.u-color-60 {
+  color: color(var(--Color-primary) l(60%));
+}
+.u-color-bg60 {
+  background: color(var(--Color-primary) l(60%));
+}
+
+.u-color-70 {
+  color: color(var(--Color-primary) l(70%));
+}
+.u-color-bg70 {
+  background: color(var(--Color-primary) l(70%));
+}
+
+.u-color-80 {
+  color: color(var(--Color-primary) l(80%));
+}
+.u-color-bg80 {
+  background: color(var(--Color-primary) l(80%));
+}
+
+.u-color-90 {
+  color: color(var(--Color-primary) l(90%));
+}
+.u-color-bg90 {
+  background: color(var(--Color-primary) l(90%));
+}
+
+.u-color-95 {
+  color: color(var(--Color-primary) l(95%));
+}
+.u-color-bg95 {
+  background: color(var(--Color-primary) l(95%));
+}
