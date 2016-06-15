@@ -15,7 +15,6 @@
 
 @import 'src/modules/breadcrumb';
 @import 'src/modules/entrypoint';
-@import 'src/modules/highlight';
 @import 'src/modules/prose';
 
 @import 'src/themes/pac';
