@@ -10,6 +10,20 @@
   color: white;
 }
 
+.u-color-grey {
+  color: #eee;
+}
+.u-color-bgGrey {
+  background: #eee;
+}
+
+.u-color-greyDark {
+  color: #30373d;
+}
+.u-color-bgGreyDark {
+  background: #30373d;
+}
+
 .u-color-100 {
   background: var(--Color-primary);
 }

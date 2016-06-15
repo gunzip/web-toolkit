@@ -16,6 +16,7 @@
 @import 'src/modules/breadcrumb';
 @import 'src/modules/entrypoint';
 @import 'src/modules/prose';
+@import 'src/modules/utilities';
 
 @import 'src/themes/pac';
 
