@@ -1,0 +1,23 @@
+/** @define Breadcrumb; */
+
+.Breadcrumb {
+
+}
+
+.Breadcrumb-item {
+  display: inline;
+}
+
+.Breadcrumb-link {
+  @extend .u-linkClean;
+  @extend .u-text-xxs;
+  @extend .u-textWeight-700;
+}
+
+.Breadcrumb-link:after {
+  content: ' › ';
+  margin-left: 0 0.2em;
+}
+.Breadcrumb-link--last:after {
+  content: none;
+}

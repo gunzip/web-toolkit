@@ -6,11 +6,15 @@
   --Color-primary: #111;
 }
 
+.u-color-white {
+  color: white;
+}
+
 .u-color-100 {
-  background: --Color-primary;
+  background: var(--Color-primary);
 }
 .u-color-bg100 {
-  background: --Color-primary;
+  background: var(--Color-primary);
 }
 
 .u-color-10 {

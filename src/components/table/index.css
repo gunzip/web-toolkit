@@ -81,10 +81,10 @@
  */
 .Table--withBorder tr {
   border-bottom: 1px var(--Table-border-color) solid;
-  margin-top: var(--Table-cell-pad-v);
+  /*margin-top: var(--Table-cell-pad-v);*/
 }
 
-.Table--withBorder thead tr {
+.Table--withBorder th {
   border-bottom: 2px var(--Table-border-color) solid;
 }
 
@@ -98,10 +98,6 @@
   border-top: 0;
 }
 
-.Table--withBorder tbody tr:last-child {
-  border-bottom: 0;
-}
-
 /* Compact layout modifier
    ========================================================================== */
 
@@ -111,4 +107,98 @@
 .Table--compact td,
 .Table--compact th {
   padding: var(--Table-cell-pad-h);
+}
+
+/* Responsive layout modifier
+ * 	http://dbushell.com/2016/03/04/css-only-responsive-tables/
+   ========================================================================== */
+
+.Table--responsive {
+  /*!
+  // IE needs inline-block to position scrolling shadows otherwise use:
+  // display: block;
+  // max-width: min-content;
+  */
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+
+  overflow-x: auto;
+
+  /* optional - looks better for small cell values */
+  white-space: nowrap;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: auto;
+}
+
+.Table--responsive,
+.Table--flip tbody {
+  /* optional - enable iOS momentum scrolling */
+  -webkit-overflow-scrolling: touch;
+
+  /* scrolling shadows */
+  background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
+              radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+}
+
+.Table--responsive td:first-child,
+.Table--flip tbody tr:first-child {
+  background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+
+.Table--responsive td:last-child,
+.Table--flip tbody tr:last-child {
+  background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+
+.Table--flip {
+  display: flex;
+  overflow: hidden;
+  background: none;
+}
+
+.Table--flip thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+}
+
+.Table--flip tbody {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.Table--flip tr {
+  display: flex;
+  flex-direction: column;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+
+.Table--flip td,
+.Table--flip th {
+  display: block;
+}
+
+.Table--flip td {
+  background-image: none !important;
+}
+
+/* @FIXME */
+.Table--flip th {
+  border-bottom: 0 !important;
+  border-top: 1px solid var(--Table-border-color) !important;
+  border-right: 2px solid var(--Table-border-color) !important;
 }

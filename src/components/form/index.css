@@ -24,8 +24,9 @@
   border-width: var(--Form-border-width);
 }
 
-select.Form-input {
-  background-color: transparent;
+.Form-input:not(.is-disabled),
+.Form-input:not(:disabled) {
+  background-color: white;
 }
 
 .Form-legend {

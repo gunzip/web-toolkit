@@ -1,6 +1,6 @@
 /** @define Prose; weak; */
 
-@import '../../utils/type';
+@import '../../utils/text';
 
 :root {
   --Prose-color-text-primary: #1C2024;
@@ -20,16 +20,16 @@
 /*
  *	Do not nest .Prose(s)
  */
-.Prose {
+.Prose > * {
   max-width: 32em;
 }
 
-.Prose blockquote {
-  @extend .u-typeBlockquote;
+.Prose-textRelease {
+  max-width: none;
 }
 
-.Prose small {
-  @extend .u-typeXxs;
+.Prose blockquote {
+  @extend .u-textBlockquote;
 }
 
 .Prose p {
@@ -38,19 +38,16 @@
 
 .Prose p,
 .Prose li {
+  @extend .u-text-xs;
   color: var(--Prose-color-text-primary);
-  @extend .u-typeXs;
 }
 
 .Prose small {
-  @extend .u-typeXxs;
-}
-
-.Prose pre {
-  @extend .u-typePre;
+  @extend .u-text-xxs;
 }
 
 .Prose a {
+  @extend .u-linkClean;
   color: var(--Prose-color-link);
 }
 
@@ -73,8 +70,8 @@
 .Prose ul,
 .Prose ol {
   list-style-position: outside;
-  margin-left: 1.5em;
   margin-bottom: calc(6 * var(--Prose-space-unit));
+  margin-left: 1.5em;
 }
 
 .Prose ul {

@@ -21,8 +21,7 @@
 }
 
 .Alert {
-  padding: calc(4 * var(--Alert-space-unit));
-  margin: calc(4 * var(--Alert-space-unit)) 0;
+  padding: 0 calc(4 * var(--Alert-space-unit));
   border-left: calc(2 * var(--Alert-space-unit)) solid #FAFAFA;
 }
 
@@ -57,7 +56,7 @@
   border-left-color: color(var(--Alert-info-bg) l(-40%));
   color: var(--Alert-info-color);
 }
-.Alert--infoFull {
+.Alert-infoFull {
   @extend .Alert--info;
   background: var(--Alert-info-bg);
 }

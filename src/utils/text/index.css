@@ -1,0 +1,170 @@
+/** @define utilities */
+
+:root {
+  --Text-blockquote-border-color: #eee;
+  --Text-color-text-primary: #333333;
+  --Text-color-text-secondary: #5A6772;
+  --Text-space-unit: 0.5rem;
+
+  --Text-preFormatted-font: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  "Lucida Sans Typewriter", "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+.u-textSecondary {
+  color: var(--Text-color-text-secondary) !important;
+}
+
+/*
+ * 	1. antialiasing firefox per mac
+ * 	2. antialiasing chrome, safari per mac
+ */
+.u-textSmooth {
+  -moz-osx-font-smoothing: grayscale !important; /* 1 */
+  -webkit-font-smoothing: antialiased !important; /* 2 */
+}
+
+.u-textWeight-200 {
+  font-weight: 200 !important;
+}
+
+.u-textWeight-300 {
+  font-weight: 300 !important;
+}
+
+.u-textWeight-400 {
+  font-weight: 400 !important;
+}
+
+.u-textWeight-600 {
+  font-weight: 600 !important;
+}
+
+.u-textWeight-700 {
+  font-weight: 700 !important;
+}
+
+.u-textWeight-900 {
+  font-weight: 900 !important;
+}
+
+.u-textItalic {
+  font-style: italic !important;
+}
+
+.u-textPreformatted {
+  overflow-x: auto !important;
+  font-family: var(--Text-preFormatted-font) !important;
+  max-height: 32em;
+}
+.u-textPreformatted:hover,
+.u-textPreformatted:focus {
+  width: min-content;
+  max-width: min-content;
+}
+
+.u-textBlockquote {
+  padding: 1.2rem 2.8rem !important;
+  margin: 0 0 2.8rem !important;
+  border-left: 0.5rem solid var(--Text-blockquote-border-color) !important;
+  font-style: italic !important;
+}
+
+/*
+ *	Font sizing
+ * 	====================================
+ */
+.u-text-xxl {
+  font-size: 3.6rem !important;
+  line-height: 1.2 !important;
+}
+
+.u-text-xl {
+  font-size: 3.2rem !important;
+  line-height: 1.2 !important;
+}
+
+.u-text-l {
+  font-size: 2.8rem !important;
+  line-height: 1.2 !important;
+}
+
+.u-text-m {
+  font-size: 2.3rem !important;
+  letter-spacing: 0.007em !important;
+  line-height: 1.2 !important;
+}
+
+.u-text-s {
+  font-size: 2.1rem !important;
+  letter-spacing: 0.005em !important;
+  line-height: 1.2 !important;
+}
+
+.u-text-xs {
+  font-size: 1.8rem !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.55 !important;
+}
+
+.u-text-xxs {
+  font-size: 1.5rem !important;
+  letter-spacing: normal !important;
+  line-height: 1.55 !important;
+}
+
+@media (--md-viewport), (--lg-viewport) {
+  .u-text-xxl {
+    font-size: 5.4rem !important;
+  }
+
+  .u-text-xl {
+    font-size: 4rem !important;
+  }
+
+  .u-text-l {
+    font-size: 3.2rem !important;
+  }
+}
+
+/*
+ *	Heading
+ * 	====================================
+ */
+
+.u-text-h1 {
+  @extend .u-text-xxl;
+  @extend .u-textWeight-700;
+  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+}
+
+.u-text-h2 {
+  @extend .u-text-xl;
+  @extend .u-textWeight-700;
+  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+}
+
+.u-text-h3 {
+  @extend .u-text-l;
+  @extend .u-textWeight-700;
+  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+}
+
+.u-text-h4 {
+  @extend .u-text-m;
+  @extend .u-textWeight-700;
+  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+}
+
+.u-text-h5 {
+  @extend .u-text-s;
+  @extend .u-textWeight-400;
+  color: var(--Text-color-text-secondary);
+  margin-bottom: calc(2 * var(--Text-space-unit)) !important;
+}
+
+.u-text-h6 {
+  @extend .u-text-xs;
+  @extend .u-textWeight-700;
+  letter-spacing: 0.007em !important;
+  margin-bottom: calc(2 * var(--Text-space-unit)) !important;
+}

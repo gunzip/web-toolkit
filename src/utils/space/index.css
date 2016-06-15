@@ -1,0 +1,91 @@
+/** @define utilities; */
+/*
+ * Fork of https://github.com/jaredhanson/suitcss-utils-space
+ */
+:root {
+  --Spacing-unit: 0.5rem;
+}
+
+/* All */
+
+.u-padding-all-xs { padding: 0 !important; }
+.u-padding-all-s { padding: var(--Spacing-unit) !important; }
+.u-padding-all-m { padding: calc(2 * var(--Spacing-unit)) !important; }
+.u-padding-all-l { padding: calc(4 * var(--Spacing-unit)) !important; }
+
+.u-margin-all-xs { margin: 0 !important; }
+.u-margin-all-s { margin: var(--Spacing-unit) !important; }
+.u-margin-all-m { margin: calc(2 * var(--Spacing-unit)) !important; }
+.u-margin-all-l { margin: calc(4 * var(--Spacing-unit)) !important; }
+
+/* Vertical */
+
+.u-padding-v-xs { padding-top: 0 !important; padding-bottom: 0 !important; }
+.u-padding-v-s { padding-top: var(--Spacing-unit) !important; padding-bottom: var(--Spacing-unit) !important; }
+.u-padding-v-m { padding-top: calc(2 * var(--Spacing-unit)) !important; padding-bottom: calc(2 * var(--Spacing-unit)) !important; }
+.u-padding-v-l { padding-top: calc(4 * var(--Spacing-unit)) !important; padding-bottom: calc(4 * var(--Spacing-unit)) !important; }
+
+.u-margin-v-xs { margin-top: 0 !important; margin-bottom: 0 !important; }
+.u-margin-v-s { margin-top: var(--Spacing-unit) !important;  margin-bottom: var(--Spacing-unit) !important; }
+.u-margin-v-m { margin-top: calc(2 * var(--Spacing-unit)) !important;  margin-bottom: calc(2 * var(--Spacing-unit)) !important; }
+.u-margin-v-l { margin-top: calc(4 * var(--Spacing-unit)) !important;  margin-bottom: calc(4 * var(--Spacing-unit)) !important; }
+
+/* Horizontal */
+
+.u-padding-h-xs { padding-left: 0 !important; padding-right: 0 !important; }
+.u-padding-h-s { padding-left: var(--Spacing-unit) !important; padding-right: var(--Spacing-unit) !important; }
+.u-padding-h-m { padding-left: calc(2 * var(--Spacing-unit)) !important; padding-right: calc(2 * var(--Spacing-unit)) !important; }
+.u-padding-h-l { padding-left: calc(4 * var(--Spacing-unit)) !important; padding-right: calc(4 * var(--Spacing-unit)) !important; }
+
+.u-margin-h-xs { margin-left: 0 !important; margin-right: 0 !important; }
+.u-margin-h-s { margin-left: var(--Spacing-unit) !important; margin-right: var(--Spacing-unit) !important; }
+.u-margin-h-m { margin-left: calc(2 * var(--Spacing-unit)) !important; margin-right: calc(2 * var(--Spacing-unit)) !important; }
+.u-margin-h-l { margin-left: calc(4 * var(--Spacing-unit)) !important; margin-right: calc(4 * var(--Spacing-unit)) !important; }
+
+/* Top */
+
+.u-padding-top-xs { padding-top: 0 !important; }
+.u-padding-top-s { padding-top: var(--Spacing-unit) !important; }
+.u-padding-top-m { padding-top: calc(2 * var(--Spacing-unit)) !important; }
+.u-padding-top-l { padding-top: calc(4 * var(--Spacing-unit)) !important; }
+
+.u-margin-top-xs { margin-top: 0 !important; }
+.u-margin-top-s { margin-top: var(--Spacing-unit) !important; }
+.u-margin-top-m { margin-top: calc(2 * var(--Spacing-unit)) !important; }
+.u-margin-top-l { margin-top: calc(4 * var(--Spacing-unit)) !important; }
+
+/* Bottom */
+
+.u-padding-bottom-xs { padding-bottom: 0 !important; }
+.u-padding-bottom-s { padding-bottom: var(--Spacing-unit) !important; }
+.u-padding-bottom-m { padding-bottom: calc(2 * var(--Spacing-unit)) !important; }
+.u-padding-bottom-l { padding-bottom: calc(4 * var(--Spacing-unit)) !important; }
+
+.u-margin-bottom-xs { margin-bottom: 0 !important; }
+.u-margin-bottom-s { margin-bottom: var(--Spacing-unit) !important; }
+.u-margin-bottom-m { margin-bottom: calc(2 * var(--Spacing-unit)) !important; }
+.u-margin-bottom-l { margin-bottom: calc(4 * var(--Spacing-unit)) !important; }
+
+/* Left */
+
+.u-padding-left-xs { padding-left: 0 !important; }
+.u-padding-left-s { padding-left: var(--Spacing-unit) !important; }
+.u-padding-left-m { padding-left: calc(2 * var(--Spacing-unit)) !important; }
+.u-padding-left-l { padding-left: calc(4 * var(--Spacing-unit)) !important; }
+
+.u-margin-left-xs { margin-left: 0 !important; }
+.u-margin-left-s { margin-left: var(--Spacing-unit) !important; }
+.u-margin-left-m { margin-left: calc(2 * var(--Spacing-unit)) !important; }
+.u-margin-left-l { margin-left: calc(4 * var(--Spacing-unit)) !important; }
+
+/* Right */
+
+.u-padding-right-xs { padding-right: 0 !important; }
+.u-padding-right-s { padding-right: var(--Spacing-unit) !important; }
+.u-padding-rightm { padding-right: calc(2 * var(--Spacing-unit)) !important; }
+.u-padding-right-l { padding-right: calc(4 * var(--Spacing-unit)) !important; }
+
+.u-margin-right-xs { margin-right: 0 !important; }
+.u-margin-right-s { margin-right: var(--Spacing-unit) !important; }
+.u-margin-right-m { margin-right: calc(2 * var(--Spacing-unit)) !important; }
+.u-margin-right-l { margin-right: calc(4 * var(--Spacing-unit)) !important; }

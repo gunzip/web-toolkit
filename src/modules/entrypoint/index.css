@@ -1,0 +1,9 @@
+/** @define Entrypoint; */
+
+.Entrypoint-item {
+  @extend .u-sizeFill;
+  @extend .u-color-bg100;
+  @extend .u-borderRadius-m;
+  @extend .u-padding-all-l;
+  @extend .u-margin-v-m;
+}
