@@ -1,0 +1,24 @@
+/** @define Utilities */
+
+.Utilities {
+  @extend .u-padding-top-xxl;
+  @extend .u-padding-bottom-xxl;
+}
+
+.Utilities-title {
+  @extend .u-text-h3;
+  @extend .u-margin-bottom-xxl;
+}
+
+.Utilities-link {
+  @extend .u-text-m;
+  @extend .u-padding-top-l;
+  @extend .u-padding-bottom-l;
+  @extend .u-sizeFull;
+  border-top: 1px solid currentColor;
+}
+
+.Utilities-link:after {
+  margin-left: 0.2em;
+  content: ' › ';
+}
