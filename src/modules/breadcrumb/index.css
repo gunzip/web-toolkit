@@ -14,10 +14,10 @@
   @extend .u-textWeight-700;
 }
 
-.Breadcrumb-link:after {
+.Breadcrumb-item:after {
   content: ' › ';
   margin-left: 0 0.2em;
 }
-.Breadcrumb-link--last:after {
+.Breadcrumb-item:last-child:after {
   content: none;
 }

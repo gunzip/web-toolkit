@@ -127,44 +127,44 @@
 }
 
 /*
- *	Heading
- * 	====================================
+ *	Heading - loosely set default margins
+ * 	=====================================
  */
 
 .u-text-h1 {
   @extend .u-text-xxl;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+  margin-bottom: calc(3 * var(--Text-space-unit));
 }
 
 .u-text-h2 {
   @extend .u-text-xl;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+  margin-bottom: calc(3 * var(--Text-space-unit));
 }
 
 .u-text-h3 {
   @extend .u-text-l;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+  margin-bottom: calc(3 * var(--Text-space-unit));
 }
 
 .u-text-h4 {
   @extend .u-text-m;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit)) !important;
+  margin-bottom: calc(3 * var(--Text-space-unit));
 }
 
 .u-text-h5 {
   @extend .u-text-s;
   @extend .u-textWeight-400;
   color: var(--Text-color-text-secondary);
-  margin-bottom: calc(2 * var(--Text-space-unit)) !important;
+  margin-bottom: calc(2 * var(--Text-space-unit));
 }
 
 .u-text-h6 {
   @extend .u-text-xs;
   @extend .u-textWeight-700;
   letter-spacing: 0.007em !important;
-  margin-bottom: calc(2 * var(--Text-space-unit)) !important;
+  margin-bottom: calc(2 * var(--Text-space-unit));
 }

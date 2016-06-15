@@ -1,0 +1,10 @@
+/** @define Dot */
+
+.Dot {
+  @extend .u-borderRadius-circle;
+  @extend .u-text-xxs;
+  @extend .u-inlineBlock;
+  @extend .u-margin-right-s;
+  width: 1em;
+  height: 1em;
+}

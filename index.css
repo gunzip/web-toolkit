@@ -9,23 +9,29 @@
 @import 'src/components/alert';
 @import 'src/components/button';
 @import 'src/components/callout';
+@import 'src/components/dot';
 @import 'src/components/form';
 @import 'src/components/table';
 
 @import 'src/modules/breadcrumb';
 @import 'src/modules/entrypoint';
+@import 'src/modules/highlight';
 @import 'src/modules/prose';
 
 @import 'src/themes/pac';
+
+@custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 992px);
+@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1440px);
+@custom-media --lg-viewport screen and (min-width: 1440px);
 
 :root {
   --it-Base-font-size: 1.8rem;
   --it-Base-text-color: #1C2024;
 }
 
-@custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 992px);
-@custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1440px);
-@custom-media --lg-viewport screen and (min-width: 1440px);
+:root {
+  --Grid-gutter-size: 1.6rem;
+}
 
 /**
  * 1. 62.5% = 10px on browsers with base size = 16px

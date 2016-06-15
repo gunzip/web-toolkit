@@ -11,3 +11,7 @@
 .u-borderRadius-l {
   border-radius: 8px !important;
 }
+
+.u-borderRadius-circle {
+  border-radius: 50% !important;
+}
