@@ -1,8 +1,10 @@
 @import 'suitcss';
 @import 'suitcss-components-form';
 
+@import 'src/utils/borders';
 @import 'src/utils/colors';
 @import 'src/utils/corners';
+@import 'src/utils/layout';
 @import 'src/utils/space';
 @import 'src/utils/text';
 

@@ -15,7 +15,7 @@
   @extend .u-padding-top-l;
   @extend .u-padding-bottom-l;
   @extend .u-sizeFull;
-  border-top: 1px solid currentColor;
+  @extend .u-border-top-xxs;
 }
 
 .Utilities-link:after {

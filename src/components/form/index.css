@@ -17,6 +17,21 @@
 
   --Form-border-width: 0.4rem;
   --Form-choose-height: 1em;
+
+  --Form-select-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
+  --Form-select-arrow-width: 2rem;
+}
+
+select.Form-input {
+  background-color: currentColor;
+}
+
+option:hover {
+  box-shadow: 0 0 10px 100px #1882A8 inset;
+}
+
+.Form-label.is-required:after {
+  content: ' * ';
 }
 
 .Form-field.is-invalid .Form-input,
@@ -54,6 +69,7 @@
  *	==============================
  */
 .Form-label--block {
+  background-color: white;
   border: 1px solid var(--Form-input-border-color);
   border-bottom: 0;
   min-height: calc(var(--Form-choose-height) + 2 * var(--Form-choose-height));

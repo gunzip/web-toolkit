@@ -1,13 +1,9 @@
-:root {
-  --Card-border-color: #ddd;
-}
-
 .Card {
   overflow: hidden;
 }
 
 .Card--withBorder {
-  border: 1px solid var(--Card-border-color);
+  @extend .u-border-all-xxs;
 }
 
 .Card--shadow {
