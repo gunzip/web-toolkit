@@ -6,8 +6,18 @@
   --Color-primary: #111;
 }
 
+.u-color-black {
+  color: black;
+}
+.u-color-bgBlack {
+  background: white;
+}
+
 .u-color-white {
   color: white;
+}
+.u-color-bgWhite {
+  background: white;
 }
 
 .u-color-grey {
@@ -15,6 +25,13 @@
 }
 .u-color-bgGrey {
   background: #eee;
+}
+
+.u-color-greyMid {
+  color: #444e57;
+}
+.u-color-bgGreyMid {
+  background: #444e57;
 }
 
 .u-color-greyDark {

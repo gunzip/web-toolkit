@@ -1,3 +1,44 @@
+:root {
+  --Card-border-color: #ddd;
+}
+
 .Card {
-  
+  overflow: hidden;
+}
+
+.Card--withBorder {
+  border: 1px solid var(--Card-border-color);
+}
+
+.Card--shadow {
+  border: none;
+  box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.35);
+}
+
+.Card--round {
+  @extend .u-borderRadius-m;
+}
+
+.Card-extra {
+  @extend .u-text-h6;
+  @extend .u-margin-bottom-l;
+}
+
+.Card-content {
+  @extend .u-padding-all-l;
+}
+
+.Card-title {
+  @extend .u-text-h4;
+  @extend .u-margin-bottom-l;
+}
+
+.Card-titleLink {
+  @extend .u-color-black;
+  @extend .u-textWeight-400;
+}
+
+.Card-text {
+  @extend .u-textSecondary;
+  @extend .u-margin-bottom-l;
 }

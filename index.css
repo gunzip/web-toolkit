@@ -14,6 +14,7 @@
 @import 'src/components/table';
 
 @import 'src/modules/breadcrumb';
+@import 'src/modules/card';
 @import 'src/modules/entrypoint';
 @import 'src/modules/prose';
 @import 'src/modules/utilities';
