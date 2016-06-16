@@ -23,6 +23,10 @@
   -webkit-font-smoothing: antialiased !important; /* 2 */
 }
 
+.u-textClean {
+  text-decoration: none !important;
+}
+
 .u-textWeight-200 {
   font-weight: 200 !important;
 }

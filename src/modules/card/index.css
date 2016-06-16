@@ -1,3 +1,5 @@
+/** @define Card; */
+
 .Card {
   overflow: hidden;
 }
@@ -18,6 +20,11 @@
 .Card-extra {
   @extend .u-text-h6;
   @extend .u-margin-bottom-l;
+  @extend .u-textClean;
+}
+
+.Card-extraLink {
+  @extend .u-textClean;
 }
 
 .Card-content {
@@ -29,9 +36,19 @@
   @extend .u-margin-bottom-l;
 }
 
+.Card-title-fatLink {
+  @extend .u-textWeight-700;
+  @extend .u-margin-bottom-l;
+}
+
 .Card-titleLink {
   @extend .u-color-black;
   @extend .u-textWeight-400;
+  @extend .u-textClean;
+}
+
+.Card-titleLink--fat {
+  @extend .u-textWeight-700;
 }
 
 .Card-text {

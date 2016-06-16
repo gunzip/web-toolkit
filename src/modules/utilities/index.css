@@ -16,6 +16,7 @@
   @extend .u-padding-bottom-l;
   @extend .u-sizeFull;
   @extend .u-border-top-xxs;
+  @extend .u-textClean;
 }
 
 .Utilities-link:after {

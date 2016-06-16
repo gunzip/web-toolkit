@@ -9,7 +9,7 @@
 }
 
 .Breadcrumb-link {
-  @extend .u-linkClean;
+  @extend .u-textClean;
   @extend .u-text-xxs;
   @extend .u-textWeight-700;
 }

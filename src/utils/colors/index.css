@@ -27,6 +27,13 @@
   background: #eee;
 }
 
+.u-color-greyAlt {
+  color: #ddd;
+}
+.u-color-bgGreyAlt {
+  background: #ddd;
+}
+
 .u-color-greyMid {
   color: #444e57;
 }
@@ -42,7 +49,7 @@
 }
 
 .u-color-100 {
-  background: var(--Color-primary);
+  color: var(--Color-primary);
 }
 .u-color-bg100 {
   background: var(--Color-primary);
