@@ -7,6 +7,8 @@
     "suitcss": "^2.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.12.0",
     "postcss-color-function": "^2.0.1",
     "postcss-extend": "^1.0.1",
     "stylelint-config-suitcss": "^6.0.0",
@@ -15,7 +17,9 @@
   },
   "scripts": {
     "build": "suitcss -m -c .postcss.js index.css build/build.css",
-    "watch": "suitcss -w -c .postcss.js index.css build/build.css"
+    "watch": "suitcss -w -c .postcss.js index.css build/build.css",
+    "build:js": "WEBPACK_ENV=build webpack",
+    "watch:js": "WEBPACK_ENV=dev webpack --progress --colors --watch"
   },
   "author": "AgID",
   "license": "CC0"
