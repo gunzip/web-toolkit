@@ -1,0 +1,20 @@
+/** @define utilities; */
+
+:root {
+  --Layout-container-wide: 1440px;
+  --Layout-container-medium: 1280px;
+}
+
+.u-layout-wide {
+  max-width: var(--Layout-container-wide) !important;
+}
+
+.u-layout-medium {
+  max-width: var(--Layout-container-medium) !important;
+}
+
+/* postcss-bem-linter: ignore */
+
+.u-layout-centerContent > * {
+  margin: auto;
+}

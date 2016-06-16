@@ -1,0 +1,11 @@
+/** @define utilities; */
+
+:root {
+  --Border-size-unit: 0.1rem;
+}
+
+.u-border-top-xxs { border-top: var(--Border-size-unit) solid currentColor !important; }
+.u-border-right-xxs { border-right: var(--Border-size-unit) solid currentColor !important; }
+.u-border-bottom-xxs { border-bottom: var(--Border-size-unit) solid currentColor !important; }
+.u-border-left-xxs { border-left: var(--Border-size-unit) solid currentColor !important; }
+.u-border-all-xxs { border: var(--Border-size-unit) solid currentColor !important; }
