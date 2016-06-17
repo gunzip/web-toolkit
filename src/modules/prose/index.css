@@ -17,17 +17,6 @@
   --Prose-space-unit: 0.5rem;
 }
 
-/*
- *	Do not nest .Prose(s)
- */
-.Prose {
-  max-width: 32em;
-}
-
-.Prose-textRelease {
-  max-width: none;
-}
-
 .Prose blockquote {
   @extend .u-textBlockquote;
 }

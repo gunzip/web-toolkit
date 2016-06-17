@@ -3,6 +3,8 @@
 :root {
   --Layout-container-wide: 1440px;
   --Layout-container-medium: 1280px;
+  --Layout-prose-fontSize: 1.8rem;
+  --Layout-prose-width: 32em;
 }
 
 .u-layout-wide {
@@ -14,7 +16,15 @@
 }
 
 /* postcss-bem-linter: ignore */
-
 .u-layout-centerContent > * {
   margin: auto;
+}
+
+.u-layoutProse {
+  font-size: var(--Layout-prose-fontSize) !important;
+  max-width: var(--Layout-prose-width) !important;
+}
+
+.u-layoutRelease {
+  max-width: auto;
 }
