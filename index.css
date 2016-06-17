@@ -19,6 +19,7 @@
 @import 'src/modules/breadcrumb';
 @import 'src/modules/card';
 @import 'src/modules/entrypoint';
+@import 'src/modules/linklist';
 @import 'src/modules/prose';
 @import 'src/modules/utilities';
 

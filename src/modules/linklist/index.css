@@ -1,0 +1,64 @@
+/** @define Linklist */
+
+:root {
+  --Linklist-border-color: #d8d8d8;
+  --Linklist-link-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
+  --Linklist-link-padding: 0.5em;
+  --Linklist-link-arrow-width: 1.5em;
+}
+
+.Linklist {
+  @extend .u-color-greyAlt;
+  @extend .u-border-top-xxs;
+}
+
+.Linklist-item {
+  @extend .u-color-greyAlt;
+  @extend .u-border-top-xxs;
+  @extend .u-block;
+  @extend .u-nbfc;
+}
+
+.Linklist-link {
+  @extend .u-block;
+  @extend .u-textClean;
+  @extend .u-padding-all-s;
+}
+
+.Linklist-link:hover {
+  @extend .u-color-bg90;
+}
+
+.Linklist-link {
+  @extend .u-color-100;
+}
+
+.Linklist-link--leaf {
+  @extend .u-padding-left-xl;
+}
+
+.Linklist-link--lev1.Linklist-link--lev1 {
+  @extend .u-color-white;
+  @extend .u-color-bg30;
+}
+
+.Linklist-link--lev2.Linklist-link--lev2 {
+  @extend .u-color-20;
+  @extend .u-color-bg80;
+}
+
+.Linklist-link--lev3.Linklist-link--lev3 {
+  @extend .u-color-20;
+  @extend .u-color-bg90;
+}
+
+.Linklist-link--expandable {
+  background-image: var(--Linklist-link-arrow);
+  background-position: right var(--Linklist-link-padding) center;
+  background-repeat: no-repeat;
+  background-size: var(--Linklist-link-arrow-width);
+  padding-right:
+    calc(
+      var(--Linklist-link-arrow-width) + (2 * var(--Linklist-link-padding))
+    );
+}

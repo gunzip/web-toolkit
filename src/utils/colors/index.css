@@ -7,120 +7,120 @@
 }
 
 .u-color-black {
-  color: black;
+  color: black !important;
 }
 .u-color-bgBlack {
-  background: white;
+  background-color: white !important;
 }
 
 .u-color-white {
-  color: white;
+  color: white !important;
 }
 .u-color-bgWhite {
-  background: white;
+  background-color: white !important;
 }
 
 .u-color-grey {
-  color: #eee;
+  color: #eee !important;
 }
 .u-color-bgGrey {
-  background: #eee;
+  background-color: #eee !important;
 }
 
 .u-color-greyAlt {
-  color: #ddd;
+  color: #ddd !important;
 }
 .u-color-bgGreyAlt {
-  background: #ddd;
+  background-color: #ddd !important;
 }
 
 .u-color-greyMid {
-  color: #444e57;
+  color: #444e57 !important;
 }
 .u-color-bgGreyMid {
-  background: #444e57;
+  background-color: #444e57 !important;
 }
 
 .u-color-greyDark {
-  color: #30373d;
+  color: #30373d !important;
 }
 .u-color-bgGreyDark {
-  background: #30373d;
+  background-color: #30373d !important;
 }
 
 .u-color-100 {
-  color: var(--Color-primary);
+  color: var(--Color-primary) !important;
 }
 .u-color-bg100 {
-  background: var(--Color-primary);
+  background-color: var(--Color-primary) !important;
 }
 
 .u-color-10 {
-  color: color(var(--Color-primary) l(10%));
+  color: color(var(--Color-primary) l(10%)) !important;
 }
 .u-color-bg10 {
-  background: color(var(--Color-primary) l(10%));
+  background-color: color(var(--Color-primary) l(10%)) !important;
 }
 
 .u-color-20 {
-  color: color(var(--Color-primary) l(20%));
+  color: color(var(--Color-primary) l(20%)) !important;
 }
 .u-color-bg20 {
-  background: color(var(--Color-primary) l(20%));
+  background-color: color(var(--Color-primary) l(20%)) !important;
 }
 
 .u-color-30 {
-  color: color(var(--Color-primary) l(30%));
+  color: color(var(--Color-primary) l(30%)) !important;
 }
 .u-color-bg30 {
-  background: color(var(--Color-primary) l(30%));
+  background-color: color(var(--Color-primary) l(30%)) !important;
 }
 
 .u-color-40 {
-  color: color(var(--Color-primary) l(40%));
+  color: color(var(--Color-primary) l(40%)) !important;
 }
 .u-color-bg40 {
-  background: color(var(--Color-primary) l(40%));
+  background-color: color(var(--Color-primary) l(40%)) !important;
 }
 
 .u-color-50 {
-  color: color(var(--Color-primary) l(50%));
+  color: color(var(--Color-primary) l(50%)) !important;
 }
 .u-color-bg50 {
-  background: color(var(--Color-primary) l(50%));
+  background-color: color(var(--Color-primary) l(50%)) !important;
 }
 
 .u-color-60 {
-  color: color(var(--Color-primary) l(60%));
+  color: color(var(--Color-primary) l(60%)) !important;
 }
 .u-color-bg60 {
-  background: color(var(--Color-primary) l(60%));
+  background-color: color(var(--Color-primary) l(60%)) !important;
 }
 
 .u-color-70 {
-  color: color(var(--Color-primary) l(70%));
+  color: color(var(--Color-primary) l(70%)) !important;
 }
 .u-color-bg70 {
-  background: color(var(--Color-primary) l(70%));
+  background-color: color(var(--Color-primary) l(70%)) !important;
 }
 
 .u-color-80 {
-  color: color(var(--Color-primary) l(80%));
+  color: color(var(--Color-primary) l(80%)) !important;
 }
 .u-color-bg80 {
-  background: color(var(--Color-primary) l(80%));
+  background-color: color(var(--Color-primary) l(80%)) !important;
 }
 
 .u-color-90 {
-  color: color(var(--Color-primary) l(90%));
+  color: color(var(--Color-primary) l(90%)) !important;
 }
 .u-color-bg90 {
-  background: color(var(--Color-primary) l(90%));
+  background-color: color(var(--Color-primary) l(90%)) !important;
 }
 
 .u-color-95 {
-  color: color(var(--Color-primary) l(95%));
+  color: color(var(--Color-primary) l(95%)) !important;
 }
 .u-color-bg95 {
-  background: color(var(--Color-primary) l(95%));
+  background-color: color(var(--Color-primary) l(95%)) !important;
 }
