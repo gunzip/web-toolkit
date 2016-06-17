@@ -9,7 +9,7 @@
 
   --Prose-color-link: #0066cc;
   --Prose-color-link-hover: #003366;
-  --Prose-color-link-visited: #551A8B;
+  --Prose-color-link-visited: #0066cc;
 
   --Prose-color-text-primary: #333333;
   --Prose-color-text-secondary: #5A6772;
@@ -20,7 +20,7 @@
 /*
  *	Do not nest .Prose(s)
  */
-.Prose > * {
+.Prose {
   max-width: 32em;
 }
 
@@ -32,7 +32,8 @@
   @extend .u-textBlockquote;
 }
 
-.Prose p {
+.Prose p,
+.Prose pre {
   margin-bottom: calc(6 * var(--Prose-space-unit));
 }
 
@@ -47,7 +48,8 @@
 }
 
 .Prose a {
-  @extend .u-linkClean;
+  @extend .u-textClean;
+  @extend .u-textWeight-700;
   color: var(--Prose-color-link);
 }
 

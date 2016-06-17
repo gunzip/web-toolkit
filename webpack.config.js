@@ -1,18 +1,37 @@
 var webpack = require('webpack');
 var path = require('path');
-var libraryName = 'build';
+var libraryName = 'IWT';
 var outputFile = libraryName + '.js';
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var env = process.env.WEBPACK_ENV;
 
-var plugins = [], outputFile;
+var plugins = [],
+  outputFile;
 
 if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({ minimize: true }));
+  plugins.push(new UglifyJsPlugin({
+    minimize: true
+  }));
   outputFile = libraryName + '.min.js';
 } else {
   outputFile = libraryName + '.js';
+}
+
+var loaders = [];
+
+if (env === 'build') {
+  loaders.push({
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+  });
+  plugins.push(new ExtractTextPlugin("vendor.css"));
+} else {
+  loaders.push({
+    test: /\.css$/,
+    loader: "style-loader!css-loader"
+  });
 }
 
 var config = {
@@ -26,24 +45,22 @@ var config = {
     umdNamedDefine: true
   },
   module: {
-    loaders: [
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: 'babel',
-        exclude: /(node_modules|bower_components)/
-      },
-      {
-        test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
-        exclude: /node_modules/
-      }
-    ]
+    loaders: [...loaders, {
+      test: /(\.jsx|\.js)$/,
+      loader: 'babel-loader',
+//      exclude: /(node_modules|bower_components)/
+    }, {
+      test: /(\.jsx|\.js)$/,
+      loader: "eslint-loader",
+      exclude: /node_modules/
+    }]
   },
   resolve: {
     root: path.resolve('./src'),
     extensions: ['', '.js']
   },
-  plugins: plugins
+  plugins: plugins,
+  debug: true
 };
 
 module.exports = config;

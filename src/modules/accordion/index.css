@@ -1,0 +1,10 @@
+.fr-accordion--is-ready .fr-accordion__header {
+	background-color: yellow;
+	border-bottom: 1px solid red;
+	display: block;
+	transition: background-color .15s ease-out,color .15s ease-out;
+}
+
+.fr-accordion--is-ready .fr-accordion__panel {
+	transition: height 250ms ease-out, visibility 250ms;
+}

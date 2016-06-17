@@ -15,6 +15,7 @@
 @import 'src/components/form';
 @import 'src/components/table';
 
+@import 'src/modules/accordion';
 @import 'src/modules/breadcrumb';
 @import 'src/modules/card';
 @import 'src/modules/entrypoint';

@@ -68,9 +68,7 @@
 
 .u-textBlockquote {
   padding: 1.2rem 2.8rem !important;
-  margin: 0 0 2.8rem !important;
   border-left: 0.5rem solid var(--Text-blockquote-border-color) !important;
-  font-style: italic !important;
 }
 
 /*
