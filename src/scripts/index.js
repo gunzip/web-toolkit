@@ -29,3 +29,25 @@ const myAccordion = Fraccordion({
 	// Integer - Duration (in milliseconds) of CSS transition when opening/closing accordion panels
 	transitionLength: 250
 });
+
+/*
+ * Masonry
+ * ================
+ */
+
+import Packery from 'packery';
+import $ from 'jquery';
+
+$(document).ready(function() {
+	var cnt = $("img").length;
+  $("img").one("load", function() {
+    if (--cnt === 0) {
+			var pckry = new Packery('.js-packery', {
+			  itemSelector: '.Card',
+			  gutter: 20
+			});
+    }
+  }).each(function() {
+    if (this.complete) $(this).load();
+  });
+});
