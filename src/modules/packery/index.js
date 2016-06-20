@@ -1,6 +1,6 @@
 import Packery from 'packery';
 
-let _packery;
+import debounce from 'throttle-debounce/throttle';
 
 //	Without jquery
 //
@@ -10,18 +10,25 @@ let _packery;
 //  });
 
 $(document).ready(function() {
+  let _packery = null;
   if ($('.js-packery-container').length <= 0) {
     return ;
   }
 	var cnt = $("img").length;
   $("img").one("load", function() {
     if (--cnt === 0) {
-			_packery = new Packery('.js-packery-container', {
-			  itemSelector: '.js-packery-item',
-				gutter: 0
-			});
+      _packery = new Packery('.js-packery-container', {
+        gutter: 0,
+        itemSelector: '.js-packery-item',
+        percentPosition: true
+      });
     }
   });
+  /* FIXME */
+  $(window).resize(debounce(500, function() {
+    console.log('resize');
+    if (_packery) _packery.layout();
+  }));
 });
 
-module.exports = _packery;
+module.exports = Packery;

@@ -7,7 +7,8 @@
     "fr-accordion": "^1.0.5",
     "jquery": "^3.0.0",
     "packery": "^2.1.1",
-    "suitcss": "^2.0.0"
+    "suitcss": "^2.0.0",
+    "throttle-debounce": "^1.0.1"
   },
   "devDependencies": {
     "@frctl/fractal": "^0.11.4",
@@ -36,7 +37,7 @@
     "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "WEBPACK_ENV=build webpack",
-    "watch:js": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "watch:js": "WEBPACK_ENV=dev webpack --display-modules --progress --colors --watch",
     "build": "npm run build:css & npm run build:js",
     "watch": "npm run watch:css & npm run watch:js",
     "build:styleguide": "fractal build",
