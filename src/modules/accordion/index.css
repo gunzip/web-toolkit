@@ -27,7 +27,7 @@
 }
 
 .Accordion-header:hover {
-  @extend .u-color-bg90;
+  @extend .u-background-90;
 }
 
 .Accordion-link {
@@ -46,7 +46,7 @@
 
 /*.Accordion-trigger {
   @extend .u-color-white;
-  @extend .u-color-bg30;
+  @extend .u-background-30;
 }*/
 
 .Accordion-link {

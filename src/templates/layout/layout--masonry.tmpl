@@ -1,26 +1,9 @@
-<style>
-  .js-packery-item {
-    width: 100%;
-  }
-  @media screen and (min-width: 768px) {
-    .js-packery-item {
-      width: 48%;
-      margin: 0 1%;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    .js-packery-item {
-      width: 31.33333%;
-      margin: 0 1%;
-    }
-  }
-</style>
-
 <div class="u-color-bgGrey u-layout-centerContent">
   <section class="js-packery-container u-layout-medium">
 
     {% for i in [1, 2] %}
-      <div class="Card Card--shadow Card--round u-margin-bottom-s u-color-bgWhite js-packery-item">
+    <div class="Packery-item js-packery-item">
+      <div class="Card Card--shadow Card--round u-color-bgWhite">
         <div class="Card-image">
           <img src="http://placehold.it/400x220?text=placeholder" class="u-sizeFull" />
         </div>
@@ -30,8 +13,9 @@
           <p class="Card-text">Pariatur sunt occaecat in enim incididunt sunt proident id quis nisi aliqua magna Lorem qui sunt minim.</p>
         </div>
       </div>
-
-      <div class="Card Card--shadow Card--round u-margin-bottom-s u-color-bgWhite js-packery-item">
+    </div>
+    <div class="Packery-item js-packery-item">
+      <div class="Card Card--shadow Card--round u-color-bgWhite">
         <div class="Card-image">
           <img src="http://placehold.it/400x220?text=placeholder" class="u-sizeFull" />
         </div>
@@ -45,8 +29,9 @@
           </p>
         </div>
       </div>
-
-      <div class="Card Card--shadow Card--round u-margin-bottom-s u-color-bgWhite js-packery-item">
+    </div>
+    <div class="Packery-item js-packery-item">
+      <div class="Card Card--shadow Card--round u-color-bgWhite">
         <div class="Card-image">
           <img src="http://placehold.it/400x220?text=placeholder" class="u-sizeFull" />
         </div>
@@ -56,6 +41,7 @@
           <p class="Card-text">Pariatur sunt occaecat in enim incididunt sunt proident id quis nisi aliqua magna Lorem qui sunt minim.</p>
         </div>
       </div>
+    </div>
     {% endfor %}
 
   </section>

@@ -2,7 +2,7 @@
 
 .Entrypoint-item {
   @extend .u-sizeFill;
-  @extend .u-color-bg100;
+  @extend .u-background-100;
   @extend .u-borderRadius-m;
   @extend .u-padding-all-l;
   @extend .u-margin-bottom-xs;

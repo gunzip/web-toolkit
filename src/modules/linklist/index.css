@@ -26,7 +26,7 @@
 }
 
 .Linklist-link:hover {
-  @extend .u-color-bg90;
+  @extend .u-background-90;
 }
 
 .Linklist-link {
@@ -39,17 +39,17 @@
 
 .Linklist-link--lev1.Linklist-link--lev1 {
   @extend .u-color-white;
-  @extend .u-color-bg30;
+  @extend .u-background-30;
 }
 
 .Linklist-link--lev2.Linklist-link--lev2 {
   @extend .u-color-20;
-  @extend .u-color-bg80;
+  @extend .u-background-80;
 }
 
 .Linklist-link--lev3.Linklist-link--lev3 {
   @extend .u-color-20;
-  @extend .u-color-bg90;
+  @extend .u-background-90;
 }
 
 .Linklist-link--expandable {

@@ -9,118 +9,118 @@
 .u-color-black {
   color: black !important;
 }
-.u-color-bgBlack {
+.u-background-black {
   background-color: white !important;
 }
 
 .u-color-white {
   color: white !important;
 }
-.u-color-bgWhite {
+.u-background-white {
   background-color: white !important;
 }
 
 .u-color-grey {
   color: #eee !important;
 }
-.u-color-bgGrey {
+.u-background-grey {
   background-color: #eee !important;
 }
 
 .u-color-greyAlt {
   color: #ddd !important;
 }
-.u-color-bgGreyAlt {
+.u-background-greyAlt {
   background-color: #ddd !important;
 }
 
 .u-color-greyMid {
   color: #444e57 !important;
 }
-.u-color-bgGreyMid {
+.u-background-greyMid {
   background-color: #444e57 !important;
 }
 
 .u-color-greyDark {
   color: #30373d !important;
 }
-.u-color-bgGreyDark {
+.u-background-greyDark {
   background-color: #30373d !important;
 }
 
 .u-color-100 {
   color: var(--Color-primary) !important;
 }
-.u-color-bg100 {
+.u-background-100 {
   background-color: var(--Color-primary) !important;
 }
 
 .u-color-10 {
   color: color(var(--Color-primary) l(10%)) !important;
 }
-.u-color-bg10 {
+.u-background-10 {
   background-color: color(var(--Color-primary) l(10%)) !important;
 }
 
 .u-color-20 {
   color: color(var(--Color-primary) l(20%)) !important;
 }
-.u-color-bg20 {
+.u-background-20 {
   background-color: color(var(--Color-primary) l(20%)) !important;
 }
 
 .u-color-30 {
   color: color(var(--Color-primary) l(30%)) !important;
 }
-.u-color-bg30 {
+.u-background-30 {
   background-color: color(var(--Color-primary) l(30%)) !important;
 }
 
 .u-color-40 {
   color: color(var(--Color-primary) l(40%)) !important;
 }
-.u-color-bg40 {
+.u-background-40 {
   background-color: color(var(--Color-primary) l(40%)) !important;
 }
 
 .u-color-50 {
   color: color(var(--Color-primary) l(50%)) !important;
 }
-.u-color-bg50 {
+.u-background-50 {
   background-color: color(var(--Color-primary) l(50%)) !important;
 }
 
 .u-color-60 {
   color: color(var(--Color-primary) l(60%)) !important;
 }
-.u-color-bg60 {
+.u-background-60 {
   background-color: color(var(--Color-primary) l(60%)) !important;
 }
 
 .u-color-70 {
   color: color(var(--Color-primary) l(70%)) !important;
 }
-.u-color-bg70 {
+.u-background-70 {
   background-color: color(var(--Color-primary) l(70%)) !important;
 }
 
 .u-color-80 {
   color: color(var(--Color-primary) l(80%)) !important;
 }
-.u-color-bg80 {
+.u-background-80 {
   background-color: color(var(--Color-primary) l(80%)) !important;
 }
 
 .u-color-90 {
   color: color(var(--Color-primary) l(90%)) !important;
 }
-.u-color-bg90 {
+.u-background-90 {
   background-color: color(var(--Color-primary) l(90%)) !important;
 }
 
 .u-color-95 {
   color: color(var(--Color-primary) l(95%)) !important;
 }
-.u-color-bg95 {
+.u-background-95 {
   background-color: color(var(--Color-primary) l(95%)) !important;
 }
