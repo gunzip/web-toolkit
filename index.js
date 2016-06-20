@@ -39,13 +39,11 @@ $(document).ready(function() {
 	var cnt = $("img").length;
   $("img").one("load", function() {
     if (--cnt === 0) {
-			$('.js-packery').packery({
-			  itemSelector: '.grid-item',
-				gutter: 20
+			new Packery('.js-packery-container', {
+			  itemSelector: '.js-packery-item',
+				gutter: 0
 			});
     }
-  }).each(function() {
-    if (this.complete) $(this).load();
   });
 });
 

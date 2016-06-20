@@ -1,0 +1,33 @@
+{
+    "title": "Alert",
+    "variants": [
+        {
+            "name": "default",
+            "hidden": true
+        },
+        {
+            "name": "error",
+            "context": {
+              "modifier": "error"
+            }
+        },
+        {
+            "name": "warning",
+            "context": {
+              "modifier": "warning"
+            }
+        },
+        {
+            "name": "success",
+            "context": {
+              "modifier": "success"
+            }
+        },
+        {
+            "name": "info",
+            "context": {
+              "modifier": "info"
+            }
+        }
+    ]
+}

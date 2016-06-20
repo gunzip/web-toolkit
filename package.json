@@ -10,6 +10,9 @@
     "suitcss": "^2.0.0"
   },
   "devDependencies": {
+    "@frctl/fractal": "^0.11.4",
+    "@frctl/nunjucks-adapter": "^0.4.6",
+    "@frctl/nunjucks-helpers": "^0.3.0",
     "babel": "^6.5.2",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
@@ -30,10 +33,16 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "build": "suitcss -m -c .postcss.js index.css build/build.css",
-    "watch": "suitcss -w -c .postcss.js index.css build/build.css",
+    "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
+    "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "WEBPACK_ENV=build webpack",
-    "watch:js": "WEBPACK_ENV=dev webpack --progress --colors --watch"
+    "watch:js": "WEBPACK_ENV=dev webpack --progress --colors --watch",
+    "build": "npm run build:css & npm run build:js",
+    "watch": "npm run watch:css & npm run watch:js",
+    "build:styleguide": "fractal build",
+    "watch:styleguide": "fractal start --watch --sync",
+    "dev": "npm run watch:css & npm run watch:js & npm run watch:styleguide",
+    "prod": "npm run build:css && npm run build:js && npm run build:styleguide"
   },
   "author": "AgID",
   "license": "CC0"
