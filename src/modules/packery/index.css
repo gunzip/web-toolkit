@@ -1,0 +1,10 @@
+/** @define Packery; */
+
+.Packery-item {
+  @extend .u-sizeFull;
+  @extend .u-md-size1of2;
+  @extend .u-lg-size1of3;
+  @extend .u-margin-bottom-s;
+  @extend .u-padding-right-xs;
+  @extend .u-padding-left-xs;
+}
