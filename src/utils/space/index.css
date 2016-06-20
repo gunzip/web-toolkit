@@ -20,7 +20,7 @@
 .u-margin-all-m { margin: calc(5 * var(--Spacing-unit)) !important; }
 .u-margin-all-l { margin: calc(6 * var(--Spacing-unit)) !important; }
 .u-margin-all-xl { margin: calc(8 * var(--Spacing-unit)) !important; }
-.u-margin-all-xl { margin: calc(10 * var(--Spacing-unit)) !important; }
+.u-margin-all-xxl { margin: calc(10 * var(--Spacing-unit)) !important; }
 
 /* Top */
 
