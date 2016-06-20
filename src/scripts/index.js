@@ -39,9 +39,9 @@ $(document).ready(function() {
 	var cnt = $("img").length;
   $("img").one("load", function() {
     if (--cnt === 0) {
-			__exports.myPackery = new Packery('.js-packery', {
-			  itemSelector: '.Card',
-			  gutter: 20
+			$('.js-packery').packery({
+			  itemSelector: '.grid-item',
+				gutter: 20
 			});
     }
   }).each(function() {
