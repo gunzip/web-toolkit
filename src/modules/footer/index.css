@@ -1,11 +1,7 @@
 /** @define Footer; weak */
 
 :root {
-  --Footer-color-text-light: #a5abb0;
-
   --Footer-color-link: #65dcdf;
-  --Footer-color-link-hover: #00aeb3;
-  --Footer-color-link-visited: #aa8dc6;
 }
 
 .Footer {
@@ -15,6 +11,10 @@
   @extend .u-padding-top-xxl;
 }
 
+.Footer a {
+  color: var(--Footer-color-link);
+}
+
 .Footer-logo {
   @extend .u-floatLeft;
   @extend .u-padding-right-xl;
@@ -22,7 +22,6 @@
 
 .Footer-link {
   @extend .u-text-s;
-  color: var(--Footer-color-link);
 }
 
 .Footer-siteName {
@@ -70,13 +69,11 @@
 }
 
 .Footer-block a {
-  color: var(--Footer-color-link);
   @extend .u-text-xxs;
   @extend .u-textWeight-700;
 }
 
 .Footer-links {
-  color: var(--Footer-color-link);
   @extend .u-border-top-xxs;
   @extend .u-margin-top-xxl;
   @extend .u-padding-top-xs;
@@ -90,6 +87,5 @@
 }
 
 .Footer-links a {
-  color: var(--Footer-color-link);
   @extend .u-text-xxs;
 }
