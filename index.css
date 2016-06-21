@@ -1,30 +1,30 @@
-@import 'suitcss';
-@import 'suitcss-components-form';
+@import "suitcss";
+@import "suitcss-components-form";
 
-@import 'src/utils/borders';
-@import 'src/utils/colors';
-@import 'src/utils/corners';
-@import 'src/utils/layout';
-@import 'src/utils/space';
-@import 'src/utils/text';
+@import "src/utils/borders";
+@import "src/utils/colors";
+@import "src/utils/corners";
+@import "src/utils/layout";
+@import "src/utils/space";
+@import "src/utils/text";
 
-@import 'src/components/alert';
-@import 'src/components/button';
-@import 'src/components/callout';
-@import 'src/components/dot';
-@import 'src/components/form';
-@import 'src/components/table';
+@import "src/components/alert";
+@import "src/components/button";
+@import "src/components/callout";
+@import "src/components/dot";
+@import "src/components/form";
+@import "src/components/table";
 
-@import 'src/modules/accordion';
-@import 'src/modules/breadcrumb';
-@import 'src/modules/card';
-@import 'src/modules/entrypoint';
-@import 'src/modules/linklist';
-@import 'src/modules/packery';
-@import 'src/modules/prose';
-@import 'src/modules/utilities';
-
-@import 'src/themes/pac';
+@import "src/modules/accordion";
+@import "src/modules/breadcrumb";
+@import "src/modules/card";
+@import "src/modules/entrypoint";
+@import "src/modules/footer";
+@import "src/modules/linklist";
+@import "src/modules/packery";
+@import "src/modules/prose";
+@import "src/modules/utilities";
+@import "src/themes/pac";
 
 @custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 992px);
 @custom-media --md-viewport screen and (min-width: 992px) and (max-width: 1440px);
@@ -32,28 +32,30 @@
 
 :root {
   --it-Base-font-size: 1.8rem;
-  --it-Base-text-color: #1C2024;
+  --it-Base-text-color: #1c2024;
 }
 
 :root {
   --Grid-gutter-size: 1.6rem;
 }
 
+/*  stylelint-disable */
 /**
  * 1. 62.5% = 10px on browsers with base size = 16px
  * 		so we got 10px = 1rem
- *
  * 2. See http://stackoverflow.com/questions/7968795/is-it-safe-to-use-the-css-rule-text-rendering-optimizelegibility-on-all-text
  */
+ /*  stylelint-enable */
 html {
   font-size: 62.5%; /* 1 */
   font-variant-ligatures: common-ligatures; /* 2 */
+
   /* text-rendering: optimizeLegibility; */
 }
 
 body {
-  font-size: var(--it-Base-font-size);
   color: var(--it-Base-text-color);
+  font-size: var(--it-Base-font-size);
 }
 
 p,
@@ -68,7 +70,7 @@ li {
 
 a:focus {
   background: #ff8c00;
-  outline: #ff8c00 solid 0px;
+  outline: #ff8c00 solid 3px;
   text-decoration: underline;
 }
 

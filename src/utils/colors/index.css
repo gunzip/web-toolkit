@@ -1,4 +1,5 @@
 /** @define utilities */
+
 /*
  *	To be overridden by themes
  */
@@ -9,6 +10,7 @@
 .u-color-black {
   color: black !important;
 }
+
 .u-background-black {
   background-color: white !important;
 }
@@ -16,6 +18,7 @@
 .u-color-white {
   color: white !important;
 }
+
 .u-background-white {
   background-color: white !important;
 }
@@ -23,6 +26,7 @@
 .u-color-grey {
   color: #eee !important;
 }
+
 .u-background-grey {
   background-color: #eee !important;
 }
@@ -30,6 +34,7 @@
 .u-color-greyAlt {
   color: #ddd !important;
 }
+
 .u-background-greyAlt {
   background-color: #ddd !important;
 }
@@ -37,6 +42,7 @@
 .u-color-greyMid {
   color: #444e57 !important;
 }
+
 .u-background-greyMid {
   background-color: #444e57 !important;
 }
@@ -44,13 +50,23 @@
 .u-color-greyDark {
   color: #30373d !important;
 }
+
 .u-background-greyDark {
   background-color: #30373d !important;
+}
+
+.u-color-grey-10 {
+  color: #a5abb0 !important;
+}
+
+.u-background-grey-10 {
+  background-color: #a5abb0 !important;
 }
 
 .u-color-100 {
   color: var(--Color-primary) !important;
 }
+
 .u-background-100 {
   background-color: var(--Color-primary) !important;
 }
@@ -58,6 +74,7 @@
 .u-color-10 {
   color: color(var(--Color-primary) l(10%)) !important;
 }
+
 .u-background-10 {
   background-color: color(var(--Color-primary) l(10%)) !important;
 }
@@ -65,6 +82,7 @@
 .u-color-20 {
   color: color(var(--Color-primary) l(20%)) !important;
 }
+
 .u-background-20 {
   background-color: color(var(--Color-primary) l(20%)) !important;
 }
@@ -72,6 +90,7 @@
 .u-color-30 {
   color: color(var(--Color-primary) l(30%)) !important;
 }
+
 .u-background-30 {
   background-color: color(var(--Color-primary) l(30%)) !important;
 }
@@ -79,6 +98,7 @@
 .u-color-40 {
   color: color(var(--Color-primary) l(40%)) !important;
 }
+
 .u-background-40 {
   background-color: color(var(--Color-primary) l(40%)) !important;
 }
@@ -86,6 +106,7 @@
 .u-color-50 {
   color: color(var(--Color-primary) l(50%)) !important;
 }
+
 .u-background-50 {
   background-color: color(var(--Color-primary) l(50%)) !important;
 }
@@ -93,6 +114,7 @@
 .u-color-60 {
   color: color(var(--Color-primary) l(60%)) !important;
 }
+
 .u-background-60 {
   background-color: color(var(--Color-primary) l(60%)) !important;
 }
@@ -100,6 +122,7 @@
 .u-color-70 {
   color: color(var(--Color-primary) l(70%)) !important;
 }
+
 .u-background-70 {
   background-color: color(var(--Color-primary) l(70%)) !important;
 }
@@ -107,6 +130,7 @@
 .u-color-80 {
   color: color(var(--Color-primary) l(80%)) !important;
 }
+
 .u-background-80 {
   background-color: color(var(--Color-primary) l(80%)) !important;
 }
@@ -114,6 +138,7 @@
 .u-color-90 {
   color: color(var(--Color-primary) l(90%)) !important;
 }
+
 .u-background-90 {
   background-color: color(var(--Color-primary) l(90%)) !important;
 }
@@ -121,6 +146,7 @@
 .u-color-95 {
   color: color(var(--Color-primary) l(95%)) !important;
 }
+
 .u-background-95 {
   background-color: color(var(--Color-primary) l(95%)) !important;
 }

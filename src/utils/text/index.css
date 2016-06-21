@@ -2,12 +2,24 @@
 
 :root {
   --Text-blockquote-border-color: #eee;
-  --Text-color-text-primary: #333333;
-  --Text-color-text-secondary: #5A6772;
+  --Text-color-text-primary: #333;
+  --Text-color-text-secondary: #5a6772;
   --Text-space-unit: 0.5rem;
 
-  --Text-preFormatted-font: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  "Lucida Sans Typewriter", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  --Text-preFormatted-font:
+    Consolas,
+    "Andale Mono WT",
+    "Andale Mono",
+    "Lucida Console",
+    "Lucida Sans Typewriter",
+    "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono",
+    "Liberation Mono",
+    "Nimbus Mono L",
+    Monaco,
+    "Courier New",
+    Courier,
+    monospace;
 }
 
 .u-textSecondary {
@@ -51,24 +63,29 @@
   font-weight: 900 !important;
 }
 
+.u-textNormal {
+  font-style: normal !important;
+}
+
 .u-textItalic {
   font-style: italic !important;
 }
 
 .u-textPreformatted {
-  overflow-x: auto !important;
   font-family: var(--Text-preFormatted-font) !important;
   max-height: 32em;
+  overflow-x: auto !important;
 }
+
 .u-textPreformatted:hover,
 .u-textPreformatted:focus {
-  width: min-content;
   max-width: min-content;
+  width: min-content;
 }
 
 .u-textBlockquote {
-  padding: 1.2rem 2.8rem !important;
   border-left: 0.5rem solid var(--Text-blockquote-border-color) !important;
+  padding: 1.2rem 2.8rem !important;
 }
 
 /*
@@ -115,6 +132,7 @@
 }
 
 @media (--md-viewport), (--lg-viewport) {
+
   .u-text-xxl {
     font-size: 5.4rem !important;
   }

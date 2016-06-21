@@ -1,9 +1,95 @@
+/** @define Footer; weak */
+
 :root {
-  --Footer-color-background: #30373d,
-  --Footer-color-text: #c6cace;
-  --Footer-color-text-light: #a5abb0,
+  --Footer-color-text-light: #a5abb0;
 
   --Footer-color-link: #65dcdf;
   --Footer-color-link-hover: #00aeb3;
-  --Footer-color-link-visited: #AA8DC6;
+  --Footer-color-link-visited: #aa8dc6;
+}
+
+.Footer {
+  @extend .u-background-greyDark;
+  @extend .u-color-white;
+  @extend .u-padding-bottom-xxl;
+  @extend .u-padding-top-xxl;
+}
+
+.Footer-logo {
+  @extend .u-floatLeft;
+  @extend .u-padding-right-xl;
+}
+
+.Footer-link {
+  @extend .u-text-s;
+  color: var(--Footer-color-link);
+}
+
+.Footer-siteName {
+  @extend .u-text-l;
+}
+
+.Footer-blockTitle {
+  @extend .u-text-m;
+  @extend .u-padding-bottom-xl;
+}
+
+.Footer-subBlock {
+  @extend .u-color-greyMid;
+  @extend .u-border-top-xxs;
+  @extend .u-padding-all-s;
+}
+
+.Footer-subTitle {
+  @extend .u-text-m;
+  @extend .u-color-white;
+  @extend .u-textWeight-400;
+  @extend .u-padding-bottom-l;
+}
+
+.Footer-block {
+  @extend .u-margin-top-xxl;
+  @extend .u-margin-bottom-xxl;
+}
+
+.Footer-block address {
+  @extend .u-text-xxs;
+  @extend .u-textNormal;
+  @extend .u-color-grey-10;
+}
+
+.Footer-block ul {
+  @extend .u-sizeFull;
+}
+
+.Footer-block li {
+  @extend .u-color-greyMid;
+  @extend .u-border-top-xxs;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+}
+
+.Footer-block a {
+  color: var(--Footer-color-link);
+  @extend .u-text-xxs;
+  @extend .u-textWeight-700;
+}
+
+.Footer-links {
+  color: var(--Footer-color-link);
+  @extend .u-border-top-xxs;
+  @extend .u-margin-top-xxl;
+  @extend .u-padding-top-xs;
+  @extend .u-sizeFull;
+}
+
+.Footer-links li {
+  @extend .u-inlineBlock;
+  @extend .u-margin-left-xs;
+  @extend .u-margin-right-xs;
+}
+
+.Footer-links a {
+  color: var(--Footer-color-link);
+  @extend .u-text-xxs;
 }
