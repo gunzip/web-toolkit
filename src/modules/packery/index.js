@@ -1,5 +1,4 @@
 import Packery from 'packery';
-
 import debounce from 'throttle-debounce/throttle';
 
 //	Without jquery
@@ -10,25 +9,21 @@ import debounce from 'throttle-debounce/throttle';
 //  });
 
 $(document).ready(function() {
-  let _packery = null;
-  if ($('.js-packery-container').length <= 0) {
-    return ;
-  }
-	var cnt = $("img").length;
+  let cnt = $("img").length;
   $("img").one("load", function() {
     if (--cnt === 0) {
-      _packery = new Packery('.js-packery-container', {
-        gutter: 0,
-        itemSelector: '.js-packery-item',
-        percentPosition: true
+      $('.js-packery-container').each(function(i, el) {
+        const _packery = new Packery(el, {
+          gutter: 0,
+          itemSelector: '.js-packery-item',
+          percentPosition: true
+        });
+        $(window).resize(debounce(250, function() {
+          if (_packery) _packery.layout();
+        }));
       });
     }
   });
-  /* FIXME */
-  $(window).resize(debounce(500, function() {
-    console.log('resize');
-    if (_packery) _packery.layout();
-  }));
 });
 
 module.exports = Packery;
