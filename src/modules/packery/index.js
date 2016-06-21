@@ -9,8 +9,8 @@ import debounce from 'throttle-debounce/throttle';
 //  });
 
 $(document).ready(function() {
-  let cnt = $("img").length;
-  $("img").one("load", function() {
+  let cnt = $(".js-packery-container img").length;
+  $(".js-packery-container img").one("load", function() {
     if (--cnt === 0) {
       $('.js-packery-container').each(function(i, el) {
         const _packery = new Packery(el, {
