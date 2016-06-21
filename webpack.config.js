@@ -3,7 +3,7 @@ var path = require('path');
 var libraryName = 'IWT';
 var outputFile = libraryName + '.js';
 
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var env = process.env.WEBPACK_ENV;
 
@@ -24,13 +24,13 @@ var loaders = [];
 if (env === 'build') {
   loaders.push({
     test: /\.css$/,
-    loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+    loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
   });
-  plugins.push(new ExtractTextPlugin("vendor.css"));
+  plugins.push(new ExtractTextPlugin('vendor.css'));
 } else {
   loaders.push({
     test: /\.css$/,
-    loader: "style-loader!css-loader"
+    loader: 'style-loader!css-loader'
   });
 }
 
@@ -44,6 +44,10 @@ var config = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
+  externals: {
+    'jquery': 'jQuery',
+    '$': 'jQuery',
+  },
   module: {
     loaders: [...loaders, {
       test: /(\.jsx|\.js)$/,
@@ -51,7 +55,7 @@ var config = {
 //      exclude: /(node_modules|bower_components)/
     }, {
       test: /(\.jsx|\.js)$/,
-      loader: "eslint-loader",
+      loader: 'eslint-loader',
       exclude: /node_modules/
     }]
   },

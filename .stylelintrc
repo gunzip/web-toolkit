@@ -3,7 +3,7 @@
     "stylelint-selector-bem-pattern"
   ],
   "rules": {
-    "selector-bem-pattern": {
+    "plugin/selector-bem-pattern": {
       "componentName": "[A-Z]+",
       "componentSelectors": {
         "initial": "^\\.{componentName}(?:-[a-z]+)?$",

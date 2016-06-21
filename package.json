@@ -8,6 +8,8 @@
     "jquery": "^3.0.0",
     "packery": "^2.1.1",
     "suitcss": "^2.0.0",
+    "suitcss-components-form": "^1.0.0",
+    "suitcss-preprocessor": "^2.0.0",
     "throttle-debounce": "^1.0.1"
   },
   "devDependencies": {
@@ -29,8 +31,7 @@
     "postcss-extend": "^1.0.1",
     "style-loader": "^0.13.1",
     "stylelint-config-suitcss": "^6.0.0",
-    "suitcss-components-form": "^1.0.0",
-    "suitcss-preprocessor": "^2.0.0",
+    "stylelint-selector-bem-pattern": "^1.0.0",
     "webpack": "^1.13.1"
   },
   "scripts": {
