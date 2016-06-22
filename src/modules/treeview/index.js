@@ -9,7 +9,7 @@ const Frtreeview = function ({
 		// firstPanelsOpenByDefault: firstPanelsOpenByDefault = true,
 		// multiselectable: multiselectable = true,
 		// readyClass: readyClass = 'fr-accordion--is-ready',
-		transitionLength: transitionLength = 250
+		// transitionLength: transitionLength = 250
 	} = {}) {
 
 	// CONSTANTS
@@ -23,6 +23,12 @@ const Frtreeview = function ({
 	// SETUP
 	// set accordion element NodeLists
 	let accordionContainers = _q(selector);
+
+  let $id = $(selector);
+  let $items = $id.find('li');
+  let $parents = $id.find('.tree-parent');
+  let $visibleItems = null;
+  let $activeItem = null;
 
   const keys = {
     tab: 9,
@@ -39,58 +45,48 @@ const Frtreeview = function ({
     asterisk: 106
   };
 
-// Function Treeview() is a class constructor for a Treeview widget. The widget binds to an
-// unordered list. The top-level <ul> must have role='tree'. All list items must have role='treeitem'.
-//
-// Tree groups must be embedded lists within the listitem that heads the group. the top <ul> of a group
-// must have role='group'. aria-expanded is used to indicate whether a group is expanded or collapsed. This
-// property must be set on the listitem the encapsulates the group.
-//
-// parent nodes must be given the class tree-parent.
-//
-
   function expandGroup($item) {
     var $group = $item.children('ul');
     $group.show().attr('aria-hidden', 'false');
     $item.attr('aria-expanded', 'true');
-    this.$visibleItems = this.$id.find('li:visible');
+    $visibleItems = $id.find('li:visible');
   }
 
-  function collapseGroup = function($item) {
+  function collapseGroup($item) {
     var $group = $item.children('ul');
     $group.hide().attr('aria-hidden', 'true');
     $item.attr('aria-expanded', 'false');
-    this.$visibleItems = this.$id.find('li:visible');
+    $visibleItems = $id.find('li:visible');
   }
 
-  function toggleGroup = function($item) {
+  function toggleGroup($item) {
     if ($item.attr('aria-expanded') == 'true') {
-      this.collapseGroup($item);
+      collapseGroup($item);
     } else {
-      this.expandGroup($item);
+      expandGroup($item);
     }
   }
 
-  function bindHandlers = function() {
+  function bindHandlers() {
     var thisObj = this;
 
-    this.$parents.click(function(e) {
+    $parents.click(function(e) {
       return thisObj.handleDblClick($(this), e);
     });
 
-    // this.$items.click(function(e) {
+    // $items.click(function(e) {
     //   return thisObj.handleClick($(this), e);
     // });
 
-    this.$items.keydown(function(e) {
+    $items.keydown(function(e) {
       return thisObj.handleKeyDown($(this), e);
     });
 
-    this.$items.keypress(function(e) {
+    $items.keypress(function(e) {
       return thisObj.handleKeyPress($(this), e);
     });
 
-    this.$items.focus(function(e) {
+    $items.focus(function(e) {
       return thisObj.handleFocus($(this), e);
     });
 
@@ -103,104 +99,104 @@ const Frtreeview = function ({
     });
   }
 
-  function updateStyling = function($item) {
-    this.$items.removeClass('tree-focus').attr('tabindex', '-1');
+  function updateStyling($item) {
+    $items.removeClass('tree-focus').attr('tabindex', '-1');
     $item.addClass('tree-focus').attr('tabindex', '0');
   }
 
-  function handleKeyDown = function($item, e) {
-    var curNdx = this.$visibleItems.index($item);
+  function handleKeyDown($item, e) {
+    var curNdx = $visibleItems.index($item);
 
     if ((e.altKey || e.ctrlKey) ||
-      (e.shiftKey && e.keyCode != this.keys.tab)) {
+      (e.shiftKey && e.keyCode != keys.tab)) {
       return true;
     }
 
     switch (e.keyCode) {
-      case this.keys.tab:
+      case keys.tab:
         {
-          this.$activeItem = null;
+          $activeItem = null;
           $item.removeClass('tree-focus');
           return true;
         }
-      case this.keys.home:
+      case keys.home:
         {
-          this.$activeItem = this.$parents.first();
-          this.$activeItem.focus();
+          $activeItem = $parents.first();
+          $activeItem.focus();
           e.stopPropagation();
           return false;
         }
-      case this.keys.end:
+      case keys.end:
         {
-          this.$activeItem = this.$visibleItems.last();
-          this.$activeItem.focus();
+          $activeItem = $visibleItems.last();
+          $activeItem.focus();
           e.stopPropagation();
           return false;
         }
-      case this.keys.enter:
-      case this.keys.space:
+      case keys.enter:
+      case keys.space:
         {
           if (!$item.is('.tree-parent')) {
             // do nothing
           } else {
-            this.toggleGroup($item, true);
+            toggleGroup($item, true);
           }
           e.stopPropagation();
           return false;
         }
-      case this.keys.left:
+      case keys.left:
         {
 
           if ($item.is('.tree-parent') && $item.attr('aria-expanded') == 'true') {
-            this.collapseGroup($item, true);
+            collapseGroup($item, true);
           } else {
             var $itemUL = $item.parent();
             var $itemParent = $itemUL.parent();
-            this.$activeItem = $itemParent;
-            this.$activeItem.focus();
+            $activeItem = $itemParent;
+            $activeItem.focus();
           }
           e.stopPropagation();
           return false;
         }
 
-      case this.keys.right:
+      case keys.right:
         {
           if (!$item.is('.tree-parent')) {
             // do nothing
           } else if ($item.attr('aria-expanded') == 'false') {
-            this.expandGroup($item, true);
+            expandGroup($item, true);
           } else {
-            this.$activeItem = $item.children('ul').children('li').first();
-            this.$activeItem.focus();
+            $activeItem = $item.children('ul').children('li').first();
+            $activeItem.focus();
           }
           e.stopPropagation();
           return false;
         }
 
-      case this.keys.up:
+      case keys.up:
         {
           if (curNdx > 0) {
-            var $prev = this.$visibleItems.eq(curNdx - 1);
-            this.$activeItem = $prev;
+            var $prev = $visibleItems.eq(curNdx - 1);
+            $activeItem = $prev;
             $prev.focus();
           }
           e.stopPropagation();
           return false;
         }
-      case this.keys.down:
+      case keys.down:
         {
-          if (curNdx < this.$visibleItems.length - 1) {
-            var $next = this.$visibleItems.eq(curNdx + 1);
-            this.$activeItem = $next;
+          if (curNdx < $visibleItems.length - 1) {
+            var $next = $visibleItems.eq(curNdx + 1);
+            $activeItem = $next;
             $next.focus();
           }
           e.stopPropagation();
           return false;
         }
-      case this.keys.asterisk:
+      case keys.asterisk:
         {
           var thisObj = this;
-          this.$parents.each(function() {
+          $parents.each(function() {
             if (thisObj.$activeItem[0] == $(this)[0]) {
               thisObj.expandGroup($(this), true);
             } else {
@@ -214,24 +210,24 @@ const Frtreeview = function ({
     return true;
   }
 
-  function handleKeyPress = function($item, e) {
+  function handleKeyPress($item, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true;
     }
 
     switch (e.keyCode) {
-      case this.keys.tab:
+      case keys.tab:
         {
           return true;
         }
-      case this.keys.enter:
-      case this.keys.home:
-      case this.keys.end:
-      case this.keys.left:
-      case this.keys.right:
-      case this.keys.up:
-      case this.keys.down:
+      case keys.enter:
+      case keys.home:
+      case keys.end:
+      case keys.left:
+      case keys.right:
+      case keys.up:
+      case keys.down:
         {
           e.stopPropagation();
           return false;
@@ -240,8 +236,8 @@ const Frtreeview = function ({
         {
           var chr = String.fromCharCode(e.which);
           var bMatch = false;
-          var itemNdx = this.$visibleItems.index($item);
-          var itemCnt = this.$visibleItems.length;
+          var itemNdx = $visibleItems.index($item);
+          var itemCnt = $visibleItems.length;
           var curNdx = itemNdx + 1;
 
           // check if the active item was the last one on the list
@@ -253,7 +249,7 @@ const Frtreeview = function ({
           // or the loop returns to the current menu item
           while (curNdx != itemNdx) {
 
-            var $curItem = this.$visibleItems.eq(curNdx);
+            var $curItem = $visibleItems.eq(curNdx);
             var titleChr = $curItem.text().charAt(0);
 
             if ($curItem.is('.tree-parent')) {
@@ -274,8 +270,8 @@ const Frtreeview = function ({
           }
 
           if (bMatch == true) {
-            this.$activeItem = this.$visibleItems.eq(curNdx);
-            this.$activeItem.focus();
+            $activeItem = $visibleItems.eq(curNdx);
+            $activeItem.focus();
           }
 
           e.stopPropagation();
@@ -286,61 +282,60 @@ const Frtreeview = function ({
     return true;
   }
 
-  function handleDblClick = function($id, e) {
+  function handleDblClick($id, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true;
     }
-    this.$activeItem = $id;
-    this.updateStyling($id);
-    this.toggleGroup($id, true);
+    $activeItem = $id;
+    updateStyling($id);
+    toggleGroup($id, true);
     e.stopPropagation();
     return false;
   }
 
-  function handleClick = function($id, e) {
+  function handleClick($id, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true;
     }
-    this.$activeItem = $id;
-    this.updateStyling($id);
+    $activeItem = $id;
+    updateStyling($id);
     e.stopPropagation();
     return false;
   }
 
-  function handleFocus = function($item) {
-    if (this.$activeItem == null) {
-      this.$activeItem = $item;
-    }
-    this.updateStyling(this.$activeItem);
-    return true;
+  function destroy() {
+    /* TODO */
   }
-
-  $(document).ready(function() {
-    $('.Treeview').each(function(i, el){
-        new Treeview(el);
-    });
-  });
 
   function init() {
-    this.$id = $(selector);
-    this.$items = this.$id.find('li');
-    this.$parents = this.$id.find('.tree-parent');
-    this.$visibleItems = null;
-    this.$activeItem = null;
 
-    this.$parents.each(function() {
+    // $(document).ready(function() {
+    //   $('.Treeview').each(function(i, el){
+    //       new Treeview(el);
+    //   });
+    // });
+
+    $parents.each(function() {
       if ($(this).attr('aria-expanded') == 'false') {
         $(this).children('ul').hide().attr('aria-hidden', 'true');
       }
     });
-    this.$visibleItems = this.$id.find('li:visible');
-    this.bindHandlers();
+
+    $visibleItems = $id.find('li:visible');
+    bindHandlers();
   }
 
   init();
 
+  // REVEAL API
+	return {
+		init,
+		destroy
+	}
+
 }
 
-module.exports = Treeview;
+
+export default Frtreeview;
