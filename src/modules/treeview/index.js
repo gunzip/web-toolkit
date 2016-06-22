@@ -67,38 +67,6 @@ const Frtreeview = function ({
     }
   }
 
-  function bindHandlers() {
-    var thisObj = this;
-
-    $parents.click(function(e) {
-      return thisObj.handleDblClick($(this), e);
-    });
-
-    // $items.click(function(e) {
-    //   return thisObj.handleClick($(this), e);
-    // });
-
-    $items.keydown(function(e) {
-      return thisObj.handleKeyDown($(this), e);
-    });
-
-    $items.keypress(function(e) {
-      return thisObj.handleKeyPress($(this), e);
-    });
-
-    $items.focus(function(e) {
-      return thisObj.handleFocus($(this), e);
-    });
-
-    $(document).click(function() {
-      if (thisObj.$activeItem != null) {
-        thisObj.$activeItem.removeClass('tree-focus');
-        thisObj.$activeItem = null;
-      }
-      return true;
-    });
-  }
-
   function updateStyling($item) {
     $items.removeClass('tree-focus').attr('tabindex', '-1');
     $item.addClass('tree-focus').attr('tabindex', '0');
@@ -303,6 +271,32 @@ const Frtreeview = function ({
     updateStyling($id);
     e.stopPropagation();
     return false;
+  }
+
+  const bindHandlers = () => {
+    $parents.click(function(e) {
+      return handleDblClick($(this), e);
+    });
+
+    // $items.click(function(e) {
+    //   return thisObj.handleClick($(this), e);
+    // });
+
+    $items.keydown(function(e) {
+      return handleKeyDown($(this), e);
+    });
+
+    $items.keypress(function(e) {
+      return handleKeyPress($(this), e);
+    });
+
+    $(document).click(function() {
+      if ($activeItem != null) {
+        $activeItem.removeClass('tree-focus');
+        $activeItem = null;
+      }
+      return true;
+    });
   }
 
   function destroy() {
