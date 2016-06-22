@@ -1,36 +1,35 @@
-/** @define Alert; weak; */
+/** @define Alert */
 
 :root {
-  --Alert-space-unit: 0.5rem;
+  --Alert-error-bg: #ffcbcb;
+  --Alert-error-color: #1e1212;
+  --Alert-error-border: #b50000;
 
-  --Alert-error-bg: #FFCBCB;
-  --Alert-error-color: #1E1212;
-  --Alert-error-border: #1E1212;
-
-  --Alert-warning-bg: #FFEF9F;
+  --Alert-warning-bg: #ffef9f;
   --Alert-warning-color: #685815;
-  --Alert-warning-border: #1E1212;
+  --Alert-warning-border: #1e1212;
 
-  --Alert-success-bg: #DFF0D8;
-  --Alert-success-color: #3C763D;
-  --Alert-success-border: #D6E9C6;
+  --Alert-success-bg: #dff0d8;
+  --Alert-success-color: #3c763d;
+  --Alert-success-border: #d6e9c6;
 
-  --Alert-info-bg: #C6F3F5;
+  --Alert-info-bg: #c6f3f5;
   --Alert-info-color: #006366;
-  --Alert-info-border: #1E1212;
+  --Alert-info-border: #1e1212;
 }
 
 .Alert {
-  padding: 0 calc(4 * var(--Alert-space-unit));
-  border-left: calc(2 * var(--Alert-space-unit)) solid #FAFAFA;
+  border-left-style: solid;
+  border-left-width: 0.5em;
+  padding-left: 1em;
 }
 
 .Alert--error {
   border-left-color: color(var(--Alert-error-bg) l(-40%));
   color: var(--Alert-error-color);
 }
-.Alert--errorFull {
-  @extend .Alert--error;
+
+.Alert--error.is-full {
   background: var(--Alert-error-bg);
 }
 
@@ -38,8 +37,8 @@
   border-left-color: color(var(--Alert-warning-bg) l(-40%));
   color: var(--Alert-warning-color);
 }
-.Alert--warningFull {
-  @extend .Alert--warning;
+
+.Alert--warning.is-full {
   background: var(--Alert-warning-bg);
 }
 
@@ -47,8 +46,8 @@
   border-left-color: color(var(--Alert-success-bg) l(-40%));
   color: var(--Alert-success-color);
 }
-.Alert--successFull {
-  @extend .Alert--success;
+
+.Alert--success.is-full {
   background: var(--Alert-success-bg);
 }
 
@@ -56,7 +55,7 @@
   border-left-color: color(var(--Alert-info-bg) l(-40%));
   color: var(--Alert-info-color);
 }
-.Alert-infoFull {
-  @extend .Alert--info;
+
+.Alert-info.is-full {
   background: var(--Alert-info-bg);
 }

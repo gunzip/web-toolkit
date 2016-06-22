@@ -4,12 +4,7 @@
   ],
   "rules": {
     "plugin/selector-bem-pattern": {
-      "componentName": "[A-Z]+",
-      "componentSelectors": {
-        "initial": "^\\.{componentName}(?:-[A-Za-z]+)?$",
-        "combined": "^\\.combined-{componentName}-[a-z]+$"
-      },
-      "utilitySelectors": "^\\.u-[-A-Za-z0-9]+$"
+      "preset": "suit"
     },
     "at-rule-empty-line-before": null,
   },

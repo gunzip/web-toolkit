@@ -7,14 +7,15 @@
  *  alas, not included in npm registry.
  *
  */
+
 /** @define Table; weak; */
 
 :root {
-  --Table-border-color: #D6DCE3;
-  --Table-cell-pad-h: 5px;
-  --Table-cell-pad-v: 10px;
-  --Table-hover-color: #E5F1FA;
-  --Table-stripe-color: #F6F7F9;
+  --Table-border-color: #d6dce3;
+  --Table-cell-pad-h: 0.5em;
+  --Table-cell-pad-v: 1em;
+  --Table-hover-color: #e5f1fa;
+  --Table-stripe-color: #f6f7f9;
 }
 
 .Table {
@@ -81,7 +82,6 @@
  */
 .Table--withBorder tr {
   border-bottom: 1px var(--Table-border-color) solid;
-  /*margin-top: var(--Table-cell-pad-v);*/
 }
 
 .Table--withBorder th {
@@ -114,57 +114,68 @@
    ========================================================================== */
 
 .Table--responsive {
-  /*!
-  // IE needs inline-block to position scrolling shadows otherwise use:
-  // display: block;
-  // max-width: min-content;
+  /*
+   * IE needs inline-block to position scrolling shadows otherwise use:
+   * display: block;
+   * max-width: min-content;
   */
-  display: inline-block;
-  vertical-align: top;
-  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 
+  display: inline-block;
+  max-width: 100%;
   overflow-x: auto;
+  vertical-align: top;
 
   /* optional - looks better for small cell values */
   white-space: nowrap;
-
-  border-collapse: collapse;
-  border-spacing: 0;
   width: auto;
 }
 
 .Table--responsive,
 .Table--flip tbody {
-  /* optional - enable iOS momentum scrolling */
-  -webkit-overflow-scrolling: touch;
-
   /* scrolling shadows */
-  background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
-              radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
-  background-size: 10px 100%, 10px 100%;
+  background:
+    radial-gradient(
+      left,
+      ellipse,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0) 75%
+    ) 0 center,
+    radial-gradient(
+      right,
+      ellipse,
+      rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0) 75%
+    ) 100% center;
+
   background-attachment: scroll, scroll;
   background-repeat: no-repeat;
+  background-size: 10px 100%, 10px 100%;
+
+  /* optional - enable iOS momentum scrolling */
+  -webkit-overflow-scrolling: touch;
 }
 
 .Table--responsive td:first-child,
 .Table--flip tbody tr:first-child {
-  background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat;
   background-size: 20px 100%;
 }
 
 .Table--responsive td:last-child,
 .Table--flip tbody tr:last-child {
-  background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
-  background-repeat: no-repeat;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
   background-position: 100% 0;
+  background-repeat: no-repeat;
   background-size: 20px 100%;
 }
 
 .Table--flip {
+  background: none;
   display: flex;
   overflow: hidden;
-  background: none;
 }
 
 .Table--flip thead {
@@ -175,16 +186,16 @@
 
 .Table--flip tbody {
   display: flex;
-  position: relative;
   overflow-x: auto;
   overflow-y: hidden;
+  position: relative;
 }
 
 .Table--flip tr {
   display: flex;
   flex-direction: column;
-  min-width: min-content;
   flex-shrink: 0;
+  min-width: min-content;
 }
 
 .Table--flip td,
@@ -199,6 +210,6 @@
 /* @FIXME */
 .Table--flip th {
   border-bottom: 0 !important;
-  border-top: 1px solid var(--Table-border-color) !important;
   border-right: 2px solid var(--Table-border-color) !important;
+  border-top: 1px solid var(--Table-border-color) !important;
 }

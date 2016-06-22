@@ -1,20 +1,16 @@
 /** @define Prose; weak; */
 
-@import '../../utils/text';
-
 :root {
-  --Prose-color-text-primary: #1C2024;
-  --Prose-color-text-secondary: #5A6772;
-  --Prose-color-text-highlighted: #B2EBED;
+  --Prose-color-text-primary: #1c2024;
+  --Prose-color-text-secondary: #5a6772;
+  --Prose-color-text-highlighted: #b2ebed;
 
-  --Prose-color-link: #0066cc;
-  --Prose-color-link-hover: #003366;
-  --Prose-color-link-visited: #0066cc;
+  --Prose-color-link: #06c;
+  --Prose-color-link-hover: #036;
+  --Prose-color-link-visited: #06c;
 
-  --Prose-color-text-primary: #333333;
-  --Prose-color-text-secondary: #5A6772;
-
-  --Prose-space-unit: 0.5rem;
+  --Prose-color-text-primary: #333;
+  --Prose-color-text-secondary: #5a6772;
 }
 
 .Prose blockquote {
@@ -23,7 +19,7 @@
 
 .Prose p,
 .Prose pre {
-  margin-bottom: calc(6 * var(--Prose-space-unit));
+  @extend .u-margin-bottom-xl;
 }
 
 .Prose p,
@@ -60,9 +56,9 @@
 
 .Prose ul,
 .Prose ol {
+  @extend .u-margin-bottom-xl;
+  @extend .u-margin-left-xl;
   list-style-position: outside;
-  margin-bottom: calc(6 * var(--Prose-space-unit));
-  margin-left: 1.5em;
 }
 
 .Prose ul {
@@ -74,5 +70,6 @@
 }
 
 .Prose li {
-  padding: calc(var(--Prose-space-unit) / 2) 0;
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
 }

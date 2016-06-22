@@ -26,5 +26,5 @@
 }
 
 .u-layoutRelease {
-  max-width: auto;
+  max-width: auto !important;
 }
