@@ -19,18 +19,6 @@
     );
 }
 
-/* .Treeview [aria-hidden=true] {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.Treeview [aria-hidden=false] {
-  height: auto;
-  max-height: 2000px;
-  transition: all 0.3s ease-in-out;
-} */
-
 .Treeview [aria-hidden="true"] {
   display: none;
 }
