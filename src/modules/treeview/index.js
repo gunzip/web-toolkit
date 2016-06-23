@@ -1,29 +1,38 @@
 /* global $ */
 
 /*
+ *	TODO:
+ *
+ *		- repack as a module
+ *		- add classes for inner ul(s)
+ *		- support CSS transition with setTimeout
+ *		- refactor without jQuery
+ */
+
+/*
  * Porting of http://www.oaa-accessibility.org/examplep/treeview1/
  */
-const Frtreeview = function ({
-		selector: selector = '.js-fr-treeview',
-		openOnClick: openOnClick = true,
-		classFocused: classFocused = 'tree-focus',
-		classParent: classParent = 'tree-parent'
-		// multiselectable: multiselectable = true,
-		// readyClass: readyClass = 'fr-accordion--is-ready',
-		// transitionLength: transitionLength = 250
-	} = {}) {
+const Frtreeview = function({
+  selector: selector = '.js-fr-treeview',
+  openOnClick: openOnClick = true,
+  classFocused: classFocused = 'fr-tree-focus',
+  classParent: classParent = 'fr-tree-parent',
+  multiselectable: multiselectable = false
+    // readyClass: readyClass = 'fr-accordion--is-ready',
+    // transitionLength: transitionLength = 250
+} = {}) {
 
-	// CONSTANTS
-	const doc = document;
-	const docEl = doc.documentElement;
-	const _q = (el, ctx = doc) => [].slice.call(ctx.querySelectorAll(el));
+  // CONSTANTS
+  const doc = document;
+  const docEl = doc.documentElement;
+  const _q = (el, ctx = doc) => [].slice.call(ctx.querySelectorAll(el));
 
-	// SUPPORTS
-	if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return null;
+  // SUPPORTS
+  if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return null;
 
-	// SETUP
-	// set treeview element NodeLists
-	let treeviewContainers = _q(selector);
+  // SETUP
+  // set treeview element NodeLists
+  let treeviewContainers = _q(selector);
 
   const keys = {
     tab: 9,
@@ -40,6 +49,23 @@ const Frtreeview = function ({
     asterisk: 106
   };
 
+  function _collapseAll(treeview) {
+    treeview.$parents.each(function() {
+      if ($(this).attr('aria-expanded') == 'false') {
+        $(this).children('ul').hide().attr('aria-hidden', 'true');
+      }
+    });
+    treeview.$visibleItems = treeview.$el.find('li:visible');
+  }
+
+  function _collapseSiblings(treeview, $item) {
+    $item.closest('ul').find('.' + classParent).not($item).each(function() {
+      $(this).children('ul').hide().attr('aria-hidden', 'true');
+			$(this).attr('aria-expanded', 'false');
+    });
+    treeview.$visibleItems = treeview.$el.find('li:visible');
+  }
+
   function _expandGroup(treeview, $item) {
     let $group = $item.children('ul');
     $group.show().attr('aria-hidden', 'false');
@@ -55,6 +81,9 @@ const Frtreeview = function ({
   }
 
   function _toggleGroup(treeview, $item) {
+    if (!multiselectable) {
+      _collapseSiblings(treeview, $item);
+    }
     if ($item.attr('aria-expanded') == 'true') {
       _collapseGroup(treeview, $item);
     } else {
@@ -270,19 +299,18 @@ const Frtreeview = function ({
   }
 
   function _bindEvents(treeview) {
-		if (openOnClick) {
-			treeview.$parents.click(function(e) {
-	      return _handleDblClick(treeview, $(this), e);
-	    });
-		}
-		else {
-	    treeview.$parents.click(function(e) {
-	      return _handleDblClick(treeview, $(this), e);
-	    });
-	    treeview.$items.click(function(e) {
-	      return _handleClick(treeview, $(this), e);
-	    });
-		}
+    if (openOnClick) {
+      treeview.$parents.click(function(e) {
+        return _handleDblClick(treeview, $(this), e);
+      });
+    } else {
+      treeview.$parents.click(function(e) {
+        return _handleDblClick(treeview, $(this), e);
+      });
+      treeview.$items.click(function(e) {
+        return _handleClick(treeview, $(this), e);
+      });
+    }
 
     treeview.$items.keydown(function(e) {
       return _handleKeyDown(treeview, $(this), e);
@@ -305,51 +333,43 @@ const Frtreeview = function ({
     /* TODO */
   }
 
-  function _initTreeview(treeview) {
-    treeview.$parents.each(function() {
-      if ($(this).attr('aria-expanded') == 'false') {
-        $(this).children('ul').hide().attr('aria-hidden', 'true');
+  function _addA11y($el) {
+    $el.attr('role', 'tree');
+
+    // Put role="treeitem" on every LI
+    // Put aria-expanded="false" on every LI (if it has no aria-expanded attr)
+    // Put tabindex="-1" on every LI (if it's not the first one)
+    // Put class=<classParent> on every LI that contains an UL
+    $el.find('li').each(function(i, li) {
+      const $li = $(li);
+      $li.attr('role', 'treeitem');
+      $li.attr('tabindex', '-1');
+      if ($li.find('ul').length !== 0) {
+        if (!li.hasAttribute('aria-expanded')) {
+          $li.attr('aria-expanded', 'false');
+        }
+        $li.addClass(classParent);
       }
     });
-    treeview.$visibleItems = treeview.$el.find('li:visible');
-  }
 
-  function _addA11y($el) {
-		$el.attr('role', 'tree');
-
-		// Put role="treeitem" on every LI
-		// Put aria-expanded="false" on every LI (if it has no aria-expanded attr)
-		// Put tabindex="-1" on every LI (if it's not the first one)
-		// Put class=<classParent> on every LI that contains an UL
-		$el.find('li').each(function(i, li) {
-			const $li = $(li);
-			$li.attr('role', 'treeitem');
-			$li.attr('tabindex', '-1');
-			if ($li.find('ul').length !== 0) {
-				if (!li.hasAttribute('aria-expanded')) {
-					$li.attr('aria-expanded', 'false');
-				}
-				$li.addClass(classParent);
-			}
-		});
-
-		// Put role="group" on every contained UL
-		$el.find('ul').attr('role', 'group');
+    // Put role="group" on every contained UL
+    $el.find('ul').attr('role', 'group');
   }
 
   function init() {
     if (treeviewContainers.length) {
-  		treeviewContainers.forEach((treeviewContainer) => {
-				_addA11y($(treeviewContainer));
+      treeviewContainers.forEach((treeviewContainer) => {
+        const $el = $(treeviewContainer);
+        _addA11y($el);
         let treeview = {
-          $el: $(treeviewContainer),
-          $items: $(treeviewContainer).find('li'),
-          $parents: $(treeviewContainer).find('.' + classParent),
+          $el: $el,
+          $items: $el.find('li'),
+          $parents: $el.find('.' + classParent),
           $visibleItems: null,
           $activeItem: null
         };
-        _initTreeview(treeview);
-  			_bindEvents(treeview);
+        _collapseAll(treeview);
+        _bindEvents(treeview);
       });
     }
   }
@@ -357,10 +377,10 @@ const Frtreeview = function ({
   init();
 
   // REVEAL API
-	return {
-		init,
-		destroy
-	}
+  return {
+    init,
+    destroy
+  }
 
 }
 
