@@ -1,7 +1,13 @@
 /* global $ */
 
+/*
+ * Porting of http://www.oaa-accessibility.org/examplep/treeview1/
+ */
 const Frtreeview = function ({
 		selector: selector = '.js-fr-treeview',
+		openOnClick: openOnClick = true,
+		classFocused: classFocused = 'tree-focus',
+		classParent: classParent = 'tree-parent'
 		// headerSelector: headerSelector = '.js-fr-accordion__header',
 		// headerIdPrefix: headerIdPrefix = 'accordion-header',
 		// panelSelector: panelSelector = '.js-fr-accordion__panel',
@@ -18,17 +24,11 @@ const Frtreeview = function ({
 	const _q = (el, ctx = doc) => [].slice.call(ctx.querySelectorAll(el));
 
 	// SUPPORTS
-	if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return;
+	if (!('querySelector' in doc) || !('addEventListener' in window) || !docEl.classList) return null;
 
 	// SETUP
-	// set accordion element NodeLists
-	let accordionContainers = _q(selector);
-
-  let $id = $(selector);
-  let $items = $id.find('li');
-  let $parents = $id.find('.tree-parent');
-  let $visibleItems = null;
-  let $activeItem = null;
+	// set treeview element NodeLists
+	let treeviewContainers = _q(selector);
 
   const keys = {
     tab: 9,
@@ -45,35 +45,35 @@ const Frtreeview = function ({
     asterisk: 106
   };
 
-  function expandGroup($item) {
-    var $group = $item.children('ul');
+  function _expandGroup(treeview, $item) {
+    let $group = $item.children('ul');
     $group.show().attr('aria-hidden', 'false');
     $item.attr('aria-expanded', 'true');
-    $visibleItems = $id.find('li:visible');
+    treeview.$visibleItems = treeview.$el.find('li:visible');
   }
 
-  function collapseGroup($item) {
-    var $group = $item.children('ul');
+  function _collapseGroup(treeview, $item) {
+    let $group = $item.children('ul');
     $group.hide().attr('aria-hidden', 'true');
     $item.attr('aria-expanded', 'false');
-    $visibleItems = $id.find('li:visible');
+    treeview.$visibleItems = treeview.$el.find('li:visible');
   }
 
-  function toggleGroup($item) {
+  function _toggleGroup(treeview, $item) {
     if ($item.attr('aria-expanded') == 'true') {
-      collapseGroup($item);
+      _collapseGroup(treeview, $item);
     } else {
-      expandGroup($item);
+      _expandGroup(treeview, $item);
     }
   }
 
-  function updateStyling($item) {
-    $items.removeClass('tree-focus').attr('tabindex', '-1');
-    $item.addClass('tree-focus').attr('tabindex', '0');
+  function _updateStyling(treeview, $item) {
+    treeview.$items.removeClass(classFocused).attr('tabindex', '-1');
+    $item.addClass(classFocused).attr('tabindex', '0');
   }
 
-  function handleKeyDown($item, e) {
-    var curNdx = $visibleItems.index($item);
+  function _handleKeyDown(treeview, $item, e) {
+    let curNdx = treeview.$visibleItems.index($item);
 
     if ((e.altKey || e.ctrlKey) ||
       (e.shiftKey && e.keyCode != keys.tab)) {
@@ -83,45 +83,48 @@ const Frtreeview = function ({
     switch (e.keyCode) {
       case keys.tab:
         {
-          $activeItem = null;
-          $item.removeClass('tree-focus');
+          treeview.$activeItem = null;
+          $item.removeClass(classFocused);
           return true;
         }
+
       case keys.home:
         {
-          $activeItem = $parents.first();
-          $activeItem.focus();
+          treeview.$activeItem = treeview.$parents.first();
+          treeview.$activeItem.focus();
           e.stopPropagation();
           return false;
         }
+
       case keys.end:
         {
-          $activeItem = $visibleItems.last();
-          $activeItem.focus();
+          treeview.$activeItem = treeview.$visibleItems.last();
+          treeview.$activeItem.focus();
           e.stopPropagation();
           return false;
         }
+
       case keys.enter:
       case keys.space:
         {
-          if (!$item.is('.tree-parent')) {
+          if (!$item.is('.' + classParent)) {
             // do nothing
           } else {
-            toggleGroup($item, true);
+            _toggleGroup(treeview, $item);
           }
           e.stopPropagation();
           return false;
         }
+
       case keys.left:
         {
-
-          if ($item.is('.tree-parent') && $item.attr('aria-expanded') == 'true') {
-            collapseGroup($item, true);
+          if ($item.is('.' + classParent) && $item.attr('aria-expanded') == 'true') {
+            _collapseGroup(treeview, $item);
           } else {
-            var $itemUL = $item.parent();
-            var $itemParent = $itemUL.parent();
-            $activeItem = $itemParent;
-            $activeItem.focus();
+            let $itemUL = $item.parent();
+            let $itemParent = $itemUL.parent();
+            treeview.$activeItem = $itemParent;
+            treeview.$activeItem.focus();
           }
           e.stopPropagation();
           return false;
@@ -129,13 +132,13 @@ const Frtreeview = function ({
 
       case keys.right:
         {
-          if (!$item.is('.tree-parent')) {
+          if (!$item.is('.' + classParent)) {
             // do nothing
           } else if ($item.attr('aria-expanded') == 'false') {
-            expandGroup($item, true);
+            _expandGroup(treeview, $item);
           } else {
-            $activeItem = $item.children('ul').children('li').first();
-            $activeItem.focus();
+            treeview.$activeItem = $item.children('ul').children('li').first();
+            treeview.$activeItem.focus();
           }
           e.stopPropagation();
           return false;
@@ -144,41 +147,39 @@ const Frtreeview = function ({
       case keys.up:
         {
           if (curNdx > 0) {
-            var $prev = $visibleItems.eq(curNdx - 1);
-            $activeItem = $prev;
+            let $prev = treeview.$visibleItems.eq(curNdx - 1);
+            treeview.$activeItem = $prev;
             $prev.focus();
           }
           e.stopPropagation();
           return false;
         }
+
       case keys.down:
         {
-          if (curNdx < $visibleItems.length - 1) {
-            var $next = $visibleItems.eq(curNdx + 1);
-            $activeItem = $next;
+          if (curNdx < treeview.$visibleItems.length - 1) {
+            let $next = treeview.$visibleItems.eq(curNdx + 1);
+            treeview.$activeItem = $next;
             $next.focus();
           }
           e.stopPropagation();
           return false;
         }
+
       case keys.asterisk:
         {
-          var thisObj = this;
-          $parents.each(function() {
-            if (thisObj.$activeItem[0] == $(this)[0]) {
-              thisObj.expandGroup($(this), true);
-            } else {
-              thisObj.expandGroup($(this), false);
-            }
+          treeview.$parents.each(function() {
+            _expandGroup(treeview, $(this));
           });
           e.stopPropagation();
           return false;
         }
+
     }
     return true;
   }
 
-  function handleKeyPress($item, e) {
+  function _handleKeyPress(treeview, $item, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true;
@@ -202,11 +203,11 @@ const Frtreeview = function ({
         }
       default:
         {
-          var chr = String.fromCharCode(e.which);
-          var bMatch = false;
-          var itemNdx = $visibleItems.index($item);
-          var itemCnt = $visibleItems.length;
-          var curNdx = itemNdx + 1;
+          let chr = String.fromCharCode(e.which);
+          let bMatch = false;
+          let itemNdx = treeview.$visibleItems.index($item);
+          let itemCnt = treeview.$visibleItems.length;
+          let curNdx = itemNdx + 1;
 
           // check if the active item was the last one on the list
           if (curNdx == itemCnt) {
@@ -217,10 +218,10 @@ const Frtreeview = function ({
           // or the loop returns to the current menu item
           while (curNdx != itemNdx) {
 
-            var $curItem = $visibleItems.eq(curNdx);
-            var titleChr = $curItem.text().charAt(0);
+            let $curItem = treeview.$visibleItems.eq(curNdx);
+            let titleChr = $curItem.text().charAt(0);
 
-            if ($curItem.is('.tree-parent')) {
+            if ($curItem.is('.' + classParent)) {
               titleChr = $curItem.find('span').text().charAt(0);
             }
 
@@ -238,8 +239,8 @@ const Frtreeview = function ({
           }
 
           if (bMatch == true) {
-            $activeItem = $visibleItems.eq(curNdx);
-            $activeItem.focus();
+            treeview.$activeItem = treeview.$visibleItems.eq(curNdx);
+            treeview.$activeItem.focus();
           }
 
           e.stopPropagation();
@@ -250,50 +251,56 @@ const Frtreeview = function ({
     return true;
   }
 
-  function handleDblClick($id, e) {
+  function _handleDblClick(treeview, $item, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true;
     }
-    $activeItem = $id;
-    updateStyling($id);
-    toggleGroup($id, true);
+    treeview.$activeItem = $item;
+    _updateStyling(treeview, $item);
+    _toggleGroup(treeview, $item);
     e.stopPropagation();
     return false;
   }
 
-  function handleClick($id, e) {
+  function _handleClick(treeview, $item, e) {
     if (e.altKey || e.ctrlKey || e.shiftKey) {
       // do nothing
       return true;
     }
-    $activeItem = $id;
-    updateStyling($id);
+    treeview.$activeItem = treeview.$el;
+    _updateStyling(treeview, $item);
     e.stopPropagation();
     return false;
   }
 
-  const bindHandlers = () => {
-    $parents.click(function(e) {
-      return handleDblClick($(this), e);
+  function _bindEvents(treeview) {
+		if (openOnClick) {
+			treeview.$parents.click(function(e) {
+	      return _handleDblClick(treeview, $(this), e);
+	    });
+		}
+		else {
+	    treeview.$parents.click(function(e) {
+	      return _handleDblClick(treeview, $(this), e);
+	    });
+	    treeview.$items.click(function(e) {
+	      return _handleClick(treeview, $(this), e);
+	    });
+		}
+
+    treeview.$items.keydown(function(e) {
+      return _handleKeyDown(treeview, $(this), e);
     });
 
-    // $items.click(function(e) {
-    //   return thisObj.handleClick($(this), e);
-    // });
-
-    $items.keydown(function(e) {
-      return handleKeyDown($(this), e);
-    });
-
-    $items.keypress(function(e) {
-      return handleKeyPress($(this), e);
+    treeview.$items.keypress(function(e) {
+      return _handleKeyPress(treeview, $(this), e);
     });
 
     $(document).click(function() {
-      if ($activeItem != null) {
-        $activeItem.removeClass('tree-focus');
-        $activeItem = null;
+      if (treeview.$activeItem != null) {
+        treeview.$activeItem.removeClass(classFocused);
+        treeview.$activeItem = null;
       }
       return true;
     });
@@ -303,22 +310,34 @@ const Frtreeview = function ({
     /* TODO */
   }
 
-  function init() {
-
-    // $(document).ready(function() {
-    //   $('.Treeview').each(function(i, el){
-    //       new Treeview(el);
-    //   });
-    // });
-
-    $parents.each(function() {
+  function _initTreeview(treeview) {
+    treeview.$parents.each(function() {
       if ($(this).attr('aria-expanded') == 'false') {
         $(this).children('ul').hide().attr('aria-hidden', 'true');
       }
     });
+    treeview.$visibleItems = treeview.$el.find('li:visible');
+  }
 
-    $visibleItems = $id.find('li:visible');
-    bindHandlers();
+  function _addA11y(treeview) {
+    /* TODO */
+  }
+
+  function init() {
+    if (treeviewContainers.length) {
+  		treeviewContainers.forEach((treeviewContainer) => {
+        let treeview = {
+          $el: $(treeviewContainer),
+          $items: $(treeviewContainer).find('li'),
+          $parents: $(treeviewContainer).find('.' + classParent),
+          $visibleItems: null,
+          $activeItem: null
+        };
+        _initTreeview(treeview);
+  			_addA11y(treeview);
+  			_bindEvents(treeview);
+      });
+    }
   }
 
   init();
@@ -331,5 +350,6 @@ const Frtreeview = function ({
 
 }
 
+new Frtreeview();
 
 export default Frtreeview;
