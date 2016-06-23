@@ -8,10 +8,6 @@
   /* stylelint-enable */
 }
 
-.Treeview [aria-hidden] {
-  transition: 0.5s all;
-}
-
 .Treeview [aria-expanded] > a {
   background-image: var(--Treeview-link-arrow);
   background-position: right var(--Treeview-link-padding) center;
@@ -21,6 +17,32 @@
     calc(
       var(--Treeview-link-arrow-width) + (2 * var(--Treeview-link-padding))
     );
+}
+
+/* .Treeview [aria-hidden=true] {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.Treeview [aria-hidden=false] {
+  height: auto;
+  max-height: 2000px;
+  transition: all 0.3s ease-in-out;
+} */
+
+.Treeview [aria-hidden] {
+  overflow: hidden;
+  transition: height 250ms ease-out, visibility 250ms;
+}
+
+.Treeview [aria-hidden="true"] {
+  height: 0;
+  visibility: hidden;
+}
+
+.Treeview [aria-hidden="false"] {
+  visibility: visible;
 }
 
 .Treeview ul li {
@@ -36,19 +58,19 @@
 .Treeview ul ul ul a:hover {
   @extend .u-color-white;
   @extend .u-background-30;
-  padding-left: 3em !important;
+  padding-left: 4em !important;
 }
 
 .Treeview ul ul a,
 .Treeview ul ul a:hover {
   @extend .u-color-20;
   @extend .u-background-80;
-  padding-left: 2em !important;
+  padding-left: 3em !important;
 }
 
 .Treeview ul a,
 .Treeview ul a:hover {
   @extend .u-color-20;
   @extend .u-background-90;
-  padding-left: 1em !important;
+  padding-left: 2em !important;
 }

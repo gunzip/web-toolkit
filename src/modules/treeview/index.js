@@ -2,10 +2,7 @@
 
 /*
  *	TODO:
- *
- *		- repack as a module
- *		- add classes for inner ul(s)
- *		- support CSS transition with setTimeout
+ *		- repack as a frend _component and CSS
  *		- refactor without jQuery
  */
 
@@ -17,9 +14,9 @@ const Frtreeview = function({
   openOnClick: openOnClick = true,
   classFocused: classFocused = 'fr-tree-focus',
   classParent: classParent = 'fr-tree-parent',
-  multiselectable: multiselectable = false
+  multiselectable: multiselectable = false,
+	transitionLength: transitionLength = 250
     // readyClass: readyClass = 'fr-accordion--is-ready',
-    // transitionLength: transitionLength = 250
 } = {}) {
 
   // CONSTANTS
@@ -49,10 +46,46 @@ const Frtreeview = function({
     asterisk: 106
   };
 
+	function _getPanelHeight(panel) {
+		//	set auto height and read offsetHeight
+		panel.style.height = 'auto';
+		let height = panel.offsetHeight;
+		//	remove style
+		panel.style.height = '';
+		return height;
+	}
+
+	function _setPanelHeight(panel) {
+		//	get panel height
+		let panelHeight = _getPanelHeight(panel);
+		//	recalc style and layout
+		panel.getBoundingClientRect();
+		//	set height on panel, reset to 'auto' on transition complete
+		panel.style.height = panelHeight + 'px';
+		setTimeout(() => {
+			panel.style.transition = 'none';
+			panel.style.height = 'auto'
+			//	recalc style and layout
+			panel.getBoundingClientRect();
+			panel.style.transition = '';
+		}, transitionLength);
+	}
+
+	function _unsetPanelHeight(panel) {
+		//	get panel height
+		let panelHeight = _getPanelHeight(panel);
+		//	set panel height from 'auto' to px
+		panel.style.height = panelHeight + 'px';
+		//	recalc style and layout
+		panel.getBoundingClientRect();
+		//	reset height
+		panel.style.height = 0;
+	}
+
   function _collapseAll(treeview) {
     treeview.$parents.each(function() {
       if ($(this).attr('aria-expanded') == 'false') {
-        $(this).children('ul').hide().attr('aria-hidden', 'true');
+        $(this).children('ul').attr('aria-hidden', 'true');
       }
     });
     treeview.$visibleItems = treeview.$el.find('li:visible');
@@ -60,22 +93,27 @@ const Frtreeview = function({
 
   function _collapseSiblings(treeview, $item) {
     $item.closest('ul').find('.' + classParent).not($item).each(function() {
-      $(this).children('ul').hide().attr('aria-hidden', 'true');
-			$(this).attr('aria-expanded', 'false');
+			if ($(this).attr('aria-expanded') != 'false') {
+				_unsetPanelHeight($(this).children('ul').get(0));
+	      $(this).children('ul').attr('aria-hidden', 'true');
+				$(this).attr('aria-expanded', 'false');
+			}
     });
     treeview.$visibleItems = treeview.$el.find('li:visible');
   }
 
   function _expandGroup(treeview, $item) {
     let $group = $item.children('ul');
-    $group.show().attr('aria-hidden', 'false');
+		_setPanelHeight($group.get(0));
+    $group.attr('aria-hidden', 'false');
     $item.attr('aria-expanded', 'true');
     treeview.$visibleItems = treeview.$el.find('li:visible');
   }
 
   function _collapseGroup(treeview, $item) {
     let $group = $item.children('ul');
-    $group.hide().attr('aria-hidden', 'true');
+		_unsetPanelHeight($group.get(0));
+    $group.attr('aria-hidden', 'true');
     $item.attr('aria-expanded', 'false');
     treeview.$visibleItems = treeview.$el.find('li:visible');
   }
