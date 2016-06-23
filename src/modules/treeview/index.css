@@ -39,6 +39,11 @@
   border-color: white !important;
 }
 
+/* FIXME: overrides focus unset */
+.Treeview li[tabindex]:focus {
+  outline: 3px solid #ff8c00 !important;
+}
+
 .Treeview li[aria-expanded=true] > a,
 .Treeview li[aria-expanded=true] > a:hover {
   @extend .u-background-grey-20;
@@ -48,19 +53,16 @@
 .Treeview ul ul ul a:hover {
   @extend .u-color-white;
   @extend .u-background-30;
-  padding-left: 4em !important;
 }
 
 .Treeview ul ul a,
 .Treeview ul ul a:hover {
   @extend .u-color-20;
   @extend .u-background-80;
-  padding-left: 3em !important;
 }
 
 .Treeview ul a,
 .Treeview ul a:hover {
   @extend .u-color-20;
   @extend .u-background-90;
-  padding-left: 2em !important;
 }

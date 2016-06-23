@@ -37,6 +37,21 @@
   @extend .u-padding-left-xl;
 }
 
+.Linklist ul ul ul a,
+.Linklist ul ul ul a:hover {
+  padding-left: 4em !important;
+}
+
+.Linklist ul ul a,
+.Linklist ul ul a:hover {
+  padding-left: 3em !important;
+}
+
+.Linklist ul a,
+.Linklist ul a:hover {
+  padding-left: 2em !important;
+}
+
 .Linklist-link--lev1.Linklist-link--lev1,
 .Linklist-link--lev1.Linklist-link--lev1:hover {
   @extend .u-color-white;
