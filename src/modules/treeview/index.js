@@ -8,11 +8,6 @@ const Frtreeview = function ({
 		openOnClick: openOnClick = true,
 		classFocused: classFocused = 'tree-focus',
 		classParent: classParent = 'tree-parent'
-		// headerSelector: headerSelector = '.js-fr-accordion__header',
-		// headerIdPrefix: headerIdPrefix = 'accordion-header',
-		// panelSelector: panelSelector = '.js-fr-accordion__panel',
-		// panelIdPrefix: panelIdPrefix = 'accordion-panel',
-		// firstPanelsOpenByDefault: firstPanelsOpenByDefault = true,
 		// multiselectable: multiselectable = true,
 		// readyClass: readyClass = 'fr-accordion--is-ready',
 		// transitionLength: transitionLength = 250
@@ -319,13 +314,33 @@ const Frtreeview = function ({
     treeview.$visibleItems = treeview.$el.find('li:visible');
   }
 
-  function _addA11y(treeview) {
-    /* TODO */
+  function _addA11y($el) {
+		$el.attr('role', 'tree');
+
+		// Put role="treeitem" on every LI
+		// Put aria-expanded="false" on every LI (if it has no aria-expanded attr)
+		// Put tabindex="-1" on every LI (if it's not the first one)
+		// Put class=<classParent> on every LI that contains an UL
+		$el.find('li').each(function(i, li) {
+			const $li = $(li);
+			$li.attr('role', 'treeitem');
+			$li.attr('tabindex', '-1');
+			if ($li.find('ul').length !== 0) {
+				if (!li.hasAttribute('aria-expanded')) {
+					$li.attr('aria-expanded', 'false');
+				}
+				$li.addClass(classParent);
+			}
+		});
+
+		// Put role="group" on every contained UL
+		$el.find('ul').attr('role', 'group');
   }
 
   function init() {
     if (treeviewContainers.length) {
   		treeviewContainers.forEach((treeviewContainer) => {
+				_addA11y($(treeviewContainer));
         let treeview = {
           $el: $(treeviewContainer),
           $items: $(treeviewContainer).find('li'),
@@ -334,7 +349,6 @@ const Frtreeview = function ({
           $activeItem: null
         };
         _initTreeview(treeview);
-  			_addA11y(treeview);
   			_bindEvents(treeview);
       });
     }
