@@ -31,18 +31,8 @@
   transition: all 0.3s ease-in-out;
 } */
 
-.Treeview [aria-hidden] {
-  overflow: hidden;
-  transition: height 250ms ease-out, visibility 250ms;
-}
-
 .Treeview [aria-hidden="true"] {
-  height: 0;
-  visibility: hidden;
-}
-
-.Treeview [aria-hidden="false"] {
-  visibility: visible;
+  display: none;
 }
 
 .Treeview ul li {
