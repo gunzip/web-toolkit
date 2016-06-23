@@ -10,12 +10,12 @@
 }
 
 .Linklist {
-  @extend .u-color-greyAlt;
+  @extend .u-color-grey-30;
   @extend .u-border-top-xxs;
 }
 
 .Linklist li {
-  @extend .u-color-greyAlt;
+  @extend .u-color-grey-30;
   @extend .u-border-top-xxs;
   @extend .u-block;
   @extend .u-nbfc;

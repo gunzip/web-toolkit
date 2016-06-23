@@ -31,36 +31,44 @@
   background-color: #eee !important;
 }
 
-.u-color-greyAlt {
-  color: #ddd !important;
-}
-
-.u-background-greyAlt {
-  background-color: #ddd !important;
-}
-
-.u-color-greyMid {
-  color: #444e57 !important;
-}
-
-.u-background-greyMid {
-  background-color: #444e57 !important;
-}
-
-.u-color-greyDark {
-  color: #30373d !important;
-}
-
-.u-background-greyDark {
-  background-color: #30373d !important;
-}
-
 .u-color-grey-10 {
   color: #a5abb0 !important;
 }
 
 .u-background-grey-10 {
   background-color: #a5abb0 !important;
+}
+
+.u-color-grey-20 {
+  color: #f5f5f0 !important;
+}
+
+.u-background-grey-20 {
+  background-color: #f5f5f0 !important;
+}
+
+.u-color-grey-30 {
+  color: #ddd !important;
+}
+
+.u-background-grey-30 {
+  background-color: #ddd !important;
+}
+
+.u-color-grey-50 {
+  color: #444e57 !important;
+}
+
+.u-background-grey-50 {
+  background-color: #444e57 !important;
+}
+
+.u-color-grey-80 {
+  color: #30373d !important;
+}
+
+.u-background-grey-80 {
+  background-color: #30373d !important;
 }
 
 .u-color-100 {

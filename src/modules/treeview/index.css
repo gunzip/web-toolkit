@@ -41,7 +41,7 @@
 
 .Treeview li[aria-expanded=true] > a,
 .Treeview li[aria-expanded=true] > a:hover {
-  @extend .u-background-grey;
+  @extend .u-background-grey-20;
 }
 
 .Treeview ul ul ul a,

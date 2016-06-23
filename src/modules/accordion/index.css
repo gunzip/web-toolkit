@@ -2,27 +2,29 @@
 
 :root {
   --Accordion-border-color: #d8d8d8;
+  /* stylelint-disable */
   --Accordion-link-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
+  /* stylelint-enable */
   --Accordion-link-padding: 0.5em;
   --Accordion-link-arrow-width: 1.5em;
 }
 
 .Accordion {
-  @extend .u-color-greyAlt;
+  @extend .u-color-grey-50;
   @extend .u-border-top-xxs;
-	@extend .u-border-bottom-xxs;
+  @extend .u-border-bottom-xxs;
 }
 
 .Accordion-panel {
-	transition: height 250ms ease-out, visibility 250ms;
+  transition: height 250ms ease-out, visibility 250ms;
 }
 
 .Accordion-header {
-  @extend .u-color-greyAlt;
+  @extend .u-color-grey-50;
   @extend .u-border-top-xxs;
   @extend .u-block;
-	@extend .u-text-m;
-	@extend .u-textWeight-400;
+  @extend .u-text-m;
+  @extend .u-textWeight-400;
   @extend .u-nbfc;
 }
 
@@ -43,11 +45,6 @@
 .Accordion-link--leaf {
   @extend .u-padding-left-xl;
 }
-
-/*.Accordion-trigger {
-  @extend .u-color-white;
-  @extend .u-background-30;
-}*/
 
 .Accordion-link {
   background-image: var(--Accordion-link-arrow);

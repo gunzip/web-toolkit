@@ -5,7 +5,7 @@
 }
 
 .Footer {
-  @extend .u-background-greyDark;
+  @extend .u-background-grey-80;
   @extend .u-color-white;
   @extend .u-padding-bottom-xxl;
   @extend .u-padding-top-xxl;
@@ -34,7 +34,7 @@
 }
 
 .Footer-subBlock {
-  @extend .u-color-greyMid;
+  @extend .u-color-grey-50;
   @extend .u-border-top-xxs;
   @extend .u-padding-all-s;
 }
@@ -62,7 +62,7 @@
 }
 
 .Footer-block li {
-  @extend .u-color-greyMid;
+  @extend .u-color-grey-50;
   @extend .u-border-top-xxs;
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;
