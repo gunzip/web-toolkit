@@ -1,6 +1,55 @@
 /* @define Header; weak */
 
+.Header {
+  /*
+   @extend .u-layout-wider;
+   @extend .u-layout-centerContent;
+  */
+}
+
 .Header-banner {
-  @extend .u-background-grey-90;
-  height: 50px;
+  @extend .u-background-grey-80;
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
+  @extend .u-posRelative;
+}
+
+.Header-serviceLink {
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
+  @extend .u-flexJustifyCenter;
+  @extend .u-padding-left-xl;
+  @extend .u-padding-right-xl;
+  @extend .u-posAbsolute;
+  background: #06c;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.Header-serviceLink a {
+  @extend .u-color-white;
+  @extend .u-text-xs;
+  @extend .u-textWeight-700;
+  @extend .u-textClean;
+  text-transform: uppercase;
+}
+
+.Header-serviceLink span {
+  @extend .u-hidden;
+  @extend .u-md-inline;
+  @extend .u-lg-inline;
+}
+
+.Header-owner {
+  @extend .u-md-before2of12;
+  @extend .u-lg-before2of12;
+  @extend .u-md-size6of12 u-md-size6of12;
+}
+
+.Header-owner a {
+  @extend .u-text-s;
+  @extend .u-textWeight-700;
+  @extend .u-color-white;
+  @extend .u-textClean;
 }

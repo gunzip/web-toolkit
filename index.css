@@ -4,6 +4,7 @@
 @import "src/utils/borders";
 @import "src/utils/colors";
 @import "src/utils/corners";
+@import "src/utils/display";
 @import "src/utils/layout";
 @import "src/utils/space";
 @import "src/utils/text";
@@ -20,6 +21,7 @@
 @import "src/modules/card";
 @import "src/modules/entrypoint";
 @import "src/modules/footer";
+@import "src/modules/header";
 @import "src/modules/linklist";
 @import "src/modules/packery";
 @import "src/modules/prose";

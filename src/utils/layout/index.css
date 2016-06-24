@@ -2,6 +2,7 @@
 
 :root {
   --Layout-container-wide: 1440px;
+  --Layout-container-wider: 1680px;
   --Layout-container-medium: 1280px;
   --Layout-prose-fontSize: 1.8rem;
   --Layout-prose-width: 32em;
@@ -9,6 +10,10 @@
 
 .u-layout-wide {
   max-width: var(--Layout-container-wide) !important;
+}
+
+.u-layout-wider {
+  max-width: var(--Layout-container-wider) !important;
 }
 
 .u-layout-medium {
