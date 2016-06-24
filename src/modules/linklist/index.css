@@ -4,6 +4,7 @@
   --Linklist-border-color: #d8d8d8;
   /* stylelint-disable */
   --Linklist-link-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
+  --Linklist-link-arrow-down: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
   /* stylelint-enable */
   --Linklist-link-padding: 0.5em;
   --Linklist-link-arrow-width: 1.5em;
@@ -12,6 +13,7 @@
 .Linklist {
   @extend .u-color-grey-30;
   @extend .u-border-top-xxs;
+  @extend .u-border-bottom-xxs;
 }
 
 .Linklist li {
@@ -39,12 +41,12 @@
 
 .Linklist ul ul ul a,
 .Linklist ul ul ul a:hover {
-  padding-left: 4em !important;
+  padding-left: 6em !important;
 }
 
 .Linklist ul ul a,
 .Linklist ul ul a:hover {
-  padding-left: 3em !important;
+  padding-left: 4em !important;
 }
 
 .Linklist ul a,

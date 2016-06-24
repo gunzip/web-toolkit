@@ -20,11 +20,11 @@
   margin: auto;
 }
 
-.u-layoutProse {
+.u-layout-prose {
   font-size: var(--Layout-prose-fontSize) !important;
   max-width: var(--Layout-prose-width) !important;
 }
 
-.u-layoutRelease {
+.u-layout-release {
   max-width: auto !important;
 }

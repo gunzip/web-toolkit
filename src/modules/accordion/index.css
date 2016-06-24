@@ -10,7 +10,7 @@
 }
 
 .Accordion {
-  @extend .u-color-grey-50;
+  @extend .u-color-grey-30;
   @extend .u-border-top-xxs;
   @extend .u-border-bottom-xxs;
 }
@@ -20,7 +20,7 @@
 }
 
 .Accordion-header {
-  @extend .u-color-grey-50;
+  @extend .u-color-grey-30;
   @extend .u-border-top-xxs;
   @extend .u-block;
   @extend .u-text-m;

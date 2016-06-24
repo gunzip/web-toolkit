@@ -1,1 +1,6 @@
 /* @define Header; weak */
+
+.Header-banner {
+  @extend .u-background-grey-90;
+  height: 50px;
+}
