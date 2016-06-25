@@ -1,5 +1,9 @@
 /* @define Header; weak */
 
+:root {
+  --Header-logo-width: 10rem;
+}
+
 .Header {
   @extend .u-layout-centerContent;
 }
@@ -81,6 +85,14 @@
   @extend .u-textClean;
 }
 
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-owner a {
+    padding-left: var(--Header-logo-width);
+  }
+
+}
+
 /* ========================================== */
 
 .Header-navbar {
@@ -116,7 +128,7 @@
 
 .Header-logo {
   @extend .u-floatLeft;
-  @extend .u-margin-right-xl;
+  min-width: var(--Header-logo-width);
 }
 
 .Header-title {
