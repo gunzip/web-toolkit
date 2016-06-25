@@ -1,17 +1,25 @@
 /* @define Header; weak */
 
 .Header {
-  /*
-   @extend .u-layout-wider;
-   @extend .u-layout-centerContent;
-  */
+  @extend .u-layout-centerContent;
 }
 
 .Header-banner {
   @extend .u-background-grey-80;
-  @extend .u-padding-top-xs;
-  @extend .u-padding-bottom-xs;
   @extend .u-posRelative;
+  @extend .u-color-30;
+  @extend .u-border-bottom-xxs;
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-banner {
+    @extend .u-padding-top-xs;
+    @extend .u-padding-bottom-xs;
+  }
+
 }
 
 .Header-serviceLink {
@@ -29,10 +37,18 @@
 
 .Header-serviceLink a {
   @extend .u-color-white;
-  @extend .u-text-xs;
+  @extend .u-text-xxs;
   @extend .u-textWeight-700;
   @extend .u-textClean;
   text-transform: uppercase;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-serviceLink a {
+    @extend .u-text-xxs;
+  }
+
 }
 
 .Header-serviceLink span {
@@ -42,14 +58,113 @@
 }
 
 .Header-owner {
-  @extend .u-md-before2of12;
-  @extend .u-lg-before2of12;
-  @extend .u-md-size6of12 u-md-size6of12;
+  @extend .u-padding-left-s;
+  max-width: 10em;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-owner {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+  }
+
 }
 
 .Header-owner a {
-  @extend .u-text-s;
+  @extend .u-sm-before2of12;
+  @extend .u-md-before2of12;
+  @extend .u-lg-before2of12;
+  @extend .u-text-xs;
   @extend .u-textWeight-700;
   @extend .u-color-white;
   @extend .u-textClean;
+}
+
+/* ========================================== */
+
+.Header-navbar {
+  @extend .u-background-100;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-navbar {
+    @extend .u-padding-top-xxl;
+    @extend .u-padding-bottom-xxl;
+  }
+
+}
+
+.Header-toggle {
+  @extend .u-size3of12;
+  @extend .u-sm-size2of12;
+  @extend .u-md-size2of12;
+  @extend .u-lg-size2of12;
+  @extend .u-padding-left-s;
+}
+
+@media (--md-viewport), (--lg-viewport) {
+
+  .Header-toggle {
+    @extend .u-padding-left-xxl;
+  }
+
+}
+
+.Header-logo {
+  @extend .u-floatLeft;
+  @extend .u-margin-right-xl;
+}
+
+.Header-title {
+  @extend .u-size6of12;
+  line-height: 0.1;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-title {
+    line-height: 1;
+  }
+
+}
+
+.Header-title a {
+  @extend .u-text-xxs;
+  @extend .u-textWeight-700;
+  @extend .u-color-white;
+  @extend .u-textClean;
+  @extend .u-alignTop;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-title a {
+    @extend .u-text-xl;
+  }
+
+}
+
+.Header-title small {
+  @extend .u-text-xxs;
+  @extend .u-textWeight-400;
+  @extend .u-color-white;
+  @extend .u-textClean;
+  @extend .u-alignTop;
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Header-title small {
+    @extend .u-text-l;
+  }
+
+}
+
+.Header-utils {
+  @extend .u-md-size4of12;
+  @extend .u-lg-size4of12;
 }

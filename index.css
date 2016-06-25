@@ -21,6 +21,7 @@
 @import "src/modules/card";
 @import "src/modules/entrypoint";
 @import "src/modules/footer";
+@import "src/modules/hamburger";
 @import "src/modules/header";
 @import "src/modules/linklist";
 @import "src/modules/packery";

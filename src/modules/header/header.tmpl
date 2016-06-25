@@ -12,31 +12,44 @@
       <a href=""><span>Accedi ai </span> servizi</a>
     </div>
     <div class="Header-owner">
-      <p class="h4"><a href="">Governo Italiano</a></p>
+      <a href="">Governo Italiano Governo Italiano</a>
     </div>
   </div>
 
-  <div class="Header-navbar hidden-print">
+  <div class="Header-navbar Grid Grid--alignMiddle">
 
-    <a href="/" class="" aria-label="apri e chiudi menu" title="navigazione">
-      <span></span>
+    <a href="/" class="Header-toggle Grid-cell" aria-label="apri e chiudi menu" title="navigazione">
+      <span class="Hamburger-toggle"></span>
     </a>
 
-    <div class="col-sm-1 col-md-2 col-md-offset-2 col-xs-2 col-xs-offset-0">
-      <a class="sr-hidden" href="/" tabindex="-1">
-        <img class="Header-logo" src="" alt="">
-      </a>
-    </div>
-
-    <div class="col-xs-8 col-xs-offset-0 col-sm-5 col-sm-offset-0 col-md-5 col-md-offset-0">
+    <div class="Header-title Grid-cell u-flex u-flexAlignItemsCenter">
+      <div class="Header-logo">
+        <a href="/" tabindex="-1">
+          <img src="http://placehold.it/75x80" alt="">
+        </a>
+      </div>
       <h1>
-        <a accesskey="1" href="{{ data.config.site.baseurl }}">
-          <span>{{ data.config.site.name }}
-          </span>
-          <small>{{ data.config.site.version }}</small>
+        <a accesskey="1" href="/">
+          {{ site.name }}<br>
+          <small>eventuale sottotitolo</small>
         </a>
       </h1>
     </div>
+
+    <!-- <div class="Header-utils">
+      <div class="Header-languages">
+        <a href="">IT</a>
+        <a href="">EN</a>
+      </div>
+      <div class="Header-social">
+      </div>
+      <div class="Header-search">
+        <form>
+          <label for="search">Cerca</label>
+          <input type="text" name="search" />
+        </form>
+      </div>
+    </div> -->
 
   </div><!-- Header-navbar -->
 
