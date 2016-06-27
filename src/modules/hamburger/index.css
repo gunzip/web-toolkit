@@ -26,15 +26,37 @@
   display: block;
   height: calc(var(--Hamburger-height) / 3);
   position: absolute;
-  width: var(--Hamburger-width);
+  width: calc(var(--Hamburger-width) * 0.7);
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Hamburger-toggle,
+  .Hamburger-toggle::before,
+  .Hamburger-toggle::after {
+    width: var(--Hamburger-width);
+  }
+
 }
 
 .Hamburger-toggle::before {
-  top: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
+  top: -calc((var(--Hamburger-height) + var(--Hamburger-pad)) * 0.8);
 }
 
 .Hamburger-toggle::after {
-  bottom: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
+  bottom: -calc((var(--Hamburger-height) + var(--Hamburger-pad)) * 0.8);
+}
+
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+
+  .Hamburger-toggle::before {
+    top: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
+  }
+
+  .Hamburger-toggle::after {
+    bottom: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
+  }
+
 }
 
 .Hamburger-toggle,

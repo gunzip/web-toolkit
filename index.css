@@ -57,9 +57,13 @@ html {
   /* text-rendering: optimizeLegibility; */
 }
 
+/**
+ * 1. Trying to avoid collapsing content
+ */
 body {
   color: var(--it-Base-text-color);
   font-size: var(--it-Base-font-size);
+  min-width: 30rem; /* 1 */
 }
 
 :focus {
