@@ -20,9 +20,13 @@
   max-width: var(--Layout-container-medium) !important;
 }
 
+.u-layoutCenter {
+  margin: auto !important;
+}
+
 /* postcss-bem-linter: ignore */
 .u-layout-centerContent > * {
-  margin: auto;
+  margin: auto !important;
 }
 
 .u-layout-prose {
