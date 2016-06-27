@@ -2,6 +2,8 @@
 
 :root {
   --Header-logo-width: 10rem;
+  --Header-smaller-pad: 0.8rem;
+  --Header-search-icon-size: 4.8rem;
 }
 
 .Header {
@@ -83,7 +85,7 @@
   @extend .u-sm-before2of12;
   @extend .u-md-before2of12;
   @extend .u-lg-before2of12;
-  @extend .u-text-xs;
+  @extend .u-text-xxs;
   @extend .u-textWeight-700;
   @extend .u-color-white;
   @extend .u-textClean;
@@ -97,20 +99,29 @@
 
 }
 
+@media (--md-viewport), (--lg-viewport) {
+
+  .Header-owner a {
+    @extend .u-text-s;
+  }
+
+}
+
 /* ========================================== */
 
 .Header-navbar {
   @extend .u-background-100;
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;
-  @extend .u-padding-right-xxl;
+  @extend .u-padding-right-xs;
 }
 
-@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+@media (--md-viewport), (--lg-viewport) {
 
   .Header-navbar {
     @extend .u-padding-top-xxl;
     @extend .u-padding-bottom-xxl;
+    @extend .u-padding-right-xxl;
   }
 
 }
@@ -132,7 +143,7 @@
   text-transform: uppercase;
 }
 
-@media (--md-viewport), (--lg-viewport) {
+@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
 
   .Header-toggle {
     @extend .u-padding-left-xxl;
@@ -151,11 +162,11 @@
 
 .Header-logo {
   @extend .u-floatLeft;
-  min-width: calc(var(--Header-logo-width) * 0.75);
+  min-width: calc(var(--Header-logo-width) * 0.7);
 }
 
 .Header-logo img {
-  width: 6rem;
+  width: 5.5rem;
 }
 
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
@@ -170,9 +181,13 @@
 
 }
 
+/**
+ *  1. FIXME: account for smallest screen
+ */
 .Header-title {
-  @extend .u-size6of12;
+  @extend .u-size9of12;
   line-height: 0.1;
+  margin-left: -var(--Header-smaller-pad); /* 1 */
 }
 
 /**
@@ -181,13 +196,13 @@
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
 
   .Header-title {
+    @extend .u-size6of12;
     @extend .u-padding-left-s; /* 1 */
-    line-height: 1;
   }
 
 }
 
-.Header-title a {
+.Header-titleLink {
   @extend .u-text-xxs;
   @extend .u-textWeight-700;
   @extend .u-color-white;
@@ -196,15 +211,23 @@
   letter-spacing: -0.05rem !important;
 }
 
-@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+@media (--sm-viewport) {
 
-  .Header-title a {
+  .Header-titleLink {
+    @extend .u-text-xs;
+  }
+
+}
+
+@media (--md-viewport), (--lg-viewport) {
+
+  .Header-titleLink {
     @extend .u-text-xl;
   }
 
 }
 
-.Header-title small {
+.Header-titleLink small {
   @extend .u-text-xxs;
   @extend .u-textWeight-400;
   @extend .u-color-white;
@@ -212,9 +235,9 @@
   @extend .u-alignTop;
 }
 
-@media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+@media (--md-viewport), (--lg-viewport) {
 
-  .Header-title small {
+  .Header-titleLink small {
     @extend .u-text-l;
   }
 
@@ -222,8 +245,30 @@
 
 /* ========================================== */
 
+.Header-searchTrigger {
+  @extend .u-sm-hidden;
+  @extend .u-md-hidden;
+  @extend .u-lg-hidden;
+  @extend .u-textRight;
+  @extend .u-flexExpandLeft;
+}
+
+.Header-searchTrigger a {
+  @extend .u-inlineBlock;
+  @extend .u-background-30;
+  height: var(--Header-search-icon-size);
+  min-width: var(--Header-search-icon-size);
+}
+
+.Header-searchTrigger a span {
+  @extend .u-hiddenVisually;
+}
+
+/* ========================================== */
+
 .Header-utils {
   @extend .u-hidden;
+  @extend .u-sm-block;
   @extend .u-md-block;
   @extend .u-lg-block;
   @extend .u-sm-size4of12;
@@ -234,6 +279,7 @@
 }
 
 .Header-utilsTop {
+  @extend .u-sm-hidden;
   @extend .u-margin-bottom-m;
 }
 
