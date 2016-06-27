@@ -28,6 +28,11 @@
 @import "src/modules/prose";
 @import "src/modules/utilities";
 @import "src/modules/treeview";
+
+/* FIXME: in html */
+@import "src/fonts/titillium";
+@import "src/icons/ita";
+
 @import "src/themes/pac";
 
 @custom-media --sm-viewport screen and (min-width: 768px) and (max-width: 992px);

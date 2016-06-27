@@ -1,5 +1,3 @@
-@import '../../fonts/titillium';
-
 /*
  *	Only apply to body
  *		class="it-Pac"
@@ -19,5 +17,5 @@
  * 	Brand color
  */
 :root {
-  --Color-primary: #0066CC;
+  --Color-primary: #06c;
 }
