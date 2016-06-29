@@ -22,16 +22,23 @@
   --Form-select-arrow-width: 2rem;
 }
 
+.Form--lean .Form-input,
+.Form-input--lean {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
 select.Form-input {
   background-color: currentColor;
 }
 
 option:hover {
-  box-shadow: 0 0 10px 100px #1882A8 inset;
+  box-shadow: 0 0 10px 100px #1882a8 inset;
 }
 
-.Form-label.is-required:after {
-  content: ' * ';
+.Form-label.is-required::after {
+  content: " * ";
 }
 
 .Form-field.is-invalid .Form-input,
@@ -72,10 +79,11 @@ option:hover {
   background-color: white;
   border: 1px solid var(--Form-input-border-color);
   border-bottom: 0;
-  min-height: calc(var(--Form-choose-height) + 2 * var(--Form-choose-height));
   line-height: calc(2 * var(--Form-choose-height));
+  min-height: calc(var(--Form-choose-height) + 2 * var(--Form-choose-height));
   padding: calc(var(--Form-choose-height) / 2);
 }
+
 .Form-label--block:last-child {
   border-bottom: 1px solid var(--Form-input-border-color);
 }
