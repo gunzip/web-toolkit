@@ -6,5 +6,10 @@ module.exports = {
   ],
   'postcss-assets-rebase': {
     assetsPath: 'styleguide/assets'
+  },
+  postcss: {
+    map: {
+      inline: false
+    }
   }
 };
