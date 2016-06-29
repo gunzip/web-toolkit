@@ -20,8 +20,6 @@ module.exports = {
   postcss: {
     from: 'index.css',
     to: 'build/build.css',
-    map: {
-      inline: false
-    }
+    map: false,
   }
 };

@@ -26,6 +26,7 @@
 @import "src/modules/linklist";
 @import "src/modules/packery";
 @import "src/modules/prose";
+@import "src/modules/skiplinks";
 @import "src/modules/utilities";
 @import "src/modules/treeview";
 
