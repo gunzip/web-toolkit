@@ -5,7 +5,22 @@
   --Layout-container-wider: 1680px;
   --Layout-container-medium: 1280px;
   --Layout-prose-fontSize: 1.8rem;
-  --Layout-prose-width: 32em;
+  --Layout-gutter: 1.2rem;
+  --Layout-gutter-wide: 2.4rem;
+}
+
+.u-layout-withGutter {
+  padding-left: var(--Layout-gutter);
+  padding-right: var(--Layout-gutter);
+}
+
+@media (--lg-viewport) {
+
+  .u-layout-withGutter {
+    padding-left: var(--Layout-gutter-wide);
+    padding-right: var(--Layout-gutter-wide);
+  }
+
 }
 
 .u-layout-wide {

@@ -129,9 +129,9 @@
 @media (--lg-viewport) {
 
   .Header-navbar {
-    @extend .u-padding-top-xxl;
-    @extend .u-padding-bottom-xxl;
-    @extend .u-padding-right-xxl;
+    @extend .u-padding-top-xl;
+    @extend .u-padding-bottom-xl;
+    @extend .u-padding-right-xl;
   }
 
 }
