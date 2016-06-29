@@ -6,12 +6,12 @@
   font-family: "ita";
   font-style: normal;
   font-weight: normal;
-  src: url("./ita.eot?z572be");
+  src: url("./font/ita.eot?z572be");
   src:
-    url("./ita.eot?z572be#iefix") format("embedded-opentype"),
-    url("./ita.ttf?z572be") format("truetype"),
-    url("./ita.woff?z572be") format("woff"),
-    url("./ita.svg?z572be#ita") format("svg");
+    url("./font/ita.eot?z572be#iefix") format("embedded-opentype"),
+    url("./font/ita.ttf?z572be") format("truetype"),
+    url("./font/ita.woff?z572be") format("woff"),
+    url("./font/ita.svg?z572be#ita") format("svg");
 }
 
 [class^="icon-"],

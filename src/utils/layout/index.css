@@ -1,12 +1,13 @@
 /** @define utilities; */
 
 :root {
-  --Layout-container-wide: 1440px;
-  --Layout-container-wider: 1680px;
-  --Layout-container-medium: 1280px;
+  --Layout-container-wide: 144rem;
+  --Layout-container-wider: 168rem;
+  --Layout-container-medium: 128rem;
   --Layout-prose-fontSize: 1.8rem;
   --Layout-gutter: 1.2rem;
   --Layout-gutter-wide: 2.4rem;
+  --Layout-prose-width: 32em;
 }
 
 .u-layout-withGutter {

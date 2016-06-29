@@ -2,12 +2,15 @@ module.exports = {
   use: [
     'postcss-extend',
     'postcss-color-function',
-    'postcss-assets-rebase'
+    'postcss-url',
+    'postcss-reporter'
   ],
-  'postcss-assets-rebase': {
-    assetsPath: 'styleguide/assets'
+  'postcss-url': {
+    url: 'copy'
   },
   postcss: {
+    from: 'index.css',
+    to: 'build/build.css',
     map: {
       inline: false
     }
