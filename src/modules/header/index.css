@@ -227,7 +227,7 @@
 @media (--sm-viewport) {
 
   .Header-titleLink {
-    @extend .u-text-xs;
+    @extend .u-text-s;
   }
 
 }
