@@ -1,0 +1,33 @@
+{% render '@header' %}
+
+<div class="u-layout-withGutter u-padding-top-xxl">
+
+  <div class="u-layout-wide u-layoutCenter u-margin-bottom-xxl">
+    {% render '@news' %}
+  </div>
+
+  <div class="u-layout-wide u-layoutCenter u-padding-bottom-xl u-margin-bottom-xl">
+    {% render '@entrypoint' %}
+  </div>
+
+  <div class="u-background-grey">
+    <div class="u-layout-wide u-layoutCenter u-padding-top-xl u-padding-bottom-xl u-margin-bottom-xxl">
+      {% render '@layout--grid' %}
+    </div>
+  </div>
+
+  <div class="u-background-grey">
+    <div class="u-layout-wide u-layoutCenter u-padding-bottom-xxl u-padding-top-xxl">
+      {% render '@utilities' %}
+    </div>
+  </div>
+
+  <div class="u-background-grey-80">
+    <div class="u-layout-wide u-layoutCenter">
+    {% render '@footer' %}
+    </div>
+  </div>
+
+  </div>
+
+</div>
