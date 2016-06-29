@@ -12,7 +12,7 @@
 }
 
 .u-background-black {
-  background-color: white !important;
+  background-color: black !important;
 }
 
 .u-color-white {
@@ -55,6 +55,14 @@
   background-color: #ddd !important;
 }
 
+.u-color-grey-40 {
+  color: #5a6772 !important;
+}
+
+.u-background-grey-40 {
+  background-color: #5a6772 !important;
+}
+
 .u-color-grey-50 {
   color: #444e57 !important;
 }
@@ -71,12 +79,28 @@
   background-color: #30373d !important;
 }
 
+.u-color-grey-90 {
+  color: #1c2024 !important;
+}
+
+.u-background-grey-90 {
+  background-color: #1c2024 !important;
+}
+
 .u-color-100 {
   color: var(--Color-primary) !important;
 }
 
 .u-background-100 {
   background-color: var(--Color-primary) !important;
+}
+
+.u-color-5 {
+  color: color(var(--Color-primary) l(5%)) !important;
+}
+
+.u-background-5 {
+  background-color: color(var(--Color-primary) l(5%)) !important;
 }
 
 .u-color-10 {

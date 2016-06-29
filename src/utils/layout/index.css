@@ -24,6 +24,10 @@
 
 }
 
+.u-layout-constrain {
+  min-width: 30rem;
+}
+
 .u-layout-wide {
   max-width: var(--Layout-container-wide) !important;
 }
@@ -38,6 +42,11 @@
 
 .u-layoutCenter {
   margin: auto !important;
+}
+
+.u-layoutCenterVertically {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 
 /* postcss-bem-linter: ignore */

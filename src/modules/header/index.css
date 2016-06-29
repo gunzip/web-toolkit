@@ -366,7 +366,7 @@
   @extend .u-padding-left-m;
 }
 
-.Header-search input {
+.Header-search {
   @extend .u-floatRight;
-  max-width: 18em;
+  max-width: 20em;
 }
