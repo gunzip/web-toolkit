@@ -2,9 +2,8 @@
 
 :root {
   --Accordion-border-color: #d8d8d8;
-  /* stylelint-disable */
-  --Accordion-link-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
-  /* stylelint-enable */
+  --Accordion-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
+  --Accordion-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
   --Accordion-link-padding: 0.5em;
   --Accordion-link-arrow-width: 1.5em;
 }
@@ -47,7 +46,7 @@
 }
 
 .Accordion-link {
-  background-image: var(--Accordion-link-arrow);
+  background-image: var(--Accordion-link-arrow-down);
   background-position: right var(--Accordion-link-padding) center;
   background-repeat: no-repeat;
   background-size: var(--Accordion-link-arrow-width);
@@ -55,4 +54,9 @@
     calc(
       var(--Accordion-link-arrow-width) + (2 * var(--Accordion-link-padding))
     );
+}
+
+.Accordion-link.is-expanded,
+.Accordion-header[aria-expanded="true"] .Accordion-link {
+  background-image: var(--Accordion-link-arrow-up);
 }

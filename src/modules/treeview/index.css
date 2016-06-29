@@ -3,13 +3,12 @@
 :root {
   --Treeview-link-padding: 0.5em;
   --Treeview-link-arrow-width: 1.5em;
-  /* stylelint-disable */
-  --Treeview-link-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
-  /* stylelint-enable */
+  --Treeview-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
+  --Treeview-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
 }
 
 .Treeview [aria-expanded] > a {
-  background-image: var(--Treeview-link-arrow);
+  background-image: var(--Treeview-link-arrow-down);
   background-position: right var(--Treeview-link-padding) center;
   background-repeat: no-repeat;
   background-size: var(--Treeview-link-arrow-width);
@@ -17,6 +16,10 @@
     calc(
       var(--Treeview-link-arrow-width) + (2 * var(--Treeview-link-padding))
     );
+}
+
+.Treeview [aria-expanded="true"] > a {
+  background-image: var(--Treeview-link-arrow-up);
 }
 
 .Treeview [aria-hidden="true"] {

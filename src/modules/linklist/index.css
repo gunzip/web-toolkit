@@ -2,10 +2,8 @@
 
 :root {
   --Linklist-border-color: #d8d8d8;
-  /* stylelint-disable */
-  --Linklist-link-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
-  --Linklist-link-arrow-down: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: #777; enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
-  /* stylelint-enable */
+  --Linklist-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
+  --Linklist-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
   --Linklist-link-padding: 0.5em;
   --Linklist-link-arrow-width: 1.5em;
 }
@@ -54,25 +52,25 @@
   padding-left: 2em !important;
 }
 
-.Linklist-link--lev1.Linklist-link--lev1,
-.Linklist-link--lev1.Linklist-link--lev1:hover {
+.Linklist-link.Linklist-link--lev1,
+.Linklist-link.Linklist-link--lev1:hover {
   @extend .u-color-white;
   @extend .u-background-30;
 }
 
-.Linklist-link--lev2.Linklist-link--lev2,
-.Linklist-link--lev2.Linklist-link--lev2:hover {
+.Linklist-link.Linklist-link--lev2,
+.Linklist-link.Linklist-link--lev2:hover {
   @extend .u-color-20;
   @extend .u-background-80;
 }
 
-.Linklist-link--lev3.Linklist-link--lev3 {
+.Linklist-link.Linklist-link--lev3 {
   @extend .u-color-20;
   @extend .u-background-90;
 }
 
-.Linklist-link--expandable {
-  background-image: var(--Linklist-link-arrow);
+.Linklist-link.is-expanded,
+.Linklist-link.is-collapsed {
   background-position: right var(--Linklist-link-padding) center;
   background-repeat: no-repeat;
   background-size: var(--Linklist-link-arrow-width);
@@ -80,4 +78,12 @@
     calc(
       var(--Linklist-link-arrow-width) + (2 * var(--Linklist-link-padding))
     );
+}
+
+.Linklist-link.is-collapsed {
+  background-image: var(--Linklist-link-arrow-down);
+}
+
+.Linklist-link.is-expanded {
+  background-image: var(--Linklist-link-arrow-up);
 }

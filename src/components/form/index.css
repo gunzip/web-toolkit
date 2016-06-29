@@ -18,7 +18,7 @@
   --Form-border-width: 0.4rem;
   --Form-choose-height: 1em;
 
-  --Form-select-arrow: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"><g><polygon points="3.6,8.3 4.7,7.1 12,14.5 19.3,7.1 20.4,8.3 12,16.9"/></g></svg>');
+  --Form-select-arrow: inline("icons/ita/svg/icon-bottom.svg");
   --Form-select-arrow-width: 2rem;
 }
 
