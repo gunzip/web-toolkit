@@ -39,17 +39,17 @@
 
 .Linklist ul ul ul a,
 .Linklist ul ul ul a:hover {
-  padding-left: 6em !important;
+  padding-left: 2.5em !important;
 }
 
 .Linklist ul ul a,
 .Linklist ul ul a:hover {
-  padding-left: 4em !important;
+  padding-left: 2em !important;
 }
 
 .Linklist ul a,
 .Linklist ul a:hover {
-  padding-left: 2em !important;
+  padding-left: 1.5em !important;
 }
 
 .Linklist-link.Linklist-link--lev1,

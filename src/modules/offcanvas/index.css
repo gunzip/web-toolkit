@@ -1,4 +1,14 @@
 /** @define Offcanvas; */
+:root {
+  --Offcanvas-width: 32em;
+  --Offcanvas-max-width: 80%;
+}
+
+.Offcanvas,
+.Offcanvas-content {
+  max-width: var(--Offcanvas-max-width);
+  width: var(--Offcanvas-width);
+}
 
 .Offcanvas.is-ready .Offcanvas-content {
   height: 100%;
@@ -7,7 +17,6 @@
   top: 0;
   transform: translateX(0);
   transition: transform 200ms ease-out;
-  width: 100%;
   will-change: translateX;
   z-index: 10;
 }

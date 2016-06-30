@@ -29,6 +29,15 @@
   width: calc(var(--Hamburger-width) * 0.7);
 }
 
+/*
+ *	1. Make the whole <a> area clickable
+ */
+.Hamburger-toggleContainer {
+  cursor: pointer;
+  padding-bottom: calc(var(--Hamburger-height) + var(--Hamburger-pad));
+  padding-top: calc(var(--Hamburger-height) + var(--Hamburger-pad));
+}
+
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
 
   .Hamburger-toggle,
