@@ -2,8 +2,9 @@
 
 :root {
   --Header-logo-width: 10rem;
-  --Header-smaller-pad: 0.8rem;
+  --Header-smaller-pad: 1rem;
   --Header-search-icon-size: 4.8rem;
+  --Header-left-offset: -4%;
 }
 
 .Header {
@@ -84,6 +85,14 @@
 
 }
 
+@media (--md-viewport), (--lg-viewport) {
+
+  .Header-owner {
+    margin-left: var(--Header-left-offset);
+  }
+
+}
+
 .Header-owner a {
   @extend .u-sm-before2of12;
   @extend .u-md-before2of12;
@@ -114,26 +123,17 @@
 
 .Header-navbar {
   @extend .u-background-50;
-  @extend .u-padding-top-s;
-  @extend .u-padding-bottom-s;
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
   @extend .u-padding-right-xs;
-}
-
-@media (--md-viewport) {
-
-  .Header-navbar {
-    @extend .u-padding-top-l;
-    @extend .u-padding-bottom-l;
-  }
-
 }
 
 /* FIXME: % padding > lg-viewport-max */
 @media (--lg-viewport) {
 
   .Header-navbar {
-    @extend .u-padding-top-xl;
-    @extend .u-padding-bottom-xl;
+    @extend .u-padding-top-l;
+    @extend .u-padding-bottom-l;
     @extend .u-padding-right-xl;
   }
 
@@ -175,11 +175,11 @@
 
 .Header-logo {
   @extend .u-floatLeft;
-  min-width: calc(var(--Header-logo-width) * 0.7);
+  min-width: calc(var(--Header-logo-width) * 0.6);
 }
 
 .Header-logo img {
-  width: 5.5rem;
+  width: 5rem;
 }
 
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
@@ -211,6 +211,14 @@
   .Header-title {
     @extend .u-size6of12;
     @extend .u-padding-left-s; /* 1 */
+  }
+
+}
+
+@media (--md-viewport), (--lg-viewport) {
+
+  .Header-title {
+    margin-left: var(--Header-left-offset);
   }
 
 }
@@ -264,6 +272,7 @@
   @extend .u-lg-hidden;
   @extend .u-textRight;
   @extend .u-flexExpandLeft;
+  @extend .u-padding-left-xxs;
 }
 
 .Header-searchTrigger a {
@@ -289,6 +298,15 @@
   @extend .u-lg-size4of12;
   @extend .u-textRight;
   @extend .u-padding-right-s;
+}
+
+@media (--sm-viewport) {
+
+  .Header-utils {
+    @extend .u-margin-top-xs;
+    @extend .u-margin-bottom-xs;
+  }
+
 }
 
 @media (--md-viewport) {
@@ -336,15 +354,6 @@
   @extend .u-margin-bottom-m;
 }
 
-@media (--sm-viewport) {
-
-  .Header-utils {
-    @extend .u-margin-top-m;
-    @extend .u-margin-bottom-s;
-  }
-
-}
-
 .Header-social > * {
   @extend .u-inlineBlock;
 }
@@ -371,5 +380,5 @@
 
 .Header-search {
   @extend .u-floatRight;
-  max-width: 20em;
+  max-width: 24em;
 }
