@@ -1,0 +1,36 @@
+/** @define Offcanvas; */
+
+.Offcanvas.is-ready {
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  transform: translateX(0);
+  transition: transform 200ms ease-out;
+  width: 100%;
+  will-change: translateX;
+  z-index: 10;
+}
+
+.Offcanvas--right.is-ready {
+  left: 100%;
+}
+
+.Offcanvas--left.is-ready {
+  right: 100%;
+}
+
+/* postcss-bem-linter: ignore */
+.Offcanvas.is-ready[aria-hidden="true"] {
+  transition: transform 200ms ease-out, visibility 200ms;
+}
+
+/* postcss-bem-linter: ignore */
+.Offcanvas--right.is-ready[aria-hidden="false"] {
+  transform: translateX(-100%);
+}
+
+/* postcss-bem-linter: ignore */
+.Offcanvas--left.is-ready[aria-hidden="false"] {
+  transform: translateX(100%);
+}
