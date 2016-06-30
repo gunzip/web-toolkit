@@ -13,7 +13,7 @@
 
   <div class="Header-navbar Grid Grid--alignMiddle">
 
-    <a href="/" class="Header-toggle Grid-cell" aria-label="apri e chiudi menu" title="navigazione">
+    <a class="Header-toggle Grid-cell js-fr-offcanvas-open" aria-controls="menu" aria-label="apri e chiudi menu" title="navigazione">
       <span class="Hamburger-toggle"></span>
       <p class="Header-toggleText">Menu</p>
     </a>
@@ -58,3 +58,12 @@
   </div><!-- Header-navbar -->
 
 </header>
+
+<div class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas" style="top:250px" id="menu">
+  <nav class="Offcanvas-content u-background-white u-layout-prose">
+    <button type="button" class="Button js-fr-offcanvas-close" aria-controls="menu">
+    	Chiudi
+    </button>
+    {% render '@treeview' %}
+  </nav>
+</div>

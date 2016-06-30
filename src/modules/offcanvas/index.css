@@ -1,6 +1,6 @@
 /** @define Offcanvas; */
 
-.Offcanvas.is-ready {
+.Offcanvas.is-ready .Offcanvas-content {
   height: 100%;
   overflow: auto;
   position: fixed;
@@ -12,25 +12,38 @@
   z-index: 10;
 }
 
-.Offcanvas--right.is-ready {
+.Offcanvas--right.is-ready .Offcanvas-content {
   left: 100%;
 }
 
-.Offcanvas--left.is-ready {
+.Offcanvas--left.is-ready .Offcanvas-content {
   right: 100%;
 }
 
 /* postcss-bem-linter: ignore */
-.Offcanvas.is-ready[aria-hidden="true"] {
+.Offcanvas.is-ready[aria-hidden="true"] .Offcanvas-content {
   transition: transform 200ms ease-out, visibility 200ms;
 }
 
 /* postcss-bem-linter: ignore */
-.Offcanvas--right.is-ready[aria-hidden="false"] {
+.Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(-100%);
 }
 
 /* postcss-bem-linter: ignore */
-.Offcanvas--left.is-ready[aria-hidden="false"] {
+.Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(100%);
+}
+
+.Offcanvas--modal.is-active::after {
+  background: black;
+  content: " ";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
 }
