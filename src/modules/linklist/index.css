@@ -8,6 +8,10 @@
   --Linklist-link-arrow-width: 1.5em;
 }
 
+/*
+ *	FIXME:
+ *	  -webkit-overflow-scrolling: touch;
+ */
 .Linklist {
   @extend .u-color-grey-30;
   @extend .u-border-top-xxs;

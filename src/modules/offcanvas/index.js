@@ -23,13 +23,12 @@ const offcanvas = Froffcanvas({
 });
 
 /*
- *	FIXME: hack to show / hide a background panel
+ *	FIXME: hack to show / hide the background panel
  */
 const _handleModal = function(e) {
-  const closeModal = (e &&
-    $('.Offcanvas').hasClass('is-active') &&
-    !$(e.target).hasClass('Offcanvas-content'));
-	if (closeModal) {
+  if (e && $('.Offcanvas').hasClass('is-active') &&
+    !$(e.target).hasClass('Offcanvas-content'))
+	{
     $('.js-fr-offcanvas-close').click();
   }
   $('.Offcanvas--modal').one('click', _handleModal);
