@@ -7,6 +7,7 @@
     "fr-accordion": "^1.0.5",
     "fr-bypasslinks": "^1.0.5",
     "fr-offcanvas": "^1.0.3",
+    "headroom.js": "^0.9.3",
     "jquery": "^3.0.0",
     "packery": "^2.1.1",
     "suitcss": "^2.0.0",

@@ -1,3 +1,5 @@
+@import "headroom";
+
 /* @define Header; weak */
 
 :root {
@@ -230,12 +232,14 @@
   @extend .u-textClean;
   @extend .u-alignTop;
   letter-spacing: -0.05rem !important;
+  line-height: 1 !important;
 }
 
 @media (--sm-viewport) {
 
   .Header-titleLink {
     @extend .u-text-s;
+    line-height: 1.5 !important;
   }
 
 }
@@ -244,6 +248,7 @@
 
   .Header-titleLink {
     @extend .u-text-xl;
+    line-height: 1.5 !important;
   }
 
 }
@@ -254,12 +259,23 @@
   @extend .u-color-white;
   @extend .u-textClean;
   @extend .u-alignTop;
+  line-height: 1 !important;
+}
+
+@media (--sm-viewport) {
+
+  .Header-titleLink small {
+    @extend .u-text-s;
+    line-height: 1.5 !important;
+  }
+
 }
 
 @media (--md-viewport), (--lg-viewport) {
 
   .Header-titleLink small {
     @extend .u-text-l;
+    line-height: 1.5 !important;
   }
 
 }
