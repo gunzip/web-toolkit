@@ -401,40 +401,62 @@
  * Headroom.js for sticky header
  * =============================
  */
-.Header.Headroom {
-  position: fixed;
-  transition: transform 200ms linear;
+.Headroom {
+  transition: transform 250ms linear;
   width: 100%;
   will-change: transform;
 }
 
-.Header.Headroom--pinned {
+.Headroom--pinned {
   transform: translateY(0%);
 }
 
-.Header.Headroom--not-top .Header-social,
-.Header.Headroom--not-top .Header-languages,
-.Header.Headroom--not-top .Header-banner {
+.Headroom .Header-social,
+.Headroom .Header-languages,
+.Headroom .Header-banner {
+  transition: all 250ms linear;
+}
+
+.Headroom--not-top .Header-social,
+.Headroom--not-top .Header-languages,
+.Headroom--not-top .Header-banner {
   margin: 0 !important;
   max-height: 0;
   overflow-y: hidden;
   padding: 0 !important;
-  transition: max-height 0.5s ease-in-out;
 }
 
-.Header.Headroom .Header-navbar {
+.Headroom .Header-navbar {
   transition: all 200ms linear;
 }
 
-.Header.Headroom--not-top .Header-navbar {
+.Headroom--not-top {
+  position: fixed;
+}
+
+.Headroom--not-top .Header-titleLink,
+.Headroom--not-top .Header-titleLink small {
+  line-height: 1 !important;
+}
+
+@media (--md-viewport), (--lg-viewport) {
+
+  .Headroom--not-top .Header-titleLink,
+  .Headroom--not-top .Header-titleLink small {
+    @extend .u-text-s;
+  }
+
+}
+
+.Headroom--not-top .Header-navbar {
   @extend .u-padding-top-xxs;
   @extend .u-padding-bottom-xxs;
 }
 
-.Header.Headroom--not-top .Header-search {
+.Headroom--not-top .Header-search {
   @extend .u-margin-bottom-xxs;
 }
 
-.Header.Headroom--unpinned {
+.Headroom--unpinned {
   transform: translateY(-100%);
 }

@@ -4,12 +4,10 @@ const myElement = document.querySelector('header');
 
 const opts = {
   // vertical offset in px before element is first unpinned
-  offset: 200,
-  // scroll tolerance in px before state changes
-  tolerance: 0,
-  // or you can specify tolerance individually for up/down scroll
+  offset: 0,
+  // you can specify tolerance individually for up/down scroll
   tolerance: {
-    up: 5,
+    up: 0,
     down: 0
   },
   // css classes to apply
