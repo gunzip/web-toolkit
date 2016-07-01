@@ -414,7 +414,7 @@
 .Headroom .Header-social,
 .Headroom .Header-languages,
 .Headroom .Header-banner {
-  transition: all 250ms linear;
+  transition: all 350ms linear;
 }
 
 .Headroom--not-top .Header-social,
