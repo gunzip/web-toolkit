@@ -1,5 +1,3 @@
-@import "headroom";
-
 /* @define Header; weak */
 
 :root {
@@ -397,4 +395,46 @@
 .Header-search {
   @extend .u-floatRight;
   max-width: 24em;
+}
+
+/*
+ * Headroom.js for sticky header
+ * =============================
+ */
+.Header.Headroom {
+  position: fixed;
+  transition: transform 200ms linear;
+  width: 100%;
+  will-change: transform;
+}
+
+.Header.Headroom--pinned {
+  transform: translateY(0%);
+}
+
+.Header.Headroom--not-top .Header-social,
+.Header.Headroom--not-top .Header-languages,
+.Header.Headroom--not-top .Header-banner {
+  margin: 0 !important;
+  max-height: 0;
+  overflow-y: hidden;
+  padding: 0 !important;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.Header.Headroom .Header-navbar {
+  transition: all 200ms linear;
+}
+
+.Header.Headroom--not-top .Header-navbar {
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-bottom-xxs;
+}
+
+.Header.Headroom--not-top .Header-search {
+  @extend .u-margin-bottom-xxs;
+}
+
+.Header.Headroom--unpinned {
+  transform: translateY(-100%);
 }
