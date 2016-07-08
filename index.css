@@ -24,6 +24,7 @@
 @import "src/modules/hamburger";
 @import "src/modules/header";
 @import "src/modules/linklist";
+@import "src/modules/megamenu";
 @import "src/modules/offcanvas";
 @import "src/modules/packery";
 @import "src/modules/prose";

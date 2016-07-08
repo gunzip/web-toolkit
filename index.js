@@ -4,6 +4,7 @@ import IwtPackery from './src/modules/packery';
 import IwtTreeview from './src/modules/treeview';
 import IwtOffcanvas from './src/modules/offcanvas';
 import IwtHeadroom from './src/modules/header';
+import IwtMegamenu from './src/modules/megamenu';
 
 const __exports = {
 	IwtAccordion,
@@ -12,6 +13,7 @@ const __exports = {
 	IwtSkiplinks,
 	IwtOffcanvas,
 	IwtHeadroom,
+	IwtMegamenu,
 };
 
 export default __exports;
