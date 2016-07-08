@@ -1,0 +1,21 @@
+/** @define utilities; */
+
+.u-zindex-min {
+  z-index: 1;
+}
+
+.u-zindex-20 {
+  z-index: 20;
+}
+
+.u-zindex-30 {
+  z-index: 30;
+}
+
+.u-zindex-40 {
+  z-index: 40;
+}
+
+.u-zindex-max {
+  z-index: 999999;
+}

@@ -10,6 +10,12 @@
 .u-border-left-xxs { border-left: var(--Border-size-unit) solid currentColor !important; }
 .u-border-all-xxs { border: var(--Border-size-unit) solid currentColor !important; }
 
+.u-border-top-m { border-top: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-right-m { border-right: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-bottom-m { border-bottom: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-left-m { border-left: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+.u-border-all-m { border: calc(10 * var(--Border-size-unit)) solid currentColor !important; }
+
 .u-border-none {
   border: none !important;
 }
