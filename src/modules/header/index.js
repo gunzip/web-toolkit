@@ -43,8 +43,11 @@ const opts = {
   onNotBottom: function() {}
 };
 
-const headroom = new Headroom(myElement, opts);
+let headroom = null;
 
-headroom.init();
+if (myElement) {
+  headroom = new Headroom(myElement, opts);
+  headroom.init();
+}
 
 module.exports = headroom;
