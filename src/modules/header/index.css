@@ -199,6 +199,8 @@
  */
 .Header-title {
   @extend .u-size9of12;
+  @extend .u-flex;
+  @extend .u-flexAlignItemsCenter;
   line-height: 0.1;
   margin-left: -var(--Header-smaller-pad); /* 1 */
 }
@@ -291,9 +293,11 @@
 
 .Header-searchTrigger a {
   @extend .u-inlineBlock;
+  @extend .u-linkClean;
   @extend .u-background-40;
-  height: var(--Header-search-icon-size);
-  min-width: var(--Header-search-icon-size);
+  @extend .u-color-white;
+  @extend .u-padding-all-s;
+  @extend .u-text-m;
 }
 
 .Header-searchTrigger a span {
@@ -338,6 +342,38 @@
   }
 
 }
+
+/* Expandable search box
+  ========================================== */
+
+.Header-utils.is-expaned {
+  @extend .u-block;
+  @extend .u-sizeFull;
+  @extend .u-background-40;
+  @extend .u-margin-top-s;
+  @extend .u-margin-left-xs;
+  @extend .u-padding-top-xxs;
+  @extend .u-padding-right-xxs;
+  @extend .u-padding-left-xxs;
+}
+
+.Header-utils.is-expaned > * {
+  @extend .u-hidden;
+}
+
+.Header-utils.is-expaned > .Header-search {
+  @extend .u-block;
+  @extend .u-sizeFull;
+  @extend .u-margin-bottom-xxs;
+  @extend .u-padding-all-xxs;
+  max-width: none;
+}
+
+.Header-utils.is-expaned > .Header-search button {
+  @extend .u-hidden;
+}
+
+/* ========================================== */
 
 .Header-utils > div {
   @extend .u-floatRight;

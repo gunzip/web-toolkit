@@ -1,4 +1,19 @@
+import $ from 'jquery';
+import debounce from 'throttle-debounce/throttle';
+
 import Headroom from 'headroom.js';
+
+// Hide / show search box
+
+$('.js-searchTrigger').on('click', () => {
+  $('.Header-utils').toggleClass('is-expaned');
+});
+
+$(window).resize(debounce(250, function() {
+  $('.Header-utils').removeClass('is-expaned');
+}));
+
+// Headroom for fixed sticky header
 
 const myElement = document.querySelector('header');
 

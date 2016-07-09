@@ -11,6 +11,7 @@
 }
 
 .Offcanvas.is-ready .Offcanvas-content {
+  @extend .u-zindex-max;
   height: 100%;
   overflow: auto;
   position: fixed;
@@ -18,7 +19,6 @@
   transform: translateX(0);
   transition: transform 200ms ease-out;
   will-change: translateX;
-  z-index: 10;
 }
 
 .Offcanvas--right.is-ready .Offcanvas-content {
