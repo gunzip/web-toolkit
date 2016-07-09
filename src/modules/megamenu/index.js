@@ -6,7 +6,9 @@ import scriptjs from 'scriptjs';
 
 scriptjs('https://cdn.rawgit.com/adobe-accessibility/Accessible-Mega-Menu/master/js/jquery-accessibleMegaMenu.js', function() {
 
-  $('.Megamenu').accessibleMegaMenu({
+  $('.js-megamenu')
+    .addClass('is-ready')
+    .accessibleMegaMenu({
     /* prefix for generated unique id attributes, which are required
        to indicate aria-owns, aria-controls and aria-labelledby */
     uuidPrefix: 'megamenu',

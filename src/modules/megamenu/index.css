@@ -2,7 +2,7 @@
 
 :root {
   --Megamenu-border-color: #dedede;
-  --Megamenu-arrow-width: 0.8em;
+  --Megamenu-arrow-width: 0.5em;
 }
 
 .Megamenu-list {
@@ -18,8 +18,11 @@
 
 /* first descendant link within a top level navigation item */
 .Megamenu-item > a {
-  @extend .u-inlineBlock;
-  @extend .u-posRelative;
+  @extend .u-block;
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-padding-right-xxl;
+  @extend .u-padding-left-xxl;
 }
 
 /* focus/open states of first descendant link within a top level
@@ -36,8 +39,7 @@
 }
 
 /* sub-navigation panel */
-.Megamenu-subnav {
-  @extend .u-background-white;
+.Megamenu.is-ready .Megamenu-subnav {
   @extend .u-hidden;
   @extend .u-posAbsolute;
   left: 0;
@@ -45,7 +47,7 @@
 }
 
 /* sub-navigation panel open state */
-.Megamenu-subnav.is-open {
+.Megamenu.is-ready .Megamenu-subnav.is-open {
   @extend .u-block;
 }
 
@@ -69,13 +71,6 @@
   @extend .u-border-top-xxs;
 }
 
-.Megamenu--styled .Megamenu-list > li {
-  @extend .u-padding-top-s;
-  @extend .u-padding-bottom-s;
-  @extend .u-padding-right-xxl;
-  @extend .u-padding-left-xxl;
-}
-
 .Megamenu--styled .Megamenu-item > a,
 .Megamenu--styled .Megamenu-subnavGroup > li > a {
   @extend .u-textClean;
@@ -84,24 +79,22 @@
   @extend .u-posRelative;
 }
 
-.Megamenu--styled .Megamenu-list > li:hover::after {
+.Megamenu--styled .Megamenu-list > li > a[aria-expanded=true]::after {
   border-bottom: var(--Megamenu-arrow-width) solid color(var(--Color-primary) l(-15%));
   border-left: var(--Megamenu-arrow-width) solid transparent;
   border-right: var(--Megamenu-arrow-width) solid transparent;
-  bottom: -calc(1em - var(--Megamenu-arrow-width));
+  bottom: 0;
   content: "";
   display: block;
   height: 0;
   left: calc(50% - var(--Megamenu-arrow-width));
-  position: relative;
+  position: absolute;
   width: 0;
 }
 
 .Megamenu--styled .Megamenu-subnav {
-  @extend .u-margin-top-s;
   @extend .u-background-80;
   @extend .u-padding-all-l;
-  @extend .u-margin-top-s;
 }
 
 .Megamenu--styled .Megamenu-subnavGroup > li {
@@ -124,7 +117,7 @@
 .Megamenu--styled .Megamenu-subnavGroup > li > ul {
   @extend .u-padding-top-xs;
   @extend .u-margin-top-xxs;
-  @extend .u-padding-botom-xs;
+  @extend .u-padding-bottom-xs;
   @extend .u-border-top-xxs;
 }
 
