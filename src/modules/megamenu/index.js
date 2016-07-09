@@ -4,10 +4,12 @@ import scriptjs from 'scriptjs';
 
 /* FIXME: wait till https://github.com/adobe-accessibility/Accessible-Mega-Menu/pull/38 and then packege with npm */
 
+$('.js-megamenu')
+  .addClass('is-ready');
+
 scriptjs('https://cdn.rawgit.com/adobe-accessibility/Accessible-Mega-Menu/master/js/jquery-accessibleMegaMenu.js', function() {
 
   $('.js-megamenu')
-    .addClass('is-ready')
     .accessibleMegaMenu({
     /* prefix for generated unique id attributes, which are required
        to indicate aria-owns, aria-controls and aria-labelledby */
