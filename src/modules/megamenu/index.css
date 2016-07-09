@@ -8,7 +8,7 @@
 .Megamenu-list {
   @extend .u-block;
   @extend .u-posRelative;
-  @extend .u-zindex-max;
+  @extend .u-zindex-40;
 }
 
 /* a top level navigation item in the mega menu */
@@ -42,6 +42,7 @@
 .Megamenu.is-ready .Megamenu-subnav {
   @extend .u-hidden;
   @extend .u-posAbsolute;
+  @extend .u-zindex-max;
   left: 0;
   width: 100%;
 }

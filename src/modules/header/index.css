@@ -377,8 +377,12 @@
   @extend .u-text-xs;
 }
 
-.Header-social [class^="icon-"],
-.Header-social [class*=" icon-"] {
+.Header-socialIcons > li {
+  @extend .u-inlineBlock;
+}
+
+.Header-socialIcons [class^="icon-"],
+.Header-socialIcons [class*=" icon-"] {
   @extend .u-inlineBlock;
   @extend .u-background-white;
   @extend .u-color-50;
