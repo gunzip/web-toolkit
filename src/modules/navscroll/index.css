@@ -1,0 +1,23 @@
+/** @define Navscroll; weak; */
+
+.Navscroll {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.Navscroll > ul {
+  text-align: justify;
+  width: 100em;
+}
+
+.Navscroll > ul::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.Navscroll > ul > li {
+  display: inline-block;
+}
