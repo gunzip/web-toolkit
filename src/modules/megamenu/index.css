@@ -117,11 +117,25 @@
 
 .Megamenu--styled .Megamenu-subnavGroup > li > ul {
   @extend .u-padding-top-xs;
-  @extend .u-margin-top-xxs;
+  @extend .u-margin-top-s;
   @extend .u-padding-bottom-xs;
   @extend .u-border-top-xxs;
 }
 
-.Megamenu--styled .Megamenu-subnavGroup > li > ul > li > a {
+/*
+ *	Max depth = 3 levels
+ */
+.Megamenu--styled .Megamenu-subnavGroup > li > ul > li a {
+  @extend .u-text-xs;
+  @extend .u-color-5;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li > ul > li > ul > li > a {
+  @extend .u-text-xxs;
   @extend .u-color-10;
+}
+
+.Megamenu--styled .Megamenu-subnavGroup > li > ul > li > ul {
+  @extend .u-margin-top-xs;
+  @extend .u-margin-bottom-xs;
 }
