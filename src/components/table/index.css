@@ -178,20 +178,21 @@
   overflow: hidden;
 }
 
-.Table--flip thead {
+.Table--flip > thead {
   display: flex;
   flex-shrink: 0;
   min-width: min-content;
 }
 
-.Table--flip tbody {
+.Table--flip > tbody {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
   position: relative;
 }
 
-.Table--flip tr {
+.Table--flip > tbody > tr {
+  border-right: 1px solid var(--Table-border-color);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;

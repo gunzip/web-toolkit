@@ -1,3 +1,5 @@
+import IwtTable from './src/components/table';
+
 import IwtAccordion from './src/modules/accordion';
 import IwtSkiplinks from './src/modules/skiplinks';
 import IwtPackery from './src/modules/packery';
@@ -7,6 +9,7 @@ import IwtHeadroom from './src/modules/header';
 import IwtMegamenu from './src/modules/megamenu';
 
 const __exports = {
+	IwtTable,
 	IwtAccordion,
 	IwtPackery,
 	IwtTreeview,
