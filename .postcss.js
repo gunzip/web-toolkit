@@ -1,10 +1,20 @@
 module.exports = {
   use: [
+    'postcss-devtools',
+
+    'postcss-easy-import',
+    'postcss-custom-properties',
+    'postcss-custom-media',
+
+    'postcss-each',
+
     'postcss-extend',
     'postcss-color-function',
     'postcss-inline-svg',
     'postcss-assets',
     'postcss-url',
+    'postcss-calc',
+    'autoprefixer',
     'postcss-reporter'
   ],
   'postcss-url': {
