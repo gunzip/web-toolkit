@@ -7,6 +7,7 @@ module.exports = {
     'postcss-custom-media',
 
     'postcss-each',
+    'postcss-nesting',
 
     'postcss-extend',
     'postcss-color-function',
