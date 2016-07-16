@@ -22,7 +22,7 @@
   @extend .u-color-grey-30;
   @extend .u-border-top-xxs;
   @extend .u-block;
-  @extend .u-text-m;
+  @extend .u-text-r-m;
   @extend .u-textWeight-400;
   @extend .u-nbfc;
 }

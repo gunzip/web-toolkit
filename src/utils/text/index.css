@@ -1,9 +1,14 @@
 /** @define utilities */
 
+@import "./text.css";
+@import "./text-sm.css";
+@import "./text-md.css";
+@import "./text-lg.css";
+@import "./lineheight.css";
+
 :root {
   --Text-color-text-primary: #333;
   --Text-color-text-secondary: #5a6772;
-  --Text-space-unit: 0.5rem;
 
   --Text-preFormatted-font:
     Consolas,
@@ -83,102 +88,96 @@
 }
 
 /*
- *	Font sizing
+ *	Responsive font sizing
  * 	====================================
  */
-.u-text-xxl {
-  font-size: 3.6rem !important;
-  line-height: 1.2 !important;
+.u-text-r-xxl {
+  @extend .u-text-xxl;
+  @extend .u-text-sm-xxl;
+  @extend .u-text-lg-xxl;
+  @extend .u-text-md-xxl;
 }
 
-.u-text-xl {
-  font-size: 3.2rem !important;
-  line-height: 1.2 !important;
+.u-text-r-xl {
+  @extend .u-text-xl;
+  @extend .u-text-sm-xl;
+  @extend .u-text-lg-xl;
+  @extend .u-text-md-xl;
 }
 
-.u-text-l {
-  font-size: 2.8rem !important;
-  line-height: 1.2 !important;
+.u-text-r-l {
+  @extend .u-text-l;
+  @extend .u-text-sm-l;
+  @extend .u-text-lg-l;
+  @extend .u-text-md-l;
 }
 
-.u-text-m {
-  font-size: 2.3rem !important;
-  letter-spacing: 0.007em !important;
-  line-height: 1.2 !important;
+.u-text-r-m {
+  @extend .u-text-m;
+  @extend .u-text-sm-m;
+  @extend .u-text-lg-m;
+  @extend .u-text-md-m;
 }
 
-.u-text-s {
-  font-size: 2.1rem !important;
-  letter-spacing: 0.005em !important;
-  line-height: 1.2 !important;
+.u-text-r-s {
+  @extend .u-text-s;
+  @extend .u-text-sm-s;
+  @extend .u-text-lg-s;
+  @extend .u-text-md-s;
 }
 
-.u-text-xs {
-  font-size: 1.8rem !important;
-  letter-spacing: 0.01em !important;
-  line-height: 1.55 !important;
+.u-text-r-xs {
+  @extend .u-text-xs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-lg-xs;
+  @extend .u-text-md-xs;
 }
 
-.u-text-xxs {
-  font-size: 1.5rem !important;
-  letter-spacing: normal !important;
-  line-height: 1.55 !important;
-}
-
-@media (--md-viewport), (--lg-viewport) {
-
-  .u-text-xxl {
-    font-size: 5.4rem !important;
-  }
-
-  .u-text-xl {
-    font-size: 4rem !important;
-  }
-
-  .u-text-l {
-    font-size: 3.2rem !important;
-  }
+.u-text-r-xxs {
+  @extend .u-text-xxs;
+  @extend .u-text-sm-xxs;
+  @extend .u-text-lg-xxs;
+  @extend .u-text-md-xxs;
 }
 
 /*
- *	Heading - loosely set default margins
+ *	Heading - set default margins
  * 	=====================================
  */
 
 .u-text-h1 {
-  @extend .u-text-xxl;
+  @extend .u-text-r-xxl;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit));
+  @extend .u-margin-bottom-s;
 }
 
 .u-text-h2 {
-  @extend .u-text-xl;
+  @extend .u-text-r-xl;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit));
+  @extend .u-margin-bottom-s;
 }
 
 .u-text-h3 {
-  @extend .u-text-l;
+  @extend .u-text-r-l;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit));
+  @extend .u-margin-bottom-s;
 }
 
 .u-text-h4 {
-  @extend .u-text-m;
+  @extend .u-text-r-m;
   @extend .u-textWeight-700;
-  margin-bottom: calc(3 * var(--Text-space-unit));
+  @extend .u-margin-bottom-s;
 }
 
 .u-text-h5 {
-  @extend .u-text-s;
+  @extend .u-text-r-s;
   @extend .u-textWeight-400;
-  color: var(--Text-color-text-secondary);
-  margin-bottom: calc(2 * var(--Text-space-unit));
+  @extend .u-margin-bottom-s;
+  @extend .u-textSecondary;
 }
 
 .u-text-h6 {
-  @extend .u-text-xs;
+  @extend .u-text-r-xs;
   @extend .u-textWeight-700;
-  letter-spacing: 0.007em !important;
-  margin-bottom: calc(2 * var(--Text-space-unit));
+  @extend .u-margin-bottom-s;
 }

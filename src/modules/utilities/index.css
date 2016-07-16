@@ -11,7 +11,7 @@
 }
 
 .Utilities-link {
-  @extend .u-text-m;
+  @extend .u-text-r-m;
   @extend .u-padding-top-l;
   @extend .u-padding-bottom-l;
   @extend .u-sizeFull;

@@ -4,7 +4,6 @@
   --Layout-container-wide: 144rem;
   --Layout-container-wider: 168rem;
   --Layout-container-medium: 128rem;
-  --Layout-prose-fontSize: 1.8rem;
   --Layout-gutter: 1.2rem;
   --Layout-gutter-wide: 2.4rem;
   --Layout-prose-width: 32em;
@@ -15,6 +14,7 @@
   padding-right: var(--Layout-gutter);
 }
 
+/* FIXME: responsive padding */
 @media (--lg-viewport) {
 
   .u-layout-withGutter {
@@ -55,7 +55,6 @@
 }
 
 .u-layout-prose {
-  font-size: var(--Layout-prose-fontSize) !important;
   max-width: var(--Layout-prose-width) !important;
 }
 

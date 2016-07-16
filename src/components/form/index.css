@@ -99,7 +99,7 @@ option:hover {
 
 .Form-field--withPlaceholder .Form-label {
   @extend .u-textWeight-400;
-  @extend .u-text-xs;
+  @extend .u-text-r-xs;
   @extend .u-posAbsolute;
   @extend .u-layoutCenterVertically;
   left: 1em;

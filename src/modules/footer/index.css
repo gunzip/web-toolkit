@@ -21,15 +21,15 @@
 }
 
 .Footer-link {
-  @extend .u-text-s;
+  @extend .u-text-r-s;
 }
 
 .Footer-siteName {
-  @extend .u-text-l;
+  @extend .u-text-r-l;
 }
 
 .Footer-blockTitle {
-  @extend .u-text-m;
+  @extend .u-text-r-m;
   @extend .u-padding-bottom-xl;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .Footer-subTitle {
-  @extend .u-text-m;
+  @extend .u-text-r-m;
   @extend .u-color-white;
   @extend .u-textWeight-400;
   @extend .u-padding-bottom-l;
@@ -52,7 +52,7 @@
 }
 
 .Footer-block address {
-  @extend .u-text-xxs;
+  @extend .u-text-r-xxs;
   @extend .u-textNormal;
   @extend .u-color-grey-10;
 }
@@ -69,7 +69,7 @@
 }
 
 .Footer-block a {
-  @extend .u-text-xxs;
+  @extend .u-text-r-xxs;
   @extend .u-textWeight-700;
 }
 
@@ -87,5 +87,5 @@
 }
 
 .Footer-links a {
-  @extend .u-text-xxs;
+  @extend .u-text-r-xxs;
 }

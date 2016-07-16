@@ -5,21 +5,21 @@
             "name": "default",
             "context": {
               "modifier": "default",
-              "type": "u-text-xs"
+              "type": "u-text-r-xs"
             }
         },
         {
             "name": "info",
             "context": {
               "modifier": "info",
-              "type": "u-text-xs"
+              "type": "u-text-r-xs"
             }
         },
         {
             "name": "danger",
             "context": {
               "modifier": "danger",
-              "type": "u-text-xs"
+              "type": "u-text-r-xs"
             }
         }
     ]

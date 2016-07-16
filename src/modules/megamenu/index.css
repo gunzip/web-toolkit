@@ -76,7 +76,7 @@
 .Megamenu--styled .Megamenu-subnavGroup > li > a {
   @extend .u-textClean;
   @extend .u-color-white;
-  @extend .u-text-s;
+  @extend .u-text-r-s;
   @extend .u-posRelative;
 }
 
@@ -126,12 +126,12 @@
  *	Max depth = 3 levels
  */
 .Megamenu--styled .Megamenu-subnavGroup > li > ul > li a {
-  @extend .u-text-xs;
+  @extend .u-text-r-xs;
   @extend .u-color-5;
 }
 
 .Megamenu--styled .Megamenu-subnavGroup > li > ul > li > ul > li > a {
-  @extend .u-text-xxs;
+  @extend .u-text-r-xxs;
   @extend .u-color-10;
 }
 

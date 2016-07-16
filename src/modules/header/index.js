@@ -9,7 +9,7 @@ const opts = {
   offset: 0,
   // you can specify tolerance individually for up/down scroll
   tolerance: {
-    up: 0,
+    up: 50,
     down: 0
   },
   // css classes to apply
