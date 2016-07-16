@@ -96,11 +96,20 @@
 
 .Header-navbar {
   @extend .u-background-50;
-  @extend .u-padding-top-xs;
-  @extend .u-padding-bottom-xs;
-  @extend .u-padding-right-xs;
+  @extend .u-padding-all-xxs;
 
-  /* FIXME: % padding > lg-viewport-max */
+  @media (--sm-viewport) {
+    @extend .u-padding-top-s;
+    @extend .u-padding-bottom-s;
+    @extend .u-padding-right-xs;
+  }
+
+  @media (--md-viewport) {
+    @extend .u-padding-top-m;
+    @extend .u-padding-bottom-m;
+    @extend .u-padding-right-l;
+  }
+
   @media (--lg-viewport) {
     @extend .u-padding-top-l;
     @extend .u-padding-bottom-l;
@@ -110,11 +119,11 @@
 
 .Header-toggle {
   @extend .u-block;
-  @extend .u-size3of12;
+  @extend .u-size2of12;
   @extend .u-sm-size2of12;
   @extend .u-md-size2of12;
   @extend .u-lg-size2of12;
-  @extend .u-padding-left-s;
+  @extend .u-padding-left-xs;
 
   @extend .u-color-white;
   @extend .u-text-xxs;
@@ -156,19 +165,21 @@
 }
 
 /**
- *  1. FIXME: account for smallest screen
- *  2. Avoids collapse to burger icon
+ *  1. Avoids collapse to burger icon
  */
 .Header-title {
-  @extend .u-size9of12;
+  @extend .u-size10of12;
   @extend .u-flex;
   @extend .u-flexAlignItemsCenter;
+
+  @extend .u-padding-left-xs;
+  @extend .u-padding-right-xxs;
+
   line-height: 0.1;
-  margin-left: -var(--Header-smaller-pad); /* 1 */
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-size6of12;
-    @extend .u-padding-left-s; /* 2 */
+    @extend .u-padding-left-s; /* 1 */
   }
 
   @media (--md-viewport), (--lg-viewport) {
@@ -224,6 +235,8 @@
   @extend .u-textRight;
   @extend .u-flexExpandLeft;
   @extend .u-padding-left-xxs;
+  @extend .u-padding-bottom-xs;
+  @extend .u-padding-top-xs;
 }
 
 .Header-searchTrigger a {
@@ -232,7 +245,10 @@
   @extend .u-background-40;
   @extend .u-color-white;
   @extend .u-padding-all-s;
-  @extend .u-text-m;
+  @extend .u-text-xs;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-text-m;
+  }
 }
 
 .Header-searchTrigger a span {
@@ -242,15 +258,20 @@
 /* ========================================== */
 
 .Header-utils {
-  @extend .u-hidden;
-  @extend .u-sm-block;
-  @extend .u-md-block;
-  @extend .u-lg-block;
+  @extend .u-block;
+  @extend .u-background-40;
+  @extend .u-margin-top-xxs;
+  @extend .u-textRight;
+
+  @extend .u-sizeFull;
   @extend .u-sm-size4of12;
   @extend .u-md-size4of12;
   @extend .u-lg-size4of12;
-  @extend .u-textRight;
-  @extend .u-padding-right-s;
+
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-padding-right-s;
+    @extend .u-background-50;
+  }
 
   @media (--sm-viewport) {
     @extend .u-margin-top-xs;
@@ -266,34 +287,27 @@
   }
 }
 
-/* Expandable search box
-  ========================================== */
-
-.Header-utils.is-expaned {
-  @extend .u-block;
-  @extend .u-sizeFull;
-  @extend .u-background-40;
-  @extend .u-margin-top-s;
-  @extend .u-margin-left-xs;
-  @extend .u-padding-top-xxs;
-  @extend .u-padding-right-xxs;
-  @extend .u-padding-left-xxs;
-}
-
-.Header-utils.is-expaned > * {
+.Header-utils > *,
+.Header-utils > .Header-search button {
   @extend .u-hidden;
+  @extend .u-sm-block;
+  @extend .u-md-block;
+  @extend .u-lg-block;
 }
 
-.Header-utils.is-expaned > .Header-search {
-  @extend .u-block;
-  @extend .u-sizeFull;
-  @extend .u-margin-bottom-xxs;
+.Header-utils > .Header-search {
   @extend .u-padding-all-xxs;
-  max-width: none;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-margin-bottom-m;
+    @extend .u-padding-left-m;
+    @extend .u-floatRight;
+    max-width: 24em;
+    padding-right: 0 !important;
+  }
 }
 
-.Header-utils.is-expaned > .Header-search button {
-  @extend .u-hidden;
+.Header-utils:target > .Header-search {
+  @extend .u-sizeFull;
 }
 
 /* ========================================== */
@@ -348,16 +362,6 @@
   @extend .u-padding-all-xs;
   @extend .u-borderRadius-circle;
   @extend .u-margin-left-xs;
-}
-
-.Header-search {
-  @extend .u-margin-bottom-m;
-  @extend .u-padding-left-m;
-}
-
-.Header-search {
-  @extend .u-floatRight;
-  max-width: 24em;
 }
 
 /*
