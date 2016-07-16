@@ -13,28 +13,23 @@
   --Prose-color-text-secondary: #5a6772;
 }
 
-.Prose blockquote {
-  @extend .u-textBlockquote;
-}
-
-.Prose p,
-.Prose pre {
+.Prose > p,
+.Prose > pre {
   @extend .u-margin-bottom-xl;
 }
 
-.Prose p,
-.Prose li {
+.Prose > p,
+.Prose > ul > li,
+.Prose > ol > li {
   @extend .u-text-xs;
   color: var(--Prose-color-text-primary);
 }
 
-.Prose small {
+.Prose > p > small {
   @extend .u-text-xxs;
 }
 
-.Prose a {
-  @extend .u-textClean;
-  @extend .u-textWeight-700;
+.Prose p > a {
   color: var(--Prose-color-link);
 }
 
@@ -46,30 +41,43 @@
   color: var(--Prose-color-text-secondary);
 }
 
-.Prose a:hover {
+.Prose-blockquote {
+  @extend .u-border-left-m;
+  @extend .u-padding-left-l;
+  @extend .u-margin-bottom-xl;
+}
+
+.Prose-blockquote > p {
+  @extend .u-text-m;
+  @extend .u-textItalic;
+  @extend .u-textSecondary;
+}
+
+.Prose > p > a:hover {
   color: var(--Prose-color-link-hover);
 }
 
-.Prose a:visited {
+.Prose > p > a:visited {
   color: var(--Prose-color-link-visited);
 }
 
-.Prose ul,
-.Prose ol {
+.Prose > ul,
+.Prose > ol {
   @extend .u-margin-bottom-xl;
   @extend .u-margin-left-xl;
   list-style-position: outside;
 }
 
-.Prose ul {
+.Prose > ul {
   list-style-type: square;
 }
 
-.Prose ol {
+.Prose > ol {
   list-style-type: decimal;
 }
 
-.Prose li {
+.Prose > ul > li,
+.Prose > ol > li {
   @extend .u-padding-top-xxs;
   @extend .u-padding-bottom-xxs;
 }

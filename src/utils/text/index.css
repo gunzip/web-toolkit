@@ -1,7 +1,6 @@
 /** @define utilities */
 
 :root {
-  --Text-blockquote-border-color: #eee;
   --Text-color-text-primary: #333;
   --Text-color-text-secondary: #5a6772;
   --Text-space-unit: 0.5rem;
@@ -81,11 +80,6 @@
 .u-textPreformatted:focus {
   max-width: min-content;
   width: min-content;
-}
-
-.u-textBlockquote {
-  border-left: 1rem solid var(--Text-blockquote-border-color) !important;
-  padding-left: 2rem !important;
 }
 
 /*
