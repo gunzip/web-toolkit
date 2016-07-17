@@ -231,7 +231,6 @@
 
 .Header-utils {
   @extend .u-block;
-  @extend .u-background-40;
   @extend .u-margin-top-xxs;
   @extend .u-textRight;
 
@@ -240,12 +239,14 @@
   @extend .u-md-size4of12;
   @extend .u-lg-size4of12;
 
+  @extend .u-background-40;
+
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-padding-right-s;
     @extend .u-background-50;
   }
 
   @media (--sm-viewport) {
+    @extend .u-padding-right-s;
     @extend .u-margin-top-xs;
     @extend .u-margin-bottom-xs;
   }
@@ -374,6 +375,7 @@
 }
 
 .Headroom--pinned.Headroom--not-top {
+  max-height: 100em;
   position: fixed;
 }
 
@@ -401,5 +403,5 @@
 }
 
 .Headroom--unpinned {
-  /* transform: translateY(-100%); */
+  transform: translateY(-100%);
 }
