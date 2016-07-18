@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import scriptjs from 'scriptjs';
+import Megamenu from 'accessible-mega-menu';
 
 // ASAP hide megamenu panels
 $('.js-megamenu').addClass('is-ready');
@@ -63,10 +63,7 @@ const listToMegaMenu = ($ul, _opts) => {
     .end();
 }
 
-/* FIXME: wait till https://github.com/adobe-accessibility/Accessible-Mega-Menu/pull/38 and then packege with npm */
-
-scriptjs('https://cdn.rawgit.com/adobe-accessibility/Accessible-Mega-Menu/master/js/jquery-accessibleMegaMenu.js', function() {
-
+$(document).ready(function() {
   $('.js-megamenu').each((i, el) => {
     const $el = $(el);
     const rel = $(el).data('rel');
@@ -77,7 +74,6 @@ scriptjs('https://cdn.rawgit.com/adobe-accessibility/Accessible-Mega-Menu/master
     }
     $el.accessibleMegaMenu(opts);
   });
-
 });
 
-module.exports = { listToMegaMenu };
+module.exports = { opts, listToMegaMenu, Megamenu };
