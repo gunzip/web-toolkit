@@ -3,7 +3,7 @@
 .Entrypoint-item {
   @extend .u-sizeFill;
   @extend .u-borderRadius-m;
-  @extend .u-padding-all-l;
   @extend .u-margin-bottom-xs;
   @extend .u-border-shadow-xxs;
+  @extend .u-padding-r-all-l;
 }
