@@ -347,6 +347,7 @@
   will-change: transform;
 }
 
+.Headroom--fixed,
 .Headroom--pinned {
   transform: translateY(0%);
 }
@@ -357,6 +358,9 @@
   transition: all 350ms linear;
 }
 
+.Headroom--fixed.Headroom--not-top .Header-social,
+.Headroom--fixed.Headroom--not-top .Header-languages,
+.Headroom--fixed.Headroom--not-top .Header-banner,
 .Headroom--pinned.Headroom--not-top .Header-social,
 .Headroom--pinned.Headroom--not-top .Header-languages,
 .Headroom--pinned.Headroom--not-top .Header-banner {
@@ -370,15 +374,18 @@
   transition: all 200ms linear;
 }
 
+.Headroom--fixed.Headroom--not-top .Headroom-hideme,
 .Headroom--pinned.Headroom--not-top .Headroom-hideme {
   @extend .u-hidden;
 }
 
+.Headroom--fixed.Headroom--not-top,
 .Headroom--pinned.Headroom--not-top {
   max-height: 100em;
   position: fixed;
 }
 
+.Headroom--fixed.Headroom--not-top .Header-titleLink,
 .Headroom--pinned.Headroom--not-top .Header-titleLink {
   @extend .u-text-xs;
   @extend .u-text-sm-s;
@@ -388,20 +395,25 @@
   @extend .u-flex;
 }
 
+.Headroom--fixed.Headroom--not-top .Header-titleLink small,
 .Headroom--pinned.Headroom--not-top .Header-titleLink small {
   @extend .u-hidden;
 }
 
+.Headroom--fixed.Headroom--not-top .Header-navbar,
 .Headroom--pinned.Headroom--not-top .Header-navbar {
   @extend .u-padding-top-xxs;
   @extend .u-padding-bottom-xxs;
 }
 
+.Headroom--fixed.Headroom--not-top .Header-search,
 .Headroom--pinned.Headroom--not-top .Header-search {
-  @extend .u-margin-bottom-xxs;
-  @extend .u-padding-bottom-xxs;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-margin-bottom-xxs;
+    @extend .u-padding-bottom-xxs;
+  }
 }
 
 .Headroom--unpinned {
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
 }
