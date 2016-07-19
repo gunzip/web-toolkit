@@ -1,8 +1,8 @@
-import Frdialogmodal from 'fr-dialogmodal';
+import Frdialogmodal from 'fr-dialogmodal'
 
 /* eslint-disable no-unused-vars */
 
-import stylesheet from 'fr-dialogmodal/dialogmodal.css';
+import stylesheet from 'fr-dialogmodal/dialogmodal.css'
 
 /* eslint-enable */
 
@@ -27,6 +27,6 @@ var dialog = Frdialogmodal({
 
   // String - Class name that will be added to the selector when the component is active
   activeClass: 'fr-dialogmodal--is-active'
-});
+})
 
-module.exports = { dialog, Frdialogmodal };
+export default { dialog, Frdialogmodal }

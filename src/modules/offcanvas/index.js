@@ -1,10 +1,10 @@
-import $ from 'jquery';
+import $ from 'jquery'
 
-import Froffcanvas from 'fr-offcanvas';
+import Froffcanvas from 'fr-offcanvas'
 
 /* eslint-disable no-unused-vars */
 
-import stylesheet from 'fr-offcanvas/offcanvas.css';
+import stylesheet from 'fr-offcanvas/offcanvas.css'
 
 /* eslint-enable */
 
@@ -20,7 +20,7 @@ const offcanvas = Froffcanvas({
 
   // String - Class name that will be added to the selector when the panel is visible
   activeClass: 'is-active'
-});
+})
 
 /*
  *	FIXME: hack to show / hide the background panel
@@ -29,10 +29,11 @@ const _handleModal = function(e) {
   if (e && $('.Offcanvas').hasClass('is-active') &&
     !$(e.target).hasClass('Offcanvas-content'))
 	{
-    $('.js-fr-offcanvas-close').click();
+    $('.js-fr-offcanvas-close').click()
   }
-  $('.Offcanvas--modal').one('click', _handleModal);
-};
-_handleModal();
+  $('.Offcanvas--modal').one('click', _handleModal)
+}
 
-module.exports = offcanvas;
+_handleModal()
+
+export default { Froffcanvas, offcanvas }

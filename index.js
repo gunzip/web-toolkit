@@ -1,14 +1,14 @@
-import IwtTable from './src/components/table';
+import IwtTable from './src/components/table'
 
-import IwtAccordion from './src/modules/accordion';
-import IwtDialog from './src/modules/dialog';
-import IwtSkiplinks from './src/modules/skiplinks';
-import IwtPackery from './src/modules/packery';
-import IwtTreeview from './src/modules/treeview';
-import IwtOffcanvas from './src/modules/offcanvas';
-import IwtHeadroom from './src/modules/header';
-import IwtMegamenu from './src/modules/megamenu';
-import IwtTooltip from './src/modules/tooltip';
+import IwtAccordion from './src/modules/accordion'
+import IwtDialog from './src/modules/dialog'
+import IwtSkiplinks from './src/modules/skiplinks'
+import IwtPackery from './src/modules/packery'
+import IwtTreeview from './src/modules/treeview'
+import IwtOffcanvas from './src/modules/offcanvas'
+import IwtHeadroom from './src/modules/header'
+import IwtMegamenu from './src/modules/megamenu'
+import IwtTooltip from './src/modules/tooltip'
 
 const __exports = {
 	IwtTable,
@@ -21,6 +21,6 @@ const __exports = {
 	IwtHeadroom,
 	IwtMegamenu,
 	IwtTooltip,
-};
+}
 
-export default __exports;
+export default __exports

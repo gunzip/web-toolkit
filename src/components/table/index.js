@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import debounce from 'throttle-debounce/throttle';
+import $ from 'jquery'
+import debounce from 'throttle-debounce/throttle'
 
 const defaultOpts = {
   responsiveTableSelector: '.js-tableFlip',
@@ -21,6 +21,6 @@ const initResponsiveTables = function(opts) {
   })
 }
 
-initResponsiveTables(defaultOpts);
+initResponsiveTables(defaultOpts)
 
-module.exports = { defaultOpts, initResponsiveTables }
+export default { defaultOpts, initResponsiveTables }

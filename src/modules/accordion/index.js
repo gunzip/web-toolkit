@@ -1,12 +1,12 @@
-import Fraccordion from 'fr-accordion';
+import Fraccordion from 'fr-accordion'
 
 /* eslint-disable no-unused-vars */
 
-import stylesheet from 'fr-accordion/accordion.css';
+import stylesheet from 'fr-accordion/accordion.css'
 
 /* eslint-enable */
 
-module.exports = Fraccordion({
+const accordion = Fraccordion({
 	// String - Use header id on element to tie each accordion panel to its header - see panelIdPrefix
 	headerIdPrefix: 'accordion-header',
 	// String - Use panel id on element to tie each accordion header to its panel - see headerIdPrefix
@@ -17,4 +17,6 @@ module.exports = Fraccordion({
 	multiselectable: false,
 	// String - Class name that will be added to the selector when the component has been initialised
 	readyClass: 'fr-accordion--is-ready'
-});
+})
+
+export default { accordion, Fraccordion }

@@ -1,8 +1,8 @@
-import Frtooltip from 'fr-tooltip';
+import Frtooltip from 'fr-tooltip'
 
 /* eslint-disable no-unused-vars */
 
-import stylesheet from 'fr-tooltip/tooltip.css';
+import stylesheet from 'fr-tooltip/tooltip.css'
 
 /* eslint-enable */
 
@@ -21,6 +21,6 @@ var tooltip = Frtooltip({
 
 	// String - Class name that will be added to the selector when the component has been initialised
 	readyClass: 'fr-tooltip--is-ready'
-});
+})
 
-module.exports = { tooltip, Frtooltip };
+export default { tooltip, Frtooltip }

@@ -1,37 +1,37 @@
-var webpack = require('webpack');
-var path = require('path');
-var libraryName = 'IWT';
-var outputFile = libraryName + '.js';
+var webpack = require('webpack')
+var path = require('path')
+var libraryName = 'IWT'
+var outputFile = libraryName + '.js'
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-var env = process.env.WEBPACK_ENV;
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+var env = process.env.WEBPACK_ENV
 
-var plugins = [],
-  outputFile;
+var plugins = []
+var outputFile
+
+var loaders = []
 
 if (env === 'build') {
   plugins.push(new UglifyJsPlugin({
     minimize: true
-  }));
-  outputFile = libraryName + '.min.js';
+  }))
+  outputFile = libraryName + '.min.js'
 } else {
-  outputFile = libraryName + '.js';
+  outputFile = libraryName + '.js'
 }
-
-var loaders = [];
 
 if (env === 'build') {
   loaders.push({
     test: /\.css$/,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-  });
-  plugins.push(new ExtractTextPlugin('vendor.css'));
+  })
+  plugins.push(new ExtractTextPlugin('vendor.css'))
 } else {
   loaders.push({
     test: /\.css$/,
     loader: 'style-loader!css-loader'
-  });
+  })
 }
 
 var config = {
@@ -65,6 +65,6 @@ var config = {
   },
   plugins: plugins,
   debug: true
-};
+}
 
-module.exports = config;
+module.exports = config

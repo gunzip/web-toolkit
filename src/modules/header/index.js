@@ -1,8 +1,8 @@
-import Headroom from 'headroom.js';
+import Headroom from 'headroom.js'
 
 // Headroom for fixed sticky header
 
-const myElement = document.querySelector('header');
+const myElement = document.querySelector('header')
 
 const opts = {
   // vertical offset in px before element is first unpinned
@@ -43,13 +43,13 @@ const opts = {
   onBottom: function() {},
   // callback when moving away from bottom of page, `this` is headroom object
   onNotBottom: function() {}
-};
-
-let headroom = null;
-
-if (myElement) {
-  headroom = new Headroom(myElement, opts);
-  headroom.init();
 }
 
-module.exports = headroom;
+let headroom = null
+
+if (myElement) {
+  headroom = new Headroom(myElement, opts)
+  headroom.init()
+}
+
+export default { Headroom, headroom }

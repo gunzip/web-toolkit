@@ -1,7 +1,7 @@
 {
   "ecmaFeatures": {
     "globalReturn": true,
-    "jsx": true,
+    "jsx": false,
     "modules": true
   },
   "rules": {
@@ -22,7 +22,8 @@
     "quotes": [2, "single", "avoid-escape"],
     "camelcase": 0,
     "new-cap": [1, { "capIsNew": false }],
-    "no-undef": 1
+    "no-undef": 1,
+    "semi": [2, "never"]
   },
   "env": {
     "browser": true,
