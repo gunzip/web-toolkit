@@ -70,7 +70,6 @@ $(document).ready(function() {
     if ($el.find('ul').length === 0 && rel && $(rel).length > 0) {
       let $menu = listToMegaMenu($(rel), opts);
       $el.append($menu);
-      console.log($el.html());
     }
     $el.accessibleMegaMenu(opts);
   });

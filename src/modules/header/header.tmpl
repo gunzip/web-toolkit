@@ -58,8 +58,12 @@
 
   </div><!-- Header-navbar -->
 
-  <div class="u-textCenter Headroom-hideme u-hidden u-sm-block u-md-block u-lg-block">
-    {% render '@megamenu' %}
+  <div class="u-textCenter">
+    {% if clone %}
+      <nav class="Megamenu Megamenu--styled js-megamenu" data-rel=".Offcanvas .Treeview"></nav>
+    {% else %}
+      {% render '@megamenu' %}
+    {% endif %}
   </div>
 
 </header>
