@@ -11,6 +11,10 @@
   @extend .u-layout-centerContent;
 }
 
+.Header a:focus {
+  background: transparent;
+}
+
 .Header-banner {
   @extend .u-background-95;
   @extend .u-posRelative;
