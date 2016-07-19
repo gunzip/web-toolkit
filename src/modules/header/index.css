@@ -62,7 +62,8 @@
 
 .Header-owner {
   @extend .u-padding-left-s;
-  max-width: 10em;
+
+  white-space: nowrap;
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     max-width: 100% !important;
@@ -78,7 +79,10 @@
   @extend .u-sm-before2of12;
   @extend .u-md-before2of12;
   @extend .u-lg-before2of12;
-  @extend .u-text-r-s;
+  @extend .u-text-xxs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-md-s;
+  @extend .u-text-lg-s;
   @extend .u-textWeight-700;
   @extend .u-color-white;
   @extend .u-textClean;
