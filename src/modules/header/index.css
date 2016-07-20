@@ -270,6 +270,10 @@
   @extend .u-lg-block;
 }
 
+.Header-search input {
+  @extend .u-sizeFill;
+}
+
 .Header-search {
   @extend .u-padding-all-xxs;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
