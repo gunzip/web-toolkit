@@ -16,8 +16,12 @@ module.exports = {
     'postcss-url',
     'postcss-calc',
     'autoprefixer',
+    'postcss-flexbugs-fixes',
     'postcss-reporter'
   ],
+  'autoprefixer': {
+    browsers: ['last 10 versions', 'ie 8', 'ie 9']
+  },
   'postcss-url': {
     url: 'copy'
   },
