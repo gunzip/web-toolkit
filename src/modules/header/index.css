@@ -182,7 +182,17 @@
   }
 }
 
+/*
+ * 	1. Make room for searchTrigger
+ */
 .Header-titleLink {
+  @extend .u-size10of12; /* 1 */
+  @extend .u-sm-sizeFull;
+  @extend .u-md-sizeFull;
+  @extend .u-lg-sizeFull;
+}
+
+.Header-titleLink a {
   @extend .u-text-xxs;
   @extend .u-text-sm-m;
   @extend .u-text-md-l;
@@ -209,15 +219,14 @@
   @extend .u-sm-hidden;
   @extend .u-md-hidden;
   @extend .u-lg-hidden;
-  @extend .u-textRight;
-  @extend .u-flexExpandLeft;
+  @extend .u-sizeFill;
   @extend .u-padding-left-xxs;
   @extend .u-padding-bottom-xs;
   @extend .u-padding-top-xs;
 }
 
 .Header-searchTrigger a {
-  @extend .u-inlineBlock;
+  @extend .u-floatRight;
   @extend .u-linkClean;
   @extend .u-background-40;
   @extend .u-color-white;
