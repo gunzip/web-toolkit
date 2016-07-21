@@ -4,24 +4,26 @@
   --Layout-container-wide: 144rem;
   --Layout-container-wider: 168rem;
   --Layout-container-medium: 128rem;
-  --Layout-gutter: 1.2rem;
+  --Layout-gutter: 0.8rem;
   --Layout-gutter-wide: 2.4rem;
   --Layout-prose-width: 32em;
 }
 
 .u-layout-withGutter {
-  padding-left: var(--Layout-gutter);
-  padding-right: var(--Layout-gutter);
-}
-
-/* FIXME: responsive padding */
-@media (--lg-viewport) {
-
-  .u-layout-withGutter {
-    padding-left: var(--Layout-gutter-wide);
-    padding-right: var(--Layout-gutter-wide);
+  padding-left: calc(1.5 * var(--Layout-gutter)) !important;
+  padding-right: calc(1.5 * var(--Layout-gutter)) !important;
+  @media (--sm-viewport) {
+    padding-left: calc(2 * var(--Layout-gutter)) !important;
+    padding-right: calc(2 * var(--Layout-gutter)) !important;
   }
-
+  @media (--md-viewport) {
+    padding-left: calc(2.5 * var(--Layout-gutter)) !important;
+    padding-right: calc(2.5 * var(--Layout-gutter)) !important;
+  }
+  @media (--lg-viewport) {
+    padding-left: calc(3 * var(--Layout-gutter)) !important;
+    padding-right: calc(3 * var(--Layout-gutter)) !important;
+  }
 }
 
 .u-layout-constrain {

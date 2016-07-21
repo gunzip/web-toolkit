@@ -119,9 +119,6 @@
 .Header-toggle {
   @extend .u-block;
   @extend .u-size2of12;
-  @extend .u-sm-size2of12;
-  @extend .u-md-size2of12;
-  @extend .u-lg-size2of12;
   @extend .u-padding-left-xs;
 
   @extend .u-color-white;
@@ -404,12 +401,16 @@
 
 .Headroom--fixed.Headroom--not-top .Header-titleLink,
 .Headroom--pinned.Headroom--not-top .Header-titleLink {
-  @extend .u-text-xs;
-  @extend .u-text-sm-s;
-  @extend .u-text-md-m;
-  @extend .u-text-lg-l;
   @extend .u-flexAlignSelfCenter;
   @extend .u-flex;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-titleLink a,
+.Headroom--pinned.Headroom--not-top .Header-titleLink a {
+  @extend .u-text-xs;
+  @extend .u-text-sm-xs;
+  @extend .u-text-md-s;
+  @extend .u-text-lg-m;
 }
 
 .Headroom--fixed.Headroom--not-top .Header-titleLink small,
@@ -421,6 +422,11 @@
 .Headroom--pinned.Headroom--not-top .Header-navbar {
   @extend .u-padding-top-xxs;
   @extend .u-padding-bottom-xxs;
+}
+
+.Headroom--fixed.Headroom--not-top .Header-logo img,
+.Headroom--pinned.Headroom--not-top .Header-logo img {
+  max-width: 3em;
 }
 
 .Headroom--fixed.Headroom--not-top .Header-search,
