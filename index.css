@@ -47,7 +47,8 @@
 @custom-media --lg-viewport screen and (min-width: 1440px);
 
 :root {
-  --it-Base-font-size: 1.8rem;
+  --it-Base-font-size-ratio: 1.8;
+  --it-Base-font-size: calc(1rem * var(--it-Base-font-size-ratio));
   --it-Base-text-color: #1c2024;
 }
 
