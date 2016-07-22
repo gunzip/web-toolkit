@@ -110,9 +110,9 @@
   }
 
   @media (--lg-viewport) {
-    @extend .u-padding-top-l;
-    @extend .u-padding-bottom-l;
-    @extend .u-padding-right-xl;
+    @extend .u-padding-top-m;
+    @extend .u-padding-bottom-m;
+    @extend .u-padding-right-xxl;
   }
 }
 
