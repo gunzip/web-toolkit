@@ -1,4 +1,6 @@
+import $ from 'jquery'
 import Headroom from 'headroom.js'
+import debounce from 'throttle-debounce/throttle'
 
 // Headroom for fixed sticky header
 
@@ -32,13 +34,13 @@ const opts = {
   // element to listen to scroll events on, defaults to `window`
   scroller: window,
   // callback when pinned, `this` is headroom object
-  onPin: function() { },
+  onPin: function() {},
   // callback when unpinned, `this` is headroom object
-  onUnpin: function() { },
+  onUnpin: function() {},
   // callback when above offset, `this` is headroom object
-  onTop: function() { },
+  onTop: function() {},
   // callback when below offset, `this` is headroom object
-  onNotTop: function() { },
+  onNotTop: function() {},
   // callback when at bottom of page, `this` is headroom object
   onBottom: function() {},
   // callback when moving away from bottom of page, `this` is headroom object
@@ -52,4 +54,23 @@ if (myElement) {
   headroom.init()
 }
 
-export default { Headroom, headroom }
+const headroomFixed = '.Headroom--fixed'
+
+if ($(headroomFixed).length > 0) {
+  const _onResize = function() {
+    $('body').css({
+      paddingTop: ($(headroomFixed).height() + 16) + 'px'
+    })
+  }
+  $(headroomFixed).css({
+    position: 'fixed',
+    top: 0
+  })
+  $(window).resize(debounce(250, _onResize))
+  _onResize()
+}
+
+export default {
+  Headroom,
+  headroom
+}
