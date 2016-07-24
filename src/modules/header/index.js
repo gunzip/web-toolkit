@@ -1,4 +1,3 @@
-import $ from 'jquery'
 import Headroom from 'headroom.js'
 
 // Headroom for fixed sticky header
@@ -37,9 +36,9 @@ const opts = {
   // callback when unpinned, `this` is headroom object
   onUnpin: function() { },
   // callback when above offset, `this` is headroom object
-  onTop: function() {$('body').css({paddingTop: '0'})},
+  onTop: function() { },
   // callback when below offset, `this` is headroom object
-  onNotTop: function() {$('body').css({paddingTop: ($('.Headroom').height()) + 'px'})},
+  onNotTop: function() { },
   // callback when at bottom of page, `this` is headroom object
   onBottom: function() {},
   // callback when moving away from bottom of page, `this` is headroom object
