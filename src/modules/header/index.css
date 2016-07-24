@@ -356,7 +356,7 @@
  * =============================
  */
 .Headroom {
-  transition: transform 250ms linear;
+  transition: transform 250ms ease;
   width: 100%;
   will-change: transform;
 }
@@ -369,7 +369,16 @@
 .Headroom .Header-social,
 .Headroom .Header-languages,
 .Headroom .Header-banner {
-  transition: all 350ms linear;
+  transition: all 250ms ease;
+}
+
+/*
+ *	1. Allow transition on element heights
+ */
+.Header-social,
+.Header-languages,
+.Header-banner {
+  max-height: 5em; /* 1 */
 }
 
 .Headroom--fixed.Headroom--not-top .Header-social,
@@ -382,10 +391,6 @@
   max-height: 0;
   overflow-y: hidden;
   padding: 0 !important;
-}
-
-.Headroom .Header-navbar {
-  transition: all 200ms linear;
 }
 
 .Headroom--fixed.Headroom--not-top .Headroom-hideme,
