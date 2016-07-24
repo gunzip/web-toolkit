@@ -53,6 +53,7 @@
 
 .Card-text {
   @extend .u-text-r-xs;
+  @extend .u-lineHeight-l;
   @extend .u-textSecondary;
   @extend .u-margin-bottom-l;
 }
