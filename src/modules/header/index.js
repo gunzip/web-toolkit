@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import Headroom from 'headroom.js'
 
 // Headroom for fixed sticky header
@@ -32,13 +33,13 @@ const opts = {
   // element to listen to scroll events on, defaults to `window`
   scroller: window,
   // callback when pinned, `this` is headroom object
-  onPin: function() {},
+  onPin: function() { },
   // callback when unpinned, `this` is headroom object
-  onUnpin: function() {},
+  onUnpin: function() { },
   // callback when above offset, `this` is headroom object
-  onTop: function() {},
+  onTop: function() {$('body').css({paddingTop: '0'})},
   // callback when below offset, `this` is headroom object
-  onNotTop: function() {},
+  onNotTop: function() {$('body').css({paddingTop: ($('.Headroom').height()) + 'px'})},
   // callback when at bottom of page, `this` is headroom object
   onBottom: function() {},
   // callback when moving away from bottom of page, `this` is headroom object
