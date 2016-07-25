@@ -137,7 +137,7 @@
     @extend .u-padding-left-xxl;
   }
   @media (--lg-viewport) {
-    @extend .u-margin-left-xl;
+    @extend .u-margin-left-l;
   }
 }
 
