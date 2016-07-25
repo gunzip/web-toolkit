@@ -19,8 +19,8 @@
   @extend .u-posRelative;
   @extend .u-color-60;
   @extend .u-border-bottom-xxs;
-  @extend .u-padding-top-xxs;
-  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-top-xs;
+  @extend .u-padding-bottom-xs;
 
   /**
    * 1. Must be the same as Header-title
@@ -72,12 +72,16 @@
     max-width: 100% !important;
     padding-left: 0 !important;
   }
+
+  @media (--lg-viewport) {
+    @extend .u-padding-left-l;
+  }
 }
 
 .Header-owner a {
   @extend .u-sm-before2of12;
   @extend .u-md-before2of12;
-  @extend .u-lg-before2of12;
+  @extend .u-lg-before1of8;
   @extend .u-text-xxs;
   @extend .u-text-sm-xs;
   @extend .u-text-md-s;
