@@ -54,12 +54,16 @@ if (myElement) {
   headroom.init()
 }
 
+/*
+ *	Make space when using fixed header.
+ */
 const headroomFixed = '.Headroom--fixed'
 
-if ($(headroomFixed).length > 0) {
+if ($('.' + opts.classes.initial).is(headroomFixed)) {
   const _onResize = function() {
+    const paddingTop = $(headroomFixed).height() + (Math.floor($(window).width() / 50))
     $('body').css({
-      paddingTop: ($(headroomFixed).height() + 16) + 'px'
+      paddingTop: paddingTop + 'px'
     })
   }
   $(headroomFixed).css({
@@ -67,7 +71,7 @@ if ($(headroomFixed).length > 0) {
     top: 0
   })
   $(window).resize(debounce(250, _onResize))
-  _onResize()
+  $(document).ready(_onResize)
 }
 
 export default {
