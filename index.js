@@ -1,3 +1,4 @@
+import IwtForm from './src/components/form'
 import IwtTable from './src/components/table'
 
 import IwtAccordion from './src/modules/accordion'
@@ -21,6 +22,7 @@ const __exports = {
 	IwtHeadroom,
 	IwtMegamenu,
 	IwtTooltip,
+	IwtForm
 }
 
 export default __exports

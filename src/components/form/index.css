@@ -15,6 +15,8 @@
   --Form-state-warning-label-color: #e5ce23;
   --Form-state-warning-message-color: #e5ce23;
 
+  --Form-label-checked-background: #c6f3f5;
+
   --Form-border-width: 0.4rem;
   --Form-choose-height: 1em;
 
@@ -39,6 +41,10 @@ option:hover {
 
 .Form-label.is-required::after {
   content: " * ";
+}
+
+.Form-label.is-checked {
+  background: var(--Form-label-checked-background);
 }
 
 .Form-field.is-invalid .Form-input,
