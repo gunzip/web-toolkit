@@ -61,7 +61,7 @@ const headroomFixed = '.Headroom--fixed'
 
 if ($('.' + opts.classes.initial).is(headroomFixed)) {
   const _onResize = function() {
-    const paddingTop = $(headroomFixed).height() + (Math.floor($(window).width() / 50))
+    const paddingTop = $(headroomFixed).height() + ( Math.min(32, Math.floor($(window).width() / 50)) )
     $('body').css({
       paddingTop: paddingTop + 'px'
     })
