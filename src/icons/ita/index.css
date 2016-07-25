@@ -14,6 +14,7 @@
     url("./font/ita.svg?z572be#ita") format("svg");
 }
 
+.u-icon,
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "ita" !important;
