@@ -116,9 +116,13 @@
   }
 }
 
+/*
+ *	1. Align content to header for wide screen
+ */
 .Header-toggle {
   @extend .u-block;
   @extend .u-size2of12;
+  @extend .u-lg-size1of8; /* 1 */
   @extend .u-padding-left-xs;
 
   @extend .u-color-white;
@@ -131,6 +135,9 @@
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-left-xxl;
+  }
+  @media (--lg-viewport) {
+    @extend .u-margin-left-xl;
   }
 }
 
