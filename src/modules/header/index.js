@@ -61,7 +61,7 @@ const headroomFixed = '.Headroom--fixed'
 
 if ($('.' + opts.classes.initial).is(headroomFixed)) {
   const _onResize = function() {
-    const paddingTop = $(headroomFixed).height() + ( Math.min(32, Math.floor($(window).width() / 50)) )
+    const paddingTop = ($(headroomFixed).height() ? $(headroomFixed).height() : 250) + (Math.min(32, Math.floor($(window).width() / 50)))
     $('body').css({
       paddingTop: paddingTop + 'px'
     })
@@ -71,7 +71,9 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
     top: 0
   })
   $(window).resize(debounce(250, _onResize))
-  $(document).ready(_onResize)
+  $(window).load(function() {
+    setTimeout(_onResize, 100)
+  })
 }
 
 export default {
