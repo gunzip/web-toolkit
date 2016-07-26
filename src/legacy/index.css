@@ -1,0 +1,69 @@
+/*
+ *	FIXME: The bare minimum for IE9
+ */
+.legacy .Main div,
+.legacy .Main section,
+.legacy .Header,
+.legacy .Header > *,
+.legacy .Header-utils > *,
+.legacy .Header-navbar > .Header-toggle,
+.legacy .Header-navbar > .Header-title,
+.legacy .Header-navbar > .Header-utils {
+  float: left !important;
+  position: static !important;
+  width: 100% !important;
+}
+
+.legacy body {
+  padding: 0 !important;
+}
+
+.legacy header {
+  padding-bottom: 1% !important;
+}
+
+.legacy .Header-serviceLink {
+  height: 3em;
+  line-height: 3em;
+}
+
+.legacy .Header-navbar > .Header-toggle {
+  width: 60px !important;
+}
+
+.legacy .Header-navbar > .Header-title,
+.legacy .Header-navbar > .Header-utils {
+  width: 40% !important;
+}
+
+.legacy .Header-search.Header-search {
+  max-width: none !important;
+}
+
+.legacy .Header-search button,
+.legacy .Header-search .Form-input,
+.legacy .Header-search .Form-label {
+  float: left !important;
+  position: static !important;
+}
+
+.legacy .Header-search .Form-field {
+  width: 100% !important;
+}
+
+.legacy .Header-search .Form-field .Form-input {
+  max-width: 80% !important;
+  width: 80% !important;
+}
+
+.legacy .Header-search .Form-field .Form-label {
+  @extend .u-hiddenVisually;
+}
+
+.legacy .Header-search .Form-field button {
+  width: 2em !important;
+}
+
+.legacy .Header-navbar > .Header-title {
+  margin-left: 10%;
+}
