@@ -94,7 +94,7 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
   // when header starts minimized
   $(window).scroll(debounce(250, () => {
     if (0 === $(window).scrollTop()) {
-      setTimeout(_adjustPadding, 100)
+      setTimeout(_adjustPadding, 250)
     }
   }))
 
