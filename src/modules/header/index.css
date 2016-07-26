@@ -27,8 +27,8 @@
    */
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-left-s; /* 1 */
-    @extend .u-padding-top-xs;
-    @extend .u-padding-bottom-xs;
+    @extend .u-padding-top-s;
+    @extend .u-padding-bottom-s;
   }
 
 }
@@ -99,7 +99,12 @@
 
 .Header-navbar {
   @extend .u-background-50;
-  @extend .u-padding-all-xxs;
+
+  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-s;
+
+  @extend .u-padding-right-xs;
+  @extend .u-padding-left-xs;
 
   @media (--sm-viewport) {
     @extend .u-padding-top-s;
@@ -408,10 +413,11 @@
 
 .Headroom--fixed.Headroom--not-top .Header-titleLink a,
 .Headroom--pinned.Headroom--not-top .Header-titleLink a {
-  @extend .u-text-xs;
+  @extend .u-text-xxs;
   @extend .u-text-sm-xs;
   @extend .u-text-md-s;
   @extend .u-text-lg-m;
+  @extend .u-textWeight-400;
 }
 
 .Headroom--fixed.Headroom--not-top .Header-titleLink small,

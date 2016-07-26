@@ -27,13 +27,32 @@ const offcanvas = Froffcanvas({
  */
 const _handleModal = function(e) {
   if (e && $('.Offcanvas').hasClass('is-active') &&
-    !$(e.target).hasClass('Offcanvas-content'))
-	{
+    !$(e.target).hasClass('Offcanvas-content')) {
     $('.js-fr-offcanvas-close').click()
   }
   $('.Offcanvas--modal').one('click', _handleModal)
 }
 
-_handleModal()
+/*
+ *	Prevent scroll on body when offcanvas is visible
+ */
+const _handleOverflow = () => {
+  if ('false' === $('.Offcanvas').attr('aria-hidden')) {
+    $('body').css('overflow-y', 'hidden')
+  } else {
+    $('body').css('overflow-y', 'visible')
+  }
+}
 
-export default { Froffcanvas, offcanvas }
+$(document).ready(() => {
+  _handleModal()
+
+  $('.js-fr-offcanvas')
+    .focus(_handleOverflow)
+    .blur(_handleOverflow)
+})
+
+export default {
+  Froffcanvas,
+  offcanvas
+}
