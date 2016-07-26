@@ -9,6 +9,10 @@
   --Layout-prose-width: 32em;
 }
 
+.js-enabled .u-jsHiddenVisually {
+  @extend .u-hiddenVisually;
+}
+
 .u-layout-withGutter {
   padding-left: calc(1.5 * var(--Layout-gutter)) !important;
   padding-right: calc(1.5 * var(--Layout-gutter)) !important;
