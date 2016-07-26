@@ -28,12 +28,13 @@
 }
 
 .Card-content {
-  @extend .u-padding-all-l;
+  @extend .u-padding-r-all;
 }
 
 .Card-title {
   @extend .u-text-h4;
-  @extend .u-margin-bottom-l;
+  @extend .u-margin-r-bottom;
+  @extend .u-layout-prose;
 }
 
 .Card-title-fatLink {
@@ -42,6 +43,7 @@
 }
 
 .Card-titleLink {
+  @extend .u-text-h4;
   @extend .u-color-black;
   @extend .u-textWeight-400;
   @extend .u-textClean;
@@ -53,7 +55,8 @@
 
 .Card-text {
   @extend .u-text-r-xs;
-  @extend .u-lineHeight-l;
+  @extend .u-layout-prose;
+  @extend .u-lineHeight-xl;
   @extend .u-textSecondary;
   @extend .u-margin-bottom-l;
 }

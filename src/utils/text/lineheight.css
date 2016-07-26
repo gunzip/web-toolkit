@@ -15,5 +15,9 @@
 }
 
 .u-lineHeight-l {
+  line-height: 1.4 !important;
+}
+
+.u-lineHeight-xl {
   line-height: 1.55 !important;
 }

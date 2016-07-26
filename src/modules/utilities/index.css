@@ -1,19 +1,19 @@
 /** @define utilities */
 
 .Utilities {
-  @extend .u-padding-top-xxl;
-  @extend .u-padding-bottom-xxl;
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
 }
 
 .Utilities-title {
   @extend .u-text-h3;
-  @extend .u-margin-bottom-xxl;
+  @extend .u-margin-r-bottom;
 }
 
 .Utilities-link {
   @extend .u-text-r-m;
-  @extend .u-padding-top-l;
-  @extend .u-padding-bottom-l;
+  @extend .u-padding-r-top;
+  @extend .u-padding-r-bottom;
   @extend .u-sizeFull;
   @extend .u-border-top-xxs;
   @extend .u-textClean;

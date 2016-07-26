@@ -206,7 +206,7 @@
 }
 
 .Header-titleLink a {
-  @extend .u-text-xxs;
+  @extend .u-text-xs;
   @extend .u-text-sm-m;
   @extend .u-text-md-l;
   @extend .u-text-lg-l;

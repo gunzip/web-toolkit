@@ -47,8 +47,9 @@
 }
 
 .Footer-block {
-  @extend .u-margin-top-xxl;
-  @extend .u-margin-bottom-xxl;
+  @extend .u-text-xxl;
+  @extend .u-margin-r-top;
+  @extend .u-margin-r-bottom;
 }
 
 .Footer-block address {

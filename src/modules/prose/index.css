@@ -22,7 +22,7 @@
 .Prose > ul > li,
 .Prose > ol > li {
   @extend .u-text-r-xs;
-  @extend .u-lineHeight-l;
+  @extend .u-lineHeight-xl;
   color: var(--Prose-color-text-primary);
 }
 
