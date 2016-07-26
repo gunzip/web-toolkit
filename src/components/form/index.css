@@ -39,9 +39,10 @@ option:hover {
   box-shadow: 0 0 10px 100px #1882a8 inset;
 }
 
+/* .Form-legend.is-required::after,
 .Form-label.is-required::after {
   content: " * ";
-}
+} */
 
 .Form-label.is-checked {
   background: var(--Form-label-checked-background);
