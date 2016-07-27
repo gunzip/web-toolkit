@@ -114,3 +114,15 @@
 .u-layout-release {
   max-width: none !important;
 }
+
+/*
+ *	https://css-tricks.com/full-width-containers-limited-width-parents/
+ */
+.u-layout-releaseFull {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
