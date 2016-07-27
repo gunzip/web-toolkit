@@ -64,12 +64,12 @@ if (myElement) {
 const headroomFixed = '.Headroom--fixed'
 
 if ($('.' + opts.classes.initial).is(headroomFixed)) {
+  const headerHeight = $(headroomFixed).height()
 
   const _adjustPadding = function() {
-    // 250px as fallback - should not happen -
+    // 260px as fallback - should not happen -
     // 32px as maximum space between content and header
-    const paddingTop = ($(headroomFixed).height() ?
-      $(headroomFixed).height() : 250) + (Math.min(32, Math.floor($(window).width() / 50)))
+    const paddingTop = (headerHeight || 260) + (Math.min(32, Math.floor($(window).width() / 50)))
 
     $('body').css({
       paddingTop: paddingTop + 'px'
@@ -82,22 +82,10 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
   })
 
   // Set up padding on page load
-  // setTimeout() call due to Safari bug computing header height()
-  $(window).load(function() {
-    setTimeout(_adjustPadding, 100)
-  })
+  $(document).ready(_adjustPadding)
 
   // Make padding responsive
   $(window).resize(debounce(250, _adjustPadding))
-
-  // Avoid small padding on page refresh
-  // when header starts minimized
-  $(window).scroll(debounce(250, () => {
-    if (0 === $(window).scrollTop()) {
-      setTimeout(_adjustPadding, 250)
-    }
-  }))
-
 }
 
 export default {

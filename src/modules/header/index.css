@@ -373,9 +373,7 @@
  */
 .Headroom {
   max-height: 100em;
-  transition: all 250ms ease;
   width: 100%;
-  will-change: all;
 }
 
 .Headroom--fixed,
@@ -389,6 +387,7 @@
 .Headroom-hideme {
   max-height: 5em; /* 1 */
   transition: all 250ms ease;
+  will-change: all;
 }
 
 .Headroom--fixed.Headroom--not-top .Headroom-hideme,
@@ -399,7 +398,7 @@
   padding: 0 !important;
 }
 
-.Headroom--fixed.Headroom--not-top,
+.Headroom--fixed,
 .Headroom--pinned.Headroom--not-top {
   position: fixed;
   top: 0;
