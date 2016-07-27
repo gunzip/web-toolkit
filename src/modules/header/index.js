@@ -92,13 +92,13 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
 
   // This happens *only* after a resize
   // when scrolling to top
-  $(headroomFixed).on('transitionend', function() {
+  $(headroomFixed).on('transitionend', debounce(250, function() {
     const height = $(this).height()
     if (headerHeight < height) {
       headerHeight = height
       _adjustPadding()
     }
-  })
+  }))
 
 }
 
