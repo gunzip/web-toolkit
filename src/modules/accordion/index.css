@@ -45,7 +45,7 @@
   @extend .u-padding-left-xl;
 }
 
-.Accordion-link {
+.Accordion-header {
   background-image: var(--Accordion-link-arrow-down);
   background-position: right var(--Accordion-link-padding) center;
   background-repeat: no-repeat;
@@ -56,7 +56,6 @@
     );
 }
 
-.Accordion-link.is-expanded,
-.Accordion-header[aria-expanded="true"] .Accordion-link {
+.Accordion-header[aria-expanded="true"] {
   background-image: var(--Accordion-link-arrow-up);
 }
