@@ -1,4 +1,4 @@
-/** @define utilities */
+/** @define Utilities */
 
 .Utilities {
   @extend .u-padding-r-top;
@@ -19,10 +19,8 @@
   @extend .u-textClean;
 }
 
-/* stylelint-disable */
 /* postcss-bem-linter: ignore */
 .Utilities-link::after {
   content: " › ";
   margin-left: 0.2em;
 }
-/* stylelint-enable */

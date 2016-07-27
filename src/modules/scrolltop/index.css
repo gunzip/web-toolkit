@@ -1,3 +1,5 @@
+/** @define ScrollTop */
+
 .ScrollTop {
   @extend .u-block;
   @extend .u-posFixed;

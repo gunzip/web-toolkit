@@ -1,3 +1,5 @@
+/** @define Form; */
+
 /*
  *	Custom theme for
  *		https://github.com/giuseppeg/suitcss-components-form
@@ -35,10 +37,12 @@
   border-top: none;
 }
 
+/* postcss-bem-linter: ignore */
 select.Form-input {
   background-color: currentColor;
 }
 
+/* postcss-bem-linter: ignore */
 option:hover {
   box-shadow: 0 0 10px 100px #1882a8 inset;
 }
@@ -130,6 +134,7 @@ option:hover {
   @extend .u-hidden;
 }
 
+/* postcss-bem-linter: ignore */
 .Form-input.Form-input:focus + [role="tooltip"] {
   @extend .u-block;
   @extend .u-color-white;
