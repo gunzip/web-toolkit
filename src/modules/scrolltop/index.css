@@ -1,7 +1,6 @@
 /** @define ScrollTop */
 
 .ScrollTop {
-  @extend .u-block;
   @extend .u-posFixed;
   @extend .u-background-95;
   @extend .u-color-white;
