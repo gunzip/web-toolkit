@@ -10,8 +10,13 @@
 }
 
 /* postcss-bem-linter: ignore */
-.js-enabled .u-jsHiddenVisually {
+.js-enabled .u-jsVisibilityHidden {
   visibility: hidden;
+}
+
+/* postcss-bem-linter: ignore */
+.js-enabled .u-jsDisplayNone {
+  display: none;
 }
 
 .u-layout-withGutter {
