@@ -9,25 +9,48 @@
   --Layout-prose-width: 32em;
 }
 
+/* postcss-bem-linter: ignore */
 .js-enabled .u-jsHiddenVisually {
-  @extend .u-hiddenVisually;
+  visibility: hidden;
 }
 
 .u-layout-withGutter {
   padding-left: calc(1.5 * var(--Layout-gutter)) !important;
   padding-right: calc(1.5 * var(--Layout-gutter)) !important;
-  @media (--sm-viewport) {
+}
+
+@media (--sm-viewport) {
+
+  .u-layout-sm-withGutter {
     padding-left: calc(2 * var(--Layout-gutter)) !important;
     padding-right: calc(2 * var(--Layout-gutter)) !important;
   }
-  @media (--md-viewport) {
+
+}
+
+@media (--md-viewport) {
+
+  .u-layout-md-withGutter {
     padding-left: calc(2.5 * var(--Layout-gutter)) !important;
     padding-right: calc(2.5 * var(--Layout-gutter)) !important;
   }
-  @media (--lg-viewport) {
+
+}
+
+@media (--lg-viewport) {
+
+  .u-layout-lg-withGutter {
     padding-left: calc(3 * var(--Layout-gutter)) !important;
     padding-right: calc(3 * var(--Layout-gutter)) !important;
   }
+
+}
+
+.u-layout-r-withGutter {
+  @extend .u-layout-withGutter;
+  @extend .u-layout-sm-withGutter;
+  @extend .u-layout-md-withGutter;
+  @extend .u-layout-lg-withGutter;
 }
 
 .u-layout-constrain {
