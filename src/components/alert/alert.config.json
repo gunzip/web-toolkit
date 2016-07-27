@@ -8,25 +8,29 @@
         {
             "name": "error",
             "context": {
-              "modifier": "error"
+              "modifier": "error",
+              "text": "Si è verificato un errore !"
             }
         },
         {
             "name": "warning",
             "context": {
-              "modifier": "warning"
+              "modifier": "warning",
+              "text": "Attenzione !"
             }
         },
         {
             "name": "success",
             "context": {
-              "modifier": "success"
+              "modifier": "success",
+              "text": "Operazione eseguita con successo"
             }
         },
         {
             "name": "info",
             "context": {
-              "modifier": "info"
+              "modifier": "info",
+              "text": "Ulteriori informazioni"
             }
         }
     ]
