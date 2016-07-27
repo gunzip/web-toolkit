@@ -64,12 +64,12 @@ if (myElement) {
 const headroomFixed = '.Headroom--fixed'
 
 if ($('.' + opts.classes.initial).is(headroomFixed)) {
-  const headerHeight = $(headroomFixed).height()
+  let headerHeight = $(headroomFixed).height()
 
   const _adjustPadding = function() {
     // 260px as fallback - should not happen -
     // 32px as maximum space between content and header
-    const paddingTop = (headerHeight || 260) + (Math.min(32, Math.floor($(window).width() / 50)))
+    const paddingTop = (headerHeight) + (Math.min(32, Math.floor($(window).width() / 50)))
 
     $('body').css({
       paddingTop: paddingTop + 'px'
@@ -85,7 +85,21 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
   $(document).ready(_adjustPadding)
 
   // Make padding responsive
-  $(window).resize(debounce(250, _adjustPadding))
+  $(window).resize(debounce(250, function() {
+    headerHeight = $(headroomFixed).height()
+    setTimeout(_adjustPadding, 250)
+  }))
+
+  // This happens *only* after a resize
+  // when scrolling to top
+  $(headroomFixed).on('transitionend', function() {
+    const height = $(this).height()
+    if (headerHeight < height) {
+      headerHeight = height
+      _adjustPadding()
+    }
+  })
+
 }
 
 export default {
