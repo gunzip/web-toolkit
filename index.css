@@ -20,6 +20,7 @@
 @import "src/modules/accordion";
 @import "src/modules/breadcrumb";
 @import "src/modules/card";
+@import "src/modules/cookiebar";
 @import "src/modules/dialog";
 @import "src/modules/entrypoint";
 @import "src/modules/footer";
