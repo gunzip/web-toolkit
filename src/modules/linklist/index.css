@@ -14,8 +14,6 @@
  */
 .Linklist {
   @extend .u-color-grey-30;
-  @extend .u-border-top-xxs;
-  @extend .u-border-bottom-xxs;
 }
 
 .Linklist li {
@@ -30,15 +28,12 @@
   @extend .u-block;
   @extend .u-color-50;
   @extend .u-textClean;
-  @extend .u-padding-all-s;
+  @extend .u-padding-bottom-s;
+  @extend .u-padding-top-s;
 }
 
 .Linklist a:hover {
   @extend .u-background-5;
-}
-
-.Linklist ul a {
-  @extend .u-padding-left-xl;
 }
 
 .Linklist ul ul ul a,
