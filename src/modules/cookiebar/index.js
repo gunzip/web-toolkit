@@ -15,7 +15,7 @@ const opts = {
 }
 
 $(document).ready(function() {
-  $('.CookieBar').cookieBar(opts)
+  $('.js-CookieBar').cookieBar(opts)
 })
 
 export default {
