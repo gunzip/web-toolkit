@@ -18,49 +18,19 @@
           <div class="Grid-cell u-sizeFit">
             <img src="http://placehold.it/330x330?text=placeholder" class="u-sizeFit" />
           </div>
-          <div class="Grid-cell u-md-sizeFill u-lg-sizeFill">
-            <div class="Card-content u-color-grey-30 u-border-top-xxs u-text-r-xl u-text-xxs u-padding-r-right u-padding-r-left">
-              <p class="Card-extra">
-                <span class="Dot u-background-70"></span>
-                <a class="Card-extraLink u-color-50" href="">Notizie</a>
-                <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
-              </p>
-              <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
-              <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum.
-                Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit cupidatat ut ex.
-              </p>
-            </div>
+          <div class="Grid-cell u-md-sizeFill u-lg-sizeFill u-padding-r-left">
+            {% render '@tile' %}
           </div>
         </div>
       </div>
 
-      <div class="Grid-cell Card u-md-size1of4 u-lg-size1of4">
-        <div class="Card-content u-color-grey-30 u-border-top-xxs u-text-r-xl u-text-xxs u-padding-r-right u-padding-r-left">
-          <p class="Card-extra">
-            <span class="Dot u-background-70"></span>
-            <a class="Card-extraLink u-color-50" href="">Notizie</a>
-            <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
-          </p>
-          <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
-          <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum.
-            Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit cupidatat ut ex.
-          </p>
-        </div>
+      <div class="Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left">
+        {% render '@tile' %}
       </div>
 
       {% for b in [1, 2, 3, 4] %}
-      <div class="Grid-cell Card u-md-size1of4 u-lg-size1of4">
-        <div class="Card-content u-color-grey-30 u-border-top-xxs u-text-r-xl u-text-xxs u-padding-r-right u-padding-r-left">
-          <p class="Card-extra">
-            <span class="Dot u-background-70"></span>
-            <a class="Card-extraLink u-color-50" href="">Notizie</a>
-            <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-cf">12 Maggio 2016</span>
-          </p>
-          <p class="Card-title"><a class="Card-titleLink Card-titleLink--fat" href="">Immigrazione, Palazzo Chigi chiede chiarimenti all’Unar sulla lettera all’on. Meloni</a></p>
-          <p class="Card-text">Nisi quis qui commodo nostrud ullamco nulla cupidatat enim minim ut voluptate mollit cillum commodo cillum.
-            Enim quis proident sint culpa incididunt consequat ad ullamco in. Sit culpa est incididunt officia exercitation sunt mollit cupidatat ut ex.
-          </p>
-        </div>
+      <div class="Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left">
+        {% render '@tile' %}
       </div>
       {% endfor %}
     </div>
