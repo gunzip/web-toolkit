@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import Megamenu from 'accessible-mega-menu'
+import Megamenu from './megamenu'
 
 // ASAP hide megamenu panels
 $('.js-megamenu').addClass('is-ready')

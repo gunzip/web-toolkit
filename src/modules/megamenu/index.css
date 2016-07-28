@@ -28,9 +28,9 @@
 /* focus/open states of first descendant link within a top level
       navigation item */
 
-/* .Megamenu-item > a:focus,
-.Megamenu-item > a.is-open {
-} */
+.Megamenu-subnavGroup > li > ul > li > a.is-focus {
+  outline: #ff8c00 solid 3px;
+}
 
 /* open state of first descendant link within a top level
       navigation item */
