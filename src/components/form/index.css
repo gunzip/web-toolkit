@@ -32,9 +32,14 @@
 
 .Form--lean .Form-input,
 .Form-input--lean {
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+
+.Form--ultraLean .Form-input,
+.Form-input--ultraLean {
+  border: none !important;
 }
 
 /* postcss-bem-linter: ignore */
@@ -114,7 +119,6 @@ option:hover {
 
 .Form-field--withPlaceholder .Form-label {
   @extend .u-textWeight-400;
-  @extend .u-text-r-xs;
   @extend .u-posAbsolute;
   @extend .u-layoutCenterVertically;
   left: 1em;
