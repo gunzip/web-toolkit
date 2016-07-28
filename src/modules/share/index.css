@@ -48,7 +48,10 @@
 .Share-revealText {
   @extend .u-color-grey-50;
   @extend .u-text-r-xl;
-  @extend .u-textClean;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+.Share-revealText:hover {
+  text-decoration: underline;
 }

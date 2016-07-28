@@ -1,10 +1,9 @@
 import $ from 'jquery'
 
-const hideClass = 'u-hiddenVisually'
+const hideClass = 'u-jsHiddenVisually'
 
 $(document).ready(() => {
   $('.Share > ul')
-    .addClass(hideClass)
     .find('li')
     .css({
       maxWidth: 0
@@ -14,7 +13,7 @@ $(document).ready(() => {
 const _toggleVisibility = ($share) => {
   $share
     .find('.Share-revealText')
-    .toggleClass('u-hiddenVisually')
+    .toggleClass(hideClass)
 
   $share
     .find('.Share-revealIcon')
