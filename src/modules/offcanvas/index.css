@@ -24,6 +24,7 @@
   transform: translateX(0);
   transition: transform 200ms ease-out;
   will-change: translateX;
+  @extend .u-border-shadow-m;
 }
 
 .Offcanvas--right.is-ready .Offcanvas-content {
