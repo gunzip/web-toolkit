@@ -17,7 +17,7 @@
   @extend .u-textCenter;
   @extend .u-textWeight-700;
   @extend .u-sizeFit;
-  @extend .u-text-l;
+  @extend .u-text-r-s;
   content: counter(Bullets);
   height: 2em;
   line-height: 200%;
