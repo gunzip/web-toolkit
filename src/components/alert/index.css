@@ -56,6 +56,6 @@
   color: var(--Alert-info-color);
 }
 
-.Alert-info.is-full {
+.Alert--info.is-full {
   background: var(--Alert-info-bg);
 }
