@@ -28,7 +28,8 @@
 }
 
 .Card-content {
-  @extend .u-padding-r-top;
+  @extend .u-text-r-l;
+  @extend .u-padding-r-all;
 }
 
 .Card-title {
