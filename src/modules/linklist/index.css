@@ -18,7 +18,7 @@
 
 .Linklist li {
   @extend .u-color-grey-30;
-  @extend .u-border-bottom-xxs;
+  @extend .u-border-top-xxs;
   @extend .u-block;
   @extend .u-nbfc;
 }
@@ -28,12 +28,13 @@
   @extend .u-block;
   @extend .u-color-50;
   @extend .u-textClean;
-  @extend .u-padding-bottom-s;
-  @extend .u-padding-top-s;
+  @extend .u-padding-bottom-m;
+  @extend .u-padding-top-m;
 }
 
-.Linklist--padded .Linklist-link,
-.Linklist--padded a {
+.Linklist--padded > li > .Linklist-link,
+.Linklist--padded > li > a,
+.Linklist--padded > li > a:hover {
   @extend .u-padding-left-s;
 }
 
@@ -41,18 +42,18 @@
   @extend .u-background-5;
 }
 
-.Linklist ul ul ul a,
-.Linklist ul ul ul a:hover {
+.Linklist ul ul ul > li > a,
+.Linklist ul ul ul > li > a:hover {
   padding-left: 2.5em !important;
 }
 
-.Linklist ul ul a,
-.Linklist ul ul a:hover {
+.Linklist ul ul > li > a,
+.Linklist ul ul > li > a:hover {
   padding-left: 2em !important;
 }
 
-.Linklist ul a,
-.Linklist ul a:hover {
+.Linklist ul > li > a,
+.Linklist ul > li > a:hover {
   padding-left: 1.5em !important;
 }
 
