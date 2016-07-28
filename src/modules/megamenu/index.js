@@ -5,6 +5,9 @@ import Megamenu from './megamenu'
 $('.js-megamenu').addClass('is-ready')
 
 const opts = {
+  /* if false open menu on hover */
+  openOnClick: true,
+
   /* prefix for generated unique id attributes, which are required
      to indicate aria-owns, aria-controls and aria-labelledby */
   uuidPrefix: 'megamenu',
