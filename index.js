@@ -1,3 +1,5 @@
+import IwtScripts from './src/scripts'
+
 import IwtForm from './src/components/form'
 import IwtTable from './src/components/table'
 
@@ -26,6 +28,7 @@ const __exports = {
 	IwtHeadroom,
 	IwtMegamenu,
 	IwtTooltip,
+	IwtScripts,
 	IwtScrolltop,
 	IwtShare,
 	IwtForm
