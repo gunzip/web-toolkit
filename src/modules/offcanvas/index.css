@@ -1,7 +1,7 @@
 /** @define Offcanvas; */
 
 :root {
-  --Offcanvas-width: 32em;
+  --Offcanvas-width: 24em;
   --Offcanvas-max-width: 80%;
 }
 
