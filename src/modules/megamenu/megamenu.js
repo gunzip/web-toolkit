@@ -741,6 +741,9 @@ limitations under the License.
           menu.on('mouseover.accessible-megamenu', $.proxy(_mouseOverHandler, this))
             .on('mouseout.accessible-megamenu', $.proxy(_mouseOutHandler, this))
         }
+        else {
+          menu.on('click.accessible-megamenu', $.proxy(_mouseOverHandler, this))
+        }
 
         if (isTouch) {
           menu.on('touchstart.accessible-megamenu', $.proxy(_clickHandler, this))
