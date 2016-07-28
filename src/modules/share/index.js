@@ -45,7 +45,7 @@ $('.js-Share').click((e) => {
       .animate({
           maxWidth: 0
         },
-        500,
+        250,
         () => {
           $buttons.addClass(hideClass)
           _toggleVisibility($share)

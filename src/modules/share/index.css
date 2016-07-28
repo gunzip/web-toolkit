@@ -32,7 +32,7 @@
 
 .Share-revealIcon {
   @extend .u-color-white;
-  @extend .u-floatRight;
+  @extend .u-floatLeft;
   @extend .u-background-50;
   @extend .u-textCenter;
   height: 100%;
@@ -48,6 +48,7 @@
 .Share-revealText {
   @extend .u-color-grey-50;
   @extend .u-text-r-l;
+  @extend .u-textWeight-400;
   padding-left: 1em;
   padding-right: 1em;
 }
