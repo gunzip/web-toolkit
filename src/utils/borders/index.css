@@ -22,6 +22,20 @@
 .u-border-left-l { border-left: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
 .u-border-all-l { border: calc(15 * var(--Border-size-unit)) solid currentColor !important; }
 
+/*
+ *	Border for responsive cell
+ *	see http://codepen.io/Hawkun/pen/rsIEp
+ */
+.u-borderAlt {
+  box-shadow:
+    0.1em 0 0 0 currentColor,
+    0 0.1em 0 0 currentColor,
+    0.1em 0.1em 0 0 currentColor,
+    0.1em 0 0 0 currentColor inset,
+    0 0.1em 0 0 currentColor inset;
+  padding: 0.1em;
+}
+
 .u-border-none {
   border: none !important;
 }

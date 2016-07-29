@@ -4,6 +4,7 @@ import IwtForm from './src/components/form'
 import IwtTable from './src/components/table'
 
 import IwtAccordion from './src/modules/accordion'
+import IwtCarousel from './src/modules/carousel'
 import IwtCookiebar from './src/modules/cookiebar'
 import IwtDialog from './src/modules/dialog'
 import IwtSkiplinks from './src/modules/skiplinks'
@@ -19,6 +20,7 @@ import IwtScrolltop from './src/modules/tooltip'
 const __exports = {
 	IwtTable,
 	IwtAccordion,
+	IwtCarousel,
 	IwtCookiebar,
 	IwtDialog,
 	IwtPackery,

@@ -21,6 +21,10 @@ if (env === 'build') {
   outputFile = libraryName + '.js'
 }
 
+loaders.push({
+  test: /\.png/, loader: 'url-loader?limit=100000&minetype=image/png'
+})
+
 if (env === 'build') {
   loaders.push({
     test: /\.css$/,

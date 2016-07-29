@@ -21,6 +21,7 @@
 @import "src/modules/breadcrumb";
 @import "src/modules/bullets";
 @import "src/modules/card";
+@import "src/modules/carousel";
 @import "src/modules/cookiebar";
 @import "src/modules/dialog";
 @import "src/modules/entrypoint";

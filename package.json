@@ -12,11 +12,13 @@
     "headroom.js": "^0.9.3",
     "jquery": "^3.0.0",
     "jquery.cookie": "^1.4.1",
+    "owl.carousel": "^2.1.4",
     "packery": "^2.1.1",
     "suitcss": "^2.0.0",
     "suitcss-components-form": "^1.0.0",
     "suitcss-preprocessor": "^2.0.0",
-    "throttle-debounce": "^1.0.1"
+    "throttle-debounce": "^1.0.1",
+    "url-loader": "^0.5.7"
   },
   "devDependencies": {
     "@frctl/fractal": "^0.11.4",
@@ -61,5 +63,5 @@
     "prod": "npm run build:css && npm run build:js && npm run build:styleguide"
   },
   "author": "AgID",
-  "license": "CC0"
+  "license": "MIT"
 }
