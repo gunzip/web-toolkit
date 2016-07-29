@@ -7,15 +7,15 @@
     </div>
 
     <div aria-hidden="true">
-      <button class="owl-prev" title="Slide precedente" tabindex="0">
+      <button class="owl-prev" title="Slide precedente">
           <span class="icon icon-arrow-left u-color-white u-floatLeft u-text-r-l"></span>
       </button>
-      <button class="owl-next" title="Slide successiva" tabindex="0">
+      <button class="owl-next" title="Slide successiva">
         <span class="icon icon-arrow-right u-color-white u-floatRight u-text-r-l"></span>
       </button>
     </div>
 
-    <div class="Carousel js-Carousel owl-carousel owl-theme" role="region" tabindex="0" aria-labelledby="carousel-heading">
+    <div class="Carousel js-Carousel owl-carousel owl-theme" role="region" aria-labelledby="carousel-heading">
       {% for i in [1, 2, 3, 4, 5, 6, 7]%}
       <div class="Carousel-item" id="img-a">
         {% render '@tile--gallery' %}

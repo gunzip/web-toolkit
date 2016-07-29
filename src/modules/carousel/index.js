@@ -5,6 +5,7 @@ import $ from 'jquery'
 import css from 'owl.carousel/dist/assets/owl.carousel.css'
 
 import owlCarousel from 'owl.carousel'
+import a11y from './a11y'
 
 /* eslint-enable no-unused-vars */
 
