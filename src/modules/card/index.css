@@ -38,20 +38,11 @@
   @extend .u-layout-prose;
 }
 
-.Card-title-fatLink {
-  @extend .u-textWeight-700;
-  @extend .u-margin-bottom-l;
-}
-
 .Card-titleLink {
-  @extend .u-text-h4;
+  @extend .u-text-m;
   @extend .u-color-black;
   @extend .u-textWeight-400;
   @extend .u-textClean;
-}
-
-.Card-titleLink--fat {
-  @extend .u-textWeight-700;
 }
 
 .Card-text {
