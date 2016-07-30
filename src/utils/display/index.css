@@ -1,3 +1,22 @@
 @import "./display-sm.css";
 @import "./display-md.css";
 @import "./display-lg.css";
+
+.u-visibilityHidden {
+  visibility: hidden !important;
+}
+
+/* postcss-bem-linter: ignore */
+.js-enabled .u-jsVisibilityHidden {
+  visibility: hidden;
+}
+
+/* postcss-bem-linter: ignore */
+.js-enabled .u-jsDisplayNone {
+  display: none;
+}
+
+/* postcss-bem-linter: ignore */
+.js-enabled .u-jsHiddenVisually {
+  @extend .u-hiddenVisually;
+}

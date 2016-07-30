@@ -9,21 +9,6 @@
   --Layout-prose-width: 32em;
 }
 
-/* postcss-bem-linter: ignore */
-.js-enabled .u-jsVisibilityHidden {
-  visibility: hidden;
-}
-
-/* postcss-bem-linter: ignore */
-.js-enabled .u-jsDisplayNone {
-  display: none;
-}
-
-/* postcss-bem-linter: ignore */
-.js-enabled .u-jsHiddenVisually {
-  @extend .u-hiddenVisually;
-}
-
 .u-layout-withGutter {
   padding-left: calc(1.5 * var(--Layout-gutter)) !important;
   padding-right: calc(1.5 * var(--Layout-gutter)) !important;

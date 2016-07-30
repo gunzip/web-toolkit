@@ -13,7 +13,7 @@ const opts = {
   owlPrev: '.owl-prev',
   owlNext: '.owl-next',
   owlItem: '.owl-item',
-  jsSelector: '.js-Carousel',
+  jsSelector: '.owl-carousel',
   owlOpts: {
     nav: false,
     // navText: ['precedente', 'successivo'],
@@ -39,20 +39,27 @@ const opts = {
 }
 
 const init = function() {
-  const $owl = $(opts.jsSelector).owlCarousel(opts.owlOpts)
+  const $owl = $(opts.jsSelector)
+
   $(opts.owlPrev).click(() => $owl.trigger('prev.owl.carousel'))
   $(opts.owlNext).click(() => $owl.trigger('next.owl.carousel'))
 
-  // $owl.find(opts.owlItem).attr('tabindex', '0')
-
   $owl.on('initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel', (event) => {
     if (!event.namespace) return
+
     var carousel = event.relatedTarget,
       element = event.target,
       current = carousel.current()
-    $(opts.owlPrev, element).toggleClass('disabled', current === carousel.maximum())
-    $(opts.owlNext, element).toggleClass('disabled', current === carousel.minimum())
+
+    $(`${opts.owlNext}[aria-controls='${element.id}']`)
+      .toggleClass('u-visibilityHidden', current === carousel.maximum())
+
+    $(`${opts.owlPrev}[aria-controls='${element.id}']`)
+      .toggleClass('u-visibilityHidden', current === carousel.minimum())
   })
+
+  // must be called after events initialization
+  $owl.owlCarousel(opts.owlOpts)
 }
 
 $(document).ready(init)
