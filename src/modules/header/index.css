@@ -102,7 +102,6 @@
 
   @extend .u-padding-top-s;
   @extend .u-padding-bottom-s;
-
   @extend .u-padding-right-xs;
   @extend .u-padding-left-xs;
 
@@ -244,7 +243,7 @@
   @extend .u-background-40;
   @extend .u-color-white;
   @extend .u-padding-all-s;
-  @extend .u-text-r-xs;
+  @extend .u-text-r-xxs;
 }
 
 .Header-searchTrigger a span {
@@ -419,6 +418,7 @@
   @extend .u-textWeight-400;
 }
 
+.Headroom--fixed.Headroom--not-top .Header-toggleText,
 .Headroom--fixed.Headroom--not-top .Header-titleLink small,
 .Headroom--pinned.Headroom--not-top .Header-titleLink small {
   @extend .u-hidden;
@@ -426,8 +426,12 @@
 
 .Headroom--fixed.Headroom--not-top .Header-navbar,
 .Headroom--pinned.Headroom--not-top .Header-navbar {
-  @extend .u-padding-top-xxs;
-  @extend .u-padding-bottom-xxs;
+  @extend .u-padding-top-none;
+  @extend .u-padding-bottom-none;
+  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
+    @extend .u-padding-top-xxs;
+    @extend .u-padding-bottom-xxs;
+  }
 }
 
 .Headroom--fixed.Headroom--not-top .Header-logo img,
@@ -437,10 +441,8 @@
 
 .Headroom--fixed.Headroom--not-top .Header-search,
 .Headroom--pinned.Headroom--not-top .Header-search {
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-margin-bottom-xxs;
-    @extend .u-padding-bottom-xxs;
-  }
+  @extend .u-margin-bottom-xxs;
+  @extend .u-padding-bottom-xxs;
 }
 
 .Headroom--unpinned {
