@@ -1,8 +1,6 @@
 /*
  *	FIXME: The bare minimum for IE9
  */
-.legacy .Main div,
-.legacy .Main section,
 .legacy .Header,
 .legacy .Header > *,
 .legacy .Header-utils > *,
@@ -12,6 +10,15 @@
   float: left !important;
   position: static !important;
   width: 100% !important;
+}
+
+/* .legacy .Main div,
+.legacy .Main section,
+{} */
+
+.legacy .u-flex,
+.legacy .Grid-cell {
+  display: inline-block !important;
 }
 
 .legacy body {
