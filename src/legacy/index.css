@@ -89,3 +89,22 @@
 .no-flexbox .Header-navbar > .Header-title {
   margin-left: 10%;
 }
+
+/* IE8 */
+
+.no-flexbox .Megamenu-item {
+  display: inline-block !important;
+}
+
+.no-flexbox .Header-navbar {
+  background: var(--Color-primary) !important;
+  color: white !important;
+}
+
+.no-flexbox .Header-navbar a {
+  color: white !important;
+}
+
+.no-flexbox .u-jsVisibilityHidden {
+  visibility: visible !important;
+}
