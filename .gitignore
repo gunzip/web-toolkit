@@ -7,3 +7,4 @@ config.local.js
 build
 npm-debug.log
 styleguide/assets
+styleguide/vendor
