@@ -17,18 +17,18 @@
 
   {{ yield|safe }}
 
-  <!--[if (IE 9)]>
-  <script src="https://cdn.rawgit.com/inexorabletash/polyfill/master/polyfill.min.js"></script>
+  <!--[if (lte IE 9)]>
+  <script src="/vendor/polyfill.min.js"></script>
   <![endif]-->
 
-  <!--[if (lte IE 8)]>
+  <!--[if (IE 8)]>
   <script src="/vendor/respond.min.js"></script>
   <script src="/vendor/rem.min.js"></script>
   <script src="/vendor/selectivizr.js"></script>
   <![endif]-->
 
-  <!--[if (gt IE 8)]> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!--[if (!IE 8)]> -->
+  <script src="/vendor/jquery.min.js"></script>
   <script src="/build/IWT.js"></script>
   <!-- <![endif]-->
 

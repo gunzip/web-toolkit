@@ -1,27 +1,6 @@
 /*
- *	FIXME: The bare minimum for IE9
+ *	FIXME: The bare minimum for ancient devices
  */
-.no-flexbox .Header,
-.no-flexbox .Header > *,
-.no-flexbox .Header-utils > *,
-.no-flexbox .Header-navbar > .Header-toggle,
-.no-flexbox .Header-navbar > .Header-title,
-.no-flexbox .Header-navbar > .Header-utils {
-  box-sizing: border-box;
-  display: inline-block !important;
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-  position: static !important;
-  text-align: left;
-  vertical-align: top;
-  width: 100%;
-}
-
-/* .no-flexbox .Main div,
-.no-flexbox .Main section,
-{} */
-
 .no-flexbox .Grid {
   display: block !important;
   font-size: 0;
@@ -39,12 +18,19 @@
 }
 
 .no-flexbox .u-flex,
-.no-flexbox .Grid-cell {
+.no-flexbox .Grid-cell,
+.no-flexbox .Header,
+.no-flexbox .Header > *,
+.no-flexbox .Header-utils > *,
+.no-flexbox .Header-navbar > .Header-toggle,
+.no-flexbox .Header-navbar > .Header-title,
+.no-flexbox .Header-navbar > .Header-utils {
   box-sizing: border-box;
   display: inline-block !important;
   font-size: 1rem;
   margin: 0;
   padding: 0;
+  position: static !important;
   text-align: left;
   vertical-align: top;
   width: 100%;
