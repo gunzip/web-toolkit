@@ -1,6 +1,12 @@
 /*
- *	FIXME: The bare minimum for ancient devices
+ *	FIXME:
+ *
+ *		Hall of shame
+ *	  The bare minimum to support ancient devices
+ *	  Mostly IE8 / IE9
+ *
  */
+
 .no-flexbox .Grid {
   display: block !important;
   font-size: 0;
@@ -101,10 +107,25 @@
   color: white !important;
 }
 
+.no-flexbox .Header-owner a,
+.no-flexbox .Header-serviceLink a,
+.no-flexbox .Header-serviceLink span,
 .no-flexbox .Header-navbar a {
   color: white !important;
+  display: inline !important;
 }
 
-.no-flexbox .u-jsVisibilityHidden {
-  visibility: visible !important;
+.no-flexbox .Skiplinks a {
+  top: -10em;
+}
+
+/*
+ * 	CSS transform does not work in IE8
+ */
+.no-flexbox .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
+  left: auto !important;
+}
+
+.no-flexbox .Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
+  right: auto !important;
 }
