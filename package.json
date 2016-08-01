@@ -51,12 +51,13 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
+    "build:vendor": "shx cp -r src/vendor styleguide/",
     "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "WEBPACK_ENV=build webpack",
     "watch:js": "WEBPACK_ENV=dev webpack --display-modules --progress --colors --watch",
-    "build": "npm run build:css & npm run build:js",
-    "watch": "npm run watch:css & npm run watch:js",
+    "build": "npm run build:vendor && npm run build:css & npm run build:js",
+    "watch": "npm run build:vendor && npm run watch:css & npm run watch:js",
     "build:styleguide": "fractal build",
     "watch:styleguide": "fractal start --watch --sync",
     "dev": "npm run watch:css & npm run watch:js & npm run watch:styleguide",

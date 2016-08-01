@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<!--[if lte IE 9 ]>  <html class="no-js legacy"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
 <head>
-  <script>
-    (function() {
-      document.getElementsByTagName('html')[0].className =
-        document.getElementsByTagName('html')[0].className.replace('no-js', 'js-enabled')
-    })()
-  </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="/vendor/modernizr.js"></script>
+
   <link media="screen" rel="stylesheet" href="/build/vendor.css">
   <link media="screen" rel="stylesheet" href="/build/build.css">
   <link media="screen" rel="stylesheet" href="/examples.css">
+
   <title>Preview Layout</title>
 </head>
 <body class="Pac">
 
   {{ yield|safe }}
 
-  <!--[if (lte IE 9)]>
+  <!--[if (IE 9)]>
   <script src="https://cdn.rawgit.com/inexorabletash/polyfill/master/polyfill.min.js"></script>
   <![endif]-->
 
   <!--[if (lte IE 8)]>
-  <script src="https://cdn.rawgit.com/scottjehl/Respond/master/dest/respond.min.js"></script>
-  <script src="https://cdn.rawgit.com/chuckcarpenter/REM-unit-polyfill/master/js/rem.min.js"></script>
-  <script src="https://cdn.rawgit.com/keithclark/selectivizr/master/selectivizr.js"></script>
+  <script src="/vendor/respond.min.js"></script>
+  <script src="/vendor/rem.min.js"></script>
+  <script src="/vendor/selectivizr.js"></script>
   <![endif]-->
 
+  <!--[if (gt IE 8)]> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="/build/IWT.js"></script>
+  <!-- <![endif]-->
 
 </body>
 </html>

@@ -1,12 +1,12 @@
 /*
  *	FIXME: The bare minimum for IE9
  */
-.legacy .Header,
-.legacy .Header > *,
-.legacy .Header-utils > *,
-.legacy .Header-navbar > .Header-toggle,
-.legacy .Header-navbar > .Header-title,
-.legacy .Header-navbar > .Header-utils {
+.no-flexbox .Header,
+.no-flexbox .Header > *,
+.no-flexbox .Header-utils > *,
+.no-flexbox .Header-navbar > .Header-toggle,
+.no-flexbox .Header-navbar > .Header-title,
+.no-flexbox .Header-navbar > .Header-utils {
   box-sizing: border-box;
   display: inline-block !important;
   font-size: 1rem;
@@ -18,11 +18,11 @@
   width: 100%;
 }
 
-/* .legacy .Main div,
-.legacy .Main section,
+/* .no-flexbox .Main div,
+.no-flexbox .Main section,
 {} */
 
-.legacy .Grid {
+.no-flexbox .Grid {
   display: block !important;
   font-size: 0;
   margin: 0;
@@ -30,16 +30,16 @@
   text-align: left;
 }
 
-.legacy .Grid--withGutter {
+.no-flexbox .Grid--withGutter {
   margin: 0 -8px;
 }
 
-.legacy .Grid--withGutter > .Grid-cell {
+.no-flexbox .Grid--withGutter > .Grid-cell {
   padding: 0 8px;
 }
 
-.legacy .u-flex,
-.legacy .Grid-cell {
+.no-flexbox .u-flex,
+.no-flexbox .Grid-cell {
   box-sizing: border-box;
   display: inline-block !important;
   font-size: 1rem;
@@ -50,56 +50,56 @@
   width: 100%;
 }
 
-.legacy body {
+.no-flexbox body {
   padding: 0 !important;
 }
 
-.legacy header {
+.no-flexbox header {
   padding-bottom: 1% !important;
 }
 
-.legacy .Header-serviceLink {
+.no-flexbox .Header-serviceLink {
   height: 3em;
   line-height: 3em;
 }
 
-.legacy .Header-navbar > .Header-toggle {
+.no-flexbox .Header-navbar > .Header-toggle {
   width: 60px !important;
 }
 
-.legacy .Header-navbar > .Header-title,
-.legacy .Header-navbar > .Header-utils {
+.no-flexbox .Header-navbar > .Header-title,
+.no-flexbox .Header-navbar > .Header-utils {
   width: 40% !important;
 }
 
-.legacy .Header-search.Header-search {
+.no-flexbox .Header-search.Header-search {
   max-width: none !important;
 }
 
-.legacy .Header-search button,
-.legacy .Header-search .Form-input,
-.legacy .Header-search .Form-label {
+.no-flexbox .Header-search button,
+.no-flexbox .Header-search .Form-input,
+.no-flexbox .Header-search .Form-label {
   float: left !important;
   position: static !important;
 }
 
-.legacy .Header-search .Form-field {
+.no-flexbox .Header-search .Form-field {
   width: 100% !important;
 }
 
-.legacy .Header-search .Form-field .Form-input {
+.no-flexbox .Header-search .Form-field .Form-input {
   max-width: 80% !important;
   width: 80% !important;
 }
 
-.legacy .Header-search .Form-field .Form-label {
+.no-flexbox .Header-search .Form-field .Form-label {
   @extend .u-hiddenVisually;
 }
 
-.legacy .Header-search .Form-field button {
+.no-flexbox .Header-search .Form-field button {
   width: 2em !important;
 }
 
-.legacy .Header-navbar > .Header-title {
+.no-flexbox .Header-navbar > .Header-title {
   margin-left: 10%;
 }
