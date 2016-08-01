@@ -7,18 +7,47 @@
 .legacy .Header-navbar > .Header-toggle,
 .legacy .Header-navbar > .Header-title,
 .legacy .Header-navbar > .Header-utils {
-  float: left !important;
+  box-sizing: border-box;
+  display: inline-block !important;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
   position: static !important;
-  width: 100% !important;
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
 }
 
 /* .legacy .Main div,
 .legacy .Main section,
 {} */
 
+.legacy .Grid {
+  display: block !important;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.legacy .Grid--withGutter {
+  margin: 0 -8px;
+}
+
+.legacy .Grid--withGutter > .Grid-cell {
+  padding: 0 8px;
+}
+
 .legacy .u-flex,
 .legacy .Grid-cell {
+  box-sizing: border-box;
   display: inline-block !important;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  width: 100%;
 }
 
 .legacy body {
