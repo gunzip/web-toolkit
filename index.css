@@ -41,8 +41,10 @@
 @import "src/modules/tooltip";
 @import "src/modules/treeview";
 
-/* FIXME: in html */
-@import "src/fonts/titillium";
+/*
+ * WebFontLoaded: @import "src/fonts/titillium"
+ * see src/_preview.html
+ */
 @import "src/icons/ita";
 
 @import "src/themes/pac";
