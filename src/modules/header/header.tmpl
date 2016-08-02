@@ -58,13 +58,23 @@
 
   </div><!-- Header-navbar -->
 
+  {% if menu %}
   <div class="Headroom-hideme u-textCenter u-hidden u-sm-block u-md-block u-lg-block">
     {% if clone %}
       <nav class="Megamenu Megamenu--styled js-megamenu" data-rel=".Offcanvas .Treeview"></nav>
-    {% else %}
+    {% elif megamenu %}
       {% render '@megamenu' %}
+    {% else %}
+      <nav class="Megamenu Megamenu--styled">
+        <ul class="Megamenu-list">
+          <li class="Megamenu-item"><a href="">Aree tematiche</a></li>
+          <li class="Megamenu-item"><a href="">L'Amministrazione</a></li>
+          <li class="Megamenu-item"><a href="">Vivere a Cernusco sul Naviglio</a></li>
+        </ul>
+      </nav>
     {% endif %}
   </div>
+  {% endif %}
 
 </header>
 

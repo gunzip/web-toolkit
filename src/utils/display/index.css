@@ -7,17 +7,17 @@
 }
 
 /* postcss-bem-linter: ignore */
-.js-enabled .u-jsVisibilityHidden {
+.js .u-jsVisibilityHidden {
   visibility: hidden;
 }
 
 /* postcss-bem-linter: ignore */
-.js-enabled .u-jsDisplayNone {
+.js .u-jsDisplayNone {
   display: none;
 }
 
 /* postcss-bem-linter: ignore */
-.js-enabled .u-jsHiddenVisually {
+.js .u-jsHiddenVisually {
   @extend .u-hiddenVisually;
 }
 
