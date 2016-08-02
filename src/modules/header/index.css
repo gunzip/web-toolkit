@@ -399,6 +399,7 @@
 
 .Headroom--fixed,
 .Headroom--pinned.Headroom--not-top {
+  @extend .u-zindex-40;
   position: fixed;
   top: 0;
 }
