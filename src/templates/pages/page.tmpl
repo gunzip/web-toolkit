@@ -1,6 +1,6 @@
 <div id="main">
 
-  <div class="u-layout-wide u-layoutCenter u-text-r-xxl u-margin-r-bottom u-layout-r-withGutter">
+  <div class="u-layout-wide u-layoutCenter u-text-r-xxl u-padding-r-top u-margin-r-bottom u-layout-r-withGutter">
     {% render '@news' %}
   </div>
 
@@ -14,7 +14,15 @@
     </div>
   </div>
 
-  <div class="u-background-grey-20 u-background-teal-50 u-color-black u-text-xxl u-padding-r-top u-padding-r-bottom">
+  <div class="u-background-70 u-padding-r-top u-padding-r-bottom">
+    {% render '@layout--twitter' %}
+  </div>
+
+  <div class="u-background-grey-60 u-padding-r-top u-padding-r-bottom u-text-r-xxl">
+    {% render '@carousel' %}
+  </div>
+
+  <div class="u-background-grey-20 u-background-grey-20 u-color-black u-text-xxl u-padding-r-top u-padding-r-bottom">
     <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
       {% render '@utilities' %}
     </div>
