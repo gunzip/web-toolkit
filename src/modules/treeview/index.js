@@ -56,30 +56,37 @@ const Frtreeview = function({
   }
 
   function _collapseSiblings(treeview, $item) {
+    const $hideMe = $()
     $item.closest('ul').find('.' + classParent).not($item).each(function() {
-			if ($(this).attr('aria-expanded') != 'false') {
-				$(this).children('ul').slideUp()
+			if ($(this).attr('aria-expanded') !== 'false') {
+				$hideMe.add($(this).children('ul'))
 	      $(this).children('ul').attr('aria-hidden', 'true')
 				$(this).attr('aria-expanded', 'false')
 			}
     })
-    treeview.$visibleItems = treeview.$el.find('li:visible')
+    $hideMe.slideUp(() => {
+      treeview.$visibleItems = treeview.$el.find('li:visible')
+      console.log('collapaseSibling', treeview.$visibleItems)
+    })
   }
 
   function _expandGroup(treeview, $item) {
     let $group = $item.children('ul')
-		$group.slideDown()
-    $group.attr('aria-hidden', 'false')
-    $item.attr('aria-expanded', 'true')
-    treeview.$visibleItems = treeview.$el.find('li:visible')
+		$group.slideDown(() => {
+      $group.attr('aria-hidden', 'false')
+      $item.attr('aria-expanded', 'true')
+      treeview.$visibleItems = treeview.$el.find('li:visible')
+    })
   }
 
   function _collapseGroup(treeview, $item) {
     let $group = $item.children('ul')
-		$group.slideUp()
-    $group.attr('aria-hidden', 'true')
-    $item.attr('aria-expanded', 'false')
-    treeview.$visibleItems = treeview.$el.find('li:visible')
+		$group.slideUp(() => {
+      $group.attr('aria-hidden', 'true')
+      $item.attr('aria-expanded', 'false')
+      treeview.$visibleItems = treeview.$el.find('li:visible')
+      console.log('collapseGroup', treeview.$visibleItems)
+    })
   }
 
   function _toggleGroup(treeview, $item) {
@@ -183,6 +190,7 @@ const Frtreeview = function({
 
       case keys.down:
         {
+          console.log('down', treeview.$visibleItems)
           if (curNdx < treeview.$visibleItems.length - 1) {
             let $next = treeview.$visibleItems.eq(curNdx + 1)
             treeview.$activeItem = $next
@@ -344,8 +352,9 @@ const Frtreeview = function({
     // Put class=<classParent> on every LI that contains an UL
     $el.find('li').each(function(i, li) {
       const $li = $(li)
-      $li.attr('role', 'treeitem')
-      $li.attr('tabindex', '-1')
+      $li
+        .attr('role', 'treeitem')
+        .attr('tabindex', (0 === i) ? '0' : '-1')
       if ($li.find('ul').length !== 0) {
         if (!li.hasAttribute('aria-expanded')) {
           $li.attr('aria-expanded', 'false')
@@ -353,7 +362,6 @@ const Frtreeview = function({
         $li.addClass(classParent)
       }
     })
-
     // Put role="group" on every contained UL
     $el.find('ul').attr('role', 'group')
   }
