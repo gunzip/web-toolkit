@@ -1,3 +1,7 @@
+/*
+ * currentTarget polyfill by Jonathan Neal
+ * https://gist.github.com/jonathantneal/3748027#file-eventlistener-polyfill-js
+ */
 !window.addEventListener && (function (WindowPrototype, DocumentPrototype, ElementPrototype, addEventListener, removeEventListener, dispatchEvent, registry) {
 	WindowPrototype[addEventListener] = DocumentPrototype[addEventListener] = ElementPrototype[addEventListener] = function (type, listener) {
 		var target = this;
@@ -27,7 +31,19 @@
 	};
 })(Window.prototype, HTMLDocument.prototype, Element.prototype, "addEventListener", "removeEventListener", "dispatchEvent", []);
 
-(function () {
+/*
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+ */
+ /**
+  * Shim for "fixing" IE's lack of support (IE < 9) for applying slice
+  * on host objects like NamedNodeMap, NodeList, and HTMLCollection
+  * (technically, since host objects have been implementation-dependent,
+  * at least before ES6, IE hasn't needed to work this way).
+  * Also works on strings, fixes IE < 9 to allow an explicit undefined
+  * for the 2nd argument (as in Firefox), and prevents errors when
+  * called on other DOM objects.
+  */
+ (function () {
   'use strict';
   var _slice = Array.prototype.slice;
 
