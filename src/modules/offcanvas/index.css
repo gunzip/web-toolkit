@@ -51,6 +51,7 @@
 }
 
 .Offcanvas--modal.is-active::after {
+  @extend .u-zindex-50;
   background: black;
   content: " ";
   display: block;
@@ -60,5 +61,4 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9;
 }

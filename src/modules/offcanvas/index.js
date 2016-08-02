@@ -40,7 +40,6 @@ const offcanvas = Froffcanvas(opts)
  *	FIXME: hack to show / hide the background panel
  */
 const _handleModal = function(e) {
-  if (e) console.log(e)
   if (e && $(opts.panelSelector).hasClass('is-active') &&
     !$(e.target).is(opts.contentSelector)) {
     $(opts.closeSelector).click()

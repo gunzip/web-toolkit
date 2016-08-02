@@ -28,8 +28,8 @@
   @extend .u-block;
   @extend .u-color-50;
   @extend .u-textClean;
-  @extend .u-padding-bottom-m;
-  @extend .u-padding-top-m;
+  @extend .u-padding-r-bottom;
+  @extend .u-padding-r-top;
 }
 
 .Linklist--padded > li > .Linklist-link,
