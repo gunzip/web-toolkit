@@ -20,9 +20,8 @@
     "url-loader": "^0.5.7"
   },
   "devDependencies": {
-    "@frctl/fractal": "^0.11.4",
-    "@frctl/nunjucks-adapter": "^0.4.6",
-    "@frctl/nunjucks-helpers": "^0.3.0",
+    "@frctl/fractal": "^1.0.0",
+    "@frctl/nunjucks": "^1.0.1",
     "babel": "^6.5.2",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
@@ -52,7 +51,7 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "build:vendor": "shx cp -r src/vendor styleguide/",
+    "build:vendor": "shx cp -r src/vendor build/",
     "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "WEBPACK_ENV=build webpack",

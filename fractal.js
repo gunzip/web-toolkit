@@ -1,22 +1,25 @@
-'use strict';
+const fractal = module.exports = require('@frctl/fractal').create()
 
-const fractal = require('@frctl/fractal');
+fractal.set('project.title', 'Italia.it Web Toolkit Styleguide')
 
-fractal.set('project.title', 'Ita Web Toolkit Styleguide');
+fractal.components.set('path', __dirname + '/src')
 
-fractal.set('components.path', 'src');
+fractal.docs.set('path', __dirname + '/docs')
 
-fractal.set('docs.path', 'docs');
+fractal.web.set('static.path', __dirname + '/build')
 
-fractal.set('plugins.web.static.path', 'styleguide');
+// prefix all resources url with '/build'
+fractal.web.set('static.mount', 'build')
 
-fractal.set('components.default.preview', '@preview');
+fractal.web.set('builder.dest', __dirname + '/styleguide')
 
-fractal.set('components.default.status', 'wip');
+fractal.components.set('default.preview', '@preview')
 
-/* templates */
-fractal.engine('nunjucks', '@frctl/nunjucks-adapter', {
-  loadHelpers: true
-});
-fractal.set('components.engine', 'nunjucks');
-fractal.set('components.ext', '.tmpl');
+fractal.components.set('default.status', 'wip')
+
+fractal.components.engine('@frctl/nunjucks')
+
+fractal.docs.engine('@frctl/nunjucks')
+fractal.docs.set('ext', '.md')
+
+fractal.components.set('ext', '.tmpl')
