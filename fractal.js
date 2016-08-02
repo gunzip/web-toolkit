@@ -8,6 +8,9 @@ fractal.docs.set('path', __dirname + '/docs')
 
 fractal.web.set('static.path', __dirname + '/build')
 
+// prefix all resources url with '/build'
+fractal.web.set('static.mount', 'build')
+
 fractal.web.set('builder.dest', __dirname + '/styleguide')
 
 fractal.components.set('default.preview', '@preview')

@@ -51,7 +51,7 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "build:vendor": "shx cp -r src/vendor styleguide/",
+    "build:vendor": "shx cp -r src/vendor build/",
     "build:css": "suitcss -m -c .postcss.js index.css build/build.css",
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "WEBPACK_ENV=build webpack",
