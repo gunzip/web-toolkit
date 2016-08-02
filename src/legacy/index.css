@@ -7,30 +7,28 @@
  *
  */
 
-.no-flexbox.no-flexboxtweener .Grid {
+.ie89 .Grid {
   display: block !important;
   font-size: 0;
-  margin: 0;
-  padding: 0;
   text-align: left;
 }
 
-.no-flexbox.no-flexboxtweener .Grid--withGutter {
+.ie89 .Grid--withGutter {
   margin: 0 -8px;
 }
 
-.no-flexbox.no-flexboxtweener .Grid--withGutter > .Grid-cell {
+.ie89 .Grid--withGutter > .Grid-cell {
   padding: 0 8px;
 }
 
-.no-flexbox.no-flexboxtweener .u-flex,
-.no-flexbox.no-flexboxtweener .Grid-cell,
-.no-flexbox.no-flexboxtweener .Header,
-.no-flexbox.no-flexboxtweener .Header > *,
-.no-flexbox.no-flexboxtweener .Header-utils > *,
-.no-flexbox.no-flexboxtweener .Header-navbar > .Header-toggle,
-.no-flexbox.no-flexboxtweener .Header-navbar > .Header-title,
-.no-flexbox.no-flexboxtweener .Header-navbar > .Header-utils {
+.ie89 .u-flex,
+.ie89 .Grid-cell,
+.ie89 .Header,
+.ie89 .Header > *,
+.ie89 .Header-utils > *,
+.ie89 .Header-navbar > .Header-toggle,
+.ie89 .Header-navbar > .Header-title,
+.ie89 .Header-navbar > .Header-utils {
   box-sizing: border-box;
   display: inline-block !important;
   font-size: 1rem;
@@ -42,91 +40,93 @@
   width: 100%;
 }
 
-.no-flexbox.no-flexboxtweener body {
+/*
+ *	Header is static
+ */
+.ie89 body {
   padding: 0 !important;
 }
 
-.no-flexbox.no-flexboxtweener header {
+.ie89 header {
   padding-bottom: 1% !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-serviceLink {
+.ie89 .Header-serviceLink {
   height: 3em;
   line-height: 3em;
 }
 
-.no-flexbox.no-flexboxtweener .Header-navbar > .Header-toggle {
+.ie89 .Header-navbar > .Header-toggle {
   width: 60px !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-navbar > .Header-title,
-.no-flexbox.no-flexboxtweener .Header-navbar > .Header-utils {
+.ie89 .Header-navbar > .Header-title,
+.ie89 .Header-navbar > .Header-utils {
   width: 40% !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-search.Header-search {
+.ie89 .Header-search.Header-search {
   max-width: none !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-search button,
-.no-flexbox.no-flexboxtweener .Header-search .Form-input,
-.no-flexbox.no-flexboxtweener .Header-search .Form-label {
+.ie89 .Header-search button,
+.ie89 .Header-search .Form-input,
+.ie89 .Header-search .Form-label {
   float: left !important;
   position: static !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-search .Form-field {
+.ie89 .Header-search .Form-field {
   width: 100% !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-search .Form-field .Form-input {
+.ie89 .Header-search .Form-field .Form-input {
   max-width: 80% !important;
   width: 80% !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-search .Form-field .Form-label {
+.ie89 .Header-search .Form-field .Form-label {
   @extend .u-hiddenVisually;
 }
 
-.no-flexbox.no-flexboxtweener .Header-search .Form-field button {
+.ie89 .Header-search .Form-field button {
   width: 2em !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-navbar > .Header-title {
+.ie89 .Header-navbar > .Header-title {
   margin-left: 10%;
 }
 
 /* IE8 */
 
-.no-flexbox.no-flexboxtweener .Megamenu-item {
+.ie8 .Megamenu-item {
   display: inline-block !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-navbar {
+.ie8 .Header-navbar {
   background: var(--Color-primary) !important;
   color: white !important;
 }
 
-.no-flexbox.no-flexboxtweener .Header-owner a,
-.no-flexbox.no-flexboxtweener .Header-serviceLink a,
-.no-flexbox.no-flexboxtweener .Header-serviceLink span,
-.no-flexbox.no-flexboxtweener .Header-navbar a {
+.ie8 .Header-owner a,
+.ie8 .Header-serviceLink a,
+.ie8 .Header-serviceLink span,
+.ie8 .Header-navbar a {
   color: white !important;
   display: inline !important;
 }
 
-.no-flexbox.no-flexboxtweener .Skiplinks a {
+.ie8 .Skiplinks a {
   top: -10em;
 }
 
 /*
-* 	CSS transform does not work in IE8
-*/
-
-.no-flexbox.no-flexboxtweener .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
+ * 	CSS transform does not work in IE8
+ */
+.ie8 .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
   left: auto !important;
 }
 
-.no-flexbox.no-flexboxtweener .Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
+.ie8 .Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
   right: auto !important;
 }
