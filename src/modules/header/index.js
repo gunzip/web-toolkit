@@ -68,8 +68,7 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
   let headerHeight = $(headroomFixed).height()
 
   const _adjustPadding = function() {
-    // 32px as maximum space between content and header
-    const paddingTop = (headerHeight) + (Math.min(32, Math.floor($(window).width() / 50)))
+    const paddingTop = headerHeight
 
     $('body').css({
       paddingTop: paddingTop + 'px'
