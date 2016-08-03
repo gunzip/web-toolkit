@@ -108,10 +108,16 @@
   color: white !important;
 }
 
+.ie8 .Cookiebar,
 .ie8 .Footer {
   color: white !important;
 }
 
+.ie8 .Header-socialIcons {
+  min-width: 12em;
+}
+
+.ie8 .Header-socialIcons li,
 .ie8 .Header-owner a,
 .ie8 .Header-serviceLink a,
 .ie8 .Header-serviceLink span,
