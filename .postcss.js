@@ -16,6 +16,11 @@ module.exports = {
     'postcss-url',
     'postcss-calc',
     'autoprefixer',
+
+    // @FIXME: get rid of the following
+    // when dropping support for ie8
+    'postcss-pseudoelements',
+
     'postcss-flexbugs-fixes',
     'postcss-reporter'
   ],
