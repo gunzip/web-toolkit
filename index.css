@@ -42,7 +42,7 @@
 @import "src/modules/treeview";
 
 /*
- * WebFontLoaded: @import "src/fonts/titillium"
+ * WebFontLoaded: _import "src/fonts/titillium"
  * see src/_preview.html
  */
 @import "src/icons/ita";

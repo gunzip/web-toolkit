@@ -31,6 +31,7 @@
 .Footer-blockTitle {
   @extend .u-text-r-m;
   @extend .u-padding-bottom-xl;
+  @extend .u-color-white;
 }
 
 .Footer-subBlock {
