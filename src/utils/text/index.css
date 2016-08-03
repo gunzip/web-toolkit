@@ -140,6 +140,11 @@
   @extend .u-text-md-xxs;
 }
 
+.u-text-p {
+  @extend .u-text-r-xs;
+  @extend .u-lineHeight-xl;
+}
+
 /*
  *	Heading - set default margins
  * 	=====================================
