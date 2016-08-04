@@ -13,6 +13,7 @@
   }, {
     "name": "clone menu",
     "context": {
+      "menu": true,
       "clone": true
     }
   }]

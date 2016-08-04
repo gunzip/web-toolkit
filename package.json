@@ -60,14 +60,12 @@
     "watch:css": "suitcss -w -c .postcss.js index.css build/build.css",
     "build:js": "cross-env WEBPACK_ENV=build webpack",
     "watch:js": "cross-env WEBPACK_ENV=dev webpack --display-modules --progress --colors --watch",
-    "build": "npm-run-all --parallel build:resources build:css build:js",
-    "watch": "npm-run-all --parallel build:resources watch:css watch:js",
     "build:styleguide": "fractal build",
     "watch:styleguide": "fractal start --watch --sync --port 1310",
-    "dev": "npm-run-all --parallel watch:css watch:js watch:styleguide",
-    "prod": "npm-run-all build:css build:js build:styleguide",
+    "watch": "npm-run-all --parallel build:resources watch:css watch:js watch:styleguide",
+    "build": "npm-run-all build:resources build:css build:js build:styleguide",
     "deploy": "git subtree push --prefix styleguide origin gh-pages"
   },
   "author": "AgID",
-  "license": "MIT"
+  "license": "CC0"
 }
