@@ -35,7 +35,7 @@ Tramite gli [archivi npm](https://www.npmjs.com/):
 - bundler per i moduli javascript [Webpack](https://webpack.github.io/) (c) Tobias Koppers, licenza MIT
 - transpiler per moduli javascript [Babel](https://babeljs.io/), (c) 2014-2016 Sebastian McKenzie, licenza MIT
 - linter per javascript [ESLint](http://eslint.org/), (c) jQuery Foundation and other contributors, licenza MIT
-- linter per fogli di stile CSS [Stylelint](http://stylelint.io/) (c)Maxime Thirouin, David Clark & Richard Hallows, licenza MIT
+- linter per fogli di stile CSS [Stylelint](http://stylelint.io/) (c) Maxime Thirouin, David Clark & Richard Hallows, licenza MIT
 
 ### Testo completo Licenza MIT
 
