@@ -6,5 +6,4 @@ config.local.js
 .publish
 build
 npm-debug.log
-styleguide/assets
-styleguide/vendor
+styleguide
