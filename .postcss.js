@@ -28,7 +28,8 @@ module.exports = {
     browsers: ['last 10 versions', 'ie 8', 'ie 9']
   },
   'postcss-url': {
-    url: 'copy'
+    url: 'copy',
+    assetsPath: './'
   },
   'postcss-inline-svg': {
     path: 'src/'
