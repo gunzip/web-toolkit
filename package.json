@@ -65,7 +65,8 @@
     "build:styleguide": "fractal build",
     "watch:styleguide": "fractal start --watch --sync --port 1310",
     "dev": "npm-run-all --parallel watch:css watch:js watch:styleguide",
-    "prod": "npm-run-all build:css build:js build:styleguide"
+    "prod": "npm-run-all build:css build:js build:styleguide",
+    "deploy": "git subtree push --prefix styleguide origin gh-pages"
   },
   "author": "AgID",
   "license": "MIT"
