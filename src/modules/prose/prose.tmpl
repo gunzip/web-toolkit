@@ -1,89 +1,24 @@
 <article class="Prose u-layout-prose">
 
-  {% render '@heading--h1' %}
-  {% render '@heading--h2' %}
-  {% render '@heading--h3' %}
-  {% render '@heading--h4' %}
-  {% render '@heading--h5' %}
-  {% render '@heading--h6' %}
+  {% render '@heading--h1', {text: 'Titolo H1'} %}
+  {% render '@heading--h2', {text: 'Titolo H2'} %}
+  {% render '@heading--h3', {text: 'Titolo H3'} %}
+  {% render '@heading--h4', {text: 'Titolo H4'} %}
+  {% render '@heading--h5', {text: 'Titolo H5'} %}
+  {% render '@heading--h6', {text: 'Titolo H6'} %}
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget aliquet erat. Pellentesque eleifend ornare ligula vitae sagittis.
-    <a href="">Donec at augue sit amet</a> augue elementum sagittis nec pretium elit. <strong>Sed aliquet</strong> consequat nulla finibus aliquam. Vivamus ac augue enim.
-    Ut magna leo, placerat quis viverra et, elementum in libero. Nullam egestas eget lacus non iaculis.
-  </p>
+  {% render '@heading--h2', { text: 'Paragafo' } %}
+  {% render '@prose--paragraph' %}
 
-  <pre class="u-textPreformatted">
-    <code class="u-text-r-xxs">
-        Preformatted text:
-        Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-          minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-            commodo sunt sint minim est anim commodo.
-            Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-              minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-                commodo sunt sint minim est anim commodo.
-                Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-                  minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-                    commodo sunt sint minim est anim commodo.
-                    Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-          minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-            commodo sunt sint minim est anim commodo.
-            Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-              minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-                commodo sunt sint minim est anim commodo.
-                Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-                  minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-                    commodo sunt sint minim est anim commodo.
-                    minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-                      commodo sunt sint minim est anim commodo.
-                      Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-          minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-            commodo sunt sint minim est anim commodo.
-            Aliqua ad excepteur irure sit ipsum cillum commodo sunt sint
-              minim est anim commodo. Aliqua ad excepteur irure sit ipsum cillum
-                              commodo sunt sint minim est anim commodo.
-    </code>
-  </pre>
+  {% render '@heading--h2', { text: 'Testo preformattato' } %}
+  {% render '@prose--code' %}
 
-  <blockquote class="Prose-blockquote">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget aliquet erat. Pellentesque eleifend ornare ligula vitae sagittis. Donec at augue sit amet augue elementum sagittis nec pretium elit.</p>
-  </blockquote>
+  {% render '@heading--h2', { text: 'Citazione' } %}
+  {% render '@prose--blockquote', { text: __SHORT_TEXTS__[0] } %}
 
-  <ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-  </ul>
+  {% render '@heading--h2', { text: 'Liste' } %}
 
-  <ol>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-  </ol>
+  {% render '@prose--ul', { texts: __SHORT_TEXTS__ } %}
+  {% render '@prose--ol', { texts: __SHORT_TEXTS__ } %}
 
-  <h2 class="u-text-h2">Lorem ipsum dolor sit amet</h2>
-  <p>
-    <em>Pellentesque et cursus enim,</em> a iaculis enim. In hac habitasse platea dictumst. Integer volutpat neque in felis viverra, at cursus quam ultrices. Donec faucibus et nisl nec sodales. Proin rutrum, ipsum ac mollis feugiat, tellus turpis rutrum sapien, sed suscipit mi dui eu nunc. Etiam vel dictum tellus. Quisque molestie massa vitae bibendum rhoncus. Curabitur ut purus nec urna congue hendrerit. Etiam pretium leo a neque molestie pulvinar. Nam scelerisque sagittis turpis, ac maximus diam posuere a. Nunc tincidunt tortor vitae auctor dapibus. Pellentesque vestibulum arcu eget tellus posuere mattis. Nam malesuada odio vel semper posuere. Curabitur suscipit eu eros a varius.
-  </p>
-  <p>
-    <small>Pellentesque et cursus enim, a iaculis enim. In hac habitasse platea dictumst. Integer volutpat neque in felis viverra, at cursus quam ultrices.
-      Donec faucibus et nisl nec sodales. Proin rutrum, ipsum ac mollis feugiat, tellus turpis rutrum sapien, sed suscipit mi dui eu nunc. Etiam vel dictum tellus.
-      Quisque molestie massa vitae bibendum rhoncus. Curabitur ut purus nec urna congue hendrerit. Etiam pretium leo a neque molestie pulvinar.
-       Nam scelerisque sagittis turpis, ac maximus diam posuere a. Nunc tincidunt tortor vitae auctor dapibus.
-       Pellentesque vestibulum arcu eget tellus posuere mattis. Nam malesuada odio vel semper posuere. Curabitur suscipit eu eros a varius.
-   </small>
-  </p>
-  <p>
-    <em>Pellentesque et cursus enim,</em> a iaculis enim. In hac habitasse platea dictumst. Integer volutpat neque in felis viverra, at cursus quam ultrices. Donec faucibus et nisl nec sodales. Proin rutrum, ipsum ac mollis feugiat, tellus turpis rutrum sapien, sed suscipit mi dui eu nunc. Etiam vel dictum tellus. Quisque molestie massa vitae bibendum rhoncus. Curabitur ut purus nec urna congue hendrerit. Etiam pretium leo a neque molestie pulvinar. Nam scelerisque sagittis turpis, ac maximus diam posuere a. Nunc tincidunt tortor vitae auctor dapibus. Pellentesque vestibulum arcu eget tellus posuere mattis. Nam malesuada odio vel semper posuere. Curabitur suscipit eu eros a varius.
-  </p>
-  <h2 class="u-text-h2">Lorem ipsum dolor sit amet</h2>
-  <p>
-    <em>Pellentesque et cursus enim,</em> a iaculis enim. In hac habitasse platea dictumst. Integer volutpat neque in felis viverra, at cursus quam ultrices. Donec faucibus et nisl nec sodales. Proin rutrum, ipsum ac mollis feugiat, tellus turpis rutrum sapien, sed suscipit mi dui eu nunc. Etiam vel dictum tellus. Quisque molestie massa vitae bibendum rhoncus. Curabitur ut purus nec urna congue hendrerit. Etiam pretium leo a neque molestie pulvinar. Nam scelerisque sagittis turpis, ac maximus diam posuere a. Nunc tincidunt tortor vitae auctor dapibus. Pellentesque vestibulum arcu eget tellus posuere mattis. Nam malesuada odio vel semper posuere. Curabitur suscipit eu eros a varius.
-  </p>
-  <p>
-    <em>Pellentesque et cursus enim,</em> a iaculis enim. In hac habitasse platea dictumst. Integer volutpat neque in felis viverra, at cursus quam ultrices. Donec faucibus et nisl nec sodales. Proin rutrum, ipsum ac mollis feugiat, tellus turpis rutrum sapien, sed suscipit mi dui eu nunc. Etiam vel dictum tellus. Quisque molestie massa vitae bibendum rhoncus. Curabitur ut purus nec urna congue hendrerit. Etiam pretium leo a neque molestie pulvinar. Nam scelerisque sagittis turpis, ac maximus diam posuere a. Nunc tincidunt tortor vitae auctor dapibus. Pellentesque vestibulum arcu eget tellus posuere mattis. Nam malesuada odio vel semper posuere. Curabitur suscipit eu eros a varius.
-  </p>
-  <p>
-    <em>Pellentesque et cursus enim,</em> a iaculis enim. In hac habitasse platea dictumst. Integer volutpat neque in felis viverra, at cursus quam ultrices. Donec faucibus et nisl nec sodales. Proin rutrum, ipsum ac mollis feugiat, tellus turpis rutrum sapien, sed suscipit mi dui eu nunc. Etiam vel dictum tellus. Quisque molestie massa vitae bibendum rhoncus. Curabitur ut purus nec urna congue hendrerit. Etiam pretium leo a neque molestie pulvinar. Nam scelerisque sagittis turpis, ac maximus diam posuere a. Nunc tincidunt tortor vitae auctor dapibus. Pellentesque vestibulum arcu eget tellus posuere mattis. Nam malesuada odio vel semper posuere. Curabitur suscipit eu eros a varius.
-  </p>
 </article>

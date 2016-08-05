@@ -1,11 +1,11 @@
 <div class="Accordion fr-accordion js-fr-accordion" id="accordion-1">
 
-	{% for i in range(0, titles.length) %}
+	{% for i in range(0, 5) %}
 	<h2 class="Accordion-header js-fr-accordion__header fr-accordion__header" id="accordion-header-{{ i }}" >
-		<span class="Accordion-link u-text-r-s">{{ titles[i] }}</span>
+		<span class="Accordion-link u-text-r-s">{{ __SHORT_TEXTS__[i] }}</span>
 	</h2>
 	<div id="accordion-panel-{{ i }}" class="Accordion-panel fr-accordion__panel js-fr-accordion__panel">
-    <p class="u-layout-prose u-color-grey-90 u-text-p u-padding-all-s">{{ texts[i] }}</p>
+    {% render '@prose--paragraph', { text: __TEXTS__[i] } %}
 	</div>
 	{% endfor %}
 

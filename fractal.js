@@ -17,9 +17,19 @@ fractal.components.set('default.preview', '@preview')
 
 fractal.components.set('default.status', 'wip')
 
-fractal.components.engine('@frctl/nunjucks')
+const faker = require('faker')
+const _ = require('lodash')
 
-fractal.docs.engine('@frctl/nunjucks')
-fractal.docs.set('ext', '.md')
+const nunj = require('@frctl/nunjucks')({
+  globals: {
+    __TEXTS__: _.range(10).map(function(){ return faker.lorem.paragraphs() }),
+    __SHORT_TEXTS__: _.range(10).map(function(){ return faker.lorem.sentence() }),
+    __LONG_TEXTS__: _.range(10).map(function(){ return faker.lorem.text() }),
+  },
+})
+
+fractal.components.engine(nunj)
+fractal.docs.engine(nunj)
 
 fractal.components.set('ext', '.tmpl')
+fractal.docs.set('ext', '.md')
