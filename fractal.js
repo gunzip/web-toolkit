@@ -22,9 +22,12 @@ const _ = require('lodash')
 
 const nunj = require('@frctl/nunjucks')({
   globals: {
-    __TEXTS__: _.range(10).map(function(){ return faker.lorem.paragraphs() }),
+    __WORD__: _.range(10).map(function(){ return faker.lorem.word() }),
+    __WORDS__: _.range(10).map(function(){ return faker.lorem.words() }),
+    __TEXTS__: _.range(10).map(function(){ return faker.lorem.paragraph() }),
     __SHORT_TEXTS__: _.range(10).map(function(){ return faker.lorem.sentence() }),
-    __LONG_TEXTS__: _.range(10).map(function(){ return faker.lorem.text() }),
+    __LONG_TEXTS__: _.range(10).map(function(){ return faker.lorem.paragraphs() }),
+    __IMAGES__: _.range(10).map(function(){ return faker.image.image() }),
   },
 })
 

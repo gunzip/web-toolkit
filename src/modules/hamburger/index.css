@@ -39,13 +39,11 @@
 }
 
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-
   .Hamburger-toggle,
   .Hamburger-toggle::before,
   .Hamburger-toggle::after {
     width: var(--Hamburger-width);
   }
-
 }
 
 .Hamburger-toggle::before {
@@ -57,7 +55,6 @@
 }
 
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-
   .Hamburger-toggle::before {
     top: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
   }
@@ -65,7 +62,6 @@
   .Hamburger-toggle::after {
     bottom: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
   }
-
 }
 
 .Hamburger-toggle,

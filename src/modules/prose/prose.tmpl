@@ -18,7 +18,16 @@
 
   {% render '@heading--h2', { text: 'Liste' } %}
 
-  {% render '@prose--ul', { texts: __SHORT_TEXTS__ } %}
-  {% render '@prose--ol', { texts: __SHORT_TEXTS__ } %}
+  <ul>
+    {% for i in range(0, 9) %}
+    <li>{{ __SHORT_TEXTS__[i] }}</li>
+    {% endfor %}
+  </ul>
+
+  <ol>
+    {% for i in range(0, 9) %}
+    <li>{{ __SHORT_TEXTS__[i] }}</li>
+    {% endfor %}
+  </ol>
 
 </article>
