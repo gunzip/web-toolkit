@@ -1,4 +1,4 @@
-<div class="Card Card--round Card--withBorder Card--shadow u-color-grey-30">
+<div class="Card Card--round Card--withBorder Card--shadow u-color-grey-30 u-background-white">
   <figure class="Card-image u-background-grey-60 u-padding-all-s">
     <a href=""><img src="http://placehold.it/370x205?text={{ index }}" class="u-sizeFull" /></a>
     <figcaption class="u-padding-r-top">
@@ -7,10 +7,10 @@
       <p class="u-color-white u-text-r-xxs">13 ottobre 2016</p>
     </figcaption>
   </figure>
-  <div class="Card-content u-background-white">
+  <div class="Card-content">
     <p class="Card-title">
       <a class="u-textClean u-color-black u-textWeight-400 u-text-r-m" href="">
-        {{ __TEXTS__[1] }}
+        {{ text | d(__TEXTS__[1]) }}
       </a>
     </p>
   </div>
