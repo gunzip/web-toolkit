@@ -74,9 +74,11 @@ $(document).ready(function() {
       let $menu = listToMegaMenu($(rel), opts)
       $el.append($menu)
         // @FIXME: make space for javascript rendered megamenu
-      $('body').css({
-        paddingTop: (parseInt($('body').css('paddingTop')) + $el.height()) + 'px'
-      })
+      if ($('header').css('position') === 'fixed') {
+        $('body').css({
+          paddingTop: '+=' + $el.height() + 'px'
+        })
+      }
     }
     $el.accessibleMegaMenu(opts)
   })
