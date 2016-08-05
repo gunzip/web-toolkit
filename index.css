@@ -29,6 +29,7 @@
 @import "src/modules/footer";
 @import "src/modules/hamburger";
 @import "src/modules/header";
+@import "src/modules/leads";
 @import "src/modules/linklist";
 @import "src/modules/megamenu";
 @import "src/modules/navscroll";
@@ -38,7 +39,6 @@
 @import "src/modules/scrolltop";
 @import "src/modules/share";
 @import "src/modules/skiplinks";
-@import "src/modules/utilities";
 @import "src/modules/tooltip";
 @import "src/modules/treeview";
 
