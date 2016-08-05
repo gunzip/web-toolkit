@@ -1,7 +1,6 @@
 /** @define utilities; */
 
 @media (--sm-viewport) {
-
   .u-text-sm-xxl {
     font-size: 3.2rem !important;
   }

@@ -1,7 +1,6 @@
 /** @define utilities; */
 
 @media (--lg-viewport) {
-
   .u-text-lg-xxl {
     font-size: 5.4rem !important;
   }

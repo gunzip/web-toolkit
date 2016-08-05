@@ -15,30 +15,24 @@
 }
 
 @media (--sm-viewport) {
-
   .u-layout-sm-withGutter {
     padding-left: calc(2 * var(--Layout-gutter)) !important;
     padding-right: calc(2 * var(--Layout-gutter)) !important;
   }
-
 }
 
 @media (--md-viewport) {
-
   .u-layout-md-withGutter {
     padding-left: calc(2.5 * var(--Layout-gutter)) !important;
     padding-right: calc(2.5 * var(--Layout-gutter)) !important;
   }
-
 }
 
 @media (--lg-viewport) {
-
   .u-layout-lg-withGutter {
     padding-left: calc(3 * var(--Layout-gutter)) !important;
     padding-right: calc(3 * var(--Layout-gutter)) !important;
   }
-
 }
 
 .u-layout-r-withGutter {

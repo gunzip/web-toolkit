@@ -22,9 +22,7 @@
 }
 
 @media print {
-
   .u-hiddenPrint {
     display: none !important;
   }
-
 }

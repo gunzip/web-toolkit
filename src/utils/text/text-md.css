@@ -1,7 +1,6 @@
 /** @define utilities; */
 
 @media (--md-viewport) {
-
   .u-text-md-xxl {
     font-size: 4.4rem !important;
   }
