@@ -5,7 +5,7 @@
     </div>
     <div class="Grid Grid--withGutter u-padding-r-top u-text-r-xxl">
       {% for i in [1, 2, 3, 4, 5, 6, 7, 8, 9] %}
-      <div class="Grid-cell usizefull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-flexAlignSelfStretch u-flex">
+      <div class="Grid-cell usizefull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-layout-matchHeight">
         {% render '@card--gallery', { text: __SHORT_TEXTS__[i] } %}
       </div>
       {% endfor %}
