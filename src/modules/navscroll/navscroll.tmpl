@@ -1,15 +1,7 @@
 <nav class="Navscroll Navscroll--withHint">
   <ul class="u-padding-all-s u-margin-all-l">
-    <li class="u-padding-right-l"><a href="#">Home</a></li>
-    <li class="u-padding-right-l"><a href="#">About</a></li>
-    <li class="u-padding-right-l"><a href="#">Contact</a></li>
-    <li class="u-padding-right-l"><a href="#">Blog</a></li>
-    <li class="u-padding-right-l"><a href="#">GitHub</a></li>
-    <li class="u-padding-right-l"><a href="#">Twitter</a></li>
-    <li class="u-padding-right-l"><a href="#">Apple</a></li>
-    <li class="u-padding-right-l"><a href="#">Google</a></li>
-    <li class="u-padding-right-l"><a href="#">Wang</a></li>
-    <li class="u-padding-right-l"><a href="#">Yahoo</a></li>
-    <li class="u-padding-right-l"><a href="#">W3C</a></li>
+    {% for i in range(0, 5) %}
+      <li class="u-padding-right-l"><a href="#">{{ __WORDS__[i] | capitalize }}</a></li>
+    {% endfor %}
   </ul>
 </nav>
