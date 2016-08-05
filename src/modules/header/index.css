@@ -332,11 +332,11 @@
   @extend .u-margin-left-xs;
 
   border: 2px solid white;
-  opacity: 0.5;
 }
 
 .Header-language.is-active {
-  opacity: 1;
+  @extend .u-background-white;
+  @extend .u-color-50;
 }
 
 .Header-social {
