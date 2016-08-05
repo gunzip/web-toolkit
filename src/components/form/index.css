@@ -140,7 +140,7 @@ option:hover {
   @extend .u-color-white;
   @extend .u-borderRadius-m;
   @extend .u-background-grey-80;
-  @extend .u-border-shadow-xs;
+  @extend .u-borderShadow-xs;
   @extend .u-padding-r-all;
   @extend .u-posAbsolute;
   @extend .u-margin-top-xxs;

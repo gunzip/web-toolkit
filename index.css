@@ -6,6 +6,7 @@
 @import "src/utils/corners";
 @import "src/utils/display";
 @import "src/utils/layout";
+@import "src/utils/shadows";
 @import "src/utils/space";
 @import "src/utils/text";
 @import "src/utils/zindex";
