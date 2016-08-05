@@ -67,9 +67,9 @@
     {% else %}
       <nav class="Megamenu Megamenu--styled">
         <ul class="Megamenu-list">
-          <li class="Megamenu-item"><a href="">{{ __WORDS__[1] }}</a></li>
-          <li class="Megamenu-item"><a href="">{{ __WORDS__[2] }}</a></li>
-          <li class="Megamenu-item"><a href="">{{ __WORDS__[3] }}</a></li>
+          <li class="Megamenu-item"><a href="">{{ __WORDS__[1] | capitalize }}</a></li>
+          <li class="Megamenu-item"><a href="">{{ __WORDS__[2] | capitalize  }}</a></li>
+          <li class="Megamenu-item"><a href="">{{ __WORDS__[3] | capitalize  }}</a></li>
         </ul>
       </nav>
     {% endif %}
@@ -77,3 +77,5 @@
   {% endif %}
 
 </header>
+
+{% render '@offcanvas', { showOpenButton: false } %}
