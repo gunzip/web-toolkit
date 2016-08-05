@@ -50,7 +50,7 @@
     "postcss-url": "^5.1.2",
     "shx": "^0.1.2",
     "style-loader": "^0.13.1",
-    "stylelint-config-suitcss": "^6.0.0",
+    "stylelint-config-suitcss": "^8.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1"
