@@ -25,18 +25,18 @@ loaders.push({
   test: /\.png/, loader: 'url-loader?limit=100000&minetype=image/png'
 })
 
-if (env === 'build') {
+// if (env === 'build') {
   loaders.push({
     test: /\.css$/,
     loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
   })
   plugins.push(new ExtractTextPlugin('vendor.css'))
-} else {
-  loaders.push({
-    test: /\.css$/,
-    loader: 'style-loader!css-loader'
-  })
-}
+// } else {
+//   loaders.push({
+//     test: /\.css$/,
+//     loader: 'style-loader!css-loader'
+//   })
+// }
 
 var config = {
   entry: __dirname + '/index.js',

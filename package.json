@@ -67,5 +67,5 @@
     "deploy": "git subtree push --prefix styleguide origin gh-pages"
   },
   "author": "AgID",
-  "license": "CC0"
+  "license": "CC0-1.0"
 }
