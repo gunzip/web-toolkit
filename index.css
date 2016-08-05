@@ -11,20 +11,21 @@
 @import "src/utils/text";
 @import "src/utils/zindex";
 
-@import "src/components/alert";
 @import "src/components/button";
-@import "src/components/callout";
-@import "src/components/dot";
 @import "src/components/form";
+@import "src/components/prose";
 @import "src/components/table";
 
 @import "src/modules/accordion";
+@import "src/modules/alert";
 @import "src/modules/breadcrumb";
 @import "src/modules/bullets";
+@import "src/modules/callout";
 @import "src/modules/card";
 @import "src/modules/carousel";
 @import "src/modules/cookiebar";
 @import "src/modules/dialog";
+@import "src/modules/dot";
 @import "src/modules/entrypoint";
 @import "src/modules/footer";
 @import "src/modules/hamburger";
@@ -35,7 +36,6 @@
 @import "src/modules/navscroll";
 @import "src/modules/offcanvas";
 @import "src/modules/packery";
-@import "src/modules/prose";
 @import "src/modules/scrolltop";
 @import "src/modules/share";
 @import "src/modules/skiplinks";
