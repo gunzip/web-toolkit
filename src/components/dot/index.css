@@ -5,6 +5,7 @@
   @extend .u-text-xxs;
   @extend .u-inlineBlock;
   @extend .u-margin-right-xxs;
+
   height: 1em;
   width: 1em;
 }
