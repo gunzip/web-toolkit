@@ -11,9 +11,9 @@
     </p>
   </div>
 
-  <div class="Header-navbar Grid Grid--alignCenter Grid--alignMiddle u-flexNoWrap">
+  <div class="Header-navbar Grid Grid--alignMiddle">
 
-    <div class="Grid-cell Header-toggle">
+    <div class="Header-toggle Grid-cell">
       <button class="Hamburger-toggleContainer js-fr-offcanvas-open"
         aria-controls="menu" aria-label="mostra / nascondi il menu" title="mostra / nascondi il menu">
         <span class="Hamburger-toggle" role="presentation"></span>
@@ -21,26 +21,28 @@
       </button>
     </div>
 
-    <div class="Header-title">
-      <div class="Header-logo" aria-hidden="true">
-        <a href="/" tabindex="-1">
-          <img src="http://placehold.it/75x80" alt="">
-        </a>
-      </div>
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="/" tabindex="-1">
+        <img src="http://placehold.it/75x80" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
       <h1 class="Header-titleLink">
         <a accesskey="1" href="/">
           {{ site.name }}<br>
           <small>eventuale sottotitolo</small>
         </a>
       </h1>
-      <div class="Header-searchTrigger js-searchTrigger">
-        <a href="#header-utils" class="icon-magnifier">
-          <span class="u-visuallyHidden">vai alla ricerca</span>
-        </a>
-      </div>
     </div>
 
-    <div class="Header-utils" id="header-utils">
+    <div class="Header-searchTrigger Grid-cell">
+      <a href="#header-search" class="js-Header-search-trigger icon-magnifier">
+        <span class="u-hiddenVisually">vai alla ricerca</a>
+      </a>
+    </div>
+
+    <div class="Header-utils Grid-cell">
       <div class="Header-social Headroom-hideme">
         <p>Seguici su:</p>
         <ul class="Header-socialIcons">
@@ -49,12 +51,12 @@
           <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
         </ul>
       </div>
-      <div class="Header-search">
+      <div class="Header-search" id="header-search">
         {% render '@form--search' %}
       </div>
       <div class="Header-languages Headroom-hideme">
-        <a class="Header-language is-active" href="">ITA</a>
-        <a class="Header-language" href="">ENG</a>
+        <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
+        <a class="Header-language" href="" title="sito in inglese">ENG</a>
       </div>
     </div>
 

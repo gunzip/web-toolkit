@@ -124,21 +124,13 @@
   }
 }
 
-/*
- *	1. Align content to header for wide screen
- */
+/* Burger button
+  ========================================== */
+
 .Header-toggle {
-  @extend .u-block;
-  @extend .u-padding-left-xs;
-
   @extend .u-size2of12;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-padding-left-xxl;
-  }
-  @media (--lg-viewport) {
-    @extend .u-margin-left-l;
-  }
+  @extend .u-lg-size1of8;
+  @extend .u-textCenter;
 }
 
 .Header-toggleText {
@@ -158,17 +150,19 @@
   text-transform: uppercase;
 }
 
+/* Logo image
+  ========================================== */
+
 .Header-logo {
-  @extend .u-floatLeft;
-
-  min-width: calc(var(--Header-logo-width) * 0.6);
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    min-width: var(--Header-logo-width);
-  }
+  @extend .u-size2of12;
+  @extend .u-sm-size2of12;
+  @extend .u-md-size1of12;
+  @extend .u-lg-size1of12;
 }
 
 .Header-logo img {
+  @extend .u-alignMiddle;
+
   width: 4.5rem;
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
@@ -176,36 +170,27 @@
   }
 }
 
+/* Title link
+  ========================================== */
+
 .Header-title {
   @extend .u-flex;
   @extend .u-flexAlignItemsCenter;
 
   @extend .u-lineHeight-xxs;
 
-  @extend .u-padding-left-xs;
-  @extend .u-padding-right-xxs;
-
-  @extend .u-size10of12;
-  @extend .u-sm-size6of12;
-  @extend .u-md-size6of12;
-  @extend .u-lg-size6of12;
+  @extend .u-size6of12;
+  @extend .u-sm-size4of12;
+  @extend .u-md-size5of12;
+  @extend .u-lg-size5of12;
 
   @media (--md-viewport), (--lg-viewport) {
     @extend .u-lineHeight-m;
   }
 }
 
-/*
- * 	1. Make room for searchTrigger
- */
-.Header-titleLink {
-  @extend .u-size10of12; /* 1 */
-  @extend .u-sm-sizeFull;
-  @extend .u-md-sizeFull;
-  @extend .u-lg-sizeFull;
-}
-
 .Header-titleLink a {
+  @extend .u-inlineBlock;
   @extend .u-text-xs;
   @extend .u-text-sm-m;
   @extend .u-text-md-l;
@@ -214,6 +199,8 @@
   @extend .u-textWeight-700;
   @extend .u-color-white;
   @extend .u-textClean;
+  @extend .u-padding-left-xxs;
+  @extend .u-padding-right-xxs;
 }
 
 .Header-titleLink small {
@@ -226,20 +213,19 @@
   @extend .u-textClean;
 }
 
-/* ========================================== */
+/* Search button for small screens
+  ========================================== */
 
 .Header-searchTrigger {
+  @extend .u-sizeFill;
   @extend .u-sm-hidden;
   @extend .u-md-hidden;
   @extend .u-lg-hidden;
-  @extend .u-sizeFill;
-  @extend .u-padding-left-xxs;
-  @extend .u-padding-bottom-xs;
-  @extend .u-padding-top-xs;
+  @extend .u-textRight;
 }
 
 .Header-searchTrigger a {
-  @extend .u-floatRight;
+  @extend .u-inlineBlock;
   @extend .u-linkClean;
   @extend .u-background-40;
   @extend .u-color-white;
@@ -247,11 +233,8 @@
   @extend .u-text-r-xxs;
 }
 
-.Header-searchTrigger a span {
-  @extend .u-hiddenVisually;
-}
-
-/* ========================================== */
+/* Utils block (social + languages + search form)
+  ================================================ */
 
 .Header-utils {
   @extend .u-block;
@@ -270,27 +253,24 @@
   }
 
   @media (--sm-viewport) {
-    @extend .u-padding-right-s;
     @extend .u-margin-top-xs;
     @extend .u-margin-bottom-xs;
   }
-
-  @media (--md-viewport) {
-    @extend .u-padding-right-m;
-  }
-
-  @media (--lg-viewport) {
-    @extend .u-padding-right-xxl;
-  }
 }
 
-.Header-utils > *,
-.Header-search button {
+.Header-utils > * {
   @extend .u-hidden;
   @extend .u-sm-block;
   @extend .u-md-block;
   @extend .u-lg-block;
+  @extend .u-floatRight;
+  @extend .u-cf;
+
+  width: 100%;
 }
+
+/* Search form
+  ================================================ */
 
 .Header-search input {
   @extend .u-sizeFill;
@@ -308,18 +288,8 @@
   }
 }
 
-.Header-utils:target > .Header-search {
-  @extend .u-sizeFull;
-}
-
-/* ========================================== */
-
-.Header-utils > div {
-  @extend .u-floatRight;
-  @extend .u-cf;
-
-  width: 100%;
-}
+/* Lanaguage bar
+  ================================================ */
 
 .Header-language {
   @extend .u-color-white;
@@ -337,6 +307,9 @@
   @extend .u-background-white;
   @extend .u-color-50;
 }
+
+/* Social icons / link
+  ================================================ */
 
 .Header-social {
   @extend .u-text-r-xs;
