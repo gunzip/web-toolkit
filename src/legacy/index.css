@@ -25,10 +25,7 @@
 .ie89 .Grid-cell,
 .ie89 .Header,
 .ie89 .Header > *,
-.ie89 .Header-utils > *,
-.ie89 .Header-navbar > .Header-toggle,
-.ie89 .Header-navbar > .Header-title,
-.ie89 .Header-navbar > .Header-utils {
+.ie89 .Header-utils > * {
   box-sizing: border-box;
   display: inline-block !important;
   font-size: 1.8rem;
@@ -56,45 +53,23 @@
   line-height: 3em;
 }
 
-.ie89 .Header-navbar > .Header-toggle {
-  width: 60px !important;
+.ie89 .Header-searchTrigger {
+  display: none !important;
 }
 
-.ie89 .Header-navbar > .Header-title,
-.ie89 .Header-navbar > .Header-utils {
-  width: 40% !important;
+.ie89 .Header-utils > * {
+  float: right !important;
+  text-align: right !important;
 }
 
-.ie89 .Header-search.Header-search {
-  max-width: none !important;
+.ie89 .Header-search label {
+  margin-top: 1em;
 }
 
 .ie89 .Header-search button,
-.ie89 .Header-search .Form-input,
-.ie89 .Header-search .Form-label {
+.ie89 .Header-search .Form-input {
   float: left !important;
-  position: static !important;
-}
-
-.ie89 .Header-search .Form-field {
-  width: 100% !important;
-}
-
-.ie89 .Header-search .Form-field .Form-input {
-  max-width: 80% !important;
-  width: 80% !important;
-}
-
-.ie89 .Header-search .Form-field .Form-label {
-  @extend .u-hiddenVisually;
-}
-
-.ie89 .Header-search .Form-field button {
-  width: 2em !important;
-}
-
-.ie89 .Header-navbar > .Header-title {
-  margin-left: 10%;
+  width: auto !important;
 }
 
 /* IE8 */
