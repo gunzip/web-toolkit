@@ -102,6 +102,9 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
 
 }
 
+/*
+ *  Toggle search-form visibility for mobile
+ */
 $('.js-Header-search-trigger').click((e) => {
   $('.js-Header-search-trigger').each((i, el) => {
     const $el = $(el)
