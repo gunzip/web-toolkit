@@ -204,7 +204,7 @@
   @extend .u-textRight;
 }
 
-.Header-searchTrigger a {
+.Header-searchTrigger button {
   @extend .u-inlineBlock;
   @extend .u-linkClean;
   @extend .u-background-40;
@@ -262,7 +262,7 @@
   }
 }
 
-.Header-search:target {
+.Header-search.is-active {
   @extend .u-block;
   @extend .u-background-40;
   @extend .u-margin-top-xs;
