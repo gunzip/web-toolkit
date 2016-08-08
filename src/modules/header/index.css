@@ -21,14 +21,14 @@
   @extend .u-border-bottom-xxs;
   @extend .u-padding-top-xs;
   @extend .u-padding-bottom-xs;
-
-  /**
-   * 1. Must be the same as Header-title
-   */
+  @extend .u-padding-left-s;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-padding-left-s; /* 1 */
     @extend .u-padding-top-s;
     @extend .u-padding-bottom-s;
+    @extend .u-padding-left-none;
+  }
+  @media (--lg-viewport) {
+    padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
   }
 }
 
@@ -64,35 +64,15 @@
   @extend .u-lg-inline;
 }
 
-.Header-owner {
-  @extend .u-padding-left-s;
-
-  white-space: nowrap;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    max-width: 100% !important;
-    padding-left: 0 !important;
-  }
-
-  @media (--lg-viewport) {
-    @extend .u-padding-left-l;
-  }
-}
-
 .Header-owner a {
-  @extend .u-sm-before2of12;
-  @extend .u-md-before2of12;
-  @extend .u-lg-before1of8;
+  @extend .u-sm-before4of12;
+  @extend .u-md-before3of12;
   @extend .u-text-xxs;
   @extend .u-text-sm-xs;
   @extend .u-text-md-s;
   @extend .u-text-lg-s;
   @extend .u-color-white;
   @extend .u-textClean;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    padding-left: var(--Header-logo-width);
-  }
 }
 
 /* ========================================== */
@@ -246,12 +226,6 @@
   @extend .u-md-size4of12;
   @extend .u-lg-size4of12;
 
-  @extend .u-background-40;
-
-  @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
-    @extend .u-background-50;
-  }
-
   @media (--sm-viewport) {
     @extend .u-margin-top-xs;
     @extend .u-margin-bottom-xs;
@@ -286,6 +260,13 @@
     max-width: 24em;
     padding-right: 0 !important;
   }
+}
+
+.Header-search:target {
+  @extend .u-block;
+  @extend .u-background-40;
+  @extend .u-margin-top-xs;
+  @extend .u-padding-all-xxs;
 }
 
 /* Lanaguage bar
@@ -405,7 +386,7 @@
 
 .Headroom--fixed.Headroom--not-top .Header-navbar,
 .Headroom--pinned.Headroom--not-top .Header-navbar {
-  @extend .u-padding-top-none;
+  @extend .u-padding-top-xxs;
   @extend .u-padding-bottom-none;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-top-xxs;

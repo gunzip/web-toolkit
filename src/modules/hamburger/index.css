@@ -25,7 +25,7 @@
   content: " ";
   display: block;
   height: calc(var(--Hamburger-height) / 3);
-  position: absolute;
+  position: relative;
   width: calc(var(--Hamburger-width) * 0.7);
 }
 
@@ -51,7 +51,7 @@
 }
 
 .Hamburger-toggle::after {
-  bottom: -calc((var(--Hamburger-height) + var(--Hamburger-pad)) * 0.8);
+  bottom: -calc((-var(--Hamburger-height) / 3) + (var(--Hamburger-height) + var(--Hamburger-pad)) * 0.8);
 }
 
 @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
@@ -60,7 +60,7 @@
   }
 
   .Hamburger-toggle::after {
-    bottom: -calc(var(--Hamburger-height) + var(--Hamburger-pad));
+    bottom: -calc((-var(--Hamburger-height) / 3) + var(--Hamburger-height) + var(--Hamburger-pad));
   }
 }
 
