@@ -352,7 +352,8 @@
   margin: 0 !important;
   max-height: 0;
   overflow-y: hidden;
-  padding: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 .Headroom--fixed,
