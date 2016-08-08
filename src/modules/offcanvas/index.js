@@ -73,7 +73,6 @@ const _handleModal = (e) => {
 $(document).ready(() => {
   _handleModal()
   _handleModalScroll()
-  $(opts.openSelector).click(() => false)
 })
 
 export default {

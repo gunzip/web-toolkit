@@ -129,17 +129,9 @@
  */
 .Header-toggle {
   @extend .u-block;
-  @extend .u-size2of12;
-  @extend .u-lg-size1of8; /* 1 */
   @extend .u-padding-left-xs;
 
-  @extend .u-color-white;
-  @extend .u-text-r-xxs;
-  @extend .u-textWeight-700;
-  @extend .u-textClean;
-
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase;
+  @extend .u-size2of12;
 
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-left-xxl;
@@ -155,8 +147,15 @@
   @extend .u-md-block;
   @extend .u-lg-block;
 
+  @extend .u-color-white;
+  @extend .u-text-r-xxs;
+  @extend .u-textWeight-700;
+  @extend .u-textClean;
+
+  letter-spacing: 0.1em !important;
   margin-bottom: -calc(1rem + var(--Hamburger-height));
   margin-top: calc(1rem + var(--Hamburger-height));
+  text-transform: uppercase;
 }
 
 .Header-logo {
