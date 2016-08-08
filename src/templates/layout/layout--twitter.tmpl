@@ -13,7 +13,7 @@
     </div>
     <div class="Grid Grid--withGutter u-padding-r-top u-text-r-xxl">
       {% for i in [1, 2, 3] %}
-      <div class="Grid-cell usizefull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-layout-matchHeight">
+      <div class="Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-text-r-m u-margin-r-bottom u-layout-matchHeight">
         {% render '@tile--twitter', { text: __TEXTS__[i] | truncate(s, 140, false, end='.')} %}
       </div>
       {% endfor %}

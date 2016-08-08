@@ -8,6 +8,9 @@
   background: transparent;
 }
 
+/*
+ *  1. See .Header-titleLink
+ */
 .Header-banner {
   @extend .u-background-95;
   @extend .u-posRelative;
@@ -19,7 +22,12 @@
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-padding-top-s;
     @extend .u-padding-bottom-s;
+  }
+  @media (--sm-viewport) {
     @extend .u-padding-left-none;
+  }
+  @media (--md-viewport) {
+    @extend .u-padding-left-s; /* 1 */
   }
   @media (--lg-viewport) {
     padding-left: calc((1 / 8 + 1 / 12) * 100%) !important;
@@ -161,6 +169,12 @@
 
   @media (--md-viewport), (--lg-viewport) {
     @extend .u-lineHeight-m;
+  }
+}
+
+.Header-titleLink {
+  @media (--md-viewport) {
+    @extend .u-padding-left-s;
   }
 }
 

@@ -74,6 +74,10 @@
   background-color: transparent;
 }
 
+.Hamburger-toggle.is-active::before {
+  top: calc(var(--Hamburger-height) / 3 - var(--Hamburger-pad)) !important;
+}
+
 .Hamburger-toggle.is-active::before,
 .Hamburger-toggle.is-active::after {
   top: 0;
