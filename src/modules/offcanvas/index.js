@@ -42,7 +42,7 @@ const offcanvas = Froffcanvas(opts)
  */
 const _handleModalScroll = () => {
   $(opts.contentSelector).on('transitionend', function() {
-    if (!$(opts.panelSelector).hasClass('is-active')) {
+    if (!$(opts.panelSelector).hasClass(opts.activeClass)) {
       $('body, html').css({
         'overflow-y': 'visible'
       })
@@ -63,7 +63,7 @@ const _handleModalScroll = () => {
  *	FIXME: hack to show / hide the background panel
  */
 const _handleModal = (e) => {
-  if (e && $(opts.panelSelector).hasClass('is-active') &&
+  if (e && $(opts.panelSelector).hasClass(opts.activeClass) &&
     !$(e.target).is(opts.contentSelector)) {
     $(opts.closeSelector).click()
   }
