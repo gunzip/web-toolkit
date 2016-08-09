@@ -13,8 +13,8 @@ per realizzare quindi un "tema" grafico specifico.
 Per ottenere i sorgenti è possibile scaricare direttamente l'[archivio compresso](@TODO)
 da GitHub.
 
-In alternativa a tale procedura, è consigliato per il download l'utilizzo
-del software di versionamento [Git](https://git-scm.com/): dopo aver
+In alternativa a tale procedura, è consigliato il download tramite
+il software di versionamento [Git](https://git-scm.com/): dopo aver
 [installato Git](https://git-scm.com/book/it/v1/Per-Iniziare-Installare-Git)
 è possibile effettuare una copia del repository in locale digitando da linea di comando:
 
@@ -24,7 +24,8 @@ git clone @TODO
 
 Questa modalità, alternativa al download diretto dell'archivio, permette di mantenere i sorgenti sincronizzati
 con i nuovi rilasci del framework nonché di contribuire al progetto
-chiedendo che le proprie modifiche vengano incorporate nella linea principale di sviluppo, vedi anche:
+proponendo di incorporare le proprie modifiche nella linea principale di sviluppo,
+vedi anche:
 
 * [Fork a repo](https://help.github.com/articles/fork-a-repo/)
 * [Using pull request](https://help.github.com/articles/using-pull-requests/)
