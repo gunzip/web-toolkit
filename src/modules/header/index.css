@@ -241,6 +241,9 @@
   }
 }
 
+/*
+ *  Hide utils on small screens
+ */
 .Header-utils > * {
   @extend .u-hidden;
   @extend .u-sm-block;
@@ -255,19 +258,15 @@
 /* Search form
   ================================================ */
 
-.Header-search input {
-  @extend .u-sizeFill;
-}
-
 .Header-search {
   @extend .u-padding-all-xxs;
   @media (--sm-viewport), (--md-viewport), (--lg-viewport) {
     @extend .u-margin-bottom-m;
     @extend .u-padding-left-m;
+    @extend .u-padding-right-none;
     @extend .u-floatRight;
 
     max-width: 24em;
-    padding-right: 0 !important;
   }
 }
 
