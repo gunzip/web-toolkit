@@ -13,14 +13,6 @@
   text-align: left;
 }
 
-.ie89 .Grid--withGutter {
-  margin: 0 -8px;
-}
-
-.ie89 .Grid--withGutter > .Grid-cell {
-  padding: 0 8px;
-}
-
 .ie89 .u-flex,
 .ie89 .Grid-cell,
 .ie89 .Header,
@@ -35,6 +27,14 @@
   text-align: left;
   vertical-align: top;
   width: 100%;
+}
+
+.ie89 .Grid--withGutter {
+  margin: 0 -8px !important;
+}
+
+.ie89 .Grid--withGutter > .Grid-cell {
+  padding: 0 8px !important;
 }
 
 /*
@@ -60,6 +60,15 @@
 .ie89 .Header-utils > * {
   float: right !important;
   text-align: right !important;
+}
+
+.ie89 .Header-search .Form-field {
+  float: right;
+  text-align: right;
+}
+
+.ie89 .Header-search .Form-field input {
+  padding: 0.3em;
 }
 
 .ie89 .Header-search label {
