@@ -22,12 +22,24 @@ const _ = require('lodash')
 
 const nunj = require('@frctl/nunjucks')({
   globals: {
-    __WORD__: _.range(10).map(function(){ return faker.lorem.word() }),
-    __WORDS__: _.range(10).map(function(){ return faker.lorem.words() }),
-    __TEXTS__: _.range(10).map(function(){ return faker.lorem.paragraph() }),
-    __SHORT_TEXTS__: _.range(10).map(function(){ return faker.lorem.sentence() }),
-    __LONG_TEXTS__: _.range(10).map(function(){ return faker.lorem.paragraphs() }),
-    __IMAGES__: _.range(10).map(function(){ return faker.image.image() }),
+    __WORD__: _.range(10).map(function() {
+      return faker.lorem.word()
+    }),
+    __WORDS__: _.range(10).map(function() {
+      return faker.lorem.words()
+    }),
+    __TEXTS__: _.range(10).map(function() {
+      return faker.lorem.paragraph()
+    }),
+    __SHORT_TEXTS__: _.range(10).map(function() {
+      return faker.lorem.sentence()
+    }),
+    __LONG_TEXTS__: _.range(10).map(function() {
+      return faker.lorem.paragraphs()
+    }),
+    __IMAGES__: _.range(10).map(function() {
+      return faker.image.image()
+    }),
   },
 })
 
@@ -36,3 +48,21 @@ fractal.docs.engine(nunj)
 
 fractal.components.set('ext', '.tmpl')
 fractal.docs.set('ext', '.md')
+
+/*
+ *  Theme
+ */
+const mandelbrot = require('@frctl/mandelbrot')
+
+const myCustomisedTheme = mandelbrot({
+  skin: 'blue',
+  'nav': ['docs', 'components'],
+  //  ["html", "view", "context", "resources", "info", "notes"]
+  'panels': ['html', 'resources', 'info', 'notes'],
+  'lang': 'it'
+})
+
+fractal.components.set('title', 'Componenti')
+fractal.docs.set('title', 'Documentazione')
+
+fractal.web.theme(myCustomisedTheme)
