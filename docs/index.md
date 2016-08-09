@@ -21,3 +21,5 @@ per poi recepire i contributi e incorporarli.
 L'obiettivo è veicolare l'effort su un insieme di elementi condivisi
 che possano esser utilizzati nella realizzazione di un sito
 o servizio usabile, accessibile e conforme a quanto prescritto nelle Linee Guida.
+
+[Come iniziare](/docs/come-iniziare)

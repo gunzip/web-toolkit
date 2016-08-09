@@ -33,3 +33,5 @@ in questo caso è consigliato seguire la procedura descritta in
 agendo direttamente sul codice sorgente dei fogli di stile
 e realizzando quindi una *build* personalizzata
 prima di integrare il CSS nel layout.
+
+[Tecnologie utilizzate](/docs/tecnologie)
