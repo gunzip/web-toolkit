@@ -81,6 +81,10 @@
   width: auto !important;
 }
 
+.ie89 .Header-navbar > * {
+  vertical-align: middle;
+}
+
 /* IE8 */
 
 .ie8 .Megamenu-item {
