@@ -4,7 +4,7 @@ title: Principali tecnologie utilizzate
 label: Tecnologie utilizzate
 ---
 
-Il toolkit è basato su alcuni software open source che assolvono
+Il toolkit è basato su alcuni software open source che svolgono
 diversi task e di cui è bene possedere una conoscenza anche sommaria
 prima di procedere a modificare i sorgenti.
 

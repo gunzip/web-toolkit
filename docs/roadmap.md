@@ -36,6 +36,8 @@ label: Roadmap
 - componente agenda
 - componente mappa (openstreetmap)
 
+- service design pattern (es. entry page servizio / form con progresso)
+
 ## v2.0.0
 
-- service design pattern (es. entry page servizio / form con progresso)
+- sistema per *custom build* (personalizzazione colori, esclusione di moduli, ...)
