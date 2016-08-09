@@ -12,6 +12,7 @@ che hanno una propria licenza diversa da CC0.
 - [src/vendor/respond.min.js](https://github.com/scottjehl/Respond) (c) Scott Jehl, licenza MIT
 - [src/vendor/selectivzr.js](http://selectivizr.com/) (c) Keith Clark, licenza MIT
 - [src/vendor/yepnope.js](http://yepnopejs.com/) (c) Alex Sexton, Ralph Holzmann, licenza MIT
+
 - [src/modules/megamenu/megamenu.js](https://adobe-accessibility.github.io/Accessible-Mega-Menu/) (c) Adobe Systems Incorporated, licenza Apache 2.0
 - [src/src/modules/carousel/a11y.js](https://github.com/rtrvrtg/owlcarousel2-a11ylayer) (c) 2015 Geoffrey Roberts, licenza MIT
 - [src/modules/cookiebar/cookiebar.js](https://github.com/carlwoodhouse/jquery.cookieBar) (c) 2016 Carl Woodhouse, licenza MIT
