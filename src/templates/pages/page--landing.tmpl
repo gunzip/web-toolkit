@@ -1,7 +1,11 @@
 {% render '@header' %}
 
 <div id="main">
-  {% render '@layout--section' %}
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-top-s">
+      {% render '@breadcrumb' %}
+  </div>
+
+  {% render '@layout--landing' %}
 
   <div class="u-background-grey-80">
     <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
