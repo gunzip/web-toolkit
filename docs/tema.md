@@ -4,7 +4,7 @@ title: Realizzare un tema
 label: Realizzare un tema
 ---
 
-All'interno della directory themes è presente un CSS di esempio in cui viene mostrato come
+All'interno della directory `src/themes` è presente un CSS di esempio in cui viene mostrato come
 sovrascrivere le variabili utilizzate all'interno del toolkit:
 
 ```
