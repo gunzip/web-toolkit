@@ -6,8 +6,6 @@ label: Roadmap
 
 ## v0.1.0-beta
 
-- migliorare la documentazione
-
 - **test cross browser**
 
 - **verifica accessibilità per i componenti js e i template**
@@ -19,6 +17,8 @@ label: Roadmap
 ## v0.1.0
 
 - profiling (es. dimensioni degli assets, profiling javascript e transizioni CSS)
+
+- refactoring di alcuni componenti
 
 - stylesheet per media print
 

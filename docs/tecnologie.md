@@ -8,22 +8,36 @@ Il toolkit è basato su alcuni software open source che svolgono
 diversi task e di cui è bene possedere una conoscenza anche sommaria
 prima di procedere a modificare i sorgenti.
 
+## npm
+
+Il tool [npm](https://docs.npmjs.com/getting-started/what-is-npm) è utilizzato per
+la gestione delle dipendenze necessarie sia alla fase di sviluppo / compilazione
+che per integrare alcuni componenti Javascript utilizzati lato client (nel browser).
+
+La lista delle librerie utilizzate è visibile nel file `package.json` (@TODO).
+
+Prima di incorporare nuove dipendenze è bene verificare che siano presenti nel
+[registro npm](https://www.npmjs.com/) in modo da poterle integrare più agevolmente.
+
 ## SUIT CSS
 
-[SUIT CSS](http://suitcss.github.io/) è sia una metodologia di implementazione per i fogli di stile CSS
-che un insieme di utilità atte a facilitarne la realizzazione.
+[SUIT CSS](http://suitcss.github.io/) è una metodologia di implementazione
+per i fogli di stile CSS a corredo di un insieme di utilità atte a facilitarne la realizzazione.
 
-1. Nella stesura del codice dei fogli di stile vengono adottate le
+Relativamente al toolkit:
+
+1. vengono adottate le
 [convenzioni di nomenclatura](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md)
-documentate sul sito di SUIT CSS.
+SUIT CSS nella stesura del codice dei fogli di stile
 
-2. Vengono utilizzate le [classi di utilità](https://github.com/suitcss/suit/blob/master/doc/utilities.md)
+2. vengono utilizzate le [classi di utilità](https://github.com/suitcss/suit/blob/master/doc/utilities.md)
 fornite dalla libreria. Si consiglia in particolare di far riferimento alla
 [documentazione online delle classi SUIT CSS](https://github.com/suitcss/utils)
+con particolare riferimento alla [griglia responsive](https://github.com/suitcss/components-grid/)
 
-3. Viene utilizzato il [preprocessore CSS di SUIT](https://github.com/suitcss/preprocessor)
-ovvero PostCSS corredato da un insieme di plugin *ad-hoc* che è possibile
-visualizzare allinterno del file `.postcss.js` contenuto nella directory radice del *repository*.
+3. viene utilizzato il [preprocessore CSS di SUIT](https://github.com/suitcss/preprocessor)
+integrato da un insieme di plugin *ad-hoc*; è possibile visualizzarne la lista
+nel file `.postcss.js` @TODO contenuto nella directory radice del *repository*.
 
 ## PostCSS
 
@@ -55,16 +69,16 @@ Per il *linting* (ovvero, l'analisi del codice in cerca di errori e/o costrutti 
 vengono utlizzati i due tool:
 
 - [stylelint](http://stylelint.io/) - per il codice CSS
-- [ESlint](http://eslint.org/) - per il codice Javascript
+- [ESLint](http://eslint.org/) - per il codice Javascript
 
 ## Generazione della styleguide e dei moduli CSS / JS
 
-Due tool sono attivati dagli *script npm* secondo le modalità descritte
-nel capitolo successivo: ["Utilizzare l'ambiente di sviluppo"](./sviluppare).
+Questi due tool sono attivati dagli *script npm* secondo le modalità descritte
+nel capitolo successivo: ["Utilizzare l'ambiente di sviluppo"](/docs/sviluppare):
 
 - [fractal](http://fractal.build) è utilizzato per generare la *styleguide* (l'elenco navigabile dei componenti grafici)
 - [webpack](https://webpack.github.io) organizza i moduli CSS / Javascript in modo da poter esser utilizzati in produzione
 
-Non è necessario conoscere il funzionamento di questi due tool che vengono qui citati per completezza.
+Non è necessario conoscere il funzionamento di questi software che vengono qui citati per completezza.
 
 [Utilizzare l'ambiente di sviluppo](/docs/sviluppare)

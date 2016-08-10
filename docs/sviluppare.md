@@ -13,17 +13,17 @@ per realizzare quindi un "tema" grafico specifico.
 Per ottenere i sorgenti è possibile scaricare direttamente l'[archivio compresso](@TODO)
 da GitHub.
 
-In alternativa a tale procedura, è consigliato il download tramite
-il software di versionamento [Git](https://git-scm.com/): dopo aver
-[installato Git](https://git-scm.com/book/it/v1/Per-Iniziare-Installare-Git)
+In alternativa è consigliato il download dei sorgenti tramite
+il software di versionamento [Git](https://git-scm.com/);
+dopo aver [installato Git](https://git-scm.com/book/it/v1/Per-Iniziare-Installare-Git)
 è possibile effettuare una copia del repository in locale digitando da linea di comando:
 
 ```
 git clone @TODO
 ```
 
-Questa modalità, alternativa al download diretto dell'archivio, permette di mantenere i sorgenti sincronizzati
-con i nuovi rilasci del framework nonché di contribuire al progetto
+L'utilizzo di Git permette di mantenere i sorgenti sincronizzati
+con i nuovi rilasci del toolkit nonché di contribuire al progetto
 proponendo di incorporare le proprie modifiche nella linea principale di sviluppo,
 vedi anche:
 
@@ -34,7 +34,7 @@ vedi anche:
 
 Per poter compilare i sorgenti (CSS / JS) è richiesta l'installazione di [Node.js / npm](https://nodejs.org).
 
-Terminata l'installazione, la seguente sequenza di comandi eseguiti all'interno della directory del framework
+Terminata l'installazione, la seguente sequenza di comandi eseguiti all'interno della directory del toolkit
 completerà il download delle librerie richieste per lo sviluppo:
 
 ```
@@ -56,7 +56,7 @@ corredati degli *assets* (CSS / JS) necessari pronti per poter esser riutilizzat
 #### Modificare i sorgenti
 
 Per poter visualizzare la styleguide in locale (i template HTML con i diversi componenti grafici)
-è possibile sostituire come ultimo passaggio (a `npm run build`) il comando
+è possibile sostituire come ultimo passaggio (al posto di `npm run build`) il comando
 
 ```
 npm run watch

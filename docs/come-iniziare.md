@@ -15,8 +15,8 @@ navigando dal menu "Componenti":
 Nella pagina che illustra ogni elemento è visibile il template HTML che lo realizza:
 il **codice HTML** a corredo produce l'output visualizzato se vengono contestualmente
 utilizzati i fogli di stile (CSS) e gli script (JS) necessari: è possibile scaricare
-i file CSS / JS già compilati (@TODO: link) e incorporarli in un template HTML
-attendosi al codice del layout di pagina di esempio:
+i file CSS / JS già compilati e incorporarli in un template HTML
+come mostrato nel codice di esempio:
 
 * CSS / Javascript già compilati @TODO
 * `index.html` con layout di pagina di esempio @TODO
