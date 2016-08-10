@@ -65,7 +65,7 @@ npm run watch
 e visitare con il browser la pagina [http://localhost:1310](http://localhost:1310)
 
 A questo punto è possibile modificare i sorgenti: qualsiasi modifica effettuata ai fogli di stile CSS,
-Javascript e/o template HTML, mentre `npm run watch` rimane in esecuzione, risulterà immediatamente visibile
+Javascript e/o template HTML mentre `npm run watch` rimane in esecuzione risulterà immediatamente visibile
 nel browser **senza dover ricaricare manualmente la pagina o lanciare il comando di build**.
 
 [Creare o modificare un modulo](/docs/moduli)

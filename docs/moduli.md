@@ -12,19 +12,33 @@ Gli elementi dell'interfaccia (moduli), contenuti nella directory `src/modules` 
 
 All'interno della directory di ogni modulo deve esser presente almeno una tra queste tre componenti.
 
+Il codice CSS deve esser collocato in un file `src/modules/<nome-modulo>/index.css`
+e <mark>importato nell'`index.css` globale contenuto nella directory radice del toolkit</mark>.
+
+Il codice Javascript deve esser collocato in un file `src/modules/<nome-modulo>/index.js`
+e <mark>importato nell'`index.js` globale contenuto nella directory radice del toolkit</mark>.
+
+Ulteriori **assets** (CSS / JS / immagini) contenuti nella directory del modulo
+possono essere importati nei rispettivi file index.
+
+Il nome dei file con gli snippet HTML *deve* iniziare con quello del modulo, ad esempio:
+
+- `src/modules/<nome-modulo>/<nome-modulo>.tmpl`
+- `src/modules/<nome-modulo>/<nome-modulo>--2.tmpl`
+
 Negli snippet HTML è possibile utilizzare i costrutti del
 [linguaggio di templating nunjucks](https://mozilla.github.io/nunjucks/).
 
-I CSS vengono processati tramite PostCSS (e plugin, vedi la sezione "[Tecnologie](/docs/tecnologie)").
+I CSS vengono processati tramite PostCSS (e i relativi plugin presentati nella sezione [Tecnologie](/docs/tecnologie)).
 
 Nei file Javascript è possibile utilizzare la sintassi [ECMAScript 2015](https://babeljs.io/docs/learn-es2015/).
 
 ### Regole generali nello sviluppo di nuovi moduli
 
 - i moduli devono essere quanto più possibile indipendenti tra loro
-- i CSS possono utilizzare le classi di utilità (quelle con prefisso `u-*`), ma **mai** incorporare selettori di altri moduli
+- nei CSS si possono utilizzare le classi di utilità (quelle con prefisso `u-*`), ma **non** incorporare selettori di altri moduli
 - [le regole di nomenclatura sono quelle di SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md)
-- i Javascript devono dichiarare tutte le loro dipendenze (es. tramite il costrutto `import`)
+- i componenti Javascript devono dichiarare tutte le loro dipendenze nell'`index.js` (es. tramite il costrutto `import`)
 - è incoraggiato l'utilizzo del costrutto PostCSS `@extend`, ma **esclusivamente** per estendere le classi di utilità (`u-*`)
 
 [Struttura del filesystem](/docs/struttura)

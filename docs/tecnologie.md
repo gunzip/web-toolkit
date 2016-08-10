@@ -12,7 +12,7 @@ prima di procedere a modificare i sorgenti.
 
 Il tool [npm](https://docs.npmjs.com/getting-started/what-is-npm) è utilizzato per
 la gestione delle dipendenze necessarie sia alla fase di sviluppo / compilazione
-che per integrare alcuni componenti Javascript utilizzati lato client (nel browser).
+che per i componenti Javascript integrati lato client (nel browser).
 
 La lista delle librerie utilizzate è visibile nel file `package.json` (@TODO).
 
@@ -22,7 +22,8 @@ Prima di incorporare nuove dipendenze è bene verificare che siano presenti nel
 ## SUIT CSS
 
 [SUIT CSS](http://suitcss.github.io/) è una metodologia di implementazione
-per i fogli di stile CSS a corredo di un insieme di utilità atte a facilitarne la realizzazione.
+per i fogli di stile CSS a corredo di un insieme di utilità che ne facilitano
+la manutenzione.
 
 Relativamente al toolkit:
 
@@ -36,7 +37,7 @@ fornite dalla libreria. Si consiglia in particolare di far riferimento alla
 con particolare riferimento alla [griglia responsive](https://github.com/suitcss/components-grid/)
 
 3. viene utilizzato il [preprocessore CSS di SUIT](https://github.com/suitcss/preprocessor)
-integrato da un insieme di plugin *ad-hoc*; è possibile visualizzarne la lista
+integrato da un insieme di plugin *ad-hoc*; è possibile visualizzare la lista dei plaugin
 nel file `.postcss.js` @TODO contenuto nella directory radice del *repository*.
 
 ## PostCSS

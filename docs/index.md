@@ -18,8 +18,8 @@ Il toolkit permette di condividere con le PA (e i loro fornitori)
 materiale riutilizzabile, mettendo a fattor comune le diverse esperienze
 per poi recepire i contributi e incorporarli.
 
-L'obiettivo è veicolare l'effort su un insieme di elementi condivisi
+L'obiettivo è convogliare l'effort su un insieme di elementi condivisi
 che possano esser utilizzati nella realizzazione di un sito
-o servizio usabile, accessibile e conforme a quanto prescritto nelle Linee Guida.
+o servizio usabile, accessibile e conforme a quanto indicato nelle Linee Guida.
 
 [Come iniziare](/docs/come-iniziare)

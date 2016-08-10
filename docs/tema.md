@@ -24,14 +24,14 @@ sovrascrivere le variabili utilizzate all'interno del toolkit:
 Similmente è possibile sovrascrivere qualsiasi variabile contenuta nei moduli CSS,
 modificando ad esempio i colori che caratterizzano l'aspetto grafico dei vari elementi.
 
-Per applicare font e colori personalizzati:
+Per applicare font e colori personalizzati bisogna:
 
-1. modifica il file del tema `src/themes/index.css` sovrascrivendo le variabili CSS
-2. effettua una nuova *build* del toolkit tramite `npm run build` (vedi ["Utilizzare l'ambiente di sviluppo"](/docs/sviluppare))
-3. incorpora i CSS generati nei tuoi template HTML
+1. modificare il file del tema `src/themes/index.css` sovrascrivendo le variabili CSS
+2. effettuare una nuova *build* del toolkit tramite `npm run build` (vedi ["Utilizzare l'ambiente di sviluppo"](/docs/sviluppare))
+3. incorporare i CSS generati nei template HTML
 
 La palette di colori è costruita automaticamente (`src/utils/colors/index.css` @TODO)
-applicando tinte e tonalità secondo quanto descritto nel relativo paragrafo delle Linee Guida @TODO;
+applicando tinte e tonalità secondo quanto descritto nel [relativo paragrafo delle Linee Guida](http://design.italia.it/linee-guida/colori/);
 in questo modo è sufficiente sovrascrivere la variabile `--Color-primary` per ottenere l'intera *palette*.
 
 Tutte le modifiche che riguardano uno specifico tema vanno applicate assegnando al tag `body`
