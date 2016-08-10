@@ -146,3 +146,68 @@ option:hover {
 
   outline: none !important;
 }
+
+/*
+ * Custom checkboxes and radios
+ * ============================
+ */
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose input {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.Form-fieldIcon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  border: 0.2rem solid var(--Color-grey-50);
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  margin-right: 1em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  width: 1em;
+}
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose input:focus ~ .Form-fieldIcon {
+  box-shadow: 0 0 0 0.1rem var(--Color-grey-50), 0 0 0 0.5rem var(--Color-focus);
+}
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose input:checked ~ .Form-fieldIcon {
+  background-color: var(--Color-teal-70);
+  color: var(--Color-grey-40);
+}
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose input:active ~ .Form-fieldIcon {
+  background-color: var(--Color-teal-30);
+  color: var(--Color-grey-40);
+}
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose [type=checkbox] ~ .Form-fieldIcon {
+  border-radius: 0.25rem;
+}
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose [type=checkbox]:checked ~ .Form-fieldIcon {
+  background-image: url("");
+}
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose [type=radio] ~ .Form-fieldIcon {
+  border-radius: 50%;
+}
+
+/* postcss-bem-linter: ignore */
+.Form-field--choose [type=radio]:checked ~ .Form-fieldIcon {
+  background-image: url("");
+}
