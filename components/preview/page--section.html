@@ -1,0 +1,436 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="it">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
+    o dal repository locale (src/fonts)
+  -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: {
+        families: ['Titillium+Web:400,700,400italic:latin']
+      }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- include html5shim per Explorer 8 -->
+  <script src="/build/vendor/modernizr.js"></script>
+
+  <link media="screen" rel="stylesheet" href="/build/vendor.css">
+  <link media="screen" rel="stylesheet" href="/build/build.css">
+
+  <title>Preview Layout</title>
+</head>
+
+<body class="Pac">
+
+  <ul class="Skiplinks js-fr-bypasslinks">
+  <li><a accesskey="2" href="#main">Vai al Contenuto</a></li>
+  <li><a accesskey="3" href="#menu">Vai alla navigazione del sito</a></li>
+</ul>
+
+
+<header class="Header Headroom--fixed">
+
+  <div class="Header-banner Headroom-hideme">
+    <p class="Header-serviceLink">
+      <a href=""><span>Accedi ai </span> servizi</a>
+    </p>
+    <p class="Header-owner">
+      <a href="">Nome amministrazione afferente</a>
+    </p>
+  </div>
+
+  <div class="Header-navbar Grid Grid--alignMiddle">
+
+    <div class="Header-toggle Grid-cell">
+      <button class="Hamburger-toggleContainer js-fr-offcanvas-open"
+        aria-controls="menu" aria-label="mostra / nascondi il menu" title="mostra / nascondi il menu">
+        <span class="Hamburger-toggle" role="presentation"></span>
+        <span class="Header-toggleText" role="presentation">Menu</span>
+      </button>
+    </div>
+
+    <div class="Header-logo Grid-cell" aria-hidden="true">
+      <a href="/" tabindex="-1">
+        <img src="http://placehold.it/75x80" alt="">
+      </a>
+    </div>
+
+    <div class="Header-title Grid-cell">
+      <h1 class="Header-titleLink">
+        <a accesskey="1" href="/">
+          Nome della Pubblica Amministrazione<br>
+          <small>eventuale sottotitolo</small>
+        </a>
+      </h1>
+    </div>
+
+    <div class="Header-searchTrigger Grid-cell">
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-magnifier"
+        title="attiva il form di ricerca" aria-label="attiva il form di ricerca" aria-hidden="false">
+      </button>
+      <button aria-controls="#header-search" class="js-Header-search-trigger icon-close u-hiddenVisually"
+        title="disattiva il form di ricerca" aria-label="disattiva il form di ricerca" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="Header-utils Grid-cell">
+      <div class="Header-social Headroom-hideme">
+        <p>Seguici su:</p>
+        <ul class="Header-socialIcons">
+          <li><a href=""><span class="icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+          <li><a href=""><span class="icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+          <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+        </ul>
+      </div>
+      <div class="Header-search" id="header-search">
+        <form class="Form">
+  <div class="Form-field Form-field--withPlaceholder Grid">
+    <input class="Form-input Grid-cell u-sizeFill u-text-r-s" required id="cerca">
+    <label class="Form-label" for="cerca">Cerca...</label>
+    <button class="Grid-cell u-sizeFit icon-magnifier u-background-60 u-color-white u-padding-all-s u-text-s"
+      title="Avvia la ricerca" aria-label="Avvia la ricerca">
+    </button>
+  </div>
+</form>
+
+      </div>
+      <div class="Header-languages Headroom-hideme">
+        <a class="Header-language is-active" href="" title="sito in italiano">ITA</a>
+        <a class="Header-language" href="" title="sito in inglese">ENG</a>
+      </div>
+    </div>
+
+  </div><!-- Header-navbar -->
+
+  
+
+</header>
+
+
+
+<section class="Offcanvas Offcanvas--left Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden" id="menu">
+	<h2 class="u-hiddenVisually">Menu di navigazione</h2>
+  <div class="Offcanvas-content u-background-white">
+    <div class="Offcanvas-toggleContainer u-padding-bottom-l u-background-70">
+      <button class="Hamburger-toggleContainer u-block u-color-white u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"
+        aria-controls="menu" aria-label="chiudi il menu" title="esci dalla navigazione">
+        <span class="Hamburger-toggle is-active">
+        </span>
+      </button>
+    </div>
+    <nav>
+      <ul class="Linklist Linklist--padded Treeview js-fr-treeview u-text-r-xs">
+  <li><a>Deleniti aut sed</a>
+    <ul>
+      <li><a>Fuga sit nobis</a></li>
+      <li><a>Quod ullam et</a></li>
+      <li><a>Dolorum velit quis</a>
+        <ul>
+          <li><a>Ex eum ratione</a></li>
+          <li><a>Reiciendis vitae quidem</a>
+            <ul>
+              <li><a>Reiciendis vitae quidem</a></li>
+              <li><a>Ab aut minus</a></li>
+              <li><a>Voluptatem dolores consequatur</a></li>
+            </ul>
+          </li>
+          <li><a>Aliquam magni non</a></li>
+        </ul>
+      </li>
+      <li><a>Sit odio voluptatem</a></li>
+      <li><a>Deleniti aut sed</a></li>
+    </ul>
+  </li>
+  <li><a>Aliquam magni non</a>
+    <ul>
+      <li><a>Dolorum velit quis</a></li>
+      <li><a>Quod ullam et</a></li>
+      <li><a>Fuga sit nobis</a>
+        <ul>
+          <li><a>Ab aut minus</a></li>
+          <li><a>Reiciendis vitae quidem</a></li>
+          <li><a>Ex eum ratione</a></li>
+        </ul>
+      </li>
+      <li><a>Voluptatem dolores consequatur</a></li>
+      <li><a>Aliquam magni non</a>
+        <ul>
+          <li><a>Sit odio voluptatem</a></li>
+          <li><a>Fuga sit nobis</a></li>
+          <li><a>Quod ullam et</a></li>
+          <li><a>Dolorum velit quis</a></li>
+          <li><a>Ex eum ratione</a></li>
+          <li><a>Reiciendis vitae quidem</a></li>
+          <li><a>Ab aut minus</a></li>
+          <li><a>Voluptatem dolores consequatur</a></li>
+          <li><a>Aliquam magni non</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</section>
+
+
+
+<div id="main">
+  <section>
+  <p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
+    <span class="icon icon-view-01 u-text-r-xl u-alignMiddle u-padding-r-right" aria-hidden="true"></span>
+    <a href="#subnav" class="js-scrollTo u-text-r-s u-textClean u-color-grey-50 u-alignMiddle">Esplora contenuti correlati</a>
+  </p>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-top-s">
+      <ul class="Breadcrumb">
+  <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">Home</a></li>
+  <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">pagina interna</a></li>
+  <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">pagina interna</a></li>
+  <li class="Breadcrumb-item"><a class="Breadcrumb-link u-color-50" href="">pagina interna</a></li>
+</ul>
+
+  </div>
+
+  <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
+    <h2 class="u-text-h2">
+      Titolo della sezione
+    </h2>
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-md-size6of12 u-lg-size6of12">
+        <article class="Prose u-layout-prose">
+          <p>
+            Itaque porro sunt sit est voluptas cumque. Repudiandae eum nam qui in laudantium delectus molestiae sunt porro. Sequi ullam rerum.
+ Accusantium qui alias hic molestiae facere molestiae qui amet molestias. Maxime velit nesciunt provident et vitae omnis eaque quia. Laudantium beatae odio id. Voluptatem accusantium magnam qui culpa officiis facere. Quia a animi quis quos sunt.
+ Quis sunt aut molestiae aperiam totam ullam quae natus. Laborum necessitatibus velit reprehenderit molestiae. Aliquam eius sed aut saepe aspernatur sequi quo aliquam. Optio fugit autem est sit qui veritatis architecto omnis et. Eos quas ut incidunt dolorem non maxime modi et nesciunt.
+          </p>
+          <p>
+            Soluta blanditiis omnis. Eligendi quasi nisi. Quia reiciendis voluptatibus aut sunt. Ad quis dignissimos nam cumque dolore adipisci. Accusamus temporibus reiciendis dolorem quos. Recusandae aperiam accusantium doloribus.
+ Voluptas excepturi et. Architecto sit odit. Est ut accusantium est magni.
+ Recusandae odio necessitatibus. Odit dolore dolore voluptate est modi. Eligendi sed culpa aut fugiat vel. Doloribus libero aut sint quam magni id occaecati accusantium. Error explicabo quo itaque iste.
+          </p>
+          <p>
+            Non eos sunt rerum. Inventore quidem possimus libero ratione et corporis. Quasi blanditiis nobis aut repellat.
+ Dolorem vel sit fuga dolorem id sed delectus soluta. Id minus consequatur est. Voluptas optio deserunt non quis veniam sapiente nemo. Culpa qui quo eaque quia placeat doloremque. Repellendus beatae corrupti cupiditate consequatur a rerum.
+ Enim voluptatem impedit in veritatis culpa. Omnis aliquam aliquid officia sed ut est molestiae provident. Cupiditate voluptatem inventore accusantium. Consectetur illo eum dolor qui placeat ullam non rerum dolorem. Aut aut ut ipsum qui.
+          </p>
+        </article>
+      </div>
+      <div class="Grid-cell u-sizeFull u-md-size4of12 u-lg-size4of12 u-md-before2of12 u-lg-before2of12">
+        <div class="u-cf u-padding-bottom-xxl">
+          <div class="Share">
+  <h2 class="Share-reveal js-Share">
+    <span class="Share-revealIcon icon icon-sharethis"></span>
+    <span class="Share-revealText">Condividi</span>
+  </h2>
+  <ul class="u-jsHiddenVisually">
+    <li><a href="#"><span class="icon icon-facebook"></span></a></li>
+    <li><a href="#"><span class="icon icon-twitter"></span></a></li>
+    <li><a href="#"><span class="icon icon-google-plus"></span></a></li>
+    <li><a href="#"><span class="icon icon-youtube"></span></a></li>
+    <li><a href="#"><span class="icon icon-flickr"></span></a></li>
+    <li><a href="#"><span class="icon icon-slideshare"></span></a></li>
+    <li><a href="#"><span class="icon icon-whatsapp"></span></a></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="u-sizeFull u-md-size11of12 u-lg-size11of12" id="subnav">
+          <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
+  <li>
+    <a class="Linklist-link Linklist-link--lev1" href="">Reprehenderit et illum quia iste sequi ex exercitationem explicabo voluptates.</a>
+  </li>
+  <li><a class="Linklist-link Linklist-link--lev2 is-expanded" href="">Debitis atque qui nihil voluptas amet.</a>
+    <ul>
+      <li><a href="" class="Linklist-link Linklist-link--lev3">Omnis tempore est adipisci sed dolores.</a></li>
+      <li><a href="">Temporibus quia dolorem.</a></li>
+      <li><a href="">Laudantium sed ex quibusdam.</a></li>
+      <li><a href="">Et consequatur aut delectus incidunt quos consequatur sint voluptatem quia.</a></li>
+    </ul>
+  </li>
+  <li><a href="">Earum optio non et fugit architecto veniam.</a></li>
+  <li><a href="">Explicabo ut sint sed fugit eligendi distinctio.</a></li>
+  <li><a href="" class="Linklist-link is-collapsed">Quis illo fugit eos distinctio non enim accusantium.</a></li>
+  <li><a href="">Quo odit et quos quam.</a></li>
+</ul>
+
+        </div>
+        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="u-background-grey-80">
+    <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
+    <footer class="Footer u-padding-all-s">
+
+  <div class="u-cf">
+    <img class="Footer-logo" src="http://placehold.it/75x80?text=placeholder" alt="">
+    <p class="Footer-siteName">
+      Comune di Civitella Roveto
+    </p>
+  </div>
+
+  <div class="Grid Grid--withGutter">
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Trasparenza</h2>
+      <ul>
+        <li><a href="">Amministrazione trasparente</a></li>
+        <li><a href="">Accesso civico</a></li>
+        <li><a href="">Albo pretorio</a></li>
+        <li><a href="">Bandi di gara e contratti</a></li>
+      </ul>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Trasparenza</h2>
+      <ul>
+        <li><a href="">Amministrazione trasparente</a></li>
+        <li><a href="">Accesso civico</a></li>
+        <li><a href="">Albo pretorio</a></li>
+        <li><a href="">Bandi di gara e contratti</a></li>
+      </ul>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Trasparenza</h2>
+      <ul>
+        <li><a href="">Amministrazione trasparente</a></li>
+        <li><a href="">Accesso civico</a></li>
+        <li><a href="">Albo pretorio</a></li>
+        <li><a href="">Bandi di gara e contratti</a></li>
+      </ul>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Trasparenza</h2>
+      <ul>
+        <li><a href="">Amministrazione trasparente</a></li>
+        <li><a href="">Accesso civico</a></li>
+        <li><a href="">Albo pretorio</a></li>
+        <li><a href="">Bandi di gara e contratti</a></li>
+      </ul>
+    </div>
+    
+
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Recapiti</h3>
+        <address>
+          Via Cherso 8<br>
+          00177 Roma<br>
+          Tel. (+39) 00.1310.1980
+        </address>
+      </div>
+    </div>
+    
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Recapiti</h3>
+        <address>
+          Via Cherso 8<br>
+          00177 Roma<br>
+          Tel. (+39) 00.1310.1980
+        </address>
+      </div>
+    </div>
+    
+
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Contatti</h2>
+      <div class="Footer-subBlock">
+        <h3 class="Footer-subTitle">Indirizzo PEC</h3>
+        <p><a href="">indirizzo.pec@gov.it</a></p>
+      </div>
+    </div>
+
+    <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+      <h2 class="Footer-blockTitle">Seguici su</h2>
+      <div class="Footer-subBlock">
+        <ul class="Footer-socialIcons">
+          <li><a href=""><span class="icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+          <li><a href=""><span class="icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+          <li><a href=""><span class="icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <ul class="Footer-links u-cf">
+    <li><a href="" title="Privacy policy">Privacy</a></li>
+    <li><a href="" title="Note legali">Note legali</a></li>
+    <li><a href="" title="Dati monitoraggio sito">Contatti</a></li>
+  </ul>
+
+</footer>
+
+    </div>
+  </div>
+
+  <a href="#" title="torna all'inizio del contenuto" class="ScrollTop js-scrollTop js-scrollTo">
+  <i class="ScrollTop-icon icon-top" aria-hidden="true"></i>
+  <span class="u-hiddenVisually">torna all'inizio del contenuto</span>
+</a>
+
+  <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all">
+  <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
+    <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.<br>
+  </p>
+  <p>
+    <button class="Button Button--default u-text-r-xxs js-cookieBarAccept u-inlineBlock u-margin-r-all">Accetto</button>
+    <a href="" class="u-text-r-xs u-color-teal-50">Privacy policy</a>
+  </p>
+</div>
+
+
+</div>
+
+
+  <script src="/build/vendor/jquery.min.js"></script>
+
+  <!--[if IE 8]>
+  <script src="/build/vendor/respond.min.js"></script>
+  <script src="/build/vendor/rem.min.js"></script>
+  <script src="/build/vendor/selectivizr.js"></script>
+  <script src="/build/vendor/slice.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="/build/vendor/polyfill.min.js"></script>
+  <![endif]-->
+
+  <!-- In produzione utilizzare <script src="/build/IWT.min.js"></script> -->
+  <script src="/build/IWT.js"></script>
+
+</body>
+</html>
+
