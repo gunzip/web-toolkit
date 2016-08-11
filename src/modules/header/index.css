@@ -368,6 +368,7 @@
 .Headroom--pinned.Headroom--not-top {
   @extend .u-zindex-40;
 
+  min-width: 30rem;
   position: fixed;
   top: 0;
 }

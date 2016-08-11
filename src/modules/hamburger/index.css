@@ -75,7 +75,7 @@
 }
 
 .Hamburger-toggle.is-active::before {
-  top: calc(var(--Hamburger-height) / 3 - var(--Hamburger-pad)) !important;
+  top: calc(var(--Hamburger-height) / 3) !important;
 }
 
 .Hamburger-toggle.is-active::before,
