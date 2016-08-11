@@ -3,8 +3,8 @@
 :root {
   --Treeview-link-padding: 0.5em;
   --Treeview-link-arrow-width: 1.2em;
-  --Treeview-link-arrow-up: inline("icons/ita/svg/icon-top.svg");
-  --Treeview-link-arrow-down: inline("icons/ita/svg/icon-bottom.svg");
+  --Treeview-link-arrow-up: inline("icons/ita/img/SVG/drop-down.svg");
+  --Treeview-link-arrow-down: inline("icons/ita/img/SVG/drop-up.svg");
 }
 
 .Treeview [aria-expanded] > a {

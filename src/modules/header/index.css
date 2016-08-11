@@ -322,8 +322,8 @@
   @extend .u-inlineBlock;
 }
 
-.Header-socialIcons [class^="icon-"],
-.Header-socialIcons [class*=" icon-"] {
+.Header-socialIcons [class^="Icon-"],
+.Header-socialIcons [class*=" Icon-"] {
   @extend .u-inlineBlock;
   @extend .u-background-white;
   @extend .u-color-50;
