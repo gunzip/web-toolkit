@@ -4,40 +4,50 @@ title: Roadmap
 label: Roadmap
 ---
 
-## v0.1.0-beta
+## v0.1.0
 
 - **test cross browser**
 
 - **verifica accessibilità per i componenti js e i template**
 
-- integrazione nuovo set di icone AgID
-  - icone per alert
-  - icone per checkbox e radio button
-
-## v0.1.0
-
-- profiling (es. dimensioni degli assets, profiling javascript e transizioni CSS)
+## v1.0.0
 
 - refactoring di alcuni componenti
 
-- stylesheet per media print
-
 - refactoring margini e padding responsive
 
-- più attenzione per IE8/9 (legacy.css)
+- stylesheet per media print
 
-## v1.0.0
-
-- form spid
-- carrello pagopa
-
-- componente pager
-- componente lightbox
-- componente agenda
-- componente mappa (openstreetmap)
-
-- service design pattern (es. entry page servizio / form con progresso)
+- migliorare (o cassare del tutto) il supporto per IE8/9 (legacy.css)
+  - considerare se introdurre un fallback per immagini svg
+  - considerare se utilizzare per i browser obsoleti il foglio di stile per la stampa
 
 ## v2.0.0
 
-- sistema per *custom build* (personalizzazione colori, esclusione di moduli, ...)
+- profiling
+  - dimensione degli assets
+  - profiling javascript e transizioni CSS
+
+- nuovi componenti
+  - dropdown
+  - pager
+  - lightbox
+  - agenda
+  - mappa (openstreetmap)
+
+- design pattern
+  - form spid
+  - entry page servizi
+  - form multistep
+  - carrello pagopa
+
+## v3.0.0
+
+- sistema per *custom build*
+  - personalizzazione automatica dei colori
+  - possibilità di selezionare i singoli moduli
+
+- progressive web app
+  - manifest.json
+  - service worker
+  - push notification
