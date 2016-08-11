@@ -1355,7 +1355,7 @@
         "isMulticolor": false,
         "isMulticolor2": false,
         "tags": [
-          "contract"
+          "collapse"
         ],
         "grid": 0
       },
@@ -1365,7 +1365,7 @@
       "properties": {
         "order": 107,
         "id": 43,
-        "name": "contract",
+        "name": "collapse",
         "prevSize": 32,
         "code": 9207
       },
