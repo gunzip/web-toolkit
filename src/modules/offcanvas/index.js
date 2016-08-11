@@ -71,6 +71,9 @@ const _handleModal = (e) => {
 }
 
 $(document).ready(() => {
+  $(opts.openSelector)
+    .add($(opts.closeSelector))
+    .click((e) => e.preventDefault())
   _handleModal()
   _handleModalScroll()
 })

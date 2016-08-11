@@ -115,6 +115,11 @@
   @extend .u-textCenter;
 }
 
+.Header-toggle > * {
+  @extend .u-inlineBlock;
+  @extend .u-linkClean;
+}
+
 .Header-toggleText {
   @extend .u-hidden;
   @extend .u-sm-block;

@@ -21,6 +21,11 @@
   @extend .u-hiddenVisually;
 }
 
+/* postcss-bem-linter: ignore */
+.no-js .u-nojsDisplayNone {
+  display: none;
+}
+
 @media print {
   .u-hiddenPrint {
     display: none !important;

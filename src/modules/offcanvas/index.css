@@ -5,10 +5,15 @@
   --Offcanvas-max-width: 80%;
 }
 
-.Offcanvas,
-.Offcanvas-content {
+/* postcss-bem-linter: ignore */
+.js .Offcanvas,
+.js .Offcanvas-content {
   max-width: var(--Offcanvas-max-width);
   width: var(--Offcanvas-width);
+}
+
+.no-js .Offcanvas:target {
+  @extend .u-block;
 }
 
 .Offcanvas-toggleContainer {
