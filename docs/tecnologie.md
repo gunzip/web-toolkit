@@ -37,7 +37,7 @@ fornite dalla libreria. Si consiglia in particolare di far riferimento alla
 con particolare riferimento alla [griglia responsive](https://github.com/suitcss/components-grid/)
 
 3. viene utilizzato il [preprocessore CSS di SUIT](https://github.com/suitcss/preprocessor)
-integrato da un insieme di plugin *ad-hoc*; è possibile visualizzare la lista dei plaugin
+integrato da un insieme di plugin *ad-hoc*; è possibile visualizzare la lista dei plugin
 nel file `.postcss.js` @TODO contenuto nella directory radice del *repository*.
 
 ## PostCSS
@@ -46,7 +46,7 @@ nel file `.postcss.js` @TODO contenuto nella directory radice del *repository*.
 
 I fogli di stile del toolkit vengono trasformati tramite PostCSS: in questo modo è possibile
 usufruire di alcuni costrutti non standard che agevolano il mantenimento del codice.
-Si consiglia di far riferimento alla documentazione online dei singoli plugin:
+Puoi far riferimento alla documentazione online dei singoli plugin:
 
 - [postcss-devtools](https://github.com/postcss/postcss-devtools)
 - [postcss-easy-import](https://github.com/TrySound/postcss-easy-import)

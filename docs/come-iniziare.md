@@ -22,12 +22,12 @@ come mostrato nel codice di esempio:
 * `index.html` con layout di pagina di esempio @TODO
 
 Se vuoi personalizzare gli elementi grafici (es. colori),
-seguendo questa modalità sarai obbligato sovrascrivere
+seguendo questa modalità sarai obbligato a sovrascrivere
 le classi del CSS tramite un ulteriore foglio di stile *ad-hoc*;
 questa metodologia non è ottimale laddove le personalizzazioni
 risultano essere complesse: in questo caso è consigliato
 seguire la procedura descritta in "[Utilizzare l'ambiente di sviluppo](/docs/sviluppare)"
-agendo direttamente sul codice sorgente dei fogli di stile per realizzare
-una *build* personalizzata prima di integrare il CSS nel layout.
+agendo direttamente sul codice sorgente dei fogli di stile del toolkit
+per realizzare una *build* personalizzata, prima di integrare il CSS nel layout.
 
 [Tecnologie utilizzate](/docs/tecnologie)
