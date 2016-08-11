@@ -364,7 +364,7 @@
   padding-top: 0 !important;
 }
 
-.Headroom--fixed,
+.js .Headroom--fixed,
 .Headroom--pinned.Headroom--not-top {
   @extend .u-zindex-40;
 
