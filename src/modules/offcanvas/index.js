@@ -65,15 +65,22 @@ const _handleModalScroll = () => {
 const _handleModal = (e) => {
   if (e && $(opts.panelSelector).hasClass(opts.activeClass) &&
     !$(e.target).is(opts.contentSelector)) {
-    $(opts.closeSelector).click()
+    // for some odd reason plain jquery click() does not work here
+    // // so we add that get(0) call
+    $(opts.closeSelector).get(0).click()
   }
+  // we're using "one" here instead of "bind" because
+  // otherwise $(opts.closeSelector).click() would trigger
+  // a click on modal again looping forever
   $(opts.modalSelector).one('click', _handleModal)
 }
 
 $(document).ready(() => {
   $(opts.openSelector)
     .add($(opts.closeSelector))
-    .click((e) => e.preventDefault())
+    .click((e) => {
+      e.preventDefault()
+    })
   _handleModal()
   _handleModalScroll()
 })
