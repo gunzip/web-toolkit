@@ -23,10 +23,29 @@
   --Form-radio-checked: svg-load("icons/ita/img/SVG/radio-button-checked.svg", stroke=var(--Color-teal-50));
   --Form-checkbox: svg-load("icons/ita/img/SVG/checkbox.svg", stroke=var(--Color-teal-50));
   --Form-checkbox-checked: svg-load("icons/ita/img/SVG/checkbox-checked.svg", stroke=var(--Color-teal-50));
+  --Form-textarea-min-height: 10em;
 }
 
 .Form--spaced {
-  margin-top: 0 !important;
+  @extend .u-margin-top-none;
+}
+
+.Form--spaced .Form-label {
+  @extend .u-padding-bottom-xxs;
+}
+
+.Form--spaced .Form-input {
+  @extend .u-margin-top-xxs;
+}
+
+.Form--spaced .Form-fieldset,
+.Form--spaced .Form-legend {
+  @extend .u-margin-bottom-s;
+}
+
+.Form--spaced .Form-field {
+  @extend .u-margin-top-none;
+  @extend .u-padding-bottom-l;
 }
 
 .Form--lean .Form-input,
@@ -70,8 +89,8 @@ option:hover {
   background-color: white;
 }
 
-.Form-legend {
-  font-weight: bold;
+.Form-textarea {
+  min-height: var(--Form-textarea-min-height);
 }
 
 /*
@@ -228,4 +247,37 @@ option:hover {
 /* postcss-bem-linter: ignore */
 .Form-field--choose [type=radio]:checked ~ .Form-fieldIcon {
   background-image: var(--Form-radio-checked);
+}
+
+/*
+*	Custom components: fieldset
+*	===================================
+*/
+
+/* postcss-bem-linter: ignore */
+.Form-fieldset > legend {
+  @extend .u-inlineBlock;
+  @extend .u-sizeFull;
+  @extend .u-border-bottom-xxs;
+  @extend .u-text-r-m;
+}
+
+.Form-field > legend {
+  @extend .u-textWeight-700;
+}
+
+/*
+*	Custom components: width
+*	===================================
+*/
+.Form-input--xs {
+  max-width: 2em !important;
+}
+
+.Form-input--s {
+  max-width: 4em !important;
+}
+
+.Form-input--m {
+  max-width: 6em !important;
 }
