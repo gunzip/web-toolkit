@@ -12,6 +12,8 @@ label: Roadmap
 
 ## v1.0.0
 
+- security audit (javascript compilato)
+
 - refactoring di alcuni componenti
 
 - refactoring margini e padding responsive
