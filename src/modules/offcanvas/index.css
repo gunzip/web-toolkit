@@ -6,8 +6,8 @@
 }
 
 /* postcss-bem-linter: ignore */
-.js .Offcanvas,
-.js .Offcanvas-content {
+.Offcanvas,
+.Offcanvas-content {
   max-width: var(--Offcanvas-max-width);
   width: var(--Offcanvas-width);
 }
@@ -20,6 +20,7 @@
   cursor: pointer;
 }
 
+.Offcanvas:target .Offcanvas-content,
 .Offcanvas.is-ready .Offcanvas-content {
   @extend .u-zindex-max;
   @extend .u-borderShadow-m;
@@ -34,29 +35,35 @@
   will-change: translateX;
 }
 
+.Offcanvas--right:target .Offcanvas-content,
 .Offcanvas--right.is-ready .Offcanvas-content {
   left: 100%;
 }
 
+.Offcanvas--left:target .Offcanvas-content,
 .Offcanvas--left.is-ready .Offcanvas-content {
   right: 100%;
 }
 
 /* postcss-bem-linter: ignore */
+.Offcanvas:not(:target) .Offcanvas-content,
 .Offcanvas.is-ready[aria-hidden="true"] .Offcanvas-content {
   transition: transform 200ms ease-out, visibility 200ms;
 }
 
 /* postcss-bem-linter: ignore */
+.Offcanvas--right:target .Offcanvas-content,
 .Offcanvas--right.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(-100%);
 }
 
 /* postcss-bem-linter: ignore */
+.Offcanvas--left:target .Offcanvas-content,
 .Offcanvas--left.is-ready[aria-hidden="false"] .Offcanvas-content {
   transform: translateX(100%);
 }
 
+.Offcanvas--modal:target::after,
 .Offcanvas--modal.is-active::after {
   @extend .u-zindex-50;
 
