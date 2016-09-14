@@ -127,8 +127,8 @@ option:hover {
   left: 1em;
 }
 
-.Form-field--withPlaceholder :focus + .Form-label,
-.Form-field--withPlaceholder :valid + .Form-label {
+.Form-field--withPlaceholder .Form-input:focus + .Form-label,
+.Form-field--withPlaceholder .Form-input:valid + .Form-label {
   opacity: 0;
 }
 
