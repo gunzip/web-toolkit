@@ -85,9 +85,13 @@ if ($('.' + opts.classes.initial).is(headroomFixed)) {
   })
 
   // Make padding respond to window resize
+  // Android browser triggers a resize event on scroll to top
   $(window).resize(debounce(250, function() {
-    headerHeight = $(headroomFixed).height()
-    setTimeout(_adjustPadding, 250)
+    const height = $(headroomFixed).height()
+    if (headerHeight < height) {
+      headerHeight = height
+      setTimeout(_adjustPadding, 250)
+    }
   }))
 
   // This happens *only* after a resize
@@ -111,8 +115,7 @@ $('.js-Header-search-trigger').click((e) => {
     if ('true' === $el.attr('aria-hidden')) {
       $el.attr('aria-hidden', 'false')
       $el.removeClass('u-hiddenVisually')
-    }
-    else {
+    } else {
       $el.attr('aria-hidden', 'true')
       $el.addClass('u-hiddenVisually')
     }
