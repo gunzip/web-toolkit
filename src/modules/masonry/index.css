@@ -1,0 +1,7 @@
+/** @define Masonry; */
+
+.Masonry-item {
+  @extend .u-padding-bottom-s;
+  @extend .u-padding-right-xs;
+  @extend .u-padding-left-xs;
+}

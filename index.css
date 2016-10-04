@@ -33,9 +33,9 @@
 @import "src/modules/leads";
 @import "src/modules/linklist";
 @import "src/modules/megamenu";
+@import "src/modules/masonry";
 @import "src/modules/navscroll";
 @import "src/modules/offcanvas";
-@import "src/modules/packery";
 @import "src/modules/scrolltop";
 @import "src/modules/share";
 @import "src/modules/skiplinks";
