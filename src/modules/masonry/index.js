@@ -4,7 +4,7 @@ import Macy from 'macy'
 const MASONRY_SELECTOR = '.js-Masonry-container'
 
 /*
- *  Only one instance per page supported ATM
+ *  @FIXME: Only one instance per page supported ATM
  *    see https://github.com/bigbitecreative/macy.js/issues/7
  */
 const initMasonry = (masonrySelector = MASONRY_SELECTOR) => {
@@ -12,7 +12,7 @@ const initMasonry = (masonrySelector = MASONRY_SELECTOR) => {
       container: masonrySelector,
       trueOrder: false,
       waitForImages: true,
-      margin: 0,
+      margin: 16,
       columns: 3,
       breakAt: {
         768: 1,
