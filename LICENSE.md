@@ -27,7 +27,7 @@ Tramite gli [archivi npm](https://www.npmjs.com/):
 - [jquery.cookie](https://www.npmjs.com/package/jquery.cookie) (c) Klaus Hartl, licenza MIT
 - [owl carousel](http://www.owlcarousel.owlgraphic.com/) (c) Owl (David Deutsch), licenza MIT
 - [throttle-debounce](https://github.com/niksy/throttle-debounce) (c) Ivan Nikolić, Ben Alman, licenza MIT
-- [macy](http://macyjs.com/) (c) Big Bite Creative, licenza MIT
+- [salvattore](http://salvattore.com/) (c) 2013-2014 Rolando Murillo and Giorgio Leveroni, licenza MIT
 
 ### Dipendenze per la fase di compilazione
 

@@ -1,5 +1,6 @@
-<div class="u-background-grey-20 u-layout-centerContent">
-  <section class="js-Masonry-container u-layout-medium">
+{% for i in [1, 2] %}
+<div class="u-background-grey-20 u-layout-centerContent u-cf">
+  <section class="js-Masonry-container u-layout-medium" data-columns>
 
     {% for i in [1, 2] %}
     <div class="Masonry-item js-Masonry-item">
@@ -46,3 +47,4 @@
 
   </section>
 </div>
+{% endfor %}
